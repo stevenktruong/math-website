@@ -1,0 +1,16 @@
+.Contact table td {
+    padding: 5px;
+}
+
+.Contact table tr:first-child td {
+    padding-top: 0;
+}
+
+.Contact table tr:last-child td {
+    padding-bottom: 0;
+}
+
+.Contact table td:first-child {
+    font-weight: 700;
+    text-align: right;
+}

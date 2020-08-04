@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Merriweather", serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+span {
+    display: block;
+    height: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+a,
+a:visited {
+    color: #2ecc71;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+a:link,
+a:hover {
+    color: #cdf4dd;
+}
+
+h1,
+h2 {
+    font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+section:first-child {
+    margin-top: 0;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}

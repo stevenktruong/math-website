@@ -1,0 +1,38 @@
+.Navbar {
+    font-family: "Open Sans", sans-serif;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.Navbar ul {
+    height: 100%;
+}
+
+.Navbar ul li {
+    text-decoration: none;
+    list-style: none;
+    height: 100%;
+}
+
+.Navbar ul li a {
+    height: 100%;
+    padding: 10px 10px;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+.Navbar ul li a:link,
+.Navbar ul li a:visited {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    color: black;
+    border-bottom: 4px solid #cdf4dd;
+    transition: border-bottom-color 0.3s;
+}
+
+.Navbar ul li a:hover,
+.Navbar ul li a:active {
+    border-bottom-color: #2ecc71;
+}

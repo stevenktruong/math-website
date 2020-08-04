@@ -1,0 +1,15 @@
+.Me {
+    width: 100%;
+}
+
+.Me h1 {
+    text-align: center;
+}
+
+.Me img {
+    display: block;
+    width: 150px;
+    height: auto;
+    border-radius: 100%;
+    margin: 20px auto;
+}
