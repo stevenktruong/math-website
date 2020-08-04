@@ -49,7 +49,8 @@ h2 {
 /* Navbar */
 nav {
   font-family: "Open Sans", sans-serif;
-  width: 100%;
+  width: 50%;
+  margin: auto;
   padding-bottom: 20px;
 }
 
@@ -74,7 +75,7 @@ nav ul li a:link,
 nav ul li a:visited {
   display: block;
   float: left;
-  margin-left: 20px;
+  margin-right: 20px;
   color: black;
   border-bottom: 4px solid #cdf4dd;
   transition: border-bottom-color 0.3s;
@@ -112,7 +113,6 @@ nav ul li a:active {
 .right-side {
   width: 50%;
   float: left;
-  padding-left: 40px;
 }
 
 /* Me */
