@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Merriweather", serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+span {
+  display: block;
+  height: 100%;
+}
+
+/* Reused parts */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a,
+a:visited {
+  color: #2ecc71;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+a:link,
+a:hover {
+  color: #cdf4dd;
+}
+
+h1,
+h2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+/* Navbar */
+nav {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+nav ul {
+  height: 100%;
+}
+
+nav ul li {
+  text-decoration: none;
+  list-style: none;
+  height: 100%;
+}
+
+nav ul li a {
+  height: 100%;
+  padding: 10px 10px;
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  display: block;
+  float: left;
+  margin-left: 20px;
+  color: black;
+  border-bottom: 4px solid #cdf4dd;
+  transition: border-bottom-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+  border-bottom-color: #2ecc71;
+}
+
+/* Layout */
+.main {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.section {
+  margin: 20px 0;
+}
+
+.section:first-child {
+  margin-top: 0;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.left-side {
+  width: 25%;
+  float: left;
+}
+
+.right-side {
+  width: 50%;
+  float: left;
+  padding-left: 40px;
+}
+
+/* Me */
+.me-container {
+  width: 100%;
+}
+
+.me {
+  display: block;
+  width: 150px;
+  height: auto;
+  border-radius: 100%;
+  margin: 20px auto;
+}
+
+.left-side h1 {
+  text-align: center;
+}
+
+/* Contact table */
+.contact table td {
+  padding: 5px;
+}
+
+.contact table tr:first-child td {
+  padding-top: 0;
+}
+
+.contact table tr:last-child td {
+  padding-bottom: 0;
+}
+
+.contact table td:first-child {
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Media queries */
+@media only screen and (max-width: 960px) {
+  .main {
+    width: auto;
+    margin: auto;
+  }
+
+  .left-side,
+  .right-side {
+    float: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main {
+    width: 480px;
+  }
+}
