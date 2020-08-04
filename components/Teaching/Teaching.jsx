@@ -37,7 +37,10 @@ export default class Teaching extends React.Component {
                                 <td key={`${key}Classes`}>
                                     {classesDataByYear[key].map((classData, i) => (
                                         <React.Fragment key={`${key}Class${i}`}>
-                                            <Link href={`/teaching/${classData.classCode}`}>
+                                            <Link
+                                                href={"/teaching/[classCode]"}
+                                                as={`/teaching/${classData.classCode}`}
+                                            >
                                                 <a>MATH {classData.course}</a>
                                             </Link>
                                             <br />

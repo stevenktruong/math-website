@@ -25,13 +25,13 @@ span {
 }
 
 a,
+a:link,
 a:visited {
     color: #2ecc71;
     text-decoration: underline;
     transition: color 0.3s;
 }
 
-a:link,
 a:hover {
     color: #cdf4dd;
 }
