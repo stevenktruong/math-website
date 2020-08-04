@@ -1,5 +1,5 @@
 import App from "next/app";
-import "styles/global.css";
+import "globals/styles.css";
 
 export default class MyApp extends App {
     render() {

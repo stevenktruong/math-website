@@ -1,18 +1,18 @@
-.Contact table td {
+.Teaching table td {
     padding: 5px;
     padding-left: 0;
     padding-right: 20px;
     vertical-align: top;
 }
 
-.Contact table tr:first-child td {
+.Teaching table tr:first-child td {
     padding-top: 0;
 }
 
-.Contact table tr:last-child td {
+.Teaching table tr:last-child td {
     padding-bottom: 0;
 }
 
-.Contact table td:first-child {
+.Teaching table td:first-child {
     font-weight: 700;
 }

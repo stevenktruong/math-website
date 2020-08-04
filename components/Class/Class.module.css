@@ -1,0 +1,39 @@
+.Class h2 {
+    margin: 0;
+}
+
+.Class h3 {
+    margin-bottom: 10px;
+}
+
+.Class table {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.Class table td {
+    padding: 5px;
+    padding-left: 0;
+    padding-right: 20px;
+    vertical-align: top;
+}
+
+.Class table tr:first-child td {
+    padding-top: 0;
+}
+
+.Class table tr:last-child td {
+    padding-bottom: 0;
+}
+
+.Class table td:first-child {
+    font-weight: 700;
+}
+
+.Class ul {
+    display: block;
+}
+
+.Class li {
+    margin: 10px 0;
+}

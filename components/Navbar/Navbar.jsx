@@ -6,13 +6,13 @@ export default class Navbar extends React.Component {
         return (
             <nav className={styles.Navbar}>
                 <ul>
-                    <li>
+                    <li key="home">
                         <Link href="/">
                             <a>Home</a>
                         </Link>
                     </li>
-                    <li className="clearfix">
-                        <Link href="/">
+                    <li key="teaching" className="clearfix">
+                        <Link href="/teaching">
                             <a>Teaching</a>
                         </Link>
                     </li>
