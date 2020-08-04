@@ -4,27 +4,30 @@ import styles from "./Teaching.module.css";
 export default class Teaching extends React.Component {
     render() {
         const classesData = this.props.classesData;
-        const firstQuarterYear = {
-            year: classesData[0].year,
-            quarter: classesData[0].quarter,
-        };
-
         const classesDataByYear = {};
-        classesData.reduce((acc, cur) => {
-            const key = `${acc.quarter} 20${acc.year}`;
-            if (!classesDataByYear[key]) {
-                classesDataByYear[key] = [];
-            }
 
-            if (cur.year === acc.year && cur.quarter === acc.quarter) {
-                classesDataByYear[key].push(cur);
-            }
-
-            return {
-                year: cur.year,
-                quarter: cur.quarter,
+        if (classesData.length) {
+            const firstQuarterYear = {
+                year: classesData[0].year,
+                quarter: classesData[0].quarter,
             };
-        }, firstQuarterYear);
+
+            classesData.reduce((acc, cur) => {
+                const key = `${acc.quarter} 20${acc.year}`;
+                if (!classesDataByYear[key]) {
+                    classesDataByYear[key] = [];
+                }
+
+                if (cur.year === acc.year && cur.quarter === acc.quarter) {
+                    classesDataByYear[key].push(cur);
+                }
+
+                return {
+                    year: cur.year,
+                    quarter: cur.quarter,
+                };
+            }, firstQuarterYear);
+        }
 
         return (
             <section className={styles.Teaching}>
