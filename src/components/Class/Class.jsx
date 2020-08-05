@@ -24,10 +24,9 @@ export default class Contact extends React.Component {
                             <td>Sections</td>
                             <td>
                                 {classData.discussions.map(discussion => (
-                                    <>
+                                    <div>
                                         {discussion.section}: {discussion.time}, {discussion.location}
-                                        <br />
-                                    </>
+                                    </div>
                                 ))}
                             </td>
                         </tr>
@@ -39,10 +38,9 @@ export default class Contact extends React.Component {
                             <td>Office Hours</td>
                             <td>
                                 {classData.officeHours.map(officeHour => (
-                                    <>
+                                    <div>
                                         {officeHour.section}: {officeHour.time}, {officeHour.location}
-                                        <br />
-                                    </>
+                                    </div>
                                 ))}
                             </td>
                         </tr>

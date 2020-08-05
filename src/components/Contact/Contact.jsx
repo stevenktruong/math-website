@@ -13,10 +13,7 @@ export default class Contact extends React.Component {
                                 <td key={`${key}Name`}>{contactInformation[key].contactKey}</td>
                                 <td key={`${key}Value`}>
                                     {contactInformation[key].value.map((line, i) => (
-                                        <div key={`${key}Line${i}`}>
-                                            {line}
-                                            <br />
-                                        </div>
+                                        <div key={`${key}Line${i}`}>{line}</div>
                                     ))}
                                 </td>
                             </tr>

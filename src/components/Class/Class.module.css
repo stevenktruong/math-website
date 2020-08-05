@@ -36,3 +36,15 @@
 .Class li {
     margin: 10px 0;
 }
+
+.Class table td div {
+    margin: 10px 0;
+}
+
+.Class table td div:first-child {
+    margin-top: 0;
+}
+
+.Class table td div:last-child {
+    margin-bottom: 0;
+}
