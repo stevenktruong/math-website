@@ -45,11 +45,15 @@ export default class Contact extends React.Component {
                             </td>
                         </tr>
                         <tr>
-                            <td>Class Website</td>
+                            <td>Links</td>
                             <td>
-                                <a href={classData.classWebsite} target="_blank">
-                                    {classData.classWebsite}
-                                </a>
+                                {classData.links.map(link => (
+                                    <div>
+                                        <a href={link.url} target="_blank">
+                                            {link.title}
+                                        </a>
+                                    </div>
+                                ))}
                             </td>
                         </tr>
                     </tbody>
