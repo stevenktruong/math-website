@@ -1,4 +1,4 @@
-import personal from "globals/personal.json";
+import contactInformation from "globals/contactInformation.json";
 import styles from "./Contact.module.css";
 
 export default class Contact extends React.Component {
@@ -8,11 +8,11 @@ export default class Contact extends React.Component {
                 <h2>Contact Information</h2>
                 <table>
                     <tbody>
-                        {Object.keys(personal).map(key => (
+                        {Object.keys(contactInformation).map(key => (
                             <tr key={`${key}`}>
-                                <td key={`${key}Name`}>{personal[key].contactKey}</td>
+                                <td key={`${key}Name`}>{contactInformation[key].contactKey}</td>
                                 <td key={`${key}Value`}>
-                                    {personal[key].value.map((line, i) => (
+                                    {contactInformation[key].value.map((line, i) => (
                                         <React.Fragment key={`${key}Line${i}`}>
                                             {line}
                                             <br />

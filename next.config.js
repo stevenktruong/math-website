@@ -1,4 +1,4 @@
-const basePath = process.env.NODE_ENV === "production" ? "/~steven" : "";
+const basePath = process.env.URL_ENV === "production" ? "/~steven" : "";
 
 module.exports = {
     basePath: basePath,

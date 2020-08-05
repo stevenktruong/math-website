@@ -5,10 +5,10 @@
     "main": "index.js",
     "scripts": {
         "clean": "rm -rf node_modules .next build && yarn",
-        "dev": "NODE_ENV=development && next",
-        "build": "next build && next export -o build",
-        "build:dev": "NODE_ENV=development && yarn build",
-        "build:production": "NODE_ENV=production && yarn build"
+        "dev": "URL_ENV=development next",
+        "build": "rm -rf build && next build && next export -o build",
+        "build:dev": "URL_ENV=development yarn build",
+        "build:production": "URL_ENV=production yarn build"
     },
     "repository": {
         "type": "git",
@@ -22,11 +22,16 @@
     "homepage": "https://github.com/stevenktruong/math-website#readme",
     "dependencies": {
         "gray-matter": "^4.0.2",
+        "moment": "^2.27.0",
         "next": "^9.5.1",
         "path": "^0.12.7",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
+        "rehype-katex": "^3.1.0",
+        "rehype-stringify": "^8.0.0",
         "remark": "^12.0.1",
-        "remark-html": "^12.0.0"
+        "remark-html": "^12.0.0",
+        "remark-math": "^2.0.1",
+        "remark-rehype": "^7.0.0"
     }
 }

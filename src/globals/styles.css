@@ -14,7 +14,6 @@ body {
 }
 
 span {
-    display: block;
     height: 100%;
 }
 
@@ -27,13 +26,15 @@ span {
 a,
 a:link,
 a:visited {
-    color: #2ecc71;
-    text-decoration: underline;
-    transition: color 0.3s;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px dotted black;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 a:hover {
-    color: #cdf4dd;
+    color: #2ecc71;
+    border-bottom: 1px dotted #2ecc71;
 }
 
 h1,

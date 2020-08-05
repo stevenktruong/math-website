@@ -7,8 +7,7 @@
 }
 
 .Class table {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 20px 0;
 }
 
 .Class table td {
@@ -31,7 +30,7 @@
 }
 
 .Class ul {
-    display: block;
+    margin-left: 15px;
 }
 
 .Class li {

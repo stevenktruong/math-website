@@ -14,9 +14,9 @@
     float: left;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1024px) {
     .Layout {
-        width: auto;
+        width: 75%;
         margin: auto;
     }
 
@@ -26,12 +26,19 @@
         width: 100%;
         height: auto;
         margin: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Layout {
+        width: auto;
+        margin: auto;
         padding: 0 20px;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .Layout {
-        width: 480px;
+        width: 100%;
     }
 }

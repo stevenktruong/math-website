@@ -1,12 +1,15 @@
+import Link from "next/link";
+import contactInformation from "globals/contactInformation.json";
 import styles from "./Class.module.css";
 
 export default class Contact extends React.Component {
     render() {
         const classData = this.props.classData;
+        const classNotes = this.props.classNotes;
         return (
             <section className={styles.Class}>
                 <h2>
-                    MATH {classData.course.toUpperCase()}, {classData.quarter} 20{classData.year}
+                    MATH {classData.course.toUpperCase()} ({classData.quarter} 20{classData.year})
                 </h2>
                 <h3>{classData.courseDescription}</h3>
                 <table>
@@ -18,23 +21,29 @@ export default class Contact extends React.Component {
                             </td>
                         </tr>
                         <tr>
-                            <td>Discussion Section</td>
-                            <td>{classData.discussion.toUpperCase()}</td>
+                            <td>Sections</td>
+                            <td>
+                                {classData.discussions.map(discussion => (
+                                    <>
+                                        {discussion.section}: {discussion.time}, {discussion.location}
+                                        <br />
+                                    </>
+                                ))}
+                            </td>
                         </tr>
                         <tr>
-                            <td>Discussion Time</td>
-                            <td>{classData.discussionTime}</td>
-                        </tr>
-                        <tr>
-                            <td>Discussion Location</td>
-                            <td>{classData.location}</td>
+                            <td>E-mail</td>
+                            <td>{contactInformation.email.value}</td>
                         </tr>
                         <tr>
                             <td>Office Hours</td>
                             <td>
-                                {classData.myOfficeHours}
-                                <br />
-                                {classData.myOffice}
+                                {classData.officeHours.map(officeHour => (
+                                    <>
+                                        {officeHour.section}: {officeHour.time}, {officeHour.location}
+                                        <br />
+                                    </>
+                                ))}
                             </td>
                         </tr>
                         <tr>
@@ -48,6 +57,23 @@ export default class Contact extends React.Component {
                     </tbody>
                 </table>
                 <div dangerouslySetInnerHTML={{ __html: classData.contentHtml }} />
+                {classNotes.length ? (
+                    <section>
+                        <h3>Notes</h3>
+                        <ul>
+                            {classNotes.map(classNote => (
+                                <li key={classNote.noteName}>
+                                    <Link
+                                        href="/teaching/[...classNote]"
+                                        as={`/teaching/${classData.classCode}/${classNote.noteName}`}
+                                    >
+                                        <a>{classNote.title}</a>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                ) : null}
             </section>
         );
     }

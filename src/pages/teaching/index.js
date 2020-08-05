@@ -7,18 +7,12 @@ import { getSortedClassesData } from "lib/classes";
 export default class Home extends React.Component {
     render() {
         return (
-            <div>
+            <>
                 <Head>
                     <title>Teaching</title>
                 </Head>
-                <Layout
-                    rightSide={
-                        <div>
-                            <Teaching classesData={this.props.classesData} />
-                        </div>
-                    }
-                />
-            </div>
+                <Layout rightSide={<Teaching classesData={this.props.classesData} />} />
+            </>
         );
     }
 }
