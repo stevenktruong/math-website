@@ -13,13 +13,15 @@ export default class Teaching extends React.Component {
             };
 
             classesData.reduce((acc, cur) => {
-                const key = `${acc.quarter} 20${acc.year}`;
+                const key = `${cur.quarter} 20${cur.year}`;
                 if (!classesDataByYear[key]) {
                     classesDataByYear[key] = [];
                 }
 
                 if (cur.year === acc.year && cur.quarter === acc.quarter) {
                     classesDataByYear[key].push(cur);
+                } else {
+                    classesDataByYear[key] = [cur];
                 }
 
                 return {
@@ -39,15 +41,14 @@ export default class Teaching extends React.Component {
                                 <td key={`${key}`}>{key}</td>
                                 <td key={`${key}Classes`}>
                                     {classesDataByYear[key].map((classData, i) => (
-                                        <React.Fragment key={`${key}Class${i}`}>
+                                        <div key={`${key}Class${i}`}>
                                             <Link
                                                 href={"/teaching/[classCode]"}
                                                 as={`/teaching/${classData.classCode}`}
                                             >
-                                                <a>MATH {classData.course}</a>
+                                                <a>MATH {classData.course.toUpperCase()}</a>
                                             </Link>
-                                            <br />
-                                        </React.Fragment>
+                                        </div>
                                     ))}
                                 </td>
                             </tr>

@@ -16,3 +16,15 @@
 .Contact table td:first-child {
     font-weight: 700;
 }
+
+.Contact table td div {
+    margin: 3px 0;
+}
+
+.Contact table td div:first-child {
+    margin-top: 0;
+}
+
+.Contact table td div:last-child {
+    margin-bottom: 0;
+}

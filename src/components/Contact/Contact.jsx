@@ -13,10 +13,10 @@ export default class Contact extends React.Component {
                                 <td key={`${key}Name`}>{contactInformation[key].contactKey}</td>
                                 <td key={`${key}Value`}>
                                     {contactInformation[key].value.map((line, i) => (
-                                        <React.Fragment key={`${key}Line${i}`}>
+                                        <div key={`${key}Line${i}`}>
                                             {line}
                                             <br />
-                                        </React.Fragment>
+                                        </div>
                                     ))}
                                 </td>
                             </tr>

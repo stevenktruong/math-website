@@ -16,3 +16,15 @@
 .Teaching table td:first-child {
     font-weight: 700;
 }
+
+.Teaching table td div {
+    margin: 10px 0;
+}
+
+.Teaching table td div:first-child {
+    margin-top: 0;
+}
+
+.Teaching table td div:last-child {
+    margin-bottom: 0;
+}

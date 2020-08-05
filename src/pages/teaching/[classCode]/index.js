@@ -12,7 +12,7 @@ export default class ClassPage extends React.Component {
             <>
                 <Head>
                     <title>
-                        MATH {classData.course.toUpperCase()}, {classData.quarter} 20{classData.year}
+                        MATH {classData.course.toUpperCase()} ({classData.quarter} 20{classData.year})
                     </title>
                 </Head>
                 <Layout rightSide={<Class classData={classData} classNotes={this.props.classNotes} />} />

@@ -4,8 +4,9 @@ import * as React from "react";
 import { getClassData } from "lib/classes";
 import { getNoteDataForClass, getAllNotePaths } from "lib/notes";
 import Layout from "components/Layout";
+import Note from "components/Note";
 
-export default class Note extends React.Component {
+export default class NotePage extends React.Component {
     render() {
         const classData = this.props.classData;
         const noteData = this.props.noteData;
@@ -19,25 +20,11 @@ export default class Note extends React.Component {
                         crossOrigin="anonymous"
                     ></link>
                     <title>
-                        MATH {classData.course} - {noteData.title}
+                        MATH {classData.course.toUpperCase()} ({classData.quarter} 20{classData.year}) -{" "}
+                        {noteData.title}
                     </title>
                 </Head>
-                <Layout
-                    rightSide={
-                        <section>
-                            <h2>
-                                <Link href="/teaching/[classCode]" as={`/teaching/${classData.classCode}`}>
-                                    <a>
-                                        MATH {classData.course}, {classData.quarter} 20{classData.year}
-                                    </a>
-                                </Link>
-                                &nbsp;- {noteData.title}
-                            </h2>
-
-                            <div dangerouslySetInnerHTML={{ __html: noteData.contentHtml }} />
-                        </section>
-                    }
-                />
+                <Layout rightSide={<Note classData={classData} noteData={noteData} />} />
             </>
         );
     }

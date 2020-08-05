@@ -9,7 +9,7 @@ export default class Contact extends React.Component {
         return (
             <section className={styles.Class}>
                 <h2>
-                    MATH {classData.course.toUpperCase()} ({classData.quarter} 20{classData.year})
+                    MATH {classData.course.toUpperCase()}, {classData.quarter} 20{classData.year}
                 </h2>
                 <h3>{classData.courseDescription}</h3>
                 <table>
