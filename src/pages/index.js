@@ -13,10 +13,9 @@ export default class Home extends React.Component {
                     <title>Steven Truong</title>
                 </Head>
                 <Layout
-                    leftSide={<Me />}
                     rightSide={
                         <>
-                            <About />
+                            <Me />
                             <Contact />
                         </>
                     }

@@ -2,6 +2,20 @@
     width: 100%;
 }
 
+.Me div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Me .ImageContainer {
+    width: 25%;
+}
+
+.Me .AboutContainer {
+    width: 75%;
+    padding-left: 10px;
+}
+
 .Me h1 {
     text-align: center;
 }
