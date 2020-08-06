@@ -1,3 +1,4 @@
+import getConfig from "next/config";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -10,6 +11,7 @@ import moment from "moment";
 import { getAllClassPaths } from "./classes";
 
 const classesDirectory = path.join(process.cwd(), "classes");
+const { publicRuntimeConfig = {} } = getConfig() || {};
 
 export const getAllNotePaths = () => {
     const classCodes = getAllClassPaths();
@@ -62,18 +64,30 @@ export const getNoteDataForClass = async (classCode, noteName) => {
     const fullPath = path.join(classesDirectory, `${classCode}/notes/${noteName}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf-8");
     const matterResult = matter(fileContents);
+    const substitutedContent = substituteVariable(
+        matterResult.content,
+        "assetsFolder",
+        `${publicRuntimeConfig.staticFolder}/images/${classCode}/${noteName}`
+    );
 
     const contentHtml = await remark()
         .use(math)
         .use(remark2rehype)
         .use(katex)
         .use(stringify)
-        .process(matterResult.content)
-        .then(vfile => vfile.contents);
+        .process(substitutedContent)
+        .then(vfile => vfile.toString());
 
     return {
         noteName,
         contentHtml,
         ...matterResult.data,
     };
+};
+
+/**
+ * Replace {{ variable }} with value
+ */
+const substituteVariable = (input, variable, value) => {
+    return input.replace(new RegExp(`\{{2} ${variable} \}{2}`), value);
 };
