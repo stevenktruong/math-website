@@ -13,11 +13,7 @@
         { "section": "2B", "time": "Tuesday 11:30am - 12:30pm", "location": "MS 3949" },
         { "section": "2C", "time": "Wednesday 10:00am - 11:30am", "location": "MS 3949" },
     ]
-"links":
-    [
-        { "title": "CCLE", "url": "https://ccle.ucla.edu/course/view/20F-MATH134-2" },
-        { "title": "Piazza", "url": "https://ccle.ucla.edu/course/view/20F-MATH134-2" },
-    ]
+"links": [{ "title": "CCLE", "url": "https://ccle.ucla.edu/course/view/20F-MATH134-2" }]
 ---
 
 ### Announcements

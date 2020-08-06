@@ -38,7 +38,7 @@ export default class Teaching extends React.Component {
                     <tbody>
                         {Object.keys(classesDataByYear).map(key => (
                             <tr key={`${key}`}>
-                                <td key={`${key}`}>{key}</td>
+                                <td key={`${key}Quarter`}>{key}</td>
                                 <td key={`${key}Classes`}>
                                     {classesDataByYear[key].map((classData, i) => (
                                         <div key={`${key}Class${i}`}>
@@ -48,6 +48,7 @@ export default class Teaching extends React.Component {
                                             >
                                                 <a>MATH {classData.course.toUpperCase()}</a>
                                             </Link>
+                                            : {classData.courseDescription}
                                         </div>
                                     ))}
                                 </td>
