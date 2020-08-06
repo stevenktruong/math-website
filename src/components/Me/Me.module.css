@@ -8,12 +8,12 @@
 }
 
 .Me .ImageContainer {
-    width: 25%;
+    width: 20%;
 }
 
 .Me .AboutContainer {
-    width: 75%;
-    padding-left: 10px;
+    width: 80%;
+    padding-left: 20px;
 }
 
 .Me h1 {
@@ -22,7 +22,7 @@
 
 .Me img {
     display: block;
-    width: 150px;
+    width: 100%;
     height: auto;
     border-radius: 100%;
     margin: 20px auto;
