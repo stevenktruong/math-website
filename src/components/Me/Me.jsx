@@ -1,5 +1,4 @@
 import getConfig from "next/config";
-import About from "components/About";
 import styles from "./Me.module.css";
 
 const { publicRuntimeConfig = {} } = getConfig() || {};
