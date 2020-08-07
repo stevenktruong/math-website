@@ -1,7 +1,7 @@
 import getConfig from "next/config";
 import Head from "next/head";
 import Navbar from "components/Navbar";
-import styles from "./Layout.module.css";
+import styles from "./Layout.module.scss";
 
 const { publicRuntimeConfig = {} } = getConfig() || {};
 

@@ -1,6 +1,6 @@
 ---
-"title": "Week 1 Notes"
-"date": "8/4/20"
+title: Week 1 Notes
+date: 8/4/20
 ---
 
 Here is an image:

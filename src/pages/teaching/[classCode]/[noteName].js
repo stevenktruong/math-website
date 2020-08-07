@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import * as React from "react";
 import { getClassData } from "lib/classes";
 import { getNoteDataForClass, getAllNotePaths } from "lib/notes";

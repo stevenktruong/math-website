@@ -1,6 +1,6 @@
 import Link from "next/link";
-import contactInformation from "globals/contactInformation.json";
-import styles from "./Class.module.css";
+import contactInformation from "config/contactInformation.json";
+import styles from "./Class.module.scss";
 
 export default class Contact extends React.Component {
     render() {

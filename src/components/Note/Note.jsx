@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./Note.module.css";
+import styles from "./Note.module.scss";
 
 export default class Note extends React.Component {
     render() {

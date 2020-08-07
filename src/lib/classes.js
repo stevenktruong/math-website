@@ -58,7 +58,7 @@ export const getSortedClassesData = () => {
 
 /**
  * Like getSortedClassesData(), but for a specific class and all includes the markdown converted to HTML.
- * @param {string} classCode - The code of the class, e.g., 20f-31a-2b
+ * @param {string} classCode - The code of the class, e.g., 31a.1.20f
  */
 export const getClassData = async classCode => {
     const fullPath = path.join(classesDirectory, `${classCode}/index.md`);
@@ -78,6 +78,7 @@ export const getClassData = async classCode => {
 
 export const parseClassCode = classCode => {
     const match = classCode.match(/^([0-9]{1,3}[a-z]{0,2})\.([0-9]{1,2})\.([0-9]{2})([fws])$/);
+
     return {
         course: match[1],
         lecture: match[2],

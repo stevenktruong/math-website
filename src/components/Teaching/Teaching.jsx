@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./Teaching.module.css";
+import styles from "./Teaching.module.scss";
 
 export default class Teaching extends React.Component {
     render() {

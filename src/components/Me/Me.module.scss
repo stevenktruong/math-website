@@ -1,0 +1,43 @@
+@use "breakpoints";
+
+.Me {
+    width: 100%;
+}
+
+.Me h1 {
+    margin: auto;
+    text-align: center;
+}
+
+.Me img {
+    display: block;
+    width: 150px;
+    height: auto;
+    border-radius: 100%;
+    margin: 20px auto;
+}
+
+@media only screen and (max-width: breakpoints.$big) {
+    .Me {
+        transform: rotate(180deg);
+        padding: 20px 0 0 0;
+    }
+
+    .Me h1,
+    .Me img {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        transform: rotate(180deg);
+    }
+
+    .Me h1 {
+        width: 80%;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .Me img {
+        width: 20%;
+    }
+}

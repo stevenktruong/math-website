@@ -18,6 +18,9 @@ export const getAllNotePaths = () => {
     const classNotes = [];
     classCodes.forEach(classPath => {
         const notesDirectory = path.join(classesDirectory, `${classPath.params.classCode}/notes`);
+
+        if (!fs.existsSync(notesDirectory)) return;
+
         const noteFileNames = fs.readdirSync(notesDirectory);
         classNotes.push(
             ...noteFileNames.map(noteFileName => {
@@ -40,6 +43,9 @@ export const getAllNotePaths = () => {
  */
 export const getSortedNotesDataForClass = classCode => {
     const notesDirectory = path.join(classesDirectory, `${classCode}/notes`);
+
+    if (!fs.existsSync(notesDirectory)) return [];
+
     const noteFileNames = fs.readdirSync(notesDirectory);
     return noteFileNames
         .map(noteFileName => {
