@@ -1,5 +1,5 @@
 @use "breakpoints";
-@use "spacings";
+@use "lengths";
 
 .Layout {
     width: 100vw;
@@ -26,7 +26,7 @@
 
         .LeftSide,
         .RightSide {
-            float: none;
+            display: block;
             width: 100%;
             height: auto;
             margin: 0;
@@ -34,12 +34,12 @@
     }
 
     @media only screen and (max-width: breakpoints.$medium) {
-        width: auto;
-        margin: auto;
-        padding: 0 spacings.$big;
-    }
-
-    @media only screen and (max-width: breakpoints.$small) {
         width: 100%;
+        margin: 0;
+
+        .LeftSide,
+        .RightSide {
+            padding: 0 lengths.$big;
+        }
     }
 }

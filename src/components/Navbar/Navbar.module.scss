@@ -1,12 +1,16 @@
 @use "breakpoints";
 @use "colors";
-@use "spacings";
+@use "lengths";
 
 .Navbar {
     font-family: "Open Sans", sans-serif;
     width: 50%;
     margin: auto;
-    padding-bottom: spacings.$big;
+    margin-bottom: lengths.$big;
+
+    .Mobile {
+        display: none;
+    }
 
     ul {
         height: 100%;
@@ -20,9 +24,9 @@
 
     ul li a {
         height: 100%;
-        padding: spacings.$medium spacings.$medium;
-        padding-top: spacings.$big;
-        margin-right: spacings.$big;
+        padding: lengths.$medium lengths.$medium;
+        padding-top: lengths.$big;
+        margin-right: lengths.$big;
         text-decoration: none;
     }
 
@@ -47,5 +51,61 @@
 
     @media only screen and (max-width: breakpoints.$medium) {
         width: 100%;
+        height: auto;
+        background-color: white;
+        margin: 0;
+
+        .Desktop {
+            display: none;
+        }
+
+        .NavbarBar {
+            position: absolute;
+            height: lengths.$mobile-navbar-height;
+            background-color: white;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        // Mobile Navbar styling
+        .Mobile {
+            display: block;
+            height: lengths.$mobile-navbar-height;
+        }
+
+        .Mobile ul {
+            position: absolute;
+            top: -104px;
+            width: 100%;
+            transition: top 0.5s;
+            z-index: 100;
+        }
+
+        .Mobile .ShowButtons {
+            top: lengths.$mobile-navbar-height;
+        }
+
+        .Mobile li {
+            float: left;
+            background-color: rgb(250, 250, 250);
+            height: auto;
+            width: 100%;
+        }
+
+        .Mobile li a:link,
+        .Mobile li a:visited {
+            float: none;
+            border-bottom: 0;
+            padding: lengths.$small;
+            padding-left: lengths.$medium;
+            margin: lengths.$medium;
+            margin-left: lengths.$big;
+            border-left: 4px solid colors.$highlight-dim;
+            transition: border-left-color colors.$transition-length;
+        }
+
+        .Mobile li a:hover {
+            border-left: 4px solid colors.$highlight;
+        }
     }
 }

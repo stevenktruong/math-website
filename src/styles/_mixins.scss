@@ -1,7 +1,7 @@
 @use "breakpoints";
 @use "colors";
 @use "fonts";
-@use "spacings";
+@use "lengths";
 
 @mixin base-fonts {
     html {
@@ -36,10 +36,10 @@
 
 @mixin base-section {
     section {
-        margin: spacings.$big 0;
+        margin: lengths.$big 0;
 
         h2 {
-            margin-bottom: spacings.$small;
+            margin-bottom: lengths.$small;
         }
     }
 
@@ -54,15 +54,15 @@
 
 @mixin base-table {
     table {
-        width: spacings.$table-width;
+        width: lengths.$table-width;
         white-space: nowrap;
         border-collapse: collapse;
     }
 
     table td {
-        padding: spacings.$small;
+        padding: lengths.$small;
         padding-left: 0;
-        padding-right: spacings.$big;
+        padding-right: lengths.$big;
         vertical-align: top;
     }
 
@@ -79,7 +79,7 @@
     }
 
     table td div {
-        margin: spacings.$medium 0;
+        margin: lengths.$medium 0;
     }
 
     table td div:first-child {

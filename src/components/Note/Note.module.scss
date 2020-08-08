@@ -1,4 +1,4 @@
-@use "spacings";
+@use "lengths";
 
 .Note {
     h2 {
@@ -6,8 +6,8 @@
     }
 
     h3 {
-        margin-top: spacings.$medium;
-        margin-bottom: spacings.$small;
+        margin-top: lengths.$medium;
+        margin-bottom: lengths.$small;
     }
 
     h3:first-of-type {

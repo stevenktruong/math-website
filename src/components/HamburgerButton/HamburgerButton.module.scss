@@ -1,0 +1,49 @@
+@use "lengths";
+
+.HamburgerButton {
+    position: absolute;
+    z-index: 9999;
+    width: lengths.$mobile-navbar-menubar-width;
+    margin: (
+            lengths.$mobile-navbar-height - 3 * (lengths.$mobile-navbar-menubar-height) - 2 *
+                (lengths.$mobile-navbar-menubar-margin)
+        ) / 2 0;
+    margin-left: lengths.$big + lengths.$medium;
+
+    .TopBar,
+    .MiddleBar,
+    .BottomBar {
+        height: lengths.$mobile-navbar-menubar-height;
+        background-color: black;
+        border-radius: 2px;
+        margin: lengths.$mobile-navbar-menubar-margin 0;
+        transition-duration: 0.5s;
+    }
+
+    .TopBar {
+        margin-top: 0;
+        transform-origin: top left;
+        transform: rotate(0deg);
+    }
+
+    .TopBarActive {
+        transform: translate(4px, 0.125px) rotate(45deg);
+    }
+
+    .MiddleBar {
+        margin-bottom: 0;
+        transform-origin: left;
+    }
+
+    .MiddleBarActive {
+        transform: scaleX(0);
+    }
+
+    .BottomBar {
+        transform-origin: bottom left;
+    }
+
+    .BottomBarActive {
+        transform: translate(4px, -0.125px) rotate(-45deg);
+    }
+}

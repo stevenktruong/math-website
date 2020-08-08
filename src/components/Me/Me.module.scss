@@ -1,5 +1,5 @@
 @use "breakpoints";
-@use "spacings";
+@use "lengths";
 
 .Me {
     width: 100%;
@@ -14,12 +14,12 @@
         width: 150px;
         height: auto;
         border-radius: 100%;
-        margin: spacings.$big auto;
+        margin: lengths.$big auto;
     }
 
     @media only screen and (max-width: breakpoints.$big) {
         transform: rotate(180deg);
-        margin: 0 0 spacings.$big 0;
+        margin: 0 0 lengths.$big 0;
 
         h1,
         img {
@@ -32,7 +32,7 @@
         h1 {
             width: 80%;
             text-align: left;
-            padding-left: spacings.$big;
+            padding-left: lengths.$big;
         }
 
         img {

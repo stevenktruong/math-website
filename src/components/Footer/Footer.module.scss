@@ -1,6 +1,6 @@
-@use "spacings";
+@use "lengths";
 
 .Footer {
     width: 100%;
-    height: spacings.$footer-height;
+    height: lengths.$footer-height;
 }
