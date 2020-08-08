@@ -9,17 +9,18 @@ import Me from "components/Me";
 
 export default class Home extends React.Component {
     render() {
+        const personalData = this.props.personalData;
         return (
             <>
                 <Head>
-                    <title>Steven Truong</title>
+                    <title>{personalData.fullName}</title>
                 </Head>
                 <Layout
-                    leftSide={<Me />}
+                    leftSide={<Me personalData={personalData} />}
                     rightSide={
                         <>
-                            <About personalData={this.props.personalData} />
-                            <Contact personalData={this.props.personalData} />
+                            <About personalData={personalData} />
+                            <Contact personalData={personalData} />
                         </>
                     }
                 />
