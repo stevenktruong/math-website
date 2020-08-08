@@ -22,12 +22,15 @@
 
             td:first-child {
                 font-weight: 300;
-                width: 10%;
+                width: 5%;
             }
 
             td:nth-child(2) {
                 text-align: center;
-                width: 70%;
+            }
+
+            td:last-child {
+                width: 10%;
             }
 
             td {
