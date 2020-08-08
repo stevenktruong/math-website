@@ -10,7 +10,6 @@ import { formatCourseTitle, formatQuarterYear } from "helpers";
 
 export default class NotePage extends React.Component {
     render() {
-        const personalData = this.props.personalData;
         const classData = this.props.classData;
         const noteData = this.props.noteData;
         return (

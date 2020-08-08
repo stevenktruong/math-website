@@ -6,7 +6,12 @@
     }
 
     h3 {
-        margin-bottom: spacings.$medium;
+        margin-top: spacings.$medium;
+        margin-bottom: spacings.$small;
+    }
+
+    h3:first-of-type {
+        margin-top: 0;
     }
 
     img {

@@ -1,3 +1,4 @@
+@use "breakpoints";
 @use "colors";
 @use "spacings";
 
@@ -52,6 +53,8 @@
 
 @mixin base-table {
     table {
+        width: spacings.$table-width;
+        white-space: nowrap;
         border-collapse: collapse;
     }
 
@@ -84,5 +87,11 @@
 
     table td div:last-child {
         margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: breakpoints.$small) {
+        .tableContainer {
+            overflow-x: scroll;
+        }
     }
 }
