@@ -1,10 +1,11 @@
 @use "breakpoints";
 @use "colors";
+@use "fonts";
 @use "spacings";
 
 @mixin base-fonts {
     html {
-        font-family: "Merriweather", serif;
+        font-family: fonts.$body-font;
     }
 
     h1,
@@ -13,7 +14,7 @@
     h4,
     h5,
     h6 {
-        font-family: "Open Sans", sans-serif;
+        font-family: fonts.$header-font;
     }
 }
 
