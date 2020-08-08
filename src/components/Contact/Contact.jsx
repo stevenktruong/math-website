@@ -1,11 +1,23 @@
-import contactInformation from "config/contactInformation.json";
+import contact from "config/contact.json";
 import styles from "./Contact.module.scss";
 
-const contactDisplayName = {
-    office: "Office",
-    phone: "Phone",
-    email: "E-mail",
-    address: "Address",
+const displayContact = {
+    office: {
+        title: "Office",
+        format: contact => contact.office,
+    },
+    phone: {
+        title: "Phone",
+        format: contact => contact.phone,
+    },
+    email: {
+        title: "E-mail",
+        format: contact => contact.email,
+    },
+    address: {
+        title: "Address",
+        format: contact => contact.address.map((line, i) => <div key={`addressLine${i}`}>{line}</div>),
+    },
 };
 
 export default class Contact extends React.Component {
@@ -15,14 +27,10 @@ export default class Contact extends React.Component {
                 <h2>Contact</h2>
                 <table>
                     <tbody>
-                        {Object.keys(contactInformation).map(key => (
+                        {Object.keys(displayContact).map(key => (
                             <tr key={`${key}`}>
-                                <td key={`${key}Name`}>{contactDisplayName[key]}</td>
-                                <td key={`${key}Value`}>
-                                    {contactInformation[key].map((line, i) => (
-                                        <div key={`${key}Line${i}`}>{line}</div>
-                                    ))}
-                                </td>
+                                <td key={`${key}Title`}>{displayContact[key].title}</td>
+                                <td key={`${key}Content`}>{displayContact[key].format(contact)}</td>
                             </tr>
                         ))}
                     </tbody>

@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { importFonts } from "config/externalImports";
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -9,12 +10,7 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html>
-                <Head>
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans&display=swap"
-                        rel="stylesheet"
-                    />
-                </Head>
+                <Head>{importFonts}</Head>
                 <body>
                     <Main />
                     <NextScript />

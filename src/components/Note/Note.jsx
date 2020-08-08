@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatCourseTitle, formatQuarterYear } from "helpers";
 import styles from "./Note.module.scss";
 
 export default class Note extends React.Component {
@@ -10,7 +11,8 @@ export default class Note extends React.Component {
                 <h2>
                     <Link href="/teaching/[classCode]" as={`/teaching/${classData.classCode}`}>
                         <a>
-                            MATH {classData.course.toUpperCase()}, {classData.quarter} 20{classData.year}
+                            {formatCourseTitle(classData.course)},{" "}
+                            {formatQuarterYear(classData.quarter, classData.year)}
                         </a>
                     </Link>
                 </h2>

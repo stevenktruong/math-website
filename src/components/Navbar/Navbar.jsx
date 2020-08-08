@@ -1,21 +1,29 @@
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
 
+const navLinks = {
+    home: {
+        title: "Home",
+        href: "/",
+    },
+    teaching: {
+        title: "Teaching",
+        href: "/teaching",
+    },
+};
+
 export default class Navbar extends React.Component {
     render() {
         return (
             <nav className={styles.Navbar}>
                 <ul>
-                    <li key="home">
-                        <Link href="/">
-                            <a>Home</a>
-                        </Link>
-                    </li>
-                    <li key="teaching" className="clearfix">
-                        <Link href="/teaching">
-                            <a>Teaching</a>
-                        </Link>
-                    </li>
+                    {Object.keys(navLinks).map((key, i) => (
+                        <li key={key} className={i === Object.keys(navLinks).length - 1 ? "clearfix" : null}>
+                            <Link href={navLinks[key].href}>
+                                <a>{navLinks[key].title}</a>
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         );

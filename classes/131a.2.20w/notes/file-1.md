@@ -10,7 +10,7 @@ Here is an image:
 Here is an equation $t$:
 
 $$
-\int_0^\infty e^{-x^2} \,\mathrm{d}x
+\test
 $$
 
 Here is some more text.

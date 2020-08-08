@@ -1,4 +1,9 @@
-@use "colors";
+@use "mixins";
+
+@include mixins.base-fonts;
+@include mixins.base-anchor;
+@include mixins.base-section;
+@include mixins.base-table;
 
 * {
     box-sizing: border-box;
@@ -6,57 +11,13 @@
     margin: 0;
 }
 
-html {
-    font-family: "Merriweather", serif;
-}
-
 body {
     width: 100vw;
     height: 100vh;
-}
-
-span {
-    height: 100%;
 }
 
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
-}
-
-a,
-a:link,
-a:visited {
-    color: black;
-    text-decoration: none;
-    border-bottom: 1px dotted black;
-    transition: color colors.$transition-length, border-bottom colors.$transition-length;
-}
-
-a:hover {
-    color: colors.$highlight;
-    border-bottom: 1px dotted colors.$highlight;
-}
-
-h1,
-h2,
-h3 {
-    font-family: "Open Sans", sans-serif;
-}
-
-h2 {
-    margin-bottom: 5px;
-}
-
-section {
-    margin: 20px 0;
-}
-
-section:first-child {
-    margin-top: 0;
-}
-
-section:last-child {
-    margin-bottom: 0;
 }

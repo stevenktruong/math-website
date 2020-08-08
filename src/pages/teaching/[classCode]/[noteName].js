@@ -1,9 +1,12 @@
-import Head from "next/head";
 import * as React from "react";
-import { getClassData } from "lib/classes";
-import { getNoteDataForClass, getAllNotePaths } from "lib/notes";
+import Head from "next/head";
+
+import { importKatex } from "config/externalImports";
 import Layout from "components/Layout";
 import Note from "components/Note";
+import { getClassData } from "lib/classes";
+import { getNoteDataForClass, getAllNotePaths } from "lib/notes";
+import { formatCourseTitle, formatQuarterYear } from "helpers";
 
 export default class NotePage extends React.Component {
     render() {
@@ -12,14 +15,9 @@ export default class NotePage extends React.Component {
         return (
             <>
                 <Head>
-                    <link
-                        rel="stylesheet"
-                        href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"
-                        integrity="sha384-qCEsSYDSH0x5I45nNW4oXemORUZnYFtPy/FqB/OjqxabTMW5HVaaH9USK4fN3goV"
-                        crossOrigin="anonymous"
-                    ></link>
+                    {importKatex}
                     <title>
-                        MATH {classData.course.toUpperCase()} ({classData.quarter} 20{classData.year}) -{" "}
+                        {formatCourseTitle(classData.course)} ({formatQuarterYear(classData.quarter, classData.year)}) -{" "}
                         {noteData.title}
                     </title>
                 </Head>

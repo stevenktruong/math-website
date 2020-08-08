@@ -1,12 +1,16 @@
-.Note h2 {
-    margin: 0;
-}
+@use "spacings";
 
-.Note h3 {
-    margin-bottom: 10px;
-}
+.Note {
+    h2 {
+        margin: 0;
+    }
 
-.Note img {
-    display: block;
-    margin: auto;
+    h3 {
+        margin-bottom: spacings.$medium;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
 }

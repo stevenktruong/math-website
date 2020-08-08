@@ -1,54 +1,51 @@
 @use "breakpoints";
 @use "colors";
+@use "spacings";
 
 .Navbar {
     font-family: "Open Sans", sans-serif;
     width: 50%;
     margin: auto;
-    padding-bottom: 20px;
-}
+    padding-bottom: spacings.$big;
 
-.Navbar ul {
-    height: 100%;
-}
+    ul {
+        height: 100%;
+    }
 
-.Navbar ul li {
-    text-decoration: none;
-    list-style: none;
-    height: 100%;
-}
+    ul li {
+        text-decoration: none;
+        list-style: none;
+        height: 100%;
+    }
 
-.Navbar ul li a {
-    height: 100%;
-    padding: 10px 10px;
-    padding-top: 20px;
-    margin-right: 20px;
-    text-decoration: none;
-}
+    ul li a {
+        height: 100%;
+        padding: spacings.$medium spacings.$medium;
+        padding-top: spacings.$big;
+        margin-right: spacings.$big;
+        text-decoration: none;
+    }
 
-.Navbar ul li a:link,
-.Navbar ul li a:visited {
-    display: block;
-    float: left;
-    color: black;
-    border-bottom: 4px solid colors.$highlight-dim;
-    transition: border-bottom-color colors.$transition-length;
-}
+    ul li a:link,
+    ul li a:visited {
+        display: block;
+        float: left;
+        color: black;
+        border-bottom: 4px solid colors.$highlight-dim;
+        transition: border-bottom-color colors.$transition-length;
+    }
 
-.Navbar ul li a:hover,
-.Navbar ul li a:active {
-    border-bottom-color: colors.$highlight;
-}
+    ul li a:hover,
+    ul li a:active {
+        border-bottom-color: colors.$highlight;
+    }
 
-@media only screen and (max-width: breakpoints.$big) {
-    .Navbar {
+    @media only screen and (max-width: breakpoints.$big) {
         width: 75%;
         margin-left: 0;
     }
-}
 
-@media only screen and (max-width: breakpoints.$medium) {
-    .Navbar {
+    @media only screen and (max-width: breakpoints.$medium) {
         width: 100%;
     }
 }

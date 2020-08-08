@@ -1,4 +1,3 @@
-import getConfig from "next/config";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -8,6 +7,8 @@ import katex from "rehype-katex";
 import remark2rehype from "remark-rehype";
 import stringify from "rehype-stringify";
 import moment from "moment";
+
+import getConfig from "next/config";
 import { getAllClassPaths } from "./classes";
 
 const classesDirectory = path.join(process.cwd(), "classes");
@@ -79,7 +80,7 @@ export const getNoteDataForClass = async (classCode, noteName) => {
     const contentHtml = await remark()
         .use(math)
         .use(remark2rehype)
-        .use(katex)
+        .use(katex, { macros: getMathMacros(classCode) })
         .use(stringify)
         .process(substitutedContent)
         .then(vfile => vfile.toString());
@@ -96,4 +97,13 @@ export const getNoteDataForClass = async (classCode, noteName) => {
  */
 const substituteVariable = (input, variable, value) => {
     return input.replace(new RegExp(`\{{2} ${variable} \}{2}`), value);
+};
+
+/**
+ * Parse the math macros file for a set of class notes
+ */
+const getMathMacros = classCode => {
+    const macrosPath = path.join(classesDirectory, `${classCode}/macros.json`);
+    const fileContents = fs.readFileSync(macrosPath, "utf-8");
+    return JSON.parse(fileContents);
 };

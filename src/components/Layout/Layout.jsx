@@ -1,5 +1,6 @@
-import getConfig from "next/config";
 import Head from "next/head";
+import getConfig from "next/config";
+
 import Navbar from "components/Navbar";
 import styles from "./Layout.module.scss";
 

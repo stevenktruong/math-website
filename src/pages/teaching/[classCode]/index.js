@@ -1,9 +1,11 @@
+import * as React from "react";
 import Head from "next/head";
-import { getAllClassPaths, getClassData } from "lib/classes";
+
 import Layout from "components/Layout";
 import Class from "components/Class";
-import * as React from "react";
 import { getSortedNotesDataForClass } from "lib/notes";
+import { getAllClassPaths, getClassData } from "lib/classes";
+import { formatCourseTitle, formatQuarterYear } from "helpers";
 
 export default class ClassPage extends React.Component {
     render() {
@@ -12,7 +14,7 @@ export default class ClassPage extends React.Component {
             <>
                 <Head>
                     <title>
-                        MATH {classData.course.toUpperCase()} ({classData.quarter} 20{classData.year})
+                        {formatCourseTitle(classData.course)} ({formatQuarterYear(classData.quarter, classData.year)})
                     </title>
                 </Head>
                 <Layout rightSide={<Class classData={classData} classNotes={this.props.classNotes} />} />

@@ -1,7 +1,8 @@
+import * as React from "react";
 import Head from "next/head";
+
 import Layout from "components/Layout";
 import Teaching from "components/Teaching";
-import * as React from "react";
 import { getSortedClassesData } from "lib/classes";
 
 export default class Home extends React.Component {
@@ -17,7 +18,7 @@ export default class Home extends React.Component {
     }
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async () => {
     const classesData = await getSortedClassesData();
     return {
         props: {

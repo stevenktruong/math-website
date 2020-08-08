@@ -5,6 +5,7 @@ import remark from "remark";
 import html from "remark-html";
 
 const classesDirectory = path.join(process.cwd(), "classes");
+
 const quarterList = {
     f: "Fall",
     w: "Winter",
@@ -90,7 +91,7 @@ export const parseClassCode = classCode => {
 /**
  * Sort by year, then quarter, then course, then lecture number.
  */
-export const sortClasses = (a, b) => {
+const sortClasses = (a, b) => {
     if (a.year !== b.year) {
         return a.year < b.year ? 1 : -1;
     }
@@ -105,5 +106,3 @@ export const sortClasses = (a, b) => {
 
     return a.lecture < b.lecture ? 1 : -1;
 };
-
-export const stylizeClassCode = classCode => {};

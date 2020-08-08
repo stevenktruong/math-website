@@ -1,10 +1,18 @@
 import Link from "next/link";
+import { formatCourseTitle, formatQuarterYear } from "helpers";
 import styles from "./Teaching.module.scss";
 
 export default class Teaching extends React.Component {
-    render() {
+    /**
+     * Create an object of the following form:
+     *
+     *   {
+     *       "Fall 2020": [ classData ]
+     *   }
+     */
+    createMapFromQuarterToClasses = () => {
         const classesData = this.props.classesData;
-        const classesDataByYear = {};
+        const classesDataByQuarter = {};
 
         if (classesData.length) {
             const firstQuarterYear = {
@@ -13,15 +21,15 @@ export default class Teaching extends React.Component {
             };
 
             classesData.reduce((acc, cur) => {
-                const key = `${cur.quarter} 20${cur.year}`;
-                if (!classesDataByYear[key]) {
-                    classesDataByYear[key] = [];
+                const key = formatQuarterYear(cur.quarter, cur.year);
+                if (!classesDataByQuarter[key]) {
+                    classesDataByQuarter[key] = [];
                 }
 
                 if (cur.year === acc.year && cur.quarter === acc.quarter) {
-                    classesDataByYear[key].push(cur);
+                    classesDataByQuarter[key].push(cur);
                 } else {
-                    classesDataByYear[key] = [cur];
+                    classesDataByQuarter[key] = [cur];
                 }
 
                 return {
@@ -31,22 +39,28 @@ export default class Teaching extends React.Component {
             }, firstQuarterYear);
         }
 
+        return classesDataByQuarter;
+    };
+
+    render() {
+        const classesData = this.props.classesData;
+        const classesDataByQuarter = this.createMapFromQuarterToClasses();
         return (
             <section className={styles.Teaching}>
                 <h2>Teaching</h2>
                 <table>
                     <tbody>
-                        {Object.keys(classesDataByYear).map(key => (
+                        {Object.keys(classesDataByQuarter).map(key => (
                             <tr key={`${key}`}>
                                 <td key={`${key}Quarter`}>{key}</td>
                                 <td key={`${key}Classes`}>
-                                    {classesDataByYear[key].map((classData, i) => (
+                                    {classesDataByQuarter[key].map((classData, i) => (
                                         <div key={`${key}Class${i}`}>
                                             <Link
                                                 href={"/teaching/[classCode]"}
                                                 as={`/teaching/${classData.classCode}`}
                                             >
-                                                <a>MATH {classData.course.toUpperCase()}</a>
+                                                <a>{formatCourseTitle(classData.course)}</a>
                                             </Link>
                                             : {classData.courseDescription}
                                         </div>
