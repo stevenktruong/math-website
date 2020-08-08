@@ -18,8 +18,8 @@ export default class Home extends React.Component {
     }
 }
 
-export const getStaticProps = async () => {
-    const classesData = await getSortedClassesData();
+export const getStaticProps = () => {
+    const classesData = getSortedClassesData();
     return {
         props: {
             classesData,

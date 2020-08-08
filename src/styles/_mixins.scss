@@ -51,6 +51,10 @@
 }
 
 @mixin base-table {
+    table {
+        border-collapse: collapse;
+    }
+
     table td {
         padding: spacings.$small;
         padding-left: 0;

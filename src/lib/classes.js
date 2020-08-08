@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
 
-const classesDirectory = path.join(process.cwd(), "classes");
+const classesDirectory = path.join(process.cwd(), "data/classes");
 
 const quarterList = {
     f: "Fall",
@@ -61,13 +61,12 @@ export const getSortedClassesData = () => {
  * Like getSortedClassesData(), but for a specific class and all includes the markdown converted to HTML.
  * @param {string} classCode - The code of the class, e.g., 31a.1.20f
  */
-export const getClassData = async classCode => {
+export const getClassData = classCode => {
     const fullPath = path.join(classesDirectory, `${classCode}/index.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const matterResult = matter(fileContents);
 
-    const processedContent = await remark().use(html).process(matterResult.content);
-    const contentHtml = processedContent.toString();
+    const contentHtml = remark().use(html).processSync(matterResult.content).toString();
 
     return {
         classCode,

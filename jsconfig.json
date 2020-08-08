@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
         "baseUrl": "./src",
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
     }
 }

@@ -10,6 +10,7 @@ import { formatCourseTitle, formatQuarterYear } from "helpers";
 
 export default class NotePage extends React.Component {
     render() {
+        const personalData = this.props.personalData;
         const classData = this.props.classData;
         const noteData = this.props.noteData;
         return (
@@ -35,9 +36,9 @@ export const getStaticPaths = () => {
     };
 };
 
-export const getStaticProps = async ({ params }) => {
-    const classData = await getClassData(params.classCode);
-    const noteData = await getNoteDataForClass(params.classCode, params.noteName);
+export const getStaticProps = ({ params }) => {
+    const classData = getClassData(params.classCode);
+    const noteData = getNoteDataForClass(params.classCode, params.noteName);
     return {
         props: {
             classData,

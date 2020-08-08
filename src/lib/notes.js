@@ -11,7 +11,7 @@ import moment from "moment";
 import getConfig from "next/config";
 import { getAllClassPaths } from "./classes";
 
-const classesDirectory = path.join(process.cwd(), "classes");
+const classesDirectory = path.join(process.cwd(), "data/classes");
 const { publicRuntimeConfig = {} } = getConfig() || {};
 
 export const getAllNotePaths = () => {
@@ -67,7 +67,7 @@ export const getSortedNotesDataForClass = classCode => {
  * @param {string} classCode - Class to get data for.
  * @param {string} noteName - Note name WITHOUT the extension .md.
  */
-export const getNoteDataForClass = async (classCode, noteName) => {
+export const getNoteDataForClass = (classCode, noteName) => {
     const fullPath = path.join(classesDirectory, `${classCode}/notes/${noteName}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf-8");
     const matterResult = matter(fileContents);
@@ -77,13 +77,13 @@ export const getNoteDataForClass = async (classCode, noteName) => {
         `${publicRuntimeConfig.staticFolder}/images/${classCode}/${noteName}`
     );
 
-    const contentHtml = await remark()
+    const contentHtml = remark()
         .use(math)
         .use(remark2rehype)
         .use(katex, { macros: getMathMacros(classCode) })
         .use(stringify)
-        .process(substitutedContent)
-        .then(vfile => vfile.toString());
+        .processSync(substitutedContent)
+        .toString();
 
     return {
         noteName,
@@ -104,6 +104,9 @@ const substituteVariable = (input, variable, value) => {
  */
 const getMathMacros = classCode => {
     const macrosPath = path.join(classesDirectory, `${classCode}/macros.json`);
+
+    if (!fs.existsSync(macrosPath)) return {};
+
     const fileContents = fs.readFileSync(macrosPath, "utf-8");
     return JSON.parse(fileContents);
 };

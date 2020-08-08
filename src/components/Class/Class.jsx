@@ -1,15 +1,12 @@
 import Link from "next/link";
-
-import contact from "config/contact.json";
 import { formatCourseTitle, formatQuarterYear } from "helpers";
-
 import styles from "./Class.module.scss";
 
 const displayClassInformation = {
     instructor: {
         title: "Instructor",
         format: classData => (
-            <a href={classData.instructorUrl} target="_blank">
+            <a href={classData.instructorUrl} key="instructorLink">
                 {classData.instructor}
             </a>
         ),
@@ -17,31 +14,27 @@ const displayClassInformation = {
     sections: {
         title: "Sections",
         format: classData =>
-            classData.discussions.map(discussion => (
-                <div>
-                    {discussion.section}: {discussion.time}, {discussion.location}
-                </div>
-            )),
+            classData.discussions.map(
+                discussion => `${discussion.section}: ${discussion.time}, ${discussion.location}`
+            ),
     },
     email: {
         title: "E-mail",
-        format: classData => contact.email.value,
+        format: personalData => personalData.email,
     },
     officeHours: {
         title: "Office Hours",
         format: classData =>
-            classData.discussions.map(discussion => (
-                <div>
-                    {discussion.section}: {discussion.time}, {discussion.location}
-                </div>
-            )),
+            classData.discussions.map(
+                discussion => `${discussion.section}: ${discussion.time}, ${discussion.location}`
+            ),
     },
     links: {
         title: "Links",
         format: classData =>
-            classData.links.map(link => (
-                <div>
-                    <a href={link.url} target="_blank">
+            classData.links.map((link, index) => (
+                <div key={`linksDiv${index}`}>
+                    <a href={link.url} key={`linksAnchor${index}`}>
                         {link.title}
                     </a>
                 </div>
@@ -49,9 +42,13 @@ const displayClassInformation = {
     },
 };
 
-export default class Contact extends React.Component {
+export default class Class extends React.Component {
     render() {
-        const classData = this.props.classData;
+        const personalData = this.props.personalData;
+        const classData = {
+            email: personalData.email,
+            ...this.props.classData,
+        };
         const classNotes = this.props.classNotes;
         return (
             <div className={styles.Class}>
@@ -65,7 +62,7 @@ export default class Contact extends React.Component {
                             {Object.keys(displayClassInformation).map(key => (
                                 <tr key={key}>
                                     <td key={`${key}Title`}>{displayClassInformation[key].title}</td>
-                                    <td key={`${key}content`}>{displayClassInformation[key].format(classData)}</td>
+                                    <td key={`${key}Content`}>{displayClassInformation[key].format(classData)}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -81,8 +78,9 @@ export default class Contact extends React.Component {
                                     <Link
                                         href="/teaching/[...classNote]"
                                         as={`/teaching/${classData.classCode}/${classNote.noteName}`}
+                                        key={`${classNote}Link`}
                                     >
-                                        <a>{classNote.title}</a>
+                                        <a key={`${classNote}Anchor`}>{classNote.title}</a>
                                     </Link>
                                 </li>
                             ))}

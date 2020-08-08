@@ -1,6 +1,7 @@
 import * as React from "react";
 import Head from "next/head";
 
+import { getPersonalData } from "lib/personal";
 import Layout from "components/Layout";
 import Contact from "components/Contact";
 import About from "components/About";
@@ -17,8 +18,8 @@ export default class Home extends React.Component {
                     leftSide={<Me />}
                     rightSide={
                         <>
-                            <About />
-                            <Contact />
+                            <About personalData={this.props.personalData} />
+                            <Contact personalData={this.props.personalData} />
                         </>
                     }
                 />
@@ -26,3 +27,12 @@ export default class Home extends React.Component {
         );
     }
 }
+
+export const getStaticProps = () => {
+    const personalData = getPersonalData();
+    return {
+        props: {
+            personalData,
+        },
+    };
+};
