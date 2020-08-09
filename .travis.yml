@@ -12,4 +12,5 @@ before_install:
     - ssh-add math_website_rsa
 
 script:
+    - yarn build:production
     - ./deploy.sh

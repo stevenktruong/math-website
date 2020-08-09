@@ -1,6 +1,8 @@
 #!/bin/bash
 
-rsync -r build $USER@$HOST:public_html
-ssh math "chmod -R u+rwX,go+rX,go-w public_html"
+SSH_TARGET="$USER@$HOST"
+
+rsync -r build $SSH_TARGET:public_html
+ssh $SSH_TARGET "chmod -R u+rwX,go+rX,go-w public_html"
 
 echo "Done!"
