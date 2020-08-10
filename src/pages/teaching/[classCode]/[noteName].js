@@ -18,7 +18,11 @@ export default class NotePage extends React.Component {
                     {importKatex}
                     <title>{noteData.title}</title>
                 </Head>
-                <Layout rightSide={<Note classData={classData} noteData={noteData} />} />
+                <Layout
+                    rightSide={<Note classData={classData} noteData={noteData} />}
+                    classData={classData}
+                    noteData={noteData}
+                />
             </>
         );
     }

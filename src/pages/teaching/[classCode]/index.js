@@ -23,6 +23,7 @@ export default class ClassPage extends React.Component {
                     rightSide={
                         <Class personalData={personalData} classData={classData} classNotes={this.props.classNotes} />
                     }
+                    classData={this.props.classData}
                 />
             </>
         );
