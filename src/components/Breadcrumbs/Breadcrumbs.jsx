@@ -2,6 +2,8 @@ import * as React from "react";
 import getConfig from "next/config";
 import { withRouter } from "next/router";
 
+import { formatCourseTitle, formatQuarterYear } from "helpers";
+
 import styles from "./Breadcrumbs.module.scss";
 
 const { publicRuntimeConfig = {} } = getConfig() || {};
@@ -14,7 +16,8 @@ const displayBreadcrumb = {
     },
     classCode: {
         sourceProp: "classData",
-        format: classData => `MATH ${classData.course.toUpperCase()}`,
+        format: classData =>
+            `${formatCourseTitle(classData.course)} (${formatQuarterYear(classData.quarter, classData.year)})`,
     },
     noteName: {
         sourceProp: "noteData",
