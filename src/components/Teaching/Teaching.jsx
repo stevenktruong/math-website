@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatCourseTitle, formatQuarterYear } from "helpers";
+import { formatQuarterYear, formatCourseWithDescription } from "helpers";
 import styles from "./Teaching.module.scss";
 
 export default class Teaching extends React.Component {
@@ -61,9 +61,13 @@ export default class Teaching extends React.Component {
                                                 href={"/teaching/[classCode]"}
                                                 as={`/teaching/${classData.classCode}`}
                                             >
-                                                <a>{formatCourseTitle(classData.course)}</a>
+                                                <a>
+                                                    {formatCourseWithDescription(
+                                                        classData.course,
+                                                        classData.courseDescription
+                                                    )}
+                                                </a>
                                             </Link>
-                                            : {classData.courseDescription}
                                         </div>
                                     ))}
                                 </td>
