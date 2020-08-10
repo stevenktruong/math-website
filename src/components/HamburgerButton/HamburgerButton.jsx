@@ -41,4 +41,8 @@ export default class HamburgerButton extends React.Component {
             </div>
         );
     }
+
+    componentDidUpdate() {
+        if (this.props.value !== this.state.active) this.updateState();
+    }
 }

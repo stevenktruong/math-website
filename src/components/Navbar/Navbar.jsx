@@ -22,9 +22,9 @@ export default class Navbar extends React.Component {
         };
     }
 
-    toggleMobileMenu() {
+    async toggleMobileMenu() {
         const newState = !this.state.mobileMenuActive;
-        this.setState({ mobileMenuActive: newState });
+        await this.setState({ mobileMenuActive: newState });
     }
 
     renderListOfButtons(isMobile = false) {
