@@ -21,7 +21,8 @@ const displayContact = {
 
 export default class Contact extends React.Component {
     render() {
-        const personalData = this.props.personalData;
+        const fileData = this.props.fileData;
+        const personalData = fileData.personalData;
         return (
             <section className={styles.Contact}>
                 <h2>Contact</h2>

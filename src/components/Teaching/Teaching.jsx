@@ -11,7 +11,8 @@ export default class Teaching extends React.Component {
      *   }
      */
     createMapFromQuarterToClasses = () => {
-        const classesData = this.props.classesData;
+        const fileData = this.props.fileData;
+        const classesData = fileData.classesData;
         const classesDataByQuarter = {};
 
         if (classesData.length) {

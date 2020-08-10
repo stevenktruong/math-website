@@ -3,7 +3,6 @@ import getConfig from "next/config";
 import { withRouter } from "next/router";
 
 import { formatCourseTitle, formatQuarterYear } from "helpers";
-
 import styles from "./Breadcrumbs.module.scss";
 
 const { publicRuntimeConfig = {} } = getConfig() || {};
@@ -58,7 +57,7 @@ class Breadcrumbs extends React.Component {
                 if (!sourcePropName) return breadcrumbType.format();
 
                 // From the data source, format the breadcrumb
-                const sourceProp = this.props[sourcePropName];
+                const sourceProp = this.props.fileData[sourcePropName];
                 return sourceProp ? breadcrumbType.format(sourceProp) : level;
             }),
         ];

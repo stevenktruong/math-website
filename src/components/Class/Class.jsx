@@ -60,12 +60,13 @@ const displayClassInformation = {
 
 export default class Class extends React.Component {
     render() {
-        const personalData = this.props.personalData;
+        const fileData = this.props.fileData;
+        const personalData = fileData.personalData;
         const classData = {
             email: personalData.email,
-            ...this.props.classData,
+            ...fileData.classData,
         };
-        const classNotes = this.props.classNotes;
+        const classNotes = fileData.classNotes;
         return (
             <div className={styles.Class}>
                 <section>

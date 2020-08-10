@@ -7,12 +7,13 @@ import { getSortedClassesData } from "lib/classes";
 
 export default class Home extends React.Component {
     render() {
+        const fileData = this.props.fileData;
         return (
             <>
                 <Head>
                     <title>Teaching</title>
                 </Head>
-                <Layout rightSide={<Teaching classesData={this.props.classesData} />} />
+                <Layout rightSide={<Teaching fileData={fileData} />} />
             </>
         );
     }
@@ -22,7 +23,9 @@ export const getStaticProps = () => {
     const classesData = getSortedClassesData();
     return {
         props: {
-            classesData,
+            fileData: {
+                classesData,
+            },
         },
     };
 };

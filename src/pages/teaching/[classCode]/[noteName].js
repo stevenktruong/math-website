@@ -10,19 +10,16 @@ import { formatCourseTitle, formatQuarterYear } from "helpers";
 
 export default class NotePage extends React.Component {
     render() {
-        const classData = this.props.classData;
-        const noteData = this.props.noteData;
+        const fileData = this.props.fileData;
+        const classData = fileData.classData;
+        const noteData = fileData.noteData;
         return (
             <>
                 <Head>
                     {importKatex}
                     <title>{noteData.title}</title>
                 </Head>
-                <Layout
-                    rightSide={<Note classData={classData} noteData={noteData} />}
-                    classData={classData}
-                    noteData={noteData}
-                />
+                <Layout rightSide={<Note fileData={fileData} />} fileData={fileData} />
             </>
         );
     }
@@ -41,8 +38,10 @@ export const getStaticProps = ({ params }) => {
     const noteData = getNoteDataForClass(params.classCode, params.noteName);
     return {
         props: {
-            classData,
-            noteData,
+            fileData: {
+                classData,
+                noteData,
+            },
         },
     };
 };

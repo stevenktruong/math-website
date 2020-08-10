@@ -9,18 +9,19 @@ import Me from "components/Me";
 
 export default class Home extends React.Component {
     render() {
-        const personalData = this.props.personalData;
+        const fileData = this.props.fileData;
+        const personalData = fileData.personalData;
         return (
             <>
                 <Head>
                     <title>{personalData.fullName}</title>
                 </Head>
                 <Layout
-                    leftSide={<Me personalData={personalData} />}
+                    leftSide={<Me fileData={fileData} />}
                     rightSide={
                         <>
-                            <About personalData={personalData} />
-                            <Contact personalData={personalData} />
+                            <About fileData={fileData} />
+                            <Contact fileData={fileData} />
                         </>
                     }
                 />
@@ -33,7 +34,9 @@ export const getStaticProps = () => {
     const personalData = getPersonalData();
     return {
         props: {
-            personalData,
+            fileData: {
+                personalData,
+            },
         },
     };
 };

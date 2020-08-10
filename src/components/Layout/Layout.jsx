@@ -10,6 +10,7 @@ const { publicRuntimeConfig = {} } = getConfig() || {};
 
 export default class Layout extends React.Component {
     render() {
+        const fileData = this.props.fileData;
         return (
             <>
                 <div className={styles.Layout}>
@@ -19,7 +20,7 @@ export default class Layout extends React.Component {
                         <link rel="icon" type="image/ico" href={`${publicRuntimeConfig.staticFolder}/favicon.ico`} />
                     </Head>
                     <Navbar />
-                    <Breadcrumbs classData={this.props.classData} noteData={this.props.noteData} />
+                    <Breadcrumbs fileData={fileData} />
                     <span className={styles.LeftSide}>{this.props.leftSide}</span>
                     <span className={styles.RightSide}>{this.props.rightSide}</span>
                 </div>

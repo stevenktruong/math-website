@@ -10,8 +10,9 @@ import { formatCourseTitle, formatQuarterYear } from "helpers";
 
 export default class ClassPage extends React.Component {
     render() {
-        const personalData = this.props.personalData;
-        const classData = this.props.classData;
+        const fileData = this.props.fileData;
+        const personalData = fileData.personalData;
+        const classData = fileData.classData;
         return (
             <>
                 <Head>
@@ -19,12 +20,7 @@ export default class ClassPage extends React.Component {
                         {formatCourseTitle(classData.course)} ({formatQuarterYear(classData.quarter, classData.year)})
                     </title>
                 </Head>
-                <Layout
-                    rightSide={
-                        <Class personalData={personalData} classData={classData} classNotes={this.props.classNotes} />
-                    }
-                    classData={this.props.classData}
-                />
+                <Layout rightSide={<Class fileData={fileData} />} fileData={fileData} />
             </>
         );
     }
@@ -44,9 +40,11 @@ export const getStaticProps = ({ params }) => {
     const classNotes = getSortedNotesDataForClass(params.classCode);
     return {
         props: {
-            personalData,
-            classData,
-            classNotes,
+            fileData: {
+                personalData,
+                classData,
+                classNotes,
+            },
         },
     };
 };
