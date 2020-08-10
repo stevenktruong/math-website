@@ -35,7 +35,7 @@
         display: block;
         float: left;
         color: black;
-        border-bottom: 4px solid colors.$highlight-dim;
+        border-bottom: 4px solid colors.$highlight-very-dim;
         transition: border-bottom-color colors.$transition-length;
     }
 
@@ -101,7 +101,7 @@
             padding-left: lengths.$medium;
             margin: lengths.$medium;
             margin-left: lengths.$big;
-            border-left: 4px solid colors.$highlight-dim;
+            border-left: 4px solid colors.$highlight-very-dim;
             transition: border-left-color colors.$transition-length;
         }
 

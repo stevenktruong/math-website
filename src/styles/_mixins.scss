@@ -22,15 +22,15 @@
     a,
     a:link,
     a:visited {
-        color: black;
+        color: colors.$highlight;
         text-decoration: none;
-        border-bottom: 1px dotted black;
-        transition: color colors.$transition-length, border-bottom colors.$transition-length;
+        border-bottom: 1px dotted colors.$highlight;
+        transition-duration: colors.$transition-length;
     }
 
     a:hover {
-        color: colors.$highlight;
-        border-bottom: 1px dotted colors.$highlight;
+        color: colors.$highlight-dim;
+        border-bottom-color: colors.$highlight-dim;
     }
 }
 

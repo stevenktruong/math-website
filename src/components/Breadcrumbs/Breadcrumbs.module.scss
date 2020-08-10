@@ -8,6 +8,10 @@
     margin-bottom: lengths.$medium;
     font-size: 12px;
 
+    a.Crumb {
+        border: none;
+    }
+
     @media only screen and (max-width: breakpoints.$big) {
         width: 75%;
         margin-left: 0;
