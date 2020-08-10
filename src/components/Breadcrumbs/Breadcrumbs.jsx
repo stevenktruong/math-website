@@ -15,9 +15,9 @@ class Breadcrumbs extends React.Component {
     }
 
     render() {
-        const fullPath = this.state.router.asPath.split("/");
-        const currentPathBeginning = fullPath.indexOf(`${publicRuntimeConfig.staticFolder}`) + 1;
-        const currentPath = fullPath.slice(currentPathBeginning);
+        // E.g., /teaching/123a.2.20f/ -> [ "", "teaching", "123a.2.20f", "" ], so we strip away the empty spaces
+        const currentPath = this.state.router.asPath.split("/").slice(1);
+        if (currentPath[currentPath.length - 1] === "") currentPath.pop();
         return (
             <div className={styles.Breadcrumbs}>
                 <a className={styles.Crumb} href={`${publicRuntimeConfig.staticFolder}/`} key="Home">
