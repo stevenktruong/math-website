@@ -1,0 +1,41 @@
+@use "lengths";
+
+@mixin boxed-theorem {
+    theorem {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        border: 1px solid black;
+        padding: lengths.$medium;
+
+        p {
+            margin: 0;
+        }
+
+        h4 {
+            display: inline-block;
+        }
+
+        ol {
+            counter-reset: list;
+            margin-left: lengths.$math-bullet-width;
+        }
+
+        li {
+            list-style: none;
+            position: relative;
+            margin: lengths.$medium 0;
+        }
+
+        li:before {
+            display: inline-block;
+            position: absolute;
+            width: lengths.$math-bullet-width - lengths.$medium;
+            left: -1 * lengths.$math-bullet-width;
+            counter-increment: list;
+            text-align: right;
+            content: "(" counter(list, lower-roman) ")";
+        }
+    }
+}

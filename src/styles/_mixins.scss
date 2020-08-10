@@ -43,11 +43,11 @@
         }
     }
 
-    section:first-child {
+    section:first-of-type {
         margin-top: 0;
     }
 
-    section:last-child {
+    section:last-of-type {
         margin-bottom: 0;
     }
 }

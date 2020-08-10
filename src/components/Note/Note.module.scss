@@ -1,6 +1,21 @@
+@use "math-styles";
 @use "lengths";
 
 .Note {
+    @include math-styles.boxed-theorem;
+
+    p {
+        margin: lengths.$big 0;
+    }
+
+    h3 + p {
+        margin-top: 0;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+
     h2 {
         margin: 0;
     }

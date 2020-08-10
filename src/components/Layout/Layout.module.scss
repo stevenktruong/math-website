@@ -31,6 +31,10 @@
             height: auto;
             margin: 0;
         }
+
+        .RightSide {
+            padding-bottom: lengths.$space-from-bottom;
+        }
     }
 
     @media only screen and (max-width: breakpoints.$medium) {
@@ -40,6 +44,10 @@
         .LeftSide,
         .RightSide {
             padding: 0 lengths.$big;
+        }
+
+        .RightSide {
+            padding-bottom: lengths.$space-from-bottom;
         }
     }
 }

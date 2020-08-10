@@ -8,15 +8,6 @@ export default class Note extends React.Component {
         const noteData = this.props.noteData;
         return (
             <section className={styles.Note}>
-                <h2>
-                    <Link href="/teaching/[classCode]" as={`/teaching/${classData.classCode}`}>
-                        <a>
-                            {formatCourseTitle(classData.course)},{" "}
-                            {formatQuarterYear(classData.quarter, classData.year)}
-                        </a>
-                    </Link>
-                </h2>
-                <h3>{noteData.title}</h3>
                 <div dangerouslySetInnerHTML={{ __html: noteData.contentHtml }} />
             </section>
         );

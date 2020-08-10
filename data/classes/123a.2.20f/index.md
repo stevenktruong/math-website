@@ -1,5 +1,5 @@
 ---
-courseDescription: Placeholder class description
+courseDescription: Placeholder Class Description
 section: 2C
 instructor: N/A
 instructorUrl: https://www.math.ucla.edu/~steven/

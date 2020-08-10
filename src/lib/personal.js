@@ -1,8 +1,7 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
-import remark from "remark";
-import html from "remark-html";
+
+import { readMarkdown, baseProcessor } from "./helpers";
 
 const dataDirectory = path.join(process.cwd(), "data");
 
@@ -20,13 +19,12 @@ const dataDirectory = path.join(process.cwd(), "data");
  */
 export const getPersonalData = () => {
     const fullPath = path.join(dataDirectory, "personal.md");
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const matterResult = matter(fileContents);
+    const file = readMarkdown(fullPath);
 
-    const contentHtml = remark().use(html).processSync(matterResult.content).toString();
+    const contentHtml = baseProcessor().processSync(file.contents).toString();
 
     return {
         contentHtml,
-        ...matterResult.data,
+        ...file.meta,
     };
 };

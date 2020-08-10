@@ -1,0 +1,20 @@
+@use "breakpoints";
+@use "colors";
+@use "lengths";
+
+.Breadcrumbs {
+    width: 50%;
+    margin: auto;
+    margin-bottom: lengths.$medium;
+    font-size: 12px;
+
+    @media only screen and (max-width: breakpoints.$big) {
+        width: 75%;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    @media only screen and (max-width: breakpoints.$medium) {
+        padding-left: lengths.$big;
+    }
+}

@@ -16,10 +16,7 @@ export default class NotePage extends React.Component {
             <>
                 <Head>
                     {importKatex}
-                    <title>
-                        {formatCourseTitle(classData.course)} ({formatQuarterYear(classData.quarter, classData.year)}) -{" "}
-                        {noteData.title}
-                    </title>
+                    <title>{noteData.title}</title>
                 </Head>
                 <Layout rightSide={<Note classData={classData} noteData={noteData} />} />
             </>

@@ -1,10 +1,10 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import remark from "remark";
-import html from "remark-html";
 
-const classesDirectory = path.join(process.cwd(), "data/classes");
+import { dataDirectory, processorWithMathForClassCode, readDirectoryContents, readMarkdown } from "./helpers";
+
+const classesDirectory = path.join(dataDirectory, "classes");
 
 const quarterList = {
     f: "Fall",
@@ -15,8 +15,7 @@ const quarterList = {
 // A course refers to the content, a class refers to a particular instance of a course
 
 export const getAllClassPaths = () => {
-    const classCodes = fs.readdirSync(classesDirectory);
-    return classCodes.map(classCode => {
+    return readDirectoryContents(classesDirectory).map(classCode => {
         return {
             params: {
                 classCode,
@@ -40,17 +39,15 @@ export const getAllClassPaths = () => {
  * The classes are sorted from most recent to least.
  */
 export const getSortedClassesData = () => {
-    const classCodes = fs.readdirSync(classesDirectory);
-    return classCodes
+    return readDirectoryContents(classesDirectory)
         .map(classCode => {
-            const fullPath = path.join(classesDirectory, `${classCode}/index.md`);
-            const fileContents = fs.readFileSync(fullPath, "utf8");
-            const matterResult = matter(fileContents);
+            const filePath = path.join(classesDirectory, `${classCode}/index.md`);
+            const file = readMarkdown(filePath);
 
             return {
                 classCode,
                 ...parseClassCode(classCode),
-                ...matterResult.data,
+                ...file.meta,
             };
         })
         .sort(sortClasses)
@@ -62,17 +59,16 @@ export const getSortedClassesData = () => {
  * @param {string} classCode - The code of the class, e.g., 31a.1.20f
  */
 export const getClassData = classCode => {
-    const fullPath = path.join(classesDirectory, `${classCode}/index.md`);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const matterResult = matter(fileContents);
+    const filePath = path.join(classesDirectory, `${classCode}/index.md`);
+    const file = readMarkdown(filePath);
 
-    const contentHtml = remark().use(html).processSync(matterResult.content).toString();
+    const contentHtml = processorWithMathForClassCode(classCode).processSync(file.contents).toString();
 
     return {
         classCode,
         ...parseClassCode(classCode),
         contentHtml,
-        ...matterResult.data,
+        ...file.meta,
     };
 };
 

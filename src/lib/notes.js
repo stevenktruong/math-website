@@ -1,30 +1,28 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import remark from "remark";
-import math from "remark-math";
-import katex from "rehype-katex";
-import remark2rehype from "remark-rehype";
-import stringify from "rehype-stringify";
 import moment from "moment";
 
 import getConfig from "next/config";
+import {
+    processorWithMathForClassCode,
+    substituteVariable,
+    dataDirectory,
+    readDirectoryContents,
+    readMarkdown,
+} from "./helpers";
 import { getAllClassPaths } from "./classes";
 
-const classesDirectory = path.join(process.cwd(), "data/classes");
 const { publicRuntimeConfig = {} } = getConfig() || {};
 
 export const getAllNotePaths = () => {
-    const classCodes = getAllClassPaths();
-    const classNotes = [];
-    classCodes.forEach(classPath => {
-        const notesDirectory = path.join(classesDirectory, `${classPath.params.classCode}/notes`);
+    const notesPaths = [];
 
-        if (!fs.existsSync(notesDirectory)) return;
+    getAllClassPaths().forEach(classPath => {
+        const notesDirectory = path.join(dataDirectory, `classes/${classPath.params.classCode}/notes`);
 
-        const noteFileNames = fs.readdirSync(notesDirectory);
-        classNotes.push(
-            ...noteFileNames.map(noteFileName => {
+        notesPaths.push(
+            ...readDirectoryContents(notesDirectory).map(noteFileName => {
                 return {
                     params: {
                         classCode: classPath.params.classCode,
@@ -35,7 +33,7 @@ export const getAllNotePaths = () => {
         );
     });
 
-    return classNotes;
+    return notesPaths;
 };
 
 /**
@@ -43,23 +41,19 @@ export const getAllNotePaths = () => {
  * @param {string} classCode - classCode to get note data for
  */
 export const getSortedNotesDataForClass = classCode => {
-    const notesDirectory = path.join(classesDirectory, `${classCode}/notes`);
+    const notesDirectory = path.join(dataDirectory, `classes/${classCode}/notes`);
 
-    if (!fs.existsSync(notesDirectory)) return [];
-
-    const noteFileNames = fs.readdirSync(notesDirectory);
-    return noteFileNames
+    return readDirectoryContents(notesDirectory)
         .map(noteFileName => {
-            const fullPath = path.join(classesDirectory, `${classCode}/notes/${noteFileName}`);
-            const fileContents = fs.readFileSync(fullPath, "utf8");
-            const matterResult = matter(fileContents);
+            const filePath = path.join(dataDirectory, `classes/${classCode}/notes/${noteFileName}`);
+            const file = readMarkdown(filePath);
 
             return {
                 noteName: noteFileName.replace(/\.md$/, ""),
-                ...matterResult.data,
+                ...file.meta,
             };
         })
-        .sort((a, b) => moment(b).diff(moment(a)));
+        .sort((a, b) => moment(b.date).diff(moment(a.date)));
 };
 
 /**
@@ -68,45 +62,20 @@ export const getSortedNotesDataForClass = classCode => {
  * @param {string} noteName - Note name WITHOUT the extension .md.
  */
 export const getNoteDataForClass = (classCode, noteName) => {
-    const fullPath = path.join(classesDirectory, `${classCode}/notes/${noteName}.md`);
-    const fileContents = fs.readFileSync(fullPath, "utf-8");
-    const matterResult = matter(fileContents);
+    const filePath = path.join(dataDirectory, `classes/${classCode}/notes/${noteName}.md`);
+    const file = readMarkdown(filePath);
+
     const substitutedContent = substituteVariable(
-        matterResult.content,
+        file.contents,
         "assetsFolder",
         `${publicRuntimeConfig.staticFolder}/images/${classCode}/${noteName}`
     );
 
-    const contentHtml = remark()
-        .use(math)
-        .use(remark2rehype)
-        .use(katex, { macros: getMathMacros(classCode) })
-        .use(stringify)
-        .processSync(substitutedContent)
-        .toString();
+    const contentHtml = processorWithMathForClassCode(classCode).processSync(substitutedContent).toString();
 
     return {
         noteName,
         contentHtml,
-        ...matterResult.data,
+        ...file.meta,
     };
-};
-
-/**
- * Replace {{ variable }} with value
- */
-const substituteVariable = (input, variable, value) => {
-    return input.replace(new RegExp(`\{{2} ${variable} \}{2}`), value);
-};
-
-/**
- * Parse the math macros file for a set of class notes
- */
-const getMathMacros = classCode => {
-    const macrosPath = path.join(classesDirectory, `${classCode}/macros.json`);
-
-    if (!fs.existsSync(macrosPath)) return {};
-
-    const fileContents = fs.readFileSync(macrosPath, "utf-8");
-    return JSON.parse(fileContents);
 };
