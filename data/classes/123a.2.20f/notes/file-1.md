@@ -3,7 +3,9 @@ title: Fake Notes
 date: 8/8/20
 ---
 
-### Cauchy's Integral Formula
+## Cauchy's Theorem
+
+### The Theorem
 
 <theorem id="theorem-1">
 
