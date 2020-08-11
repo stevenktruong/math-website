@@ -1,7 +1,7 @@
 @use "lengths";
 
 @mixin boxed-theorem {
-    :global(.theorem) {
+    theorem {
         display: block;
         box-sizing: border-box;
         width: 100%;
@@ -41,7 +41,9 @@
 }
 
 @mixin animation {
-    :global(.p5-container) {
+    animation {
+        display: block;
+
         canvas {
             display: block;
             width: 100%;

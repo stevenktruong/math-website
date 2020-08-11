@@ -12,6 +12,15 @@
         border: none;
     }
 
+    .Separator {
+        display: inline-block;
+        margin: 0 4px;
+    }
+
+    .BackSeparator {
+        display: none;
+    }
+
     @media only screen and (max-width: breakpoints.$big) {
         width: 75%;
         margin-left: 0;
@@ -20,5 +29,19 @@
 
     @media only screen and (max-width: breakpoints.$medium) {
         padding-left: lengths.$big;
+
+        .Crumb,
+        .Separator {
+            display: none;
+        }
+
+        a.Crumb:nth-last-of-type(1),
+        .BackSeparator {
+            display: inline-block;
+        }
+
+        .BackSeparator {
+            margin-right: 4px;
+        }
     }
 }

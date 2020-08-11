@@ -8,6 +8,7 @@ import styles from "./Breadcrumbs.module.scss";
 const { publicRuntimeConfig = {} } = getConfig() || {};
 
 const separator = ">";
+const backSeparator = "<";
 const displayBreadcrumb = {
     teaching: {
         sourceProp: null,
@@ -65,23 +66,36 @@ class Breadcrumbs extends React.Component {
         return (
             <div className={styles.Breadcrumbs}>
                 <a className={styles.Crumb} href={`${publicRuntimeConfig.staticFolder}/`} key="Home">
+                    <span className={styles.BackSeparator} key={`homeBackSeparator`}>{`${backSeparator}`}</span>
                     Home
                 </a>
                 {currentPath.map((level, index) => {
+                    const isSecondToLast = index === currentPath.length - 2;
                     const isLast = index === currentPath.length - 1;
                     return (
                         <React.Fragment key={`${level}Fragment`}>
-                            {` ${separator} `}
+                            <span className={styles.Separator} key={`${level}Separator`}>{`${separator}`}</span>
+
+                            {/* The last breadcrumb is not an anchor */}
                             {!isLast ? (
-                                <a
-                                    href={`${publicRuntimeConfig.staticFolder}/${currentPath
-                                        .slice(0, index + 1)
-                                        .join("/")}`}
-                                    className={styles.Crumb}
-                                    key={level}
-                                >
-                                    {titles[index]}
-                                </a>
+                                <>
+                                    <a
+                                        href={`${publicRuntimeConfig.staticFolder}/${currentPath
+                                            .slice(0, index + 1)
+                                            .join("/")}`}
+                                        className={styles.Crumb}
+                                        key={level}
+                                    >
+                                        {/* On smaller screens, we only have a breadcrumb to the previous page */}
+                                        {isSecondToLast ? (
+                                            <span
+                                                className={styles.BackSeparator}
+                                                key={`${level}BackSeparator`}
+                                            >{`${backSeparator}`}</span>
+                                        ) : null}
+                                        {titles[index]}
+                                    </a>
+                                </>
                             ) : (
                                 // Last breadcrumb is the location and is unclickable
                                 <span className={styles.Crumb} key={level}>
