@@ -1,12 +1,14 @@
 const animations = [
     {
-        container: "animation-1",
+        containerId: "animation-1",
         sketch: p => {
+            const containerId = "animation-1";
+
             let x = 0;
             let y = 0;
 
             p.setup = () => {
-                const container = document.getElementById("animation-1");
+                const container = document.getElementById(containerId);
                 p.createCanvas(container.offsetWidth, 400);
                 p.noStroke();
             };
@@ -31,4 +33,4 @@ const animations = [
     },
 ];
 
-animations.forEach(({ container, sketch }) => new p5(sketch, container));
+animations.forEach(({ containerId, sketch }) => new p5(sketch, containerId));
