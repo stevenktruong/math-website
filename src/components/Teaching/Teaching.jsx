@@ -49,32 +49,34 @@ export default class Teaching extends React.Component {
         return (
             <section className={styles.Teaching}>
                 <h2>Teaching</h2>
-                <table>
-                    <tbody>
-                        {Object.keys(classesDataByQuarter).map(key => (
-                            <tr key={`${key}`}>
-                                <td key={`${key}Quarter`}>{key}</td>
-                                <td key={`${key}Classes`}>
-                                    {classesDataByQuarter[key].map((classData, i) => (
-                                        <div key={`${key}Class${i}`}>
-                                            <Link
-                                                href={"/teaching/[classCode]"}
-                                                as={`/teaching/${classData.classCode}`}
-                                            >
-                                                <a>
-                                                    {formatCourseWithDescription(
-                                                        classData.course,
-                                                        classData.courseDescription
-                                                    )}
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    ))}
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <div className="tableContainer">
+                    <table>
+                        <tbody>
+                            {Object.keys(classesDataByQuarter).map(key => (
+                                <tr key={`${key}`}>
+                                    <td key={`${key}Quarter`}>{key}</td>
+                                    <td key={`${key}Classes`}>
+                                        {classesDataByQuarter[key].map((classData, i) => (
+                                            <div key={`${key}Class${i}`}>
+                                                <Link
+                                                    href={"/teaching/[classCode]"}
+                                                    as={`/teaching/${classData.classCode}`}
+                                                >
+                                                    <a>
+                                                        {formatCourseWithDescription(
+                                                            classData.course,
+                                                            classData.courseDescription
+                                                        )}
+                                                    </a>
+                                                </Link>
+                                            </div>
+                                        ))}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </section>
         );
     }

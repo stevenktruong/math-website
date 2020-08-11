@@ -90,9 +90,8 @@
         margin-bottom: 0;
     }
 
-    @media only screen and (max-width: breakpoints.$small) {
-        .tableContainer {
-            overflow-x: scroll;
-        }
+    .tableContainer {
+        overflow-x: auto;
+        padding-bottom: lengths.$small;
     }
 }
