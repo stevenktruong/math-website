@@ -13,3 +13,6 @@ export const importFonts = (
         rel="stylesheet"
     />
 );
+
+// Inserted as a string into Markdown files
+export const importP5 = '<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>';

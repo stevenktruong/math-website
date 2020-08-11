@@ -14,8 +14,11 @@ export const dataDirectory = path.join(process.cwd(), "data");
 /**
  * Replace {{ variable }} with value
  */
-export const substituteVariable = (input, variable, value) => {
-    return input.replace(new RegExp(`\{{2} ${variable} \}{2}`), value);
+export const substituteVariables = (input, variables) => {
+    return Object.keys(variables).reduce(
+        (acc, key) => acc.replace(new RegExp(`\{{2} ${key} \}{2}`), variables[key]),
+        input
+    );
 };
 
 /**

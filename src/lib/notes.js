@@ -3,10 +3,11 @@ import path from "path";
 import matter from "gray-matter";
 import moment from "moment";
 
+import { importP5 } from "config/externalImports";
 import getConfig from "next/config";
 import {
     processorWithMathForClassCode,
-    substituteVariable,
+    substituteVariables,
     dataDirectory,
     readDirectoryContents,
     readMarkdown,
@@ -65,11 +66,10 @@ export const getNoteDataForClass = (classCode, noteName) => {
     const filePath = path.join(dataDirectory, `classes/${classCode}/notes/${noteName}.md`);
     const file = readMarkdown(filePath);
 
-    const substitutedContent = substituteVariable(
-        file.contents,
-        "assetsFolder",
-        `${publicRuntimeConfig.staticFolder}/images/${classCode}/${noteName}`
-    );
+    const substitutedContent = substituteVariables(file.contents, {
+        assetsFolder: `${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}`,
+        includeAnimations: `${importP5}<script src="${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}/scripts/animations.js"}></script>`,
+    });
 
     const contentHtml = processorWithMathForClassCode(classCode).processSync(substitutedContent).toString();
 

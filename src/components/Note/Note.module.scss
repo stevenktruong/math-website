@@ -3,6 +3,7 @@
 
 .Note {
     @include math-styles.boxed-theorem;
+    @include math-styles.animation;
 
     *:last-child {
         margin-bottom: 0;

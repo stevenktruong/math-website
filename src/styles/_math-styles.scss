@@ -1,7 +1,7 @@
 @use "lengths";
 
 @mixin boxed-theorem {
-    theorem {
+    :global(.theorem) {
         display: block;
         box-sizing: border-box;
         width: 100%;
@@ -36,6 +36,16 @@
             counter-increment: list;
             text-align: right;
             content: "(" counter(list, lower-roman) ")";
+        }
+    }
+}
+
+@mixin animation {
+    :global(.p5-container) {
+        canvas {
+            display: block;
+            width: 100%;
+            margin: auto;
         }
     }
 }
