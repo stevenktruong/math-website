@@ -70,27 +70,25 @@ class Breadcrumbs extends React.Component {
                 {currentPath.map((level, index) => {
                     const isLast = index === currentPath.length - 1;
                     return (
-                        <>
+                        <React.Fragment key={`${level}Fragment`}>
                             {` ${separator} `}
                             {!isLast ? (
-                                <>
-                                    <a
-                                        href={`${publicRuntimeConfig.staticFolder}/${currentPath
-                                            .slice(0, index + 1)
-                                            .join("/")}`}
-                                        className={styles.Crumb}
-                                        key={level}
-                                    >
-                                        {titles[index]}
-                                    </a>
-                                </>
+                                <a
+                                    href={`${publicRuntimeConfig.staticFolder}/${currentPath
+                                        .slice(0, index + 1)
+                                        .join("/")}`}
+                                    className={styles.Crumb}
+                                    key={level}
+                                >
+                                    {titles[index]}
+                                </a>
                             ) : (
                                 // Last breadcrumb is the location and is unclickable
                                 <span className={styles.Crumb} key={level}>
                                     {titles[index]}
                                 </span>
                             )}
-                        </>
+                        </React.Fragment>
                     );
                 })}
             </div>
