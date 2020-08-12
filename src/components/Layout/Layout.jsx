@@ -1,12 +1,10 @@
 import Head from "next/head";
-import getConfig from "next/config";
 
+import { publicRuntimeConfig } from "helpers";
 import Breadcrumbs from "components/Breadcrumbs";
 import Navbar from "components/Navbar";
 
 import styles from "./Layout.module.scss";
-
-const { publicRuntimeConfig = {} } = getConfig() || {};
 
 export default class Layout extends React.Component {
     render() {

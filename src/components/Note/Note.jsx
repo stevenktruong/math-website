@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { formatCourseTitle, formatQuarterYear } from "helpers";
 import styles from "./Note.module.scss";
 
 export default class Note extends React.Component {

@@ -1,29 +1,13 @@
 import * as React from "react";
-import getConfig from "next/config";
 import { withRouter } from "next/router";
 
-import { formatCourseTitle, formatQuarterYear } from "helpers";
-import styles from "./Breadcrumbs.module.scss";
+import { breadcrumbFormatting } from "config/formatting";
+import { publicRuntimeConfig } from "helpers";
 
-const { publicRuntimeConfig = {} } = getConfig() || {};
+import styles from "./Breadcrumbs.module.scss";
 
 const separator = ">";
 const backSeparator = "<";
-const displayBreadcrumb = {
-    teaching: {
-        sourceProp: null,
-        format: () => "Teaching",
-    },
-    classCode: {
-        sourceProp: "classData",
-        format: classData =>
-            `${formatCourseTitle(classData.course)} (${formatQuarterYear(classData.quarter, classData.year)})`,
-    },
-    noteName: {
-        sourceProp: "noteData",
-        format: noteData => noteData.title,
-    },
-};
 
 class Breadcrumbs extends React.Component {
     render() {
@@ -49,7 +33,7 @@ class Breadcrumbs extends React.Component {
                 const query = currentDynamicPath[index];
 
                 // Display data associated with the levelType
-                const breadcrumbType = displayBreadcrumb[query];
+                const breadcrumbType = breadcrumbFormatting[query];
 
                 // Place to pull information from
                 const sourcePropName = breadcrumbType.sourceProp;
@@ -70,6 +54,7 @@ class Breadcrumbs extends React.Component {
                     Home
                 </a>
                 {currentPath.map((level, index) => {
+                    const href = `${publicRuntimeConfig.staticFolder}/${currentPath.slice(0, index + 1).join("/")}`;
                     const isSecondToLast = index === currentPath.length - 2;
                     const isLast = index === currentPath.length - 1;
                     return (
@@ -79,13 +64,7 @@ class Breadcrumbs extends React.Component {
                             {/* The last breadcrumb is not an anchor */}
                             {!isLast ? (
                                 <>
-                                    <a
-                                        href={`${publicRuntimeConfig.staticFolder}/${currentPath
-                                            .slice(0, index + 1)
-                                            .join("/")}`}
-                                        className={styles.Crumb}
-                                        key={level}
-                                    >
+                                    <a href={href} className={styles.Crumb} key={level}>
                                         {/* On smaller screens, we only have a breadcrumb to the previous page */}
                                         {isSecondToLast ? (
                                             <span
@@ -97,7 +76,6 @@ class Breadcrumbs extends React.Component {
                                     </a>
                                 </>
                             ) : (
-                                // Last breadcrumb is the location and is unclickable
                                 <span className={styles.Crumb} key={level}>
                                     {titles[index]}
                                 </span>

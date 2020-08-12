@@ -1,23 +1,5 @@
+import { contactFormatting } from "config/formatting";
 import styles from "./Contact.module.scss";
-
-const displayContact = {
-    office: {
-        title: "Office",
-        format: personalData => personalData.office,
-    },
-    phone: {
-        title: "Phone",
-        format: personalData => personalData.phone,
-    },
-    email: {
-        title: "E-mail",
-        format: personalData => personalData.email,
-    },
-    address: {
-        title: "Address",
-        format: personalData => personalData.address.map((line, i) => <div key={`addressLine${i}`}>{line}</div>),
-    },
-};
 
 export default class Contact extends React.Component {
     render() {
@@ -29,10 +11,10 @@ export default class Contact extends React.Component {
                 <div className="tableContainer">
                     <table>
                         <tbody>
-                            {Object.keys(displayContact).map(key => (
+                            {Object.keys(contactFormatting).map(key => (
                                 <tr key={`${key}`}>
-                                    <td key={`${key}Title`}>{displayContact[key].title}</td>
-                                    <td key={`${key}Content`}>{displayContact[key].format(personalData)}</td>
+                                    <td key={`${key}Title`}>{contactFormatting[key].title}</td>
+                                    <td key={`${key}Content`}>{contactFormatting[key].format(personalData)}</td>
                                 </tr>
                             ))}
                         </tbody>

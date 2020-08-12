@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-import { readMarkdown, baseProcessor } from "./helpers";
+import { readMarkdown, baseProcessor } from "./utils";
 
 const dataDirectory = path.join(process.cwd(), "data");
 

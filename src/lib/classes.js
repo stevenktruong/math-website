@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { dataDirectory, processorWithMathForClassCode, readDirectoryContents, readMarkdown } from "./helpers";
+import { dataDirectory, processorWithMathForClassCode, readDirectoryContents, readMarkdown } from "./utils";
 
 const classesDirectory = path.join(dataDirectory, "classes");
 

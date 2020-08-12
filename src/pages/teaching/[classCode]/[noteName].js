@@ -6,7 +6,6 @@ import Layout from "components/Layout";
 import Note from "components/Note";
 import { getClassData } from "lib/classes";
 import { getNoteDataForClass, getAllNotePaths } from "lib/notes";
-import { formatCourseTitle, formatQuarterYear } from "helpers";
 
 export default class NotePage extends React.Component {
     render() {

@@ -1,7 +1,5 @@
-import getConfig from "next/config";
+import { publicRuntimeConfig } from "helpers";
 import styles from "./Me.module.scss";
-
-const { publicRuntimeConfig = {} } = getConfig() || {};
 
 export default class Me extends React.Component {
     render() {

@@ -3,18 +3,16 @@ import path from "path";
 import matter from "gray-matter";
 import moment from "moment";
 
+import { publicRuntimeConfig } from "helpers";
 import { importP5 } from "config/externalImports";
-import getConfig from "next/config";
 import {
     processorWithMathForClassCode,
     substituteVariables,
     dataDirectory,
     readDirectoryContents,
     readMarkdown,
-} from "./helpers";
+} from "./utils";
 import { getAllClassPaths } from "./classes";
-
-const { publicRuntimeConfig = {} } = getConfig() || {};
 
 export const getAllNotePaths = () => {
     const notesPaths = [];
