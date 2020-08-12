@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import moment from "moment";
 
 import { publicRuntimeConfig } from "helpers";
-import { importP5 } from "config/externalImports";
+import { importPixi } from "config/externalImports";
 import {
     processorWithMathForClassCode,
     substituteVariables,
@@ -66,7 +66,7 @@ export const getNoteDataForClass = (classCode, noteName) => {
 
     const substitutedContent = substituteVariables(file.contents, {
         assetsFolder: `${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}`,
-        includeAnimations: `${importP5}<script src="${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}/scripts/animations.js"}></script>`,
+        includeAnimations: `${importPixi}<script src="${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}/scripts/animations.js"} defer></script>`,
     });
 
     const contentHtml = processorWithMathForClassCode(classCode).processSync(substitutedContent).toString();

@@ -37,4 +37,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis purus tor
 
 <animation id="animation-1"></animation>
 
-Words after.
+Words after the canvas.

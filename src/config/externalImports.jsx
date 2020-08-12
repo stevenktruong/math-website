@@ -15,4 +15,4 @@ export const importFonts = (
 );
 
 // Inserted as a string into Markdown files
-export const importP5 = '<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>';
+export const importPixi = '<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>';
