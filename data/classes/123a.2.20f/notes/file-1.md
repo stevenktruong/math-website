@@ -3,8 +3,6 @@ title: Fake Notes
 date: 8/8/20
 ---
 
-{{ includeAnimations }}
-
 ## Cauchy's Theorem
 
 ### The Theorem
@@ -35,6 +33,8 @@ Here is a reference to [Theorem 1](#theorem-1) and some inline math: $\test{2}{3
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis purus tortor. Phasellus ut erat et risus sodales lacinia ut sed tortor. Maecenas dignissim, libero ac ornare varius, dolor dolor convallis erat, id bibendum nunc libero vel augue. Praesent in mauris dapibus, egestas ligula at, eleifend lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras accumsan lorem et lorem luctus maximus. Proin mattis sapien mattis, molestie nisi sed, dapibus nisi. Aliquam convallis quis augue sit amet bibendum. In in dui at quam gravida condimentum eu ut ligula. Donec vulputate accumsan massa, sit amet rhoncus enim porta eget. Praesent gravida vestibulum mi ac tempor. Nullam ultricies, augue non gravida tincidunt, ante ligula lobortis arcu, et mattis eros mauris efficitur ex. Suspendisse dapibus imperdiet lectus, nec tristique elit ullamcorper quis.
 
-<animation id="animation-1"></animation>
+Here's an animation:
 
-Words after the canvas.
+<img src="{{ assetsFolder }}/animations/trig.gif" height="400">
+
+Some words after the animation.
