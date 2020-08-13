@@ -13,6 +13,3 @@ export const importFonts = (
         rel="stylesheet"
     />
 );
-
-// Inserted as a string into Markdown files
-export const importPixi = '<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>';
