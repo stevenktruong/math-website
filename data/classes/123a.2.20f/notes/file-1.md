@@ -35,6 +35,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis purus tor
 
 Here's an animation:
 
-<img src="{{ assetsFolder }}/animations/trig.gif" height="400">
+<img src="{{ assetsFolder }}/animations/trig.gif">
 
 Some words after the animation.
