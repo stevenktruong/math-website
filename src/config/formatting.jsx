@@ -23,10 +23,6 @@ export const contactFormatting = {
         title: "Office",
         format: personalData => personalData.office,
     },
-    phone: {
-        title: "Phone",
-        format: personalData => personalData.phone,
-    },
     email: {
         title: "E-mail",
         format: personalData => personalData.email,

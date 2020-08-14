@@ -1,7 +1,6 @@
 ---
 fullName: Steven Truong
 office: TBD
-phone: TBD
 email: steven [at] math [dot] ucla [dot] edu
 address:
     - UCLA Mathematics Department
