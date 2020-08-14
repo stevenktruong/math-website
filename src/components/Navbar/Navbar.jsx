@@ -11,6 +11,10 @@ const navLinks = {
         title: "Teaching",
         href: "/teaching",
     },
+    cv: {
+        title: "CV",
+        href: "files/cv.pdf",
+    },
 };
 
 export default class Navbar extends React.Component {
