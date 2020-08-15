@@ -15,6 +15,7 @@ export default class Layout extends React.Component {
                     <Head>
                         <meta charSet="UTF-8" />
                         <meta name="viewport" content="width=device-width,initial-scale=1" />
+                        <meta name="format-detection" content="telephone=no"></meta>
                         <link rel="icon" type="image/ico" href={`${publicRuntimeConfig.staticFolder}/favicon.ico`} />
                     </Head>
                     <Navbar />
