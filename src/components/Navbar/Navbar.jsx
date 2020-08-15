@@ -13,7 +13,7 @@ const navLinks = {
     },
     cv: {
         title: "CV",
-        href: "files/cv.pdf",
+        href: "/files/cv.pdf",
     },
 };
 
