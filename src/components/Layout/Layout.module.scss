@@ -44,7 +44,8 @@
 
         .LeftSide,
         .RightSide {
-            padding: 0 lengths.$big;
+            padding-left: lengths.$big;
+            padding-right: lengths.$big;
         }
     }
 }
