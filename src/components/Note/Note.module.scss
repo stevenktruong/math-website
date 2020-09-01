@@ -6,7 +6,7 @@
     @include math-styles.boxed-theorem;
     @include math-styles.animation;
 
-    *:last-child {
+    > *:last-child {
         margin-bottom: 0;
     }
 
@@ -18,7 +18,8 @@
         background-color: colors.$inline-code-background;
     }
 
-    * + p {
+    * + p,
+    * + theorem {
         margin-top: lengths.$medium;
     }
 
