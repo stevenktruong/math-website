@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { classFormatting } from "config/formatting";
-import { formatCourseTitle, formatQuarterYear } from "helpers";
+import { formatQuarterYear } from "helpers";
 
 import styles from "./Class.module.scss";
 
@@ -18,7 +18,7 @@ export default class Class extends React.Component {
             <div className={styles.Class}>
                 <section>
                     <h2>
-                        {formatCourseTitle(classData.course)}: {classData.courseDescription}
+                        {classData.course}: {classData.courseDescription}
                     </h2>
                     <h3>{formatQuarterYear(classData.quarter, classData.year)}</h3>
                     <div className="tableContainer">

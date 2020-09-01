@@ -6,7 +6,7 @@ import Class from "components/Class";
 import { getAllClassPaths, getClassData } from "lib/classes";
 import { getSortedNotesDataForClass } from "lib/notes";
 import { getPersonalData } from "lib/personal";
-import { formatCourseTitle, formatQuarterYear } from "helpers";
+import { formatQuarterYear } from "helpers";
 
 export default class ClassPage extends React.Component {
     render() {
@@ -17,7 +17,7 @@ export default class ClassPage extends React.Component {
             <>
                 <Head>
                     <title>
-                        {formatCourseTitle(classData.course)} ({formatQuarterYear(classData.quarter, classData.year)})
+                        {classData.course} ({formatQuarterYear(classData.quarter, classData.year)})
                     </title>
                 </Head>
                 <Layout rightSide={<Class fileData={fileData} />} fileData={fileData} />

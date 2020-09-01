@@ -1,7 +1,7 @@
 import * as React from "react";
 import Head from "next/head";
 
-import { importKatex } from "config/externalImports";
+import { importKatex, importHighlightStylesheet } from "config/externalImports";
 import Layout from "components/Layout";
 import Note from "components/Note";
 import { getClassData } from "lib/classes";
@@ -16,6 +16,7 @@ export default class NotePage extends React.Component {
             <>
                 <Head>
                     {importKatex}
+                    {importHighlightStylesheet}
                     <title>{noteData.title}</title>
                 </Head>
                 <Layout rightSide={<Note fileData={fileData} />} fileData={fileData} />

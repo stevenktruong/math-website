@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import remark from "remark";
 import matter from "gray-matter";
+import highlight from "rehype-highlight";
 import math from "remark-math";
 import katex from "rehype-katex";
 import rehype2react from "rehype-react";
@@ -44,6 +45,7 @@ export const processorWithMathForClassCode = classCode =>
             strict: false,
             macros: getMathMacros(classCode),
         })
+        .use(highlight)
         .use(raw)
         .use(stringify);
 

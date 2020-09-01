@@ -1,4 +1,4 @@
-import { formatCourseTitle, formatQuarterYear } from "helpers";
+import { formatQuarterYear } from "helpers";
 
 // Transform data into formatted text/HTML
 
@@ -9,8 +9,7 @@ export const breadcrumbFormatting = {
     },
     classCode: {
         sourceProp: "classData",
-        format: classData =>
-            `${formatCourseTitle(classData.course)} (${formatQuarterYear(classData.quarter, classData.year)})`,
+        format: classData => `${classData.course} (${formatQuarterYear(classData.quarter, classData.year)})`,
     },
     noteName: {
         sourceProp: "noteData",

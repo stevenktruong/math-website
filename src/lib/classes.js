@@ -76,7 +76,7 @@ export const parseClassCode = classCode => {
     const match = classCode.match(/^([0-9]{1,3}[a-z]{0,2})\.([0-9]{1,2})\.([0-9]{2})([fws])$/);
 
     return {
-        course: match[1],
+        courseNumber: match[1],
         lecture: match[2],
         year: match[3],
         quarter: quarterList[match[4]],
