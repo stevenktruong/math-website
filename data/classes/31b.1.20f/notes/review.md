@@ -87,13 +87,17 @@ Calculate $\deriv{}{x} \log_a{x}$, where $a > 0$ and $a \neq 1$.
 
 </example>
 
-_Solution_. By the [change of base formula](https://proofwiki.org/wiki/Change_of_Base_of_Logarithm), we have $\log_a{x} = \frac{\log{x}}{\log{a}}$. Referring to the table above, we get
+<solution>
+
+By the [change of base formula](https://proofwiki.org/wiki/Change_of_Base_of_Logarithm), we have $\log_a{x} = \frac{\log{x}}{\log{a}}$. Referring to the table above, we get
 
 $$
 \deriv{}{x} \log_a{x}
     = \deriv{}{x} \frac{\log{x}}{\log{a}}
     = \boxed{\frac{1}{x\log{a}}}.
 $$
+
+</solution>
 
 <exercise>
 
@@ -175,7 +179,9 @@ Calculate $\int \tan{x} \,\diff{x}$.
 
 </example>
 
-_Solution_. Recall that $\tan{x} = \frac{\sin{x}}{\cos{x}}$. We'll use [$u$-substitution](https://www.mathsisfun.com/calculus/integration-by-substitution.html): set $u = \cos{x}$, which gives $\diff{u} = -\sin{x} \,\diff{x}$. Then
+<solution>
+
+Recall that $\tan{x} = \frac{\sin{x}}{\cos{x}}$. We'll use [$u$-substitution](https://www.mathsisfun.com/calculus/integration-by-substitution.html): set $u = \cos{x}$, which gives $\diff{u} = -\sin{x} \,\diff{x}$. Then
 
 $$
 \begin{aligned}
@@ -188,6 +194,8 @@ $$
         &= \boxed{-\log{\abs{\cos{x}}} + C}.
 \end{aligned}
 $$
+
+</solution>
 
 <exercise>
 

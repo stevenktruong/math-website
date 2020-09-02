@@ -6,6 +6,7 @@
     @include math-styles.boxed-theorem;
     @include math-styles.math-counter(exercise, Exercise);
     @include math-styles.math-counter(example, Example);
+    @include math-styles.solution;
 
     counter-reset: example exercise;
 
