@@ -7,7 +7,7 @@ date: 9/1/20
 
 ### Differentiation
 
-<theorem id="derivative-definition">
+<definition id="derivative-definition">
 
 **Definition** Let $f$ be a function, and define the limit
 
@@ -17,9 +17,9 @@ $$
 
 If this limit exists, then we say that $f$ is **differentiable at $x$** and we call $f'$ the **derivative of $f$**. $f'$ is also written as $\deriv{}{x} f\p{x}$ or $\deriv{f}{x}$.
 
-</theorem>
+</definition>
 
-<theorem id="derivative-properties">
+<proposition id="derivative-properties">
 
 **Properties of the Derivative** Let $f, g$ be differentiable functions and $c$ be a real number. Then the following hold:
 
@@ -43,7 +43,7 @@ If this limit exists, then we say that $f$ is **differentiable at $x$** and we c
     \deriv{}{x} f\p{g\p{x}} = f'\p{g\p{x}}g'\p{x}
     $$
 
-</theorem>
+</proposition>
 
 Another commonly used property is the **quotient rule**:
 
@@ -53,9 +53,13 @@ $$
 
 when $g\p{x}$ and $g'\p{x}$ are both non-zero.
 
-**Exercise 1** By writing $\frac{f\p{x}}{g\p{x}} = f\p{x}\br{g\p{x}}^{-1}$, derive the quotient rule using the product rule and the chain rule.
+<exercise>
 
-<theorem id="derivative-table">
+By writing $\frac{f\p{x}}{g\p{x}} = f\p{x}\br{g\p{x}}^{-1}$, derive the quotient rule using the product rule and the chain rule.
+
+</exercise>
+
+<proposition id="derivative-table">
 
 **Common Derivatives**
 
@@ -75,9 +79,13 @@ $$
 
 Note that $\log{x}$ is base $e$, $\textbf{not}$ base $10$.
 
-</theorem>
+</proposition>
 
-**Example 1** Calculate $\deriv{}{x} \log_a{x}$, where $a > 0$ and $a \neq 1$.
+<example>
+
+Calculate $\deriv{}{x} \log_a{x}$, where $a > 0$ and $a \neq 1$.
+
+</example>
 
 _Solution_. By the [change of base formula](https://proofwiki.org/wiki/Change_of_Base_of_Logarithm), we have $\log_a{x} = \frac{\log{x}}{\log{a}}$. Referring to the table above, we get
 
@@ -87,11 +95,15 @@ $$
     = \boxed{\frac{1}{x\log{a}}}.
 $$
 
-**Exercise 2** Calculate $\deriv{}{x} b^x$, where $b > 0$. (Hint: $b = e^{\log{b}}$)
+<exercise>
+
+Calculate $\deriv{}{x} b^x$, where $b > 0$. (Hint: $b = e^{\log{b}}$)
+
+</exercise>
 
 ### Integration
 
-<theorem id="integral-definition">
+<definition id="integral-definition">
 
 **Definition** Let $f$ be continuous. If $F$ is a function which satisfies $F' = f$, then $F$ is called an **antiderivative** or **integral** of $f$. Furthermore, **indefinite integral of $f$ with respect to $x$** is
 
@@ -101,9 +113,9 @@ $$
 
 where $C$ is a constant.
 
-</theorem>
+</definition>
 
-<theorem id="integral-properties">
+<proposition id="integral-properties">
 
 **Properties of the Integral** Let $f, g$ be integrable functions and $c$ be a real number. Then the following hold:
 
@@ -118,7 +130,7 @@ where $C$ is a constant.
 2.  $\int_a^b f\p{x} \,\diff{x} = -\int_b^a f\p{x} \,\diff{x}$
 3.  $\int_a^b f\p{x} \,\diff{x} + \int_b^c f\p{x} \,\diff{x} = \int_a^c f\p{x} \,\diff{x}$
 
-</theorem>
+</proposition>
 
 <theorem id="fundamental-theorem-of-calculus">
 
@@ -151,9 +163,17 @@ $$
 \int nx^{n-1} \,\diff{x} = x^n + C.
 $$
 
-**Exercise 3** Transform the [derivative table](#derivative-table) into an integration table.
+<exercise>
 
-**Example 2** Calculate $\int \tan{x} \,\diff{x}$.
+Transform the [derivative table](#derivative-table) into an integration table.
+
+</exercise>
+
+<example>
+
+Calculate $\int \tan{x} \,\diff{x}$.
+
+</example>
 
 _Solution_. Recall that $\tan{x} = \frac{\sin{x}}{\cos{x}}$. We'll use [$u$-substitution](https://www.mathsisfun.com/calculus/integration-by-substitution.html): set $u = \cos{x}$, which gives $\diff{u} = -\sin{x} \,\diff{x}$. Then
 
@@ -162,11 +182,15 @@ $$
     \int \tan{x} \,\diff{x}
         &= \int \frac{\sin{x}}{\cos{x}} \,\diff{x} \\[2ex]
         &= \int \frac{1}{\cos{x}} \sin\p{x} \,\diff{x} \\[2ex]
-        &= -\int \frac{1}{\cos{x}} \colorbox{yellow}{$-\sin\p{x} \,\diff{x}$} \\[2ex]
-        &= -\int \frac{1}{u} \,\diff{u} \\[2ex]
+        &= -\int \frac{1}{\colorbox{red}{$\cos{x}$}} \colorbox{yellow}{$-\sin\p{x} \,\diff{x}$} \\[2ex]
+        &= -\int \frac{1}{\colorbox{red}{$u$}} \colorbox{yellow}{$\,\diff{u}$} \\[2ex]
         &= -\log{\abs{u}} + C \\[2ex]
         &= \boxed{-\log{\abs{\cos{x}}} + C}.
 \end{aligned}
 $$
 
-**Exercise 4** Calculate $\int \cot{x} \,\diff{x}$.
+<exercise>
+
+Calculate $\int \cot{x} \,\diff{x}$.
+
+</exercise>

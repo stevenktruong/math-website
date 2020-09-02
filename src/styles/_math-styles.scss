@@ -1,7 +1,9 @@
 @use "lengths";
 
 @mixin boxed-theorem {
-    theorem {
+    theorem,
+    definition,
+    proposition {
         display: block;
         box-sizing: border-box;
         width: 100%;
@@ -38,6 +40,14 @@
             text-align: right;
             content: "(" counter(list, lower-roman) ")";
         }
+    }
+}
+
+@mixin math-counter($type, $display-name) {
+    #{$type} > p::before {
+        font-weight: bold;
+        counter-increment: #{$type};
+        content: "#{$display-name} "counter(#{$type})" ";
     }
 }
 
