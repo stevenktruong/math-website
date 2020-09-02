@@ -20,14 +20,20 @@ export const getAllNotePaths = () => {
         const notesDirectory = path.join(dataDirectory, `classes/${classPath.params.classCode}/notes`);
 
         notesPaths.push(
-            ...readDirectoryContents(notesDirectory).map(noteFileName => {
-                return {
-                    params: {
-                        classCode: classPath.params.classCode,
-                        noteName: noteFileName.replace(/\.md$/, ""),
-                    },
-                };
-            })
+            ...readDirectoryContents(notesDirectory)
+                .filter(noteFileName => {
+                    const filePath = path.join(notesDirectory, noteFileName);
+                    const file = readMarkdown(filePath);
+                    return file.meta.publish === "yes" || process.env.URL_ENV === "development";
+                })
+                .map(noteFileName => {
+                    return {
+                        params: {
+                            classCode: classPath.params.classCode,
+                            noteName: noteFileName.replace(/\.md$/, ""),
+                        },
+                    };
+                })
         );
     });
 
@@ -51,6 +57,7 @@ export const getSortedNotesDataForClass = classCode => {
                 ...file.meta,
             };
         })
+        .filter(noteData => noteData.publish === "yes" || process.env.URL_ENV === "development")
         .sort((a, b) => moment(b.date).diff(moment(a.date)));
 };
 

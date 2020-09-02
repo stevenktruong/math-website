@@ -84,4 +84,5 @@ Use the custom `<theorem>` tag for boxed theorems.
 ```yml
 title: title of the notes
 date: date for the notes (notes will be sorted based on this)
+publish: whether the page will be visible or not on the website
 ```
