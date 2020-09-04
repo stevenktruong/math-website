@@ -21,7 +21,7 @@ export default class Class extends React.Component {
                         {classData.course}: {classData.courseDescription}
                     </h2>
                     <h3>{formatQuarterYear(classData.quarter, classData.year)}</h3>
-                    <div className="tableContainer">
+                    <div className="tableContainer--last-is-link">
                         <table>
                             <tbody>
                                 {Object.keys(classFormatting).map(key => (

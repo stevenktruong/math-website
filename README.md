@@ -38,6 +38,7 @@ fullName: my full name
 office: my office
 email: my (obfuscated) email address
 address: an array; each line is a line in the address
+fax: my (or the math office's) fax number
 ```
 
 ## `./data/classes/[classCode]/index.md`
@@ -51,11 +52,13 @@ instructor: name of the instructor
 instructorUrl: URL to instructor's website
 discussions:
     - section: section this information applies to
-      time: [MTWRF] [START] - [END]
+      days: [MTWRF]
+      time: [START] - [END]
       location: where the discussion takes place
 officeHours:
     - section: section this information applies to
-      time: [MTWRF] [START] - [END]
+      days: [MTWRF]
+      time: [START] - [END]
       location: where the office hours take place
 links:
     - title: title for the link

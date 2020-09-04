@@ -8,6 +8,15 @@
         font-family: fonts.$body-font;
     }
 
+    p {
+        line-height: 1.5;
+
+        code {
+            padding-bottom: 2px;
+            background-color: colors.$inline-code-background;
+        }
+    }
+
     h1,
     h2,
     h3,
@@ -22,6 +31,7 @@
     a,
     a:link,
     a:visited {
+        height: auto;
         color: colors.$highlight;
         text-decoration: none;
         border-bottom: 1px dotted colors.$highlight;
@@ -92,6 +102,10 @@
 
     .tableContainer {
         overflow-x: auto;
-        padding-bottom: lengths.$small;
+    }
+
+    .tableContainer--last-is-link {
+        // Required to prevent the link underline from overflowing
+        padding-bottom: 1px;
     }
 }
