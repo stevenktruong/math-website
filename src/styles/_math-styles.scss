@@ -1,3 +1,4 @@
+@use "fonts";
 @use "lengths";
 
 @mixin boxed-theorem {
@@ -16,8 +17,14 @@
             margin: 0;
         }
 
-        h4 {
-            display: inline-block;
+        h4,
+        h4 + p {
+            font-family: fonts.$body-font;
+            display: inline;
+        }
+
+        h4::after {
+            content: ".";
         }
 
         ol {
@@ -48,7 +55,7 @@
     #{$type} > p::before {
         font-weight: bold;
         counter-increment: #{$type};
-        content: "#{$display-name} "counter(#{$type})" ";
+        content: "#{$display-name} "counter(#{$type})". ";
     }
 }
 

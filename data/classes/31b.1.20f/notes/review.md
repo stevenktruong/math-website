@@ -10,7 +10,7 @@ publish: yes
 
 <definition id="derivative-definition">
 
-**Definition** Let $f$ be a function, and define the limit
+**Definition.** Let $f$ be a function, and define the limit
 
 $$
 f'\p{x} = \lim_{h\to0} \frac{f\p{x + h} - f\p{x}}{h}.
@@ -22,7 +22,9 @@ If this limit exists, then we say that $f$ is **differentiable at $x$** and we c
 
 <proposition id="derivative-properties">
 
-**Properties of the Derivative** Let $f, g$ be differentiable functions and $c$ be a real number. Then the following hold:
+#### Proposition (properties of the derivative)
+
+Let $f, g$ be differentiable functions and $c$ be a real number. Then the following hold:
 
 1.  $\deriv{}{x}$ is **linear**, that is,
 
@@ -110,7 +112,7 @@ Calculate $\deriv{}{x} b^x$, where $b > 0$. (Hint: $b = e^{\log{b}}$)
 
 <definition id="integral-definition">
 
-**Definition** Let $f$ be continuous. If $F$ is a function which satisfies $F' = f$, then $F$ is called an **antiderivative** or **integral** of $f$. Furthermore, **indefinite integral of $f$ with respect to $x$** is
+**Definition.** Let $f$ be continuous. If $F$ is a function which satisfies $F' = f$, then $F$ is called an **antiderivative** or **integral** of $f$. Furthermore, **indefinite integral of $f$ with respect to $x$** is
 
 $$
 \int f\p{x} \,\diff{x} = F\p{x} + C,
@@ -122,7 +124,7 @@ where $C$ is a constant.
 
 <proposition id="integral-properties">
 
-**Properties of the Integral** Let $f, g$ be integrable functions and $c$ be a real number. Then the following hold:
+**Proposition (properties of the integral).** Let $f, g$ be integrable functions and $c$ be a real number. Then the following hold:
 
 1.  Integration is **linear**, that is,
 
@@ -139,7 +141,9 @@ where $C$ is a constant.
 
 <theorem id="fundamental-theorem-of-calculus">
 
-**Theorem (the fundamental theorem of calculus)** Let $F$ be an antiderivative of $f$. Then
+#### Theorem (the fundamental theorem of calculus)
+
+Let $F$ be an antiderivative of $f$. Then
 
 1. $\int_a^b f\p{x} \,\diff{x} = F\p{b} - F\p{a}$
 2. $\deriv{}{x} \int_a^x f\p{t} \,\diff{t} = f\p{x}$
