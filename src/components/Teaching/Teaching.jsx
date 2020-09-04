@@ -49,7 +49,7 @@ export default class Teaching extends React.Component {
         return (
             <section className={styles.Teaching}>
                 <h2>Teaching</h2>
-                <div className="tableContainer--last-is-link">
+                <div className="tableContainer tableContainer--last-is-link">
                     <table>
                         <tbody>
                             {Object.keys(classesDataByQuarter).map(key => (
