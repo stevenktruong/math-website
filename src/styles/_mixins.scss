@@ -25,6 +25,14 @@
     h6 {
         font-family: fonts.$header-font;
     }
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
 }
 
 @mixin base-anchor {

@@ -7,7 +7,9 @@ export default class Teaching extends React.Component {
      * Create an object of the following form:
      *
      *   {
-     *       "Fall 2020": [ classData ]
+     *       "2020": {
+     *           "Fall": [ classData ]
+     *       }
      *   }
      */
     createMapFromQuarterToClasses = () => {
@@ -22,16 +24,15 @@ export default class Teaching extends React.Component {
             };
 
             classesData.reduce((acc, cur) => {
-                const key = formatQuarterYear(cur.quarter, cur.year);
-                if (!classesDataByQuarter[key]) {
-                    classesDataByQuarter[key] = [];
+                if (!classesDataByQuarter[cur.year]) {
+                    classesDataByQuarter[cur.year] = {};
                 }
 
-                if (cur.year === acc.year && cur.quarter === acc.quarter) {
-                    classesDataByQuarter[key].push(cur);
-                } else {
-                    classesDataByQuarter[key] = [cur];
+                if (!classesDataByQuarter[cur.year][cur.quarter]) {
+                    classesDataByQuarter[cur.year][cur.quarter] = [];
                 }
+
+                classesDataByQuarter[cur.year][cur.quarter].push(cur);
 
                 return {
                     year: cur.year,
@@ -48,34 +49,41 @@ export default class Teaching extends React.Component {
         const classesDataByQuarter = this.createMapFromQuarterToClasses();
         return (
             <section className={styles.Teaching}>
-                <h2>Teaching</h2>
+                <h1>Teaching</h1>
                 <div className="tableContainer tableContainer--last-is-link">
-                    <table>
-                        <tbody>
-                            {Object.keys(classesDataByQuarter).map(key => (
-                                <tr key={`${key}`}>
-                                    <td key={`${key}Quarter`}>{key}</td>
-                                    <td key={`${key}Classes`}>
-                                        {classesDataByQuarter[key].map((classData, i) => (
-                                            <div key={`${key}Class${i}`}>
-                                                <Link
-                                                    href={"/teaching/[classCode]"}
-                                                    as={`/teaching/${classData.classCode}`}
-                                                >
-                                                    <a>
-                                                        {formatCourseWithDescription(
-                                                            classData.course,
-                                                            classData.courseDescription
-                                                        )}
-                                                    </a>
-                                                </Link>
-                                            </div>
-                                        ))}
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                    {Object.keys(classesDataByQuarter).map(year => (
+                        <>
+                            <h2>20{year}</h2>
+                            <table>
+                                <tbody>
+                                    {Object.keys(classesDataByQuarter[year]).map(quarter => (
+                                        <React.Fragment key={`${year}${quarter}Fragment`}>
+                                            <tr key={`${year}${quarter}`}>
+                                                <td key={`${year}${quarter}Key`}>{quarter}</td>
+                                                <td key={`${year}${quarter}KeyClasses`}>
+                                                    {classesDataByQuarter[year][quarter].map((classData, i) => (
+                                                        <div key={`${year}${quarter}Class${i}`}>
+                                                            <Link
+                                                                href={"/teaching/[classCode]"}
+                                                                as={`/teaching/${classData.classCode}`}
+                                                            >
+                                                                <a>
+                                                                    {formatCourseWithDescription(
+                                                                        classData.course,
+                                                                        classData.courseDescription
+                                                                    )}
+                                                                </a>
+                                                            </Link>
+                                                        </div>
+                                                    ))}
+                                                </td>
+                                            </tr>
+                                        </React.Fragment>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </>
+                    ))}
                 </div>
             </section>
         );

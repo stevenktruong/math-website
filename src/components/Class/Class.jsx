@@ -17,9 +17,9 @@ export default class Class extends React.Component {
         return (
             <div className={styles.Class}>
                 <section>
-                    <h2>
+                    <h1>
                         {classData.course}: {classData.courseDescription}
-                    </h2>
+                    </h1>
                     <h3>{formatQuarterYear(classData.quarter, classData.year)}</h3>
                     <div className="tableContainer tableContainer--last-is-link">
                         <table>
@@ -37,7 +37,7 @@ export default class Class extends React.Component {
                 <div dangerouslySetInnerHTML={{ __html: classData.contentHtml }} />
                 {classNotes.length ? (
                     <section>
-                        <h3>Notes</h3>
+                        <h2>Notes</h2>
                         <ul>
                             {classNotes.map(classNote => (
                                 <li key={classNote.noteName}>
