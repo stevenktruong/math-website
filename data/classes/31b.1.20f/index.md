@@ -23,4 +23,10 @@ links:
       url: https://ccle.ucla.edu/course/view/20F-MATH31B-1
 ---
 
-When e-mailing me, please include `[31B]` somewhere in the subject so it doesn't get lost. I try my best to be very responsive, so if you don't get a reply by the end of the day, feel free to send me another e-mail.
+When e-mailing me, please include `[31B]` somewhere in the subject so it doesn't get lost. I try my best to be very responsive, so if you don't get a reply by the end of the day, feel free to send me another e-mail. You can just call me Steven (but _not_ Mr. Truong) in the e-mail.
+
+## Resources
+
+-   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
+-   [Symbolab Calculator](https://www.symbolab.com/solver/calculus-calculator)
+-   [Paul's Online Notes](https://tutorial.math.lamar.edu/classes/calcII/calcII.aspx)
