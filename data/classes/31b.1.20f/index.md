@@ -23,7 +23,7 @@ links:
       url: https://ccle.ucla.edu/course/view/20F-MATH31B-1
 ---
 
-When e-mailing me, please include `[31B]` somewhere in the subject so it doesn't get lost. I try my best to be very responsive, so if you don't get a reply by the end of the day, feel free to send me another e-mail. You can just call me Steven (but _not_ Mr. Truong) in the e-mail.
+When e-mailing me, please include `[31B]` somewhere in the subject so it doesn't get lost. I try my best to be very responsive, so if you don't get a reply by the end of the day, feel free to send me another e-mail. You can call me Steven (but _not_ Mr. Truong).
 
 ## Resources
 

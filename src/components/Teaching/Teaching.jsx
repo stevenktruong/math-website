@@ -50,10 +50,10 @@ export default class Teaching extends React.Component {
         return (
             <section className={styles.Teaching}>
                 <h1>Teaching</h1>
-                <div className="tableContainer tableContainer--last-is-link">
-                    {Object.keys(classesDataByQuarter).map(year => (
-                        <>
-                            <h2>20{year}</h2>
+                {Object.keys(classesDataByQuarter).map(year => (
+                    <>
+                        <h2>20{year}</h2>
+                        <div className="tableContainer tableContainer--last-is-link">
                             <table>
                                 <tbody>
                                     {Object.keys(classesDataByQuarter[year]).map(quarter => (
@@ -82,9 +82,9 @@ export default class Teaching extends React.Component {
                                     ))}
                                 </tbody>
                             </table>
-                        </>
-                    ))}
-                </div>
+                        </div>
+                    </>
+                ))}
             </section>
         );
     }
