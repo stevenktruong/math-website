@@ -9,6 +9,7 @@
     }
 
     h3 {
+        margin-bottom: lengths.$medium;
         font-size: 1.25em;
     }
 
@@ -18,8 +19,6 @@
     }
 
     table {
-        margin-top: lengths.$medium;
-
         // Style for discussion sections and office hours
         table {
             margin: 0;
