@@ -51,23 +51,27 @@ export default class Teaching extends React.Component {
             <section className={styles.Teaching}>
                 <h1>Teaching</h1>
                 {Object.keys(classesDataByQuarter).map(year => (
-                    <>
+                    <React.Fragment key={`${year}`}>
                         <h2>20{year}</h2>
                         <div className="tableContainer tableContainer--last-is-link">
                             <table>
                                 <tbody>
                                     {Object.keys(classesDataByQuarter[year]).map(quarter => (
                                         <React.Fragment key={`${year}${quarter}Fragment`}>
+                                            {/* Each row corresponds to a quarter */}
                                             <tr key={`${year}${quarter}`}>
                                                 <td key={`${year}${quarter}Key`}>{quarter}</td>
+
+                                                {/* Link of links to classes for a particular quarter */}
                                                 <td key={`${year}${quarter}KeyClasses`}>
                                                     {classesDataByQuarter[year][quarter].map((classData, i) => (
                                                         <div key={`${year}${quarter}Class${i}`}>
                                                             <Link
                                                                 href={"/teaching/[classCode]"}
                                                                 as={`/teaching/${classData.classCode}`}
+                                                                key={`${year}${quarter}Class${i}Link`}
                                                             >
-                                                                <a>
+                                                                <a key={`${year}${quarter}Class${i}Anchor`}>
                                                                     {formatCourseWithDescription(
                                                                         classData.course,
                                                                         classData.courseDescription
@@ -83,7 +87,7 @@ export default class Teaching extends React.Component {
                                 </tbody>
                             </table>
                         </div>
-                    </>
+                    </React.Fragment>
                 ))}
             </section>
         );

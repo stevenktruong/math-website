@@ -1,7 +1,7 @@
 import * as React from "react";
 import Head from "next/head";
 
-import linkedinMeta from "config/linkedinMeta";
+import { linkedinMeta } from "config/linkedinMeta";
 import Layout from "components/Layout";
 import Teaching from "components/Teaching";
 import { getSortedClassesData } from "lib/classes";
