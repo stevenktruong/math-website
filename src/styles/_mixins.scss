@@ -11,6 +11,10 @@
     p {
         line-height: 1.5;
 
+        + p {
+            margin-top: lengths.$medium;
+        }
+
         code {
             padding-bottom: 2px;
             background-color: colors.$inline-code-background;
