@@ -77,7 +77,15 @@ export const classFormatting = {
                                 {daysOfTheWeekFormatting(discussion.days)}
                             </td>
                             <td key={`${discussion.section}DiscussionTime`}>{discussion.time}</td>
-                            <td key={`${discussion.section}DiscussionLocation`}>{discussion.location}</td>
+                            <td key={`${discussion.section}DiscussionLocation`}>
+                                {discussion.link ? (
+                                    <a href={`${discussion.link}`} key={`${discussion.section}DiscussionLocationLink`}>
+                                        {discussion.location}
+                                    </a>
+                                ) : (
+                                    discussion.location
+                                )}
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -95,7 +103,16 @@ export const classFormatting = {
                                 {daysOfTheWeekFormatting(officeHour.days)}
                             </td>
                             <td key={`${officeHour.section}OfficeHoursTime`}>{officeHour.time}</td>
-                            <td key={`${officeHour.section}OfficeHoursLocation`}>{officeHour.location}</td>
+                            <td key={`${officeHour.section}OfficeHoursLocation`}>
+                                {" "}
+                                {officeHour.link ? (
+                                    <a href={`${officeHour.link}`} key={`${officeHour.section}OfficeHoursLocationLink`}>
+                                        {officeHour.location}
+                                    </a>
+                                ) : (
+                                    officeHour.location
+                                )}
+                            </td>
                         </tr>
                     </tbody>
                 </table>
