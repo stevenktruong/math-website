@@ -24,6 +24,8 @@ officeHours:
 links:
     - title: CCLE
       url: https://ccle.ucla.edu/course/view/20F-MATH31B-1
+    - title: Textbook
+      url: https://www.math.ucla.edu/~josephbreen/calc_textbook.pdf
 ---
 
 The password to all the Zoom meetings is `integrals`. I won't be recording discussions, so to make up for this, I'll be writing detailed discussion notes.
