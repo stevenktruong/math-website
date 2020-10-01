@@ -1,6 +1,6 @@
 ---
 title: Calculus Review
-date: 9/1/20
+date: "2020-09-01"
 publish: yes
 ---
 

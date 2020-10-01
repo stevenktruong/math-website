@@ -60,7 +60,7 @@
 }
 
 @mixin solution {
-    solution > p::before {
+    solution > p:first-of-type::before {
         font-style: italic;
         content: "Solution. ";
     }
