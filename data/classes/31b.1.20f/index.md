@@ -17,8 +17,8 @@ discussions:
       link: https://ucla.zoom.us/j/96065072430
 officeHours:
     - section: 1A, 1B
-      days: T
-      time: TBD
+      days: R
+      time: 1:00pm - 2:00pm
       location: Zoom
       link: https://ucla.zoom.us/j/96065072430
 links:
