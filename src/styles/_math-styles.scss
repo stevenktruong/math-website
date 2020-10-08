@@ -30,29 +30,33 @@
         ol {
             counter-reset: list;
             margin-left: lengths.$math-bullet-width;
+
+            li {
+                list-style: none;
+                position: relative;
+                margin: lengths.$medium 0;
+            }
+
+            li:before {
+                display: inline-block;
+                position: absolute;
+                width: lengths.$math-bullet-width - lengths.$medium;
+                left: -1 * lengths.$math-bullet-width;
+                counter-increment: list;
+                text-align: right;
+                content: "(" counter(list, lower-roman) ")";
+            }
         }
 
-        li {
-            list-style: none;
-            position: relative;
-            margin: lengths.$medium 0;
-        }
-
-        li:before {
-            display: inline-block;
-            position: absolute;
-            width: lengths.$math-bullet-width - lengths.$medium;
-            left: -1 * lengths.$math-bullet-width;
-            counter-increment: list;
-            text-align: right;
-            content: "(" counter(list, lower-roman) ")";
+        ul {
+            margin-left: lengths.$big;
         }
     }
 }
 
 // E.g., Exercise 1, Example 4, etc.
 @mixin math-counter($type, $display-name) {
-    #{$type} > p::before {
+    #{$type} > p:first-of-type::before {
         font-weight: bold;
         counter-increment: #{$type};
         content: "#{$display-name} "counter(#{$type})". ";

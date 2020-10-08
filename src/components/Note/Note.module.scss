@@ -10,6 +10,12 @@
 
     counter-reset: example exercise;
 
+    example {
+        ul {
+            margin-left: lengths.$big;
+        }
+    }
+
     > *:last-child {
         margin-bottom: 0;
     }
