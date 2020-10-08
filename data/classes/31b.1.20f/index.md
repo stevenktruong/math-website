@@ -36,6 +36,7 @@ When e-mailing me, please include `[31B]` somewhere in the subject so it doesn't
 
 ## Resources
 
+-   [Student Math Center](https://ww3.math.ucla.edu/student-math-center/)
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
 -   [Symbolab Calculator](https://www.symbolab.com/solver/calculus-calculator)
 -   [Paul's Online Notes](https://tutorial.math.lamar.edu/classes/calcII/calcII.aspx)
