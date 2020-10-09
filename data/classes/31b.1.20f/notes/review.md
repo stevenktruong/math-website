@@ -51,10 +51,10 @@ Let $f, g$ be differentiable functions and $c$ be a real number. Then the follow
 Another commonly used property is the **quotient rule**:
 
 $$
-\deriv{}{x} \frac{f\p{x}}{g\p{x}} = \frac{f'\p{x}g\p{x} - g'\p{x}f\p{x}}{\br{g'\p{x}}^2},
+\deriv{}{x} \frac{f\p{x}}{g\p{x}} = \frac{f'\p{x}g\p{x} - g'\p{x}f\p{x}}{\br{g\p{x}}^2},
 $$
 
-when $g\p{x}$ and $g'\p{x}$ are both non-zero.
+when $g\p{x}$ is non-zero.
 
 <exercise>
 
