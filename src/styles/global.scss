@@ -23,3 +23,7 @@ body {
     clear: both;
     display: table;
 }
+
+.katex-display {
+    overflow-x: auto;
+}
