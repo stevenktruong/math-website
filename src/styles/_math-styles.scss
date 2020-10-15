@@ -70,6 +70,13 @@
     }
 }
 
+@mixin proof {
+    proof > p:first-of-type::before {
+        font-style: italic;
+        content: "Proof. ";
+    }
+}
+
 @mixin animation {
     animation {
         display: block;
