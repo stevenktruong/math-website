@@ -17,13 +17,14 @@
             margin: 0;
         }
 
-        h3,
-        h3 + p {
+        h6,
+        h6 + p {
             font-family: fonts.$body-font;
+            font-size: 1em;
             display: inline;
         }
 
-        h3::after {
+        h6::after {
             content: ".";
         }
 

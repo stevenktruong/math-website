@@ -40,7 +40,8 @@
     }
 
     h1 + p,
-    h2 + p {
+    h2 + p,
+    h3 + p {
         margin-top: 0;
     }
 
@@ -58,10 +59,6 @@
         margin-top: 0;
     }
 
-    h3 {
-        display: inline;
-    }
-
     img {
         max-width: 100%;
         display: block;
@@ -70,5 +67,16 @@
 
     ul {
         margin-left: lengths.$big;
+    }
+
+    // Table of contents
+    h2 + ul {
+        p {
+            margin: 0;
+        }
+
+        ul > li {
+            margin: lengths.$small 0;
+        }
     }
 }

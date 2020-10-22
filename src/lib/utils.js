@@ -9,6 +9,8 @@ import rehype2react from "rehype-react";
 import remark2rehype from "remark-rehype";
 import stringify from "rehype-stringify";
 import raw from "rehype-raw";
+import toc from "remark-toc";
+import slug from "remark-slug";
 
 export const dataDirectory = path.join(process.cwd(), "data");
 
@@ -38,6 +40,8 @@ export const baseProcessor = () => remark().use(remark2rehype, { allowDangerousH
 
 export const processorWithMathForClassCode = classCode =>
     remark()
+        .use(toc, { maxDepth: 3 })
+        .use(slug)
         .use(math)
         .use(remark2rehype, { allowDangerousHtml: true })
         .use(katex, {
