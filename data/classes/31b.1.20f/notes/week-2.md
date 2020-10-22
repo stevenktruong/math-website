@@ -6,13 +6,15 @@ publish: yes
 
 # Week 2 Discussion Notes
 
+## Table of Contents
+
 ## Review of Exponentials and Logarithms
 
 Here are the main properties you'll want to remember:
 
 <proposition>
 
-### Proposition
+###### Proposition
 
 Let $b \in \p{0, \infty} \setminus \set{1}$. Then
 
@@ -62,7 +64,7 @@ Another very important identity for logarithms is the change-of-base formula:
 
 <theorem id="change-of-base">
 
-### Theorem (change-of-base)
+###### Theorem (change-of-base)
 
 Let $a, b \in \p{0, \infty} \setminus \set{1}$. Then
 
@@ -114,7 +116,7 @@ This is because we have the formulas $b = e^{\ln{b}}$ and the change-of-base for
 
 <theorem>
 
-### Theorem
+###### Theorem
 
 Let $b \in \p{0, \infty} \setminus \set{1}$. Then
 

@@ -6,6 +6,8 @@ publish: yes
 
 # Calculus Review
 
+## Table of Contents
+
 ## Differentiation
 
 <definition id="derivative-definition">
@@ -22,7 +24,7 @@ If this limit exists, then we say that $f$ is **differentiable at $x$** and we c
 
 <proposition id="derivative-properties">
 
-### Proposition (properties of the derivative)
+###### Proposition (properties of the derivative)
 
 Let $f, g$ be differentiable functions and $c$ be a real number. Then the following hold:
 
@@ -141,7 +143,7 @@ where $C$ is a constant.
 
 <theorem id="fundamental-theorem-of-calculus">
 
-### Theorem (the fundamental theorem of calculus)
+###### Theorem (the fundamental theorem of calculus)
 
 Let $F$ be an antiderivative of $f$. Then
 
