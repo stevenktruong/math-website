@@ -4,5 +4,8 @@
     "\\p": "\\mathopen{}\\left\\lparen #1 \\right\\rparen\\mathclose{}",
     "\\br": "\\mathopen{}\\left\\lbrack #1 \\right\\rbrack\\mathclose{}",
     "\\abs": "\\mathopen{}\\left\\lvert #1 \\right\\rvert\\mathclose{}",
-    "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}"
+    "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
+    "\\arcsec": "\\operatorname{arcsec}",
+    "\\arccsc": "\\operatorname{arccsc}",
+    "\\arccot": "\\operatorname{arccot}"
 }
