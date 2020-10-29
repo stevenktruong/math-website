@@ -13,6 +13,13 @@ import {
 } from "./utils";
 import { getAllClassPaths } from "./classes";
 
+const counters = [
+    { tag: "example", display: count => `<h6>Example ${count}.</h6>` },
+    { tag: "exercise", display: count => `<h6>Exercise ${count}.</h6>` },
+    { tag: "solution", display: () => `<h6>Solution.</h6>` },
+    { tag: "proof", display: () => `<h6>Proof.</h6>` },
+];
+
 export const getAllNotePaths = () => {
     const notesPaths = [];
 
@@ -70,8 +77,17 @@ export const getNoteDataForClass = (classCode, noteName) => {
     const filePath = path.join(dataDirectory, `classes/${classCode}/notes/${noteName}.md`);
     const file = readMarkdown(filePath);
 
-    const substitutedContent = substituteVariables(file.contents, {
+    let substitutedContent = substituteVariables(file.contents, {
         assetsFolder: `${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}`,
+    });
+
+    // Add counters
+    counters.forEach(counter => {
+        let count = 0;
+        substitutedContent = substitutedContent.replace(
+            new RegExp(`<${counter.tag}>`, "g"),
+            () => `<${counter.tag}>\n${counter.display(++count)}\n`
+        );
     });
 
     const contentHtml = processorWithMathForClassCode(classCode).processSync(substitutedContent).toString();

@@ -56,27 +56,58 @@
 }
 
 // E.g., Exercise 1, Example 4, etc.
-@mixin math-counter($type, $display-name) {
-    #{$type} > p:first-of-type::before {
-        font-weight: bold;
-        counter-increment: #{$type};
-        content: "#{$display-name} "counter(#{$type})". ";
+@mixin math-counter($type) {
+    #{$type} {
+        display: block;
+        h6,
+        h6 + p {
+            font-family: fonts.$body-font;
+            font-size: 1em;
+            display: inline;
+        }
     }
 }
 
-@mixin solution {
-    solution > p:first-of-type::before {
-        font-style: italic;
-        content: "Solution. ";
+// E.g., Proof., Solution., etc.
+@mixin answer($type) {
+    #{$type} {
+        display: block;
+        h6,
+        h6 + p {
+            font-family: fonts.$body-font;
+            font-size: 1em;
+            display: inline;
+        }
+
+        h6 {
+            font-style: italic;
+            font-weight: normal;
+        }
     }
 }
 
-@mixin proof {
-    proof > p:first-of-type::before {
-        font-style: italic;
-        content: "Proof. ";
-    }
-}
+// No longer used since these aren't selectable or searchable
+// @mixin math-counter($type, $display-name) {
+//     #{$type} > p:first-of-type::before {
+//         font-weight: bold;
+//         counter-increment: #{$type};
+//         content: "#{$display-name} "counter(#{$type})". ";
+//     }
+// }
+
+// @mixin solution {
+//     solution > p:first-of-type::before {
+//         font-style: italic;
+//         content: "Solution. ";
+//     }
+// }
+
+// @mixin proof {
+//     proof > p:first-of-type::before {
+//         font-style: italic;
+//         content: "Proof. ";
+//     }
+// }
 
 @mixin animation {
     animation {
