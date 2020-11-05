@@ -71,10 +71,8 @@
 
     // Table of contents
     h2 + ul {
-        p {
-            margin: 0;
-        }
-
+        p,
+        li,
         ul > li {
             margin: lengths.$small 0;
         }
