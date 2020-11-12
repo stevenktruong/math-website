@@ -1,3 +1,17 @@
+# Table of Contents
+
+-   [Development](#development)
+-   [Content](#content)
+    -   [Assets](#assets)
+    -   [`./data/personal.md`](#datapersonalmd)
+        -   [Metadata](#metadata)
+    -   [`./data/classes/[classCode]/index.md`](#dataclassesclasscodeindexmd)
+        -   [Metadata](#metadata-1)
+    -   [`./data/classes/[classCode]/macros.json`](#dataclassesclasscodemacrosjson)
+    -   [`./data/classes/[classCode]/notes/[noteName].md`](#dataclassesclasscodenotesnotenamemd)
+        -   [Custom Tags](#custom-tags)
+        -   [Metadata](#metadata-2)
+
 # Development
 
 The static site can be built with `yarn build:dev` or `yarn build:production`. The only difference between the two is the base path (the live website has index `/~steven` instead of just `/`).
@@ -76,11 +90,27 @@ Defines LaTeX macros for the class. They will mainly be used in the notes.
 }
 ```
 
-### `./data/classes/[classCode]/notes/[noteName].md`
+## `./data/classes/[classCode]/notes/[noteName].md`
 
 Notes for students to read and review from.
 
-Use the custom `<theorem>` tag for boxed theorems.
+### Custom Tags
+
+#### Boxed Sections
+
+-   `<theorem>`
+-   `<definition>`
+-   `<proposition>`
+
+These content in each of these tags is boxed. In these tags, content in `<h6>` tags (or after `######`) will be used as inline headers.
+
+#### Counters
+
+-   `<example>`
+-   `<solution>`
+-   `<exercise>`
+
+Examples and exercises are counted automatically as the Markdown file is read. For example, the second `<example>` tag in the document will be formatted as `Example 2.` without needing to count manually.
 
 ### Metadata
 
