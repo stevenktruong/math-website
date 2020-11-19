@@ -35,7 +35,7 @@ export default class Class extends React.Component {
                     </div>
                 </section>
                 <div dangerouslySetInnerHTML={{ __html: classData.contentHtml }} />
-                {classNotes.length ? (
+                {/* {classNotes.length ? (
                     <section>
                         <h2>Notes</h2>
                         <ul>
@@ -52,7 +52,7 @@ export default class Class extends React.Component {
                             ))}
                         </ul>
                     </section>
-                ) : null}
+                ) : null} */}
             </div>
         );
     }

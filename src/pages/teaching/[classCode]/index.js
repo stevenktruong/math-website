@@ -4,7 +4,6 @@ import Head from "next/head";
 import Layout from "components/Layout";
 import Class from "components/Class";
 import { getAllClassPaths, getClassData } from "lib/classes";
-import { getSortedNotesDataForClass } from "lib/notes";
 import { getPersonalData } from "lib/personal";
 import { formatQuarterYear } from "helpers";
 
@@ -37,13 +36,11 @@ export const getStaticPaths = () => {
 export const getStaticProps = ({ params }) => {
     const personalData = getPersonalData();
     const classData = getClassData(params.classCode);
-    const classNotes = getSortedNotesDataForClass(params.classCode);
     return {
         props: {
             fileData: {
                 personalData,
                 classData,
-                classNotes,
             },
         },
     };

@@ -48,13 +48,14 @@ export const getAllNotePaths = () => {
 };
 
 /**
- * Sorts from oldest to newest.
+ * A map from the note filename to the note data
  * @param {string} classCode - classCode to get note data for
  */
-export const getSortedNotesDataForClass = classCode => {
+export const getNotesDataForClass = classCode => {
     const notesDirectory = path.join(dataDirectory, `classes/${classCode}/notes`);
+    const notesData = {};
 
-    return readDirectoryContents(notesDirectory)
+    readDirectoryContents(notesDirectory)
         .map(noteFileName => {
             const filePath = path.join(dataDirectory, `classes/${classCode}/notes/${noteFileName}`);
             const file = readMarkdown(filePath);
@@ -65,7 +66,9 @@ export const getSortedNotesDataForClass = classCode => {
             };
         })
         .filter(noteData => noteData.publish === "yes" || process.env.URL_ENV === "development")
-        .sort((a, b) => moment(b.date).diff(moment(a.date)));
+        .forEach(noteData => (notesData[noteData.noteName] = noteData));
+
+    return notesData;
 };
 
 /**

@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 
 import { dataDirectory, processorWithMathForClassCode, readDirectoryContents, readMarkdown } from "./utils";
+import { getNotesDataForClass } from "./notes";
 
 const classesDirectory = path.join(dataDirectory, "classes");
 
@@ -62,7 +63,13 @@ export const getClassData = classCode => {
     const filePath = path.join(classesDirectory, `${classCode}/index.md`);
     const file = readMarkdown(filePath);
 
-    const contentHtml = processorWithMathForClassCode(classCode).processSync(file.contents).toString();
+    let contentHtml = processorWithMathForClassCode(classCode).processSync(file.contents).toString();
+
+    const notesData = getNotesDataForClass(classCode);
+    contentHtml = contentHtml.replace(
+        new RegExp("notes::(.+?).md", "g"),
+        (match, noteName) => `<a href="/teaching/${classCode}/${noteName}">${notesData[noteName].title}`
+    );
 
     return {
         classCode,

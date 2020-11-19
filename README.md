@@ -57,6 +57,12 @@ fax: my (or the math office's) fax number
 
 ## `./data/classes/[classCode]/index.md`
 
+Contains all the data about the class, including announcements and policies.
+
+### Note Links
+
+All instances of `notes::[noteName].md` will be replaced with `noteName`'s title that links to the actual note.
+
 ### Metadata
 
 ```yml
