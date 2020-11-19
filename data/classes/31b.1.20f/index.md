@@ -43,13 +43,20 @@ When e-mailing me, please include `[31B]` somewhere in the subject so it doesn't
 -   [Symbolab Calculator](https://www.symbolab.com/solver/calculus-calculator)
 -   [Paul's Online Notes](https://tutorial.math.lamar.edu/classes/calcII/calcII.aspx)
 
+## Exam Solutions
+
+-   notes::quiz-1.md
+-   notes::quiz-2.md
+-   notes::midterm-1.md
+
 ## Notes
 
--   notes::week-6.md
--   notes::week-5.md
--   notes::week-4.md
--   notes::week-3.md
--   notes::week-2.md
--   notes::week-1.md
--   notes::week-0.md
 -   notes::review.md
+-   notes::week-0.md
+-   notes::week-1.md
+-   notes::week-2.md
+-   notes::week-3.md
+-   notes::week-4.md
+-   notes::week-5.md
+-   notes::week-6.md
+-   notes::week-7.md
