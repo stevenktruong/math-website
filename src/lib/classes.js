@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+import { publicRuntimeConfig } from "helpers";
 import { dataDirectory, processorWithMathForClassCode, readDirectoryContents, readMarkdown } from "./utils";
 import { getNotesDataForClass } from "./notes";
 
@@ -68,7 +69,8 @@ export const getClassData = classCode => {
     const notesData = getNotesDataForClass(classCode);
     contentHtml = contentHtml.replace(
         new RegExp("notes::(.+?).md", "g"),
-        (match, noteName) => `<a href="/teaching/${classCode}/${noteName}">${notesData[noteName].title}`
+        (match, noteName) =>
+            `<a href="${publicRuntimeConfig.staticFolder}/teaching/${classCode}/${noteName}">${notesData[noteName].title}</a>`
     );
 
     return {
