@@ -14,8 +14,8 @@ import {
 import { getAllClassPaths } from "./classes";
 
 const counters = [
-    { tag: "example", display: count => `<h6>Example ${count}.</h6>` },
-    { tag: "exercise", display: count => `<h6>Exercise ${count}.</h6>` },
+    { tag: "example", display: count => `<h6 id="example-${count}">Example ${count}.</h6>` },
+    { tag: "exercise", display: count => `<h6 id="exercise-${count}">Exercise ${count}.</h6>` },
     { tag: "solution", display: () => `<h6>Solution.</h6>` },
     { tag: "proof", display: () => `<h6>Proof.</h6>` },
 ];
