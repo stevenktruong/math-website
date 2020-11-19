@@ -9,12 +9,6 @@
     @include math-styles.answer(proof);
     @include math-styles.answer(solution);
 
-    example {
-        ul {
-            margin-left: lengths.$big;
-        }
-    }
-
     > *:last-child {
         margin-bottom: 0;
     }
@@ -63,10 +57,6 @@
         max-width: 100%;
         display: block;
         margin: auto;
-    }
-
-    ul {
-        margin-left: lengths.$big;
     }
 
     // Table of contents
