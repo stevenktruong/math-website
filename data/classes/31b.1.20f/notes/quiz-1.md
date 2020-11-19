@@ -1,7 +1,7 @@
 ---
 title: Quiz 1 Solutions
 date: "2020-18-20"
-publish: yes
+publish: no
 ---
 
 # Quiz 1 Solutions
