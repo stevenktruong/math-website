@@ -23,7 +23,7 @@ Suppose $0 \leq g\p{x} \leq f\p{x}$. Then for $-\infty \leq a < b \leq \infty$ (
 
 </theorem>
 
-See [Week 6 Notes](week-6#direct-comparison) for some pictures and intuition for the theorem. So now that we have a good conceptual handle on comparison, how do we use it?
+See the [Week 6 Notes](./week-6#direct-comparison) for some pictures and intuition for the theorem. So now that we have a good conceptual handle on comparison, how do we use it?
 
 When approaching a problem, you should try to have an idea of whether an integral will converge or diverge (I'll talk about this more during the examples):
 
