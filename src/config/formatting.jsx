@@ -22,6 +22,14 @@ export const daysOfTheWeekFormatting = days => {
     }, days);
 };
 
+export const noteTagsFormatting = tags =>
+    tags
+        ? `<div class="note-tag-container">${tags
+              .sort()
+              .map(tag => `<span>${tag}</span>`)
+              .join(", ")}</div>`
+        : "";
+
 export const breadcrumbFormatting = {
     teaching: {
         sourceProp: null,

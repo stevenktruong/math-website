@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+import { noteTagsFormatting } from "config/formatting";
 import { publicRuntimeConfig } from "helpers";
 import { dataDirectory, processorWithMathForClassCode, readDirectoryContents, readMarkdown } from "./utils";
 import { getNotesDataForClass } from "./notes";
@@ -67,10 +68,12 @@ export const getClassData = classCode => {
     let contentHtml = processorWithMathForClassCode(classCode).processSync(file.contents).toString();
 
     const notesData = getNotesDataForClass(classCode);
+    console.log(notesData);
     contentHtml = contentHtml.replace(
         new RegExp("notes::(.+?).md", "g"),
         (match, noteName) =>
-            `<a href="${publicRuntimeConfig.staticFolder}/teaching/${classCode}/${noteName}">${notesData[noteName].title}</a>`
+            `<a href="${publicRuntimeConfig.staticFolder}/teaching/${classCode}/${noteName}">${notesData[noteName].title}</a>` +
+            noteTagsFormatting(notesData[noteName].tags)
     );
 
     return {

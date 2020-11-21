@@ -9,6 +9,13 @@
     @include math-styles.answer(proof);
     @include math-styles.answer(solution);
 
+    :global {
+        .katex-display {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+    }
+
     > *:last-child {
         margin-bottom: 0;
     }

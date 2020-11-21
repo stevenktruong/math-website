@@ -123,5 +123,6 @@ Examples and exercises are counted automatically as the Markdown file is read. F
 ```yml
 title: title of the notes
 date: date for the notes (notes will be sorted based on this)
+tags: list of tags related to the notes (e.g., topics covered)
 publish: whether the page will be visible or not on the website
 ```
