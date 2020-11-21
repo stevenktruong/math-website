@@ -1,6 +1,7 @@
 @use "lengths";
 
 .HamburgerButton {
+    cursor: pointer;
     position: absolute;
     z-index: 9999;
     width: lengths.$mobile-navbar-menubar-width;
