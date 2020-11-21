@@ -1,6 +1,11 @@
 ---
 title: Week 1 Discussion Notes
 date: "2020-10-08"
+tags:
+    - symbols
+    - notation
+    - functions
+    - inverses
 publish: yes
 ---
 

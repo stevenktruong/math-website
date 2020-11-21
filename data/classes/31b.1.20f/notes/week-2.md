@@ -1,6 +1,8 @@
 ---
 title: Week 2 Discussion Notes
 date: "2020-10-15"
+tags:
+    - exponentials and logarithms
 publish: yes
 ---
 

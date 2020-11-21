@@ -1,6 +1,10 @@
 ---
 title: Week 7 Discussion Notes
 date: "2020-11-19"
+tags:
+    - improper integrals
+    - direct comparison
+    - sequences
 publish: yes
 ---
 

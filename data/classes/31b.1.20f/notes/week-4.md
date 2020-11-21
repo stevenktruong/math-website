@@ -1,6 +1,9 @@
 ---
 title: Week 4 Discussion Notes
 date: "2020-10-29"
+tags:
+    - midterm review
+    - integration by parts
 publish: yes
 ---
 

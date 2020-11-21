@@ -1,6 +1,10 @@
 ---
 title: Week 3 Discussion Notes
 date: "2020-10-22"
+tags:
+    - inverse trig functions
+    - interest rates
+    - L'Hôpital's rule
 publish: yes
 ---
 
