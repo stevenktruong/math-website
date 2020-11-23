@@ -25,5 +25,6 @@ jobs:
       env:
         HOST: ${{ secrets.HOST }}
         USER: ${{ secrets.USER }}
-      run: echo "$HOST" > ~/.ssh/known_hosts
+      run: mkdir -p ~/.ssh
+           echo "$HOST" > ~/.ssh/known_hosts
            ./deploy.sh
