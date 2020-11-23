@@ -68,7 +68,6 @@ export const getClassData = classCode => {
     let contentHtml = processorWithMathForClassCode(classCode).processSync(file.contents).toString();
 
     const notesData = getNotesDataForClass(classCode);
-    console.log(notesData);
     contentHtml = contentHtml.replace(
         new RegExp("notes::(.+?).md", "g"),
         (match, noteName) =>
