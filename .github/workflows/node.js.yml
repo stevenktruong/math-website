@@ -18,7 +18,7 @@ jobs:
     - uses: actions/setup-node@v1
     - name: Set up SSH agent
       run: eval "$(ssh-agent -s)"
-           ssh-add - <<< "${{ secrets.MATH_SSH_KEY }}"
+           ssh-add - <<< ${{ secrets.MATH_SSH_KEY }}
     - name: Build website
       run: yarn && yarn build:production
     - name: Deploy website
