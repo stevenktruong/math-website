@@ -360,9 +360,7 @@ $$
 
 I don't think this is on the midterm, but I covered some of it anyway (if we had enough time). As a quick review, here's the statement of integration by parts:
 
-<theorem>
-
-###### Theorem (integration by parts)
+<theorem> integration by parts
 
 If $u$ and $v$ are functions, then
 

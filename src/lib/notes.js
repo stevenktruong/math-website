@@ -20,6 +20,8 @@ const counters = [
     { tag: "proof", display: () => `<h6>Proof.</h6>` },
 ];
 
+const boxedEnvironments = ["theorem", "definition", "proposition"];
+
 export const getAllNotePaths = () => {
     const notesPaths = [];
 
@@ -88,8 +90,19 @@ export const getNoteDataForClass = (classCode, noteName) => {
     counters.forEach(counter => {
         let count = 0;
         substitutedContent = substitutedContent.replace(
-            new RegExp(`<${counter.tag}>`, "g"),
+            new RegExp(`<${counter.tag} ?.*>`, "g"),
             () => `<${counter.tag}>\n${counter.display(++count)}\n`
+        );
+    });
+
+    // Format boxed environment headers, e.g., <theorem>, <definition>
+    boxedEnvironments.forEach(tag => {
+        substitutedContent = substitutedContent.replace(
+            new RegExp(`(<${tag} ?.*>) ?(.+)?`, "g"),
+            (match, fullTag, description) =>
+                `${fullTag}\n<h6>${tag.replace(tag[0], tag[0].toUpperCase())}${
+                    description ? ` (${description})` : ""
+                }</h6>`
         );
     });
 

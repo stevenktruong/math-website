@@ -16,9 +16,7 @@ publish: yes
 
 As a reminder, here's the statement of direct comparison:
 
-<theorem>
-
-###### Theorem (direct comparison test for integrals)
+<theorem> direct comparison test for integrals
 
 Suppose $0 \leq g\p{x} \leq f\p{x}$. Then for $-\infty \leq a < b \leq \infty$ (i.e., the upper and lower bounds are allowed to be infinite):
 
@@ -132,8 +130,6 @@ $$
 ### Definition
 
 <definition>
-
-###### Definition
 
 A sequence $\set{a_n}$ is an ordered list of numbers, where $a_n$ is the $n$-th term of the sequence.
 

@@ -19,8 +19,6 @@ Here are a bunch of symbols that you'll probably see during lecture (and if you'
 
 <definition>
 
-###### Definition
-
 -   $\mathbb{R} = \text{ the set of real numbers } = \p{-\infty, \infty}$
 -   $\in\: =$ "is in" or "is an element of"
 -   $\exists\: =$ "there exists"
@@ -100,7 +98,7 @@ Given a function $f$, we'd like to know if we can go "backwards" from $f$. This 
 
 <definition>
 
-**Definition**. Let $f$ have domain $D$ and range $R$. If $\exists g$ with domain $R$ and range $D$ such that
+Let $f$ have domain $D$ and range $R$. If $\exists g$ with domain $R$ and range $D$ such that
 
 -   $f\p{g\p{x}} = x\quad\forall x \in R$ and
 -   $g\p{f\p{x}} = x\quad\forall x \in D$,
@@ -121,9 +119,7 @@ $f$ doesn't have an inverse here because we can't go backwards from $y$ to get b
 
 To prevent this, we need $f$ to map two different elements to two different things. More succinctly, $a \neq b \implies f\p{a} \neq f\p{b}$. If $f$ satisfies this, then we call $f$ one-to-one, but this isn't the only way to tell if $f$ is one-to-one:
 
-<definition>
-
-###### Definition (one-to-one)
+<definition> one-to-one
 
 Let $f$ have domain $D$, and suppose one of the following is true about $f$:
 

@@ -16,8 +16,6 @@ Here are the main properties you'll want to remember:
 
 <proposition>
 
-###### Proposition
-
 Let $b \in \p{0, \infty} \setminus \set{1}$. Then
 
 $$
@@ -64,9 +62,7 @@ Do the same thing for the last two identities from the proposition.
 
 Another very important identity for logarithms is the change-of-base formula:
 
-<theorem id="change-of-base">
-
-###### Theorem (change-of-base)
+<theorem id="change-of-base"> change-of-base
 
 Let $a, b \in \p{0, \infty} \setminus \set{1}$. Then
 
@@ -117,8 +113,6 @@ $$
 This is because we have the formulas $b = e^{\ln{b}}$ and the change-of-base formula, and we'll see why right now.
 
 <theorem>
-
-###### Theorem
 
 Let $b \in \p{0, \infty} \setminus \set{1}$. Then
 

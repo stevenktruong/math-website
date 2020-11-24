@@ -181,8 +181,6 @@ The idea of **improper integrals** is to look at integrals where $f$ may not be 
 
 <definition>
 
-###### Definition
-
 Let $f\p{x}$ be a function. If $f$ is not defined at $a$, then we have the following **improper integral** of $f$:
 
 $$
@@ -326,9 +324,7 @@ and both integrals diverge, so the original integral must also diverge.
 
 As a quick preview, we're going to quickly talk about direct comparison.
 
-<theorem>
-
-###### Theorem (direct comparison)
+<theorem> direct comparison
 
 Suppose $f\p{x}$ and $g\p{x}$ are functions which satisfy $0 \leq f\p{x} \leq g\p{x}$. Then
 

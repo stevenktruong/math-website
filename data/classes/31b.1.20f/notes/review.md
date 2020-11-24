@@ -12,7 +12,7 @@ publish: yes
 
 <definition id="derivative-definition">
 
-**Definition.** Let $f$ be a function, and define the limit
+Let $f$ be a function, and define the limit
 
 $$
 f'\p{x} = \lim_{h\to0} \frac{f\p{x + h} - f\p{x}}{h}.
@@ -22,9 +22,7 @@ If this limit exists, then we say that $f$ is **differentiable at $x$** and we c
 
 </definition>
 
-<proposition id="derivative-properties">
-
-###### Proposition (properties of the derivative)
+<proposition id="derivative-properties"> properties of the derivative
 
 Let $f, g$ be differentiable functions and $c$ be a real number. Then the following hold:
 
@@ -114,7 +112,7 @@ Calculate $\deriv{}{x} b^x$, where $b > 0$. (Hint: $b = e^{\log{b}}$)
 
 <definition id="integral-definition">
 
-**Definition.** Let $f$ be continuous. If $F$ is a function which satisfies $F' = f$, then $F$ is called an **antiderivative** or **integral** of $f$. Furthermore, **indefinite integral of $f$ with respect to $x$** is
+Let $f$ be continuous. If $F$ is a function which satisfies $F' = f$, then $F$ is called an **antiderivative** or **integral** of $f$. Furthermore, **indefinite integral of $f$ with respect to $x$** is
 
 $$
 \int f\p{x} \,\diff{x} = F\p{x} + C,
@@ -124,9 +122,9 @@ where $C$ is a constant.
 
 </definition>
 
-<proposition id="integral-properties">
+<proposition id="integral-properties"> properties of the integral
 
-**Proposition (properties of the integral).** Let $f, g$ be integrable functions and $c$ be a real number. Then the following hold:
+Let $f, g$ be integrable functions and $c$ be a real number. Then the following hold:
 
 1.  Integration is **linear**, that is,
 
@@ -141,9 +139,7 @@ where $C$ is a constant.
 
 </proposition>
 
-<theorem id="fundamental-theorem-of-calculus">
-
-###### Theorem (the fundamental theorem of calculus)
+<theorem id="fundamental-theorem-of-calculus"> the fundamental theorem of calculus
 
 Let $F$ be an antiderivative of $f$. Then
 

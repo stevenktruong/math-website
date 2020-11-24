@@ -38,9 +38,7 @@ As in the case with $\cos{x}$, we have multiple choices, but I think it's clear 
 
 We can play the same game with the rest of the trig functions, and what we get are the following inverse functions:
 
-<definition id="inverse-trig">
-
-###### Definition (inverse trigonometric functions)
+<definition id="inverse-trig"> inverse trigonometric functions
 
 We define the inverses of trig functions via the following tables:
 
@@ -83,8 +81,6 @@ The way I remember how to group them are as follows: if $\sin{x}$ is the "main" 
 Now that we have the inverses, let's talk about their derivatives. They are given in the following theorem:
 
 <theorem>
-
-###### Theorem
 
 $$
 \begin{aligned}
@@ -197,9 +193,7 @@ Prove the limit, e.g., using L'Hôpital's rule or by using the limit definition 
 
 This rule will probably be the one thing you remember from this class:
 
-<theorem>
-
-###### Theorem (L'Hôpital's rule)
+<theorem> L'Hôpital's rule
 
 Suppose $f$ and $g$ satisfy the following conditions:
 
