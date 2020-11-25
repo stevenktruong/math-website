@@ -68,7 +68,7 @@ Let $\set{a_n}$ be a sequence.
 
 Notice that this just tells you that the sequences converges, but it doesn't tell you what it converges to. It can still be used to calculate limits though, especially for recursively defined sequences:
 
-<example id="11-1-88-c"> (11.1.88(c))
+<example  id="11.1.88(c)"> (11.1.88(c))
 
 Consider the sequence defined by
 
@@ -270,7 +270,7 @@ $$
 
 Telescoping series are series where a lot of terms cancel out. Generally, they'll be rational functions with linear factors in the denominator.
 
-<example> (slightly modified 11.2.14)
+<example id="11.2.14"> (slightly modified 11.2.14)
 
 Calculate $\displaystyle \sum_{n=1}^\infty \frac{1}{n\p{n+2}}$.
 
@@ -389,8 +389,8 @@ See [#156](https://campuswire.com/c/G6D8D17EE/feed/156).
 
 ### 11.1.88
 
-I covered [(a)](#example-3) and [(c)](#example-2).
+I covered [(a)](<#11.1.88(a)>) and [(c)](<#11.1.88(c)>).
 
 ### 11.2.14
 
-I solved a [slightly modified version](#example-6) of this problem.
+I solved a [slightly modified version](#11.2.14) of this problem.

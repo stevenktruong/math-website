@@ -90,8 +90,8 @@ export const getNoteDataForClass = (classCode, noteName) => {
     counters.forEach(counter => {
         let count = 0;
         substitutedContent = substitutedContent.replace(
-            new RegExp(`<${counter.tag} ?.*>`, "g"),
-            () => `<${counter.tag}>\n${counter.display(++count)}\n`
+            new RegExp(`(<${counter.tag} ?.*>)`, "g"),
+            (match, fullTag) => `${fullTag}\n${counter.display(++count)}\n`
         );
     });
 

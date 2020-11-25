@@ -101,7 +101,7 @@ The smaller integral diverges by $p$-itnegrals, so by direct comparison, $\int_0
 
 It might help to brush up on [what a limit _means_](https://tutorial.math.lamar.edu/classes/calcI/defnoflimit.aspx). With that said, taking limits will help us prove inequalities for large values of $x$, which is best illustrated through examples:
 
-<example> (8.7.60(a))
+<example id="8.7.60(a)"> (8.7.60(a))
 
 Show that if $a > 0$, then $\displaystyle \lim_{x\to\infty} \frac{x^a}{\ln{x}} \implies x^a > 2\ln{x}$ for $x$ large enough.
 
@@ -223,7 +223,7 @@ $$
 
 ### 8.7.60(a)
 
-See [Example 3](#example-3).
+See [Example 3](<#8.7.60(a)>).
 
 ### 8.7.70
 
