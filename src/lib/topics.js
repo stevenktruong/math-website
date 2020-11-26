@@ -34,7 +34,7 @@ export const getSortedTopicsData = () => {
                 ...file.meta,
             };
         })
-        .sort((a, b) => a.topic < b.topic);
+        .sort((a, b) => (a.topic < b.topic ? -1 : 1));
 };
 
 /**
