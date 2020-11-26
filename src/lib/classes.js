@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 
 import { noteTagsFormatting } from "config/formatting";
-import { publicRuntimeConfig } from "helpers";
+import { customSortOrder, publicRuntimeConfig } from "helpers";
 import { dataDirectory, processorWithMathForClassCode, readDirectoryContents, readMarkdown } from "./utils";
 import { getNotesDataForClass } from "./notes";
 
@@ -53,8 +53,7 @@ export const getSortedClassesData = () => {
                 ...file.meta,
             };
         })
-        .sort(sortClasses)
-        .reverse();
+        .sort(sortClasses);
 };
 
 /**
@@ -99,16 +98,16 @@ export const parseClassCode = classCode => {
  */
 const sortClasses = (a, b) => {
     if (a.year !== b.year) {
-        return a.year < b.year ? 1 : -1;
+        return a.year < b.year ? -1 : 1;
     }
 
     if (a.quarter !== b.quarter) {
-        return a.quarter === "w" || b.quarter === "f" ? 1 : -1;
+        return customSortOrder(["Winter", "Spring", "Fall"])(a.quarter, b.quarter);
     }
 
     if (a.course !== b.course) {
-        return a.course < b.course ? 1 : -1;
+        return a.course < b.course ? -1 : 1;
     }
 
-    return a.lecture < b.lecture ? 1 : -1;
+    return a.lecture < b.lecture ? -1 : 1;
 };

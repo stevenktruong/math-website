@@ -25,11 +25,9 @@ export const substituteVariables = (input, variables) => {
 };
 
 /**
- * Parse the math macros file for a set of class notes
+ * Parse the math macros file
  */
-export const getMathMacros = classCode => {
-    const macrosPath = path.join(dataDirectory, `classes/${classCode}/macros.json`);
-
+export const getMathMacros = macrosPath => {
     if (!fs.existsSync(macrosPath)) return {};
 
     const fileContents = fs.readFileSync(macrosPath, "utf-8");
@@ -37,6 +35,21 @@ export const getMathMacros = classCode => {
 };
 
 export const baseProcessor = () => remark().use(remark2rehype, { allowDangerousHtml: true }).use(raw).use(stringify);
+
+export const processorWithMathForTopic = topic =>
+    remark()
+        .use(toc, { maxDepth: 3 })
+        .use(slug)
+        .use(math)
+        .use(remark2rehype, { allowDangerousHtml: true })
+        .use(katex, {
+            trust: true,
+            strict: false,
+            macros: getMathMacros(path.join(dataDirectory, `quals/${topic}/macros.json`)),
+        })
+        .use(highlight)
+        .use(raw)
+        .use(stringify);
 
 export const processorWithMathForClassCode = classCode =>
     remark()
@@ -47,7 +60,7 @@ export const processorWithMathForClassCode = classCode =>
         .use(katex, {
             trust: true,
             strict: false,
-            macros: getMathMacros(classCode),
+            macros: getMathMacros(path.join(dataDirectory, `classes/${classCode}/macros.json`)),
         })
         .use(highlight)
         .use(raw)

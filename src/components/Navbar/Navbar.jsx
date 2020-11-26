@@ -11,6 +11,10 @@ const navLinks = {
         title: "Teaching",
         href: "/teaching",
     },
+    quals: {
+        title: "Quals",
+        href: "/quals",
+    },
     cv: {
         title: "CV",
         href: "/files/cv.pdf",

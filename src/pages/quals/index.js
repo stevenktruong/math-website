@@ -1,30 +1,30 @@
 import * as React from "react";
 import Head from "next/head";
 
+import { getSortedTopicsData } from "lib/topics";
 import Layout from "components/Layout";
-import Teaching from "components/Teaching";
-import { getSortedClassesData } from "lib/classes";
+import Quals from "components/Quals";
 
-export default class TeachingPage extends React.Component {
+export default class QualsPage extends React.Component {
     render() {
         const fileData = this.props.fileData;
         return (
             <>
                 <Head>
-                    <title>Teaching</title>
+                    <title>Qualifying Exams</title>
                 </Head>
-                <Layout rightSide={<Teaching fileData={fileData} />} />
+                <Layout rightSide={<Quals fileData={fileData} />} fileData={fileData} />
             </>
         );
     }
 }
 
 export const getStaticProps = () => {
-    const classesData = getSortedClassesData();
+    const topicsData = getSortedTopicsData();
     return {
         props: {
             fileData: {
-                classesData,
+                topicsData,
             },
         },
     };

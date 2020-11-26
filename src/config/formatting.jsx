@@ -25,8 +25,16 @@ export const daysOfTheWeekFormatting = days => {
 export const noteTagsFormatting = tags =>
     tags
         ? `<div class="note-tag-container">${tags
-              .sort()
+              .sort((a, b) => (a.toLowerCase() < b.toLowerCase() ? -1 : 1))
               .map(tag => `<span>${tag}</span>`)
+              .join(", ")}</div>`
+        : "";
+
+export const problemTopicsFormatting = topics =>
+    topics
+        ? `<div class="problem-topics-container">${topics
+              .sort((a, b) => (a.toLowerCase() < b.toLowerCase() ? -1 : 1))
+              .map(topic => `<span>${topic}</span>`)
               .join(", ")}</div>`
         : "";
 
@@ -42,6 +50,19 @@ export const breadcrumbFormatting = {
     noteName: {
         sourceProp: "noteData",
         format: noteData => noteData.title,
+    },
+    quals: {
+        sourceProp: null,
+        format: () => "Quals",
+    },
+    topic: {
+        sourceProp: "topicData",
+        format: topicData => topicData.title,
+    },
+    problemCode: {
+        sourceProp: "problemData",
+        format: problemData =>
+            `${formatQuarterYear(problemData.quarter, problemData.year)} - Problem ${problemData.problemNumber}`,
     },
 };
 

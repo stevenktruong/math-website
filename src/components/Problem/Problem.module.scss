@@ -1,0 +1,54 @@
+@use "lengths";
+@use "math-styles";
+
+.Problem {
+    @include math-styles.answer(solution);
+
+    :global {
+        .katex-display {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-bottom: lengths.$medium;
+    }
+
+    * + p,
+    * > p,
+    * + problem,
+    * + solution {
+        margin-top: lengths.$medium;
+    }
+
+    h1 + p,
+    h2 + p,
+    h3 + p {
+        margin-top: 0;
+    }
+
+    h1 {
+        margin: 0;
+        margin-bottom: lengths.$small;
+    }
+
+    h2 {
+        margin-top: lengths.$big;
+        margin-bottom: lengths.$small;
+    }
+
+    h1 + h2 {
+        margin-top: 0;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+        margin: lengths.$medium auto;
+    }
+}
