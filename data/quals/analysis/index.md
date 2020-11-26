@@ -2,7 +2,7 @@
 title: Analysis
 ---
 
-While studying for the analysis qualifying exam, I typed up solutions for the problems I worked on.
+While studying for the analysis qualifying exam, I will by typing solutions for the problems I worked on.
 
 ### Collaborators
 
