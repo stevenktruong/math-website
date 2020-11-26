@@ -43,6 +43,7 @@
     a,
     a:link,
     a:visited {
+        line-height: 1.5;
         height: auto;
         color: colors.$highlight;
         text-decoration: none;
@@ -129,6 +130,6 @@
     }
 
     li {
-        margin: lengths.$medium 0;
+        margin: lengths.$small 0;
     }
 }
