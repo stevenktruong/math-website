@@ -8,7 +8,7 @@ export default class Quals extends React.Component {
         const topicsData = fileData.topicsData;
         return (
             <section className={styles.Quals}>
-                <h1>Topics</h1>
+                <h1>Qualifying Exams</h1>
                 <ul>
                     {topicsData.map(topicData => (
                         <li key={topicData.topic}>

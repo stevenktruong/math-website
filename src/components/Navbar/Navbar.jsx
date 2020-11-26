@@ -2,24 +2,7 @@ import Link from "next/link";
 import HamburgerButton from "components/HamburgerButton";
 import styles from "./Navbar.module.scss";
 
-const navLinks = {
-    home: {
-        title: "Home",
-        href: "/",
-    },
-    teaching: {
-        title: "Teaching",
-        href: "/teaching",
-    },
-    quals: {
-        title: "Quals",
-        href: "/quals",
-    },
-    cv: {
-        title: "CV",
-        href: "/files/cv.pdf",
-    },
-};
+import { navLinks } from "config/formatting";
 
 export default class Navbar extends React.Component {
     constructor(props) {

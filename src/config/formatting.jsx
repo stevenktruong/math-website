@@ -12,6 +12,25 @@ export const daysOfTheWeekTable = {
     S: "S",
 };
 
+export const navLinks = {
+    home: {
+        title: "Home",
+        href: "/",
+    },
+    teaching: {
+        title: "Teaching",
+        href: "/teaching",
+    },
+    quals: {
+        title: "Qualifying Exams",
+        href: "/quals",
+    },
+    cv: {
+        title: "CV",
+        href: "/files/cv.pdf",
+    },
+};
+
 /**
  * Converts a string of days to use their display day, e.g., MTR -> MoTuTh
  * @param {string} days
@@ -53,7 +72,7 @@ export const breadcrumbFormatting = {
     },
     quals: {
         sourceProp: null,
-        format: () => "Quals",
+        format: () => "Qualifying Exams",
     },
     topic: {
         sourceProp: "topicData",
