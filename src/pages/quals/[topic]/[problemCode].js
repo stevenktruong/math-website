@@ -6,6 +6,7 @@ import Layout from "components/Layout";
 import { importKatex } from "config/externalImports";
 import { getTopicData } from "lib/topics";
 import { getAllProblemsPaths, getProblemDataForTopic } from "lib/problems";
+import { formatQuarterYear } from "helpers";
 
 export default class ProblemPage extends React.Component {
     render() {
@@ -16,7 +17,7 @@ export default class ProblemPage extends React.Component {
                 <Head>
                     {importKatex}
                     <title>
-                        {problemData.quarter} 20{problemData.year}
+                        {formatQuarterYear(problemData.quarter, problemData.year)} - Problem {problemData.problemNumber}
                     </title>
                 </Head>
                 <Layout rightSide={<Problem fileData={fileData} />} fileData={fileData} />
