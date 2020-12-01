@@ -4,7 +4,7 @@ date: "2020-11-30"
 tags:
     - convergence of infinite series
     - integration
-publish: no
+publish: yes
 ---
 
 # Week 9 Discussion Notes
