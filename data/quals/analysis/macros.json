@@ -8,5 +8,9 @@
     "\\abs": "\\mathopen{}\\left\\lvert #1 \\right\\rvert\\mathclose{}",
     "\\norm": "\\mathopen{}\\left\\lVert #1 \\right\\rVert\\mathclose{}",
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
-    "\\func": "#1\\colon #2 \\to #3"
+    "\\func": "#1\\colon #2 \\to #3",
+    "\\comp": "\\mathrm{c}",
+    "\\st": "\\:\\middle\\vert\\:",
+    "\\Re": "\\operatorname{Re}",
+    "\\C": "\\mathbb{C}"
 }
