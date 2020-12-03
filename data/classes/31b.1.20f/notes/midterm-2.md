@@ -25,12 +25,12 @@ True or false:
 ## Question 2
 
 1. If an infinite series converges conditionally, then the value of the series depends on the order of the summation. Give one example of such an infinite series and explain.
-2. Give an example of an antiderivative that can only be found using a trigonometric reduction formula.
+2. Give an example of an antiderivative that can be found using a trigonometric reduction formula.
 
 <solution>
 
 1. $\displaystyle \sum_{n=1}^\infty \frac{\p{-1}^n}{n}$ converges by the alternating series test, but $\displaystyle \sum_{n=1}^\infty \frac{1}{n}$ diverges because of the $p$-series theorem.
-2. A reduction formula is required if the integral involves even powers of $\sin{x}$ and $\cos{x}$, e.g., $\displaystyle \int \sin^2{x}\cos^{4}{x} \,\diff{x}$.
+2. A reduction formula can be used for integrals involving powers of $\sin{x}$ and $\cos{x}$, e.g., $\displaystyle \int \sin^2{x}\cos^{4}{x} \,\diff{x}$.
 
 </solution>
 
