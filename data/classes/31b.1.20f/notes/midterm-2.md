@@ -265,7 +265,7 @@ Assume the function $f$ has an inverse on its domain.
 
 1. Let $y = f^{-1}\p{x}$ and show that $\displaystyle \int f^{-1}\p{x} \,\diff{x} = \int yf'\p{y} \,\diff{y}$.
 2. Use (i) to prove that $\displaystyle \int f^{-1}\p{x} \,\diff{x} = yf\p{y} - \int f\p{y} \,\diff{y}$.
-3. Use (ii) to evaluate $\displaystyle \int \ln{x} \,\diff{x}$ and $\displaystyle \int \sin^{-1}{x} \,\diff{x}$.
+3. Use (ii) to evaluate $\displaystyle \int \ln{x} \,\diff{x}$.
 
 <solution>
 
@@ -301,32 +301,6 @@ Assume the function $f$ has an inverse on its domain.
             &= x\ln{x} - e^{\ln{x}} + C \\
             &= \boxed{x\ln{x} - x + C}.
     \end{aligned}
-    $$
-
-    Similarly, if $y = f^{-1}\p{x} = \sin^{-1}{x}$, then $f\p{y} = \sin{y}$, which gives
-
-    $$
-    \begin{aligned}
-        \int \sin^{-1}{x} \,\diff{x}
-            &= yf\p{y} - \int f\p{y} \,\diff{y} \\
-            &= \sin^{-1}\p{x} \cdot \sin\p{\sin^{-1}\p{x}} - \int \sin{y} \,\diff{y} \\
-            &= x\sin^{-1}\p{x} + \cos{y} + C \\
-            &= x\sin^{-1}\p{x} + \cos\p{\sin^{-1}{x}} + C
-    \end{aligned}
-    $$
-
-    We can calculate $\cos\p{\sin^{-1}{x}}$: if $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$, then $\cos\theta = \sqrt{1 - \sin^2\theta}$, so if we set $\theta = \sin^{-1}{x}$,
-
-    $$
-    \cos\p{\sin^{-1}{x}}
-        = \sqrt{1 - \sin^2\p{\sin^{-1}{x}}}
-        = \sqrt{1 - x^2},
-    $$
-
-    so the final answer is
-
-    $$
-    \boxed{x\sin^{-1}\p{x} + \sqrt{1 - x^2} + C}.
     $$
 
 </solution>
