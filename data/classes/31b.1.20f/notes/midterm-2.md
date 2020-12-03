@@ -1,7 +1,7 @@
 ---
 title: Midterm 2 Solutions
 date: "2020-12-02"
-publish: no
+publish: yes
 ---
 
 # Midterm 2 Solutions

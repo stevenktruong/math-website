@@ -48,6 +48,7 @@ When e-mailing me, please include `[31B]` somewhere in the subject so it doesn't
 -   notes::quiz-1.md
 -   notes::quiz-2.md
 -   notes::midterm-1.md
+-   notes::midterm-2.md
 
 ## Notes
 
