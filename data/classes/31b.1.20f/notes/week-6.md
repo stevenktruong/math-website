@@ -2,8 +2,8 @@
 title: Week 6 Discussion Notes
 date: "2020-11-10"
 tags:
-    - partial fractions
-    - improper integrals
+  - partial fractions
+  - improper integrals
 publish: yes
 ---
 

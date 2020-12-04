@@ -7,10 +7,13 @@
     "\\poc": "\\mathopen{}\\left\\lparen #1 \\right\\rbrack\\mathclose{}",
     "\\abs": "\\mathopen{}\\left\\lvert #1 \\right\\rvert\\mathclose{}",
     "\\norm": "\\mathopen{}\\left\\lVert #1 \\right\\rVert\\mathclose{}",
+    "\\inner": "\\mathopen{}\\left\\langle #1 \\right\\rangle\\mathclose{}",
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
     "\\func": "#1\\colon #2 \\to #3",
     "\\comp": "\\mathrm{c}",
+    "\\conj": "\\overline{#1}",
     "\\st": "\\:\\middle\\vert\\:",
     "\\Re": "\\operatorname{Re}",
-    "\\C": "\\mathbb{C}"
+    "\\C": "\\mathbb{C}",
+    "\\Q": "\\mathbb{Q}"
 }

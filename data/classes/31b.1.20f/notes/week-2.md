@@ -2,7 +2,7 @@
 title: Week 2 Discussion Notes
 date: "2020-10-15"
 tags:
-    - exponentials and logarithms
+  - exponentials and logarithms
 publish: yes
 ---
 
@@ -279,9 +279,9 @@ $$
 
 For the homework due this week, there are already discussions on [Campuswire](https://campuswire.com/c/G6D8D17EE/) for some of them:
 
--   7.1.57 ([#17](https://campuswire.com/c/G6D8D17EE/feed/17))
--   7.1.91 ([#5](https://campuswire.com/c/G6D8D17EE/feed/5))
--   7.2.44 ([#8](https://campuswire.com/c/G6D8D17EE/feed/8))
+- 7.1.57 ([#17](https://campuswire.com/c/G6D8D17EE/feed/17))
+- 7.1.91 ([#5](https://campuswire.com/c/G6D8D17EE/feed/5))
+- 7.2.44 ([#8](https://campuswire.com/c/G6D8D17EE/feed/8))
 
 So, I won't be covering those here.
 

@@ -2,10 +2,10 @@
 title: Week 1 Discussion Notes
 date: "2020-10-08"
 tags:
-    - symbols
-    - notation
-    - functions
-    - inverses
+  - symbols
+  - notation
+  - functions
+  - inverses
 publish: yes
 ---
 
@@ -19,11 +19,11 @@ Here are a bunch of symbols that you'll probably see during lecture (and if you'
 
 <definition>
 
--   $\mathbb{R} = \text{ the set of real numbers } = \p{-\infty, \infty}$
--   $\in\: =$ "is in" or "is an element of"
--   $\exists\: =$ "there exists"
--   $\forall\: =$ "for all" or "for any" or "for every"
--   $\implies\: =$ "implies"
+- $\mathbb{R} = \text{ the set of real numbers } = \p{-\infty, \infty}$
+- $\in\: =$ "is in" or "is an element of"
+- $\exists\: =$ "there exists"
+- $\forall\: =$ "for all" or "for any" or "for every"
+- $\implies\: =$ "implies"
 
 </definition>
 
@@ -79,14 +79,14 @@ If $f\p{x} = \frac{1}{x}$ and $D$ is not specified, then we assume $D = \set{x \
 
 Let $f\p{x} = x^2$.
 
--   $D = \R \implies R = \left[ 0, \infty \right)$
-    <img src="{{ assetsFolder }}/images/x^2-1.png" height=200px, style="margin: 0;">
+- $D = \R \implies R = \left[ 0, \infty \right)$
+  <img src="{{ assetsFolder }}/images/x^2-1.png" height=200px, style="margin: 0;">
 
--   $D = \left[ 0, \infty \right) \implies R = \left[ 0, \infty \right)$
-    <img src="{{ assetsFolder }}/images/x^2-2.png" height=200px, style="margin: 0;">
+- $D = \left[ 0, \infty \right) \implies R = \left[ 0, \infty \right)$
+  <img src="{{ assetsFolder }}/images/x^2-2.png" height=200px, style="margin: 0;">
 
--   $D = \set{x \in \R \mid x > 2} \implies R = \p{4, \infty}$
-    <img src="{{ assetsFolder }}/images/x^2-3.png" height=200px, style="margin: 0;">
+- $D = \set{x \in \R \mid x > 2} \implies R = \p{4, \infty}$
+  <img src="{{ assetsFolder }}/images/x^2-3.png" height=200px, style="margin: 0;">
 
 </example>
 
@@ -100,8 +100,8 @@ Given a function $f$, we'd like to know if we can go "backwards" from $f$. This 
 
 Let $f$ have domain $D$ and range $R$. If $\exists g$ with domain $R$ and range $D$ such that
 
--   $f\p{g\p{x}} = x\quad\forall x \in R$ and
--   $g\p{f\p{x}} = x\quad\forall x \in D$,
+- $f\p{g\p{x}} = x\quad\forall x \in R$ and
+- $g\p{f\p{x}} = x\quad\forall x \in D$,
 
 then we say $f$ is **invertible** and we call $f^{-1} = g$ the **inverse** of $f$.
 
@@ -123,10 +123,10 @@ To prevent this, we need $f$ to map two different elements to two different thin
 
 Let $f$ have domain $D$, and suppose one of the following is true about $f$:
 
--   $a \neq b \implies f\p{a} \neq f\p{b}\ \forall a, b \in D$ or
--   $f\p{x} = y$ has exactly one solution $\forall y \in R$ or
--   $f\p{a} = f\p{b} \implies a = b\ \forall a, b \in D$ or
--   $f$ passes the horizontal line test.
+- $a \neq b \implies f\p{a} \neq f\p{b}\ \forall a, b \in D$ or
+- $f\p{x} = y$ has exactly one solution $\forall y \in R$ or
+- $f\p{a} = f\p{b} \implies a = b\ \forall a, b \in D$ or
+- $f$ passes the horizontal line test.
 
 Then we say $f$ is **one-to-one** or **injective**.
 
@@ -138,14 +138,14 @@ Notice that the domain is very important when determining whether $f$ is one-to-
 
 Let $f\p{x} = x^2$.
 
--   If $D = \R$, then $f$ _is not_ one-to-one.
-    <img src="{{ assetsFolder }}/images/not-injective.png" height=400px>
+- If $D = \R$, then $f$ _is not_ one-to-one.
+  <img src="{{ assetsFolder }}/images/not-injective.png" height=400px>
 
-    $f\p{x} = 1$ has two solutions: $-1$ and $1$.
+  $f\p{x} = 1$ has two solutions: $-1$ and $1$.
 
--   If $D = \left[ 0, \infty \right)$, then $f$ _is_ one-to-one.
-    <img src="{{ assetsFolder }}/images/injective.png" height=400px>
+- If $D = \left[ 0, \infty \right)$, then $f$ _is_ one-to-one.
+  <img src="{{ assetsFolder }}/images/injective.png" height=400px>
 
-    Since $f$ is one-to-one, it has an inverse, which is $f^{-1}\p{x} = \sqrt{x}$.
+  Since $f$ is one-to-one, it has an inverse, which is $f^{-1}\p{x} = \sqrt{x}$.
 
 </example>
