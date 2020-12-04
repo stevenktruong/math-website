@@ -386,7 +386,7 @@ Find the sum of the series, if it converges.
     $$
     \sum_{n=1}^N \ln\p{\frac{n+1}{n}}
         = \sum_{n=1}^N \p{\ln\p{n+1} - \ln{n}}
-        = \ln{N},
+        = \ln\p{N+1},
     $$
 
     which diverges as $N \to \infty$. Alternatively, you can use the limit test with $\frac{1}{n}$:
