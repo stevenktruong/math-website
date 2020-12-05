@@ -6,8 +6,8 @@ While studying for the analysis qualifying exam, I will by typing solutions for 
 
 ### Collaborators
 
-- [Raymond Chu](https://www.math.ucla.edu/~rchu/)
 - [James Chapman](https://www.math.ucla.edu/~chapman20j/)
+- [Raymond Chu](https://www.math.ucla.edu/~rchu/)
 
 ### Resources
 
