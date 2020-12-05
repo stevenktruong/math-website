@@ -2,9 +2,9 @@
 title: Week 8 Discussion Notes
 date: "2020-11-24"
 tags:
-  - sequences
-  - induction
-  - convergence of infinite series
+    - sequences
+    - induction
+    - convergence of infinite series
 publish: yes
 ---
 

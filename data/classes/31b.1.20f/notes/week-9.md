@@ -2,8 +2,8 @@
 title: Week 9 Discussion Notes
 date: "2020-11-30"
 tags:
-  - convergence of infinite series
-  - integration
+    - convergence of infinite series
+    - integration
 publish: yes
 ---
 
@@ -17,8 +17,8 @@ publish: yes
 
 Let $\set{a_n}$ be a sequence.
 
-- If $\displaystyle \sum_{n=0}^\infty \abs{a_n}$ converges, then we say that the series is **absolutely convergent**.
-- If $\displaystyle \sum_{n=0}^\infty a_n$ converges, but it does not converge absolutely, then we say that the series is **conditionally convergent**.
+-   If $\displaystyle \sum_{n=0}^\infty \abs{a_n}$ converges, then we say that the series is **absolutely convergent**.
+-   If $\displaystyle \sum_{n=0}^\infty a_n$ converges, but it does not converge absolutely, then we say that the series is **conditionally convergent**.
 
 </definition>
 
@@ -70,8 +70,8 @@ The improper integral $\int_1^\infty \frac{1}{x^p} \,\diff{x}$ converges if $p >
 
 Suppose $0 \leq a_n \leq b_n$ for $n \geq M$ for some $M > 0$. Then:
 
-- If $\displaystyle \sum_{n=0}^\infty a_n$ diverges, then $\displaystyle \sum_{n=0}^\infty b_n$ diverges as well.
-- If $\displaystyle \sum_{n=0}^\infty b_n$ converges, then $\displaystyle \sum_{n=0}^\infty a_n$ converges as well.
+-   If $\displaystyle \sum_{n=0}^\infty a_n$ diverges, then $\displaystyle \sum_{n=0}^\infty b_n$ diverges as well.
+-   If $\displaystyle \sum_{n=0}^\infty b_n$ converges, then $\displaystyle \sum_{n=0}^\infty a_n$ converges as well.
 
 </theorem>
 
@@ -81,9 +81,9 @@ Suppose $0 \leq a_n \leq b_n$ for $n \geq M$ for some $M > 0$. Then:
 
 Suppose $a_n \geq 0$ and $b_n \geq 0$ for $n \geq M$ for some $M > 0$. Let $\displaystyle L = \lim_{n\to\infty} \frac{a_n}{b_n}$.
 
-- If $L \in \p{0, \infty}$, then $\displaystyle \sum_{n=0}^\infty a_n$ converges if and only if $\displaystyle \sum_{n=0}^\infty b_n$ converges.
-- If $L = 0$ and $\displaystyle \sum_{n=0}^\infty b_n$ converges, then $\displaystyle \sum_{n=0}^\infty a_n$ converges as well.
-- If $L = \infty$ and $\displaystyle \sum_{n=0}^\infty a_n$ converges, then $\displaystyle \sum_{n=0}^\infty b_n$ converges as well.
+-   If $L \in \p{0, \infty}$, then $\displaystyle \sum_{n=0}^\infty a_n$ converges if and only if $\displaystyle \sum_{n=0}^\infty b_n$ converges.
+-   If $L = 0$ and $\displaystyle \sum_{n=0}^\infty b_n$ converges, then $\displaystyle \sum_{n=0}^\infty a_n$ converges as well.
+-   If $L = \infty$ and $\displaystyle \sum_{n=0}^\infty a_n$ converges, then $\displaystyle \sum_{n=0}^\infty b_n$ converges as well.
 
 </theorem>
 
@@ -124,9 +124,9 @@ $\sum_{n=1}^\infty \frac{1}{n^2}$ converges because it's a $p$-series, so by the
 
 Let $\displaystyle L = \lim_{n\to\infty} \abs{\frac{a_{n+1}}{a_n}}$.
 
-- If $L < 1$, then $\displaystyle \sum_{n=1}^\infty a_n$ converges absolutely.
-- If $L > 1$, then $\displaystyle \sum_{n=1}^\infty a_n$ diverges.
-- If $L = 1$, then the ratio test is inconclusive.
+-   If $L < 1$, then $\displaystyle \sum_{n=1}^\infty a_n$ converges absolutely.
+-   If $L > 1$, then $\displaystyle \sum_{n=1}^\infty a_n$ diverges.
+-   If $L = 1$, then the ratio test is inconclusive.
 
 </theorem>
 
@@ -136,19 +136,19 @@ Let $\displaystyle L = \lim_{n\to\infty} \abs{\frac{a_{n+1}}{a_n}}$.
 
 Let $\displaystyle L = \lim_{n\to\infty} \abs{a_n}^{1/n}$.
 
-- If $L < 1$, then $\displaystyle \sum_{n=1}^\infty a_n$ converges absolutely.
-- If $L > 1$, then $\displaystyle \sum_{n=1}^\infty a_n$ diverges.
-- If $L = 1$, then the root test is inconclusive.
+-   If $L < 1$, then $\displaystyle \sum_{n=1}^\infty a_n$ converges absolutely.
+-   If $L > 1$, then $\displaystyle \sum_{n=1}^\infty a_n$ diverges.
+-   If $L = 1$, then the root test is inconclusive.
 
 </theorem>
 
 The ratio test and root test are pretty similar in that if one is inconclusive, the other one probably will be, too. They also "measure" how fast the terms $a_n$ converge to $0$.
 
-- If $L < 1$, then the terms converge fast enough that the whole series converges.
+-   If $L < 1$, then the terms converge fast enough that the whole series converges.
 
-- If $L > 1$, then the terms converge too slow so the series diverges.
+-   If $L > 1$, then the terms converge too slow so the series diverges.
 
-- If $L = 1$, the rate is somewhere in between too fast and too slow, which is why they're inconclusive.
+-   If $L = 1$, the rate is somewhere in between too fast and too slow, which is why they're inconclusive.
 
 ### Alternating Series Test
 

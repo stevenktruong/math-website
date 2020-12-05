@@ -27,16 +27,18 @@ export const getAllProblemsPaths = () => {
 
     getAllTopicPaths().forEach(topicPath => {
         const qualTopicDirectory = path.join(dataDirectory, `quals/${topicPath.params.topic}/problems`);
-        problemPaths.push(
-            ...readDirectoryContents(qualTopicDirectory).map(problemFileName => {
-                return {
+        readDirectoryContents(qualTopicDirectory).forEach(examDate => {
+            const examDateDirectory = path.join(qualTopicDirectory, examDate);
+
+            readDirectoryContents(examDateDirectory).forEach(problemFileName => {
+                problemPaths.push({
                     params: {
                         topic: topicPath.params.topic,
-                        problemCode: problemFileName.replace(/\.md$/, ""),
+                        problemCode: `${examDate}.${problemFileName.replace(/\.md$/, "")}`,
                     },
-                };
-            })
-        );
+                });
+            });
+        });
     });
 
     return problemPaths;
@@ -48,7 +50,9 @@ export const getAllProblemsPaths = () => {
  */
 export const getProblemsDataForTopic = topic => {
     const problemsData = {};
-    getSortedProblemsDataForTopic(topic).forEach(problemData => (problemsData[problemData.problemCode] = problemData));
+    getSortedProblemsDataForTopic(topic).forEach(problemData => {
+        problemsData[problemData.problemCode] = problemData;
+    });
     return problemsData;
 };
 
@@ -58,30 +62,40 @@ export const getProblemsDataForTopic = topic => {
  */
 export const getSortedProblemsDataForTopic = topic => {
     const problemsDirectory = path.join(dataDirectory, `quals/${topic}/problems`);
+    const sortedProblemsData = [];
 
-    return readDirectoryContents(problemsDirectory)
-        .map(problemFileName => {
-            const filePath = path.join(dataDirectory, `quals/${topic}/problems/${problemFileName}`);
+    readDirectoryContents(problemsDirectory).forEach(examDate => {
+        const examDateDirectory = path.join(problemsDirectory, examDate);
+
+        readDirectoryContents(examDateDirectory).forEach(problemFileName => {
+            const filePath = path.join(examDateDirectory, problemFileName);
             const file = readMarkdown(filePath);
 
-            const problemCode = problemFileName.replace(/\.md$/, "");
+            const problemCode = `${examDate}.${problemFileName.replace(/\.md$/, "")}`;
 
-            return {
+            sortedProblemsData.push({
                 problemCode,
                 ...parseProblemCode(problemCode),
                 ...file.meta,
-            };
-        })
-        .sort(sortProblems);
+            });
+        });
+    });
+
+    return sortedProblemsData.sort(sortProblems);
 };
 
 /**
  * Gets metadata and HTML (with math rendered) for a specific problem
  * @param {string} topic - Topic the problem belongs to
- * @param {string} problemCode - Filename WITHOUT .md at the end
+ * @param {string} problemCode - E.g., 09f.1
  */
 export const getProblemDataForTopic = (topic, problemCode) => {
-    const filePath = path.join(dataDirectory, `quals/${topic}/problems/${problemCode}.md`);
+    const parsedProblemCode = parseProblemCode(problemCode);
+
+    const filePath = path.join(
+        dataDirectory,
+        `quals/${topic}/problems/${parsedProblemCode.year}${parsedProblemCode.quarterUnformatted}/${parsedProblemCode.problemNumber}.md`
+    );
     const file = readMarkdown(filePath);
 
     let content = file.contents;
@@ -109,6 +123,7 @@ export const parseProblemCode = problemCode => {
 
     return {
         year: match[1],
+        quarterUnformatted: match[2],
         quarter: quarterList[match[2]],
         problemNumber: Number(match[3]),
     };

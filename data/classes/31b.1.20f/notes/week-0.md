@@ -2,9 +2,9 @@
 title: Week 0 Discussion Notes
 date: "2020-10-01"
 tags:
-  - review
-  - trig
-  - integration
+    - review
+    - trig
+    - integration
 publish: yes
 ---
 

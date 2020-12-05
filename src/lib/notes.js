@@ -59,7 +59,7 @@ export const getNotesDataForClass = classCode => {
 
     readDirectoryContents(notesDirectory)
         .map(noteFileName => {
-            const filePath = path.join(dataDirectory, `classes/${classCode}/notes/${noteFileName}`);
+            const filePath = path.join(notesDirectory, noteFileName);
             const file = readMarkdown(filePath);
 
             return {

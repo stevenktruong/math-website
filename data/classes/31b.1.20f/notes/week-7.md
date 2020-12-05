@@ -2,9 +2,9 @@
 title: Week 7 Discussion Notes
 date: "2020-11-19"
 tags:
-  - improper integrals
-  - direct comparison
-  - sequences
+    - improper integrals
+    - direct comparison
+    - sequences
 publish: yes
 ---
 
@@ -20,8 +20,8 @@ As a reminder, here's the statement of direct comparison:
 
 Suppose $0 \leq g\p{x} \leq f\p{x}$. Then for $-\infty \leq a < b \leq \infty$ (i.e., the upper and lower bounds are allowed to be infinite):
 
-- If $\displaystyle \int_a^b g\p{x} \,\diff{x}$ diverges, then $\displaystyle \int_a^b f\p{x} \,\diff{x}$ diverges as well.
-- If $\displaystyle \int_a^b f\p{x} \,\diff{x}$ converges, then $\displaystyle \int_a^b g\p{x} \,\diff{x}$ converges as well.
+-   If $\displaystyle \int_a^b g\p{x} \,\diff{x}$ diverges, then $\displaystyle \int_a^b f\p{x} \,\diff{x}$ diverges as well.
+-   If $\displaystyle \int_a^b f\p{x} \,\diff{x}$ converges, then $\displaystyle \int_a^b g\p{x} \,\diff{x}$ converges as well.
 
 </theorem>
 
@@ -29,8 +29,8 @@ See the [Week 6 Notes](../week-6#direct-comparison) for some pictures and intuit
 
 When approaching a problem, you should try to have an idea of whether an integral will converge or diverge (I'll talk about this more during the examples):
 
-- If you want to show that $\int_a^b f\p{x} \,\diff{x}$ converges, you need to find a larger function $g\p{x}$.
-- If you want to show that $\int_a^b f\p{x} \,\diff{x}$ diverges, you need to find a smaller (but still non-negative) function $g\p{x}$.
+-   If you want to show that $\int_a^b f\p{x} \,\diff{x}$ converges, you need to find a larger function $g\p{x}$.
+-   If you want to show that $\int_a^b f\p{x} \,\diff{x}$ diverges, you need to find a smaller (but still non-negative) function $g\p{x}$.
 
 There are two main strategies for getting this inequalities:
 
@@ -38,8 +38,8 @@ There are two main strategies for getting this inequalities:
 
 Here, you'll want to modify $f\p{x}$ to get a slightly bigger or slightly smaller function. Usually, $f\p{x}$ is a fraction, so if both the numerator and denominator are non-negative, then:
 
-- To get a bigger function, you can make the numerator bigger or the denominator smaller.
-- To get a smaller function, you can make the numerator smaller or the denominator bigger.
+-   To get a bigger function, you can make the numerator bigger or the denominator smaller.
+-   To get a smaller function, you can make the numerator smaller or the denominator bigger.
 
 <example> (8.7.74)
 

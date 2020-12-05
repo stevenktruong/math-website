@@ -2,7 +2,7 @@
 title: Week 5 Discussion Notes
 date: "2020-11-03"
 tags:
-  - trig substitution
+    - trig substitution
 publish: yes
 ---
 
