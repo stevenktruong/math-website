@@ -90,11 +90,11 @@ export const getSortedProblemsDataForTopic = topic => {
  * @param {string} problemCode - E.g., 09f.1
  */
 export const getProblemDataForTopic = (topic, problemCode) => {
-    const parsedProblemCode = parseProblemCode(problemCode);
+    const { year, quarterUnformatted, problemNumber } = parseProblemCode(problemCode);
 
     const filePath = path.join(
         dataDirectory,
-        `quals/${topic}/problems/${parsedProblemCode.year}${parsedProblemCode.quarterUnformatted}/${parsedProblemCode.problemNumber}.md`
+        `quals/${topic}/problems/${year}${quarterUnformatted}/${problemNumber}.md`
     );
     const file = readMarkdown(filePath);
 
