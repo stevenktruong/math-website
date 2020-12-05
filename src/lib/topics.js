@@ -56,6 +56,7 @@ export const getTopicData = topic => {
             contents +=
                 `\n## ${quarter} 20${year}\n` +
                 problemsDataByQuarter[year][quarter]
+                    .sort((a, b) => a.problemNumber - b.problemNumber)
                     .map(problemData => `- problems::${problemData.problemCode}.md`)
                     .join("\n");
         });

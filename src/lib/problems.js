@@ -110,7 +110,7 @@ export const parseProblemCode = problemCode => {
     return {
         year: match[1],
         quarter: quarterList[match[2]],
-        problemNumber: match[3],
+        problemNumber: Number(match[3]),
     };
 };
 
