@@ -1,0 +1,10 @@
+@use "lengths";
+
+.Teaching {
+    table {
+        td:nth-child(1) {
+            width: 4.5em;
+            padding: 0;
+        }
+    }
+}

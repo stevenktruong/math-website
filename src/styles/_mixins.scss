@@ -77,7 +77,8 @@
 
 @mixin base-table {
     table {
-        width: lengths.$table-width;
+        width: 100%;
+        min-width: lengths.$table-min-width;
         white-space: nowrap;
         border-collapse: collapse;
     }
