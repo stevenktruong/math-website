@@ -52,14 +52,14 @@ export default class Teaching extends React.Component {
                 <h1>Teaching</h1>
                 {Object.keys(classesDataByQuarter).map(year => (
                     <React.Fragment key={`${year}`}>
-                        <h2>20{year}</h2>
                         <div className="tableContainer tableContainer--last-is-link">
                             <table>
                                 <tbody>
-                                    {Object.keys(classesDataByQuarter[year]).map(quarter => (
+                                    {Object.keys(classesDataByQuarter[year]).map((quarter, i) => (
                                         <React.Fragment key={`${year}${quarter}Fragment`}>
                                             {/* Each row corresponds to a quarter */}
                                             <tr key={`${year}${quarter}`}>
+                                                <td key={`${year}${quarter}KeyYear`}>{i === 0 ? `20${year}` : null}</td>
                                                 <td key={`${year}${quarter}Key`}>{quarter}</td>
 
                                                 {/* Link of links to classes for a particular quarter */}
