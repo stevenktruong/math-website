@@ -78,40 +78,41 @@
 @mixin base-table {
     table {
         width: 100%;
-        min-width: lengths.$table-min-width;
         white-space: nowrap;
         border-collapse: collapse;
     }
 
-    table td {
-        padding: lengths.$small;
-        padding-left: 0;
-        padding-right: lengths.$big;
-        vertical-align: top;
-    }
+    table {
+        td {
+            padding: lengths.$small;
+            padding-left: 0;
+            padding-right: lengths.$big;
+            vertical-align: top;
+        }
 
-    table tr:first-child td {
-        padding-top: 0;
-    }
+        tr:first-child td {
+            padding-top: 0;
+        }
 
-    table tr:last-child td {
-        padding-bottom: 0;
-    }
+        tr:last-child td {
+            padding-bottom: 0;
+        }
 
-    table td:first-child {
-        font-weight: 700;
-    }
+        td:first-child {
+            font-weight: 700;
+        }
 
-    table td div {
-        margin: lengths.$medium 0;
-    }
+        td div {
+            margin: lengths.$medium 0;
+        }
 
-    table td div:first-child {
-        margin-top: 0;
-    }
+        td div:first-child {
+            margin-top: 0;
+        }
 
-    table td div:last-child {
-        margin-bottom: 0;
+        td div:last-child {
+            margin-bottom: 0;
+        }
     }
 
     .tableContainer {

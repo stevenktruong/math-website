@@ -2,8 +2,14 @@
 
 .Teaching {
     table {
-        td:nth-child(1) {
-            width: 4.5em;
+        width: 400px;
+
+        td {
+            display: inline-block;
+        }
+
+        td:nth-of-type(1) {
+            width: 20%;
             padding: 0;
         }
     }
