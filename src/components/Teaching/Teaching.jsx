@@ -50,11 +50,11 @@ export default class Teaching extends React.Component {
         return (
             <section className={styles.Teaching}>
                 <h1>Teaching</h1>
-                {Object.keys(classesDataByQuarter).map(year => (
-                    <React.Fragment key={`${year}`}>
-                        <div className="tableContainer tableContainer--last-is-link">
-                            <table>
-                                <tbody>
+                <div className="tableContainer tableContainer--last-is-link">
+                    <table>
+                        <tbody>
+                            {Object.keys(classesDataByQuarter).map(year => (
+                                <React.Fragment key={`${year}`}>
                                     {Object.keys(classesDataByQuarter[year]).map((quarter, i) => (
                                         <React.Fragment key={`${year}${quarter}Fragment`}>
                                             {/* Each row corresponds to a quarter */}
@@ -84,11 +84,11 @@ export default class Teaching extends React.Component {
                                             </tr>
                                         </React.Fragment>
                                     ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    </React.Fragment>
-                ))}
+                                </React.Fragment>
+                            ))}{" "}
+                        </tbody>
+                    </table>
+                </div>
             </section>
         );
     }
