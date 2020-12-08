@@ -21,6 +21,12 @@ links:
       url: https://ccle.ucla.edu/course/view/21W-MATH131A-4
 ---
 
+I won't be recording discussions, so to make up for this, I'll be writing detailed discussion notes.
+
+If you haven't already, this is a good time to learn how to use LaTeX and start typing up your homework assignments. I recommend using [Overleaf](https://www.overleaf.com/) if you've never typed up your homework before.
+
+I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Also, please address me as Steven when e-mailing me.
+
 ## Resources
 
--   [Student Math Center](https://ww3.math.ucla.edu/student-math-center/)
+-   [MIT OCW 18.100A (Introduction to Analysis)](https://ocw.mit.edu/courses/mathematics/18-100a-introduction-to-analysis-fall-2012/)
