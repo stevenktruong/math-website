@@ -11,6 +11,7 @@
     "\\inner": "\\mathopen{}\\left\\langle #1 \\right\\rangle\\mathclose{}",
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
     "\\func": "#1\\colon #2 \\to #3",
+    "\\span": "\\operatorname{span}",
     "\\comp": "\\mathrm{c}",
     "\\conj": "\\overline{#1}",
     "\\cl": "\\overline{#1}",
