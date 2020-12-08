@@ -1,7 +1,7 @@
 ---
 title: Quiz 3 Solutions
 date: "2020-12-07"
-publish: no
+publish: yes
 ---
 
 # Quiz 2 Solutions
