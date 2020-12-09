@@ -11,6 +11,7 @@ import {
     processorWithMathForTopic,
 } from "./utils";
 import { getAllTopicPaths } from "./topics";
+import { problemTopicsFormatting } from "config/formatting";
 
 const quarterList = {
     f: "Fall",
@@ -99,6 +100,8 @@ export const getProblemDataForTopic = (topic, problemCode) => {
     const file = readMarkdown(filePath);
 
     let content = file.contents;
+
+    content = problemTopicsFormatting(file.meta.topics) + content;
 
     // Add counters
     customTags.forEach(customTag => {
