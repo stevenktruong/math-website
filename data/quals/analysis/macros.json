@@ -12,9 +12,12 @@
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
     "\\func": "#1\\colon #2 \\to #3",
     "\\span": "\\operatorname{span}",
+    "\\diam": "\\operatorname{diam}",
+    "\\area": "\\operatorname{area}",
     "\\comp": "\\mathrm{c}",
     "\\conj": "\\overline{#1}",
     "\\cl": "\\overline{#1}",
+    "\\itr": "\\mathrm{o}",
     "\\st": "\\:\\middle\\vert\\:",
     "\\Res": "\\operatorname{Res}\\p{#1; #2}",
     "\\epsilon": "\\varepsilon",
@@ -22,5 +25,6 @@
     "\\Re": "\\operatorname{Re}",
     "\\Im": "\\operatorname{Im}",
     "\\C": "\\mathbb{C}",
+    "\\D": "\\mathbb{D}",
     "\\Q": "\\mathbb{Q}"
 }
