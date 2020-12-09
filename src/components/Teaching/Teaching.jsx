@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatQuarterYear, formatCourseWithDescription } from "helpers";
+import { formatQuarterYear, formatCourseWithDescription, customSortOrder } from "helpers";
 import styles from "./Teaching.module.scss";
 
 export default class Teaching extends React.Component {
@@ -53,39 +53,47 @@ export default class Teaching extends React.Component {
                 <div className="tableContainer tableContainer--last-is-link">
                     <table>
                         <tbody>
-                            {Object.keys(classesDataByQuarter).map(year => (
-                                <React.Fragment key={`${year}`}>
-                                    {Object.keys(classesDataByQuarter[year]).map((quarter, i) => (
-                                        <React.Fragment key={`${year}${quarter}Fragment`}>
-                                            {/* Each row corresponds to a quarter */}
-                                            <tr key={`${year}${quarter}`}>
-                                                <td key={`${year}${quarter}KeyYear`}>{i === 0 ? `20${year}` : null}</td>
-                                                <td key={`${year}${quarter}Key`}>{quarter}</td>
+                            {/* Generate table of classes */}
+                            {Object.keys(classesDataByQuarter)
+                                .sort()
+                                .reverse() // Most recent classes first
+                                .map(year => (
+                                    <React.Fragment key={`${year}`}>
+                                        {Object.keys(classesDataByQuarter[year])
+                                            .sort(customSortOrder(["Fall", "Spring", "Winter"])) // Most recent classes first
+                                            .map((quarter, i) => (
+                                                <React.Fragment key={`${year}${quarter}Fragment`}>
+                                                    {/* Each row corresponds to a quarter */}
+                                                    <tr key={`${year}${quarter}`}>
+                                                        <td key={`${year}${quarter}KeyYear`}>
+                                                            {i === 0 ? `20${year}` : null}
+                                                        </td>
+                                                        <td key={`${year}${quarter}Key`}>{quarter}</td>
 
-                                                {/* Link of links to classes for a particular quarter */}
-                                                <td key={`${year}${quarter}KeyClasses`}>
-                                                    {classesDataByQuarter[year][quarter].map((classData, i) => (
-                                                        <div key={`${year}${quarter}Class${i}`}>
-                                                            <Link
-                                                                href={"/teaching/[classCode]"}
-                                                                as={`/teaching/${classData.classCode}`}
-                                                                key={`${year}${quarter}Class${i}Link`}
-                                                            >
-                                                                <a key={`${year}${quarter}Class${i}Anchor`}>
-                                                                    {formatCourseWithDescription(
-                                                                        classData.course,
-                                                                        classData.courseDescription
-                                                                    )}
-                                                                </a>
-                                                            </Link>
-                                                        </div>
-                                                    ))}
-                                                </td>
-                                            </tr>
-                                        </React.Fragment>
-                                    ))}
-                                </React.Fragment>
-                            ))}{" "}
+                                                        {/* Link of links to classes for a particular quarter */}
+                                                        <td key={`${year}${quarter}KeyClasses`}>
+                                                            {classesDataByQuarter[year][quarter].map((classData, i) => (
+                                                                <div key={`${year}${quarter}Class${i}`}>
+                                                                    <Link
+                                                                        href={"/teaching/[classCode]"}
+                                                                        as={`/teaching/${classData.classCode}`}
+                                                                        key={`${year}${quarter}Class${i}Link`}
+                                                                    >
+                                                                        <a key={`${year}${quarter}Class${i}Anchor`}>
+                                                                            {formatCourseWithDescription(
+                                                                                classData.course,
+                                                                                classData.courseDescription
+                                                                            )}
+                                                                        </a>
+                                                                    </Link>
+                                                                </div>
+                                                            ))}
+                                                        </td>
+                                                    </tr>
+                                                </React.Fragment>
+                                            ))}
+                                    </React.Fragment>
+                                ))}{" "}
                         </tbody>
                     </table>
                 </div>
