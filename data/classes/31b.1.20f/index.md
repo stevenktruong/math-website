@@ -64,3 +64,4 @@ When e-mailing me, please include `[31B]` somewhere in the subject so it doesn't
 -   notes::week-7.md
 -   notes::week-8.md
 -   notes::week-9.md
+-   notes::week-10.md

@@ -4,7 +4,7 @@ date: "2020-12-08"
 tags:
     - power series
     - Taylor series
-publish: no
+publish: yes
 ---
 
 # Week 10 Discussion Notes
@@ -147,15 +147,37 @@ On the other hand, there are still a lot of functions whose Taylor series _do_ c
 The following functions have Taylor series which converge to them on the specified interval:
 
 $$
-\def\arraystretch{2.5}
-\begin{array}{lll}
-    f\p{x}  & T\p{x} & \text{interval of convergence} \\ \hline
-    e^x & \displaystyle\sum_{n=0}^\infty \frac{x^n}{n!} & \R \\
-    \sin{x} & \displaystyle\sum_{n=0}^\infty \p{-1}^n\frac{x^{2n+1}}{\p{2n+1}!} & \R \\
-    \cos{x} & \displaystyle\sum_{n=0}^\infty \p{-1}^n\frac{x^{2n}}{\p{2n}!} & \R \\
-    \displaystyle\frac{1}{1 - x} & \displaystyle\sum_{n=0}^\infty x^n & \abs{x} < 1
+\begin{array}{rcllll}
+    f\p{x}
+        & =
+        & T\p{x} \\[1ex] \hline \\[-1ex]
+    e^x & =
+        & \displaystyle\sum_{n=0}^\infty \frac{x^n}{n!}
+        & =
+        & \displaystyle 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+        & \text{for } x \in \R \\[3ex]
+    \sin{x}
+        & =
+        & \displaystyle\sum_{n=0}^\infty \p{-1}^n\frac{x^{2n+1}}{\p{2n+1}!}
+        & =
+        & \displaystyle x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots
+        & \text{for } x \in \R \\[3ex]
+    \cos{x}
+        & =
+        & \displaystyle\sum_{n=0}^\infty \p{-1}^n\frac{x^{2n}}{\p{2n}!}
+        & =
+        & \displaystyle 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots
+        & \text{for } x \in \R \\[3ex]
+    \displaystyle\frac{1}{1 - x}
+        & =
+        & \displaystyle\sum_{n=0}^\infty x^n
+        & =
+        & \displaystyle 1 + x + x^2 + x^3 + \cdots
+        & \text{for } x \in \p{-1, 1}
 \end{array}
 $$
+
+Here, $n! = 1 \cdot 2 \cdot 3 \cdots \p{n-1} \cdot n$ with $0! = 1$.
 
 </proposition>
 
