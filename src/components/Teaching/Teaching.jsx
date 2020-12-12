@@ -93,7 +93,7 @@ export default class Teaching extends React.Component {
                                                 </React.Fragment>
                                             ))}
                                     </React.Fragment>
-                                ))}{" "}
+                                ))}
                         </tbody>
                     </table>
                 </div>
