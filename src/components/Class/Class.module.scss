@@ -4,6 +4,7 @@
 @use "lengths";
 
 .Class {
+    // Needed for things made outside of the React components
     :global {
         .note-tag-container {
             font-size: fonts.$tag-font-size;
@@ -14,6 +15,12 @@
             background-color: colors.$note-tag-background;
             border-radius: 2pt;
             padding: 1pt 2pt;
+        }
+
+        #announcements-table {
+            max-width: 100%;
+            line-height: 1.5;
+            white-space: initial;
         }
     }
 

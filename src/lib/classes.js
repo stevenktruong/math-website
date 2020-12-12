@@ -64,8 +64,32 @@ export const getClassData = classCode => {
     const filePath = path.join(classesDirectory, `${classCode}/index.md`);
     const file = readMarkdown(filePath);
 
-    let contentHtml = processorWithMathForClassCode(classCode).processSync(file.contents).toString();
+    // Create announcements table
+    let substitutedContent = file.contents;
 
+    const announcements = new RegExp("## Announcements").test(substitutedContent);
+    if (announcements) {
+        substitutedContent = substitutedContent.replace(
+            new RegExp("## Announcements"),
+            match => `${match}\n<div class="tableContainer"><table id="announcements-table">\n<tbody>`
+        );
+
+        substitutedContent = substitutedContent.replace(
+            new RegExp("\\| ([0-9/]+?) \\| (.+?)\n\\|", "g"),
+            (match, date, announcement, followedBy) => `<tr>\n<td>${date}</td>\n<td>${announcement}</td>\n</tr>\n|`
+        );
+
+        // We need to end the table at the last announcement
+        substitutedContent = substitutedContent.replace(
+            new RegExp("\\| ([0-9/]+?) \\| (.+?)\n"),
+            (match, date, announcement) =>
+                `<tr>\n<td>${date}</td>\n<td>${announcement}</td>\n</tr>\n</tbody>\n</table>\n</div>\n`
+        );
+    }
+
+    let contentHtml = processorWithMathForClassCode(classCode).processSync(substitutedContent).toString();
+
+    // Replace notes macro
     const notesData = getNotesDataForClass(classCode);
     contentHtml = contentHtml.replace(
         new RegExp("notes::(.+?).md", "g"),
