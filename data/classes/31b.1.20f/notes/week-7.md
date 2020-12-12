@@ -93,7 +93,7 @@ $$
 0 \leq \frac{1}{\p{e + 1}x} \leq \frac{1}{xe^x + x^2}.
 $$
 
-The smaller integral diverges by $p$-itnegrals, so by direct comparison, $\int_0^1 \frac{\diff{x}}{xe^x + x^2}$ diverges, too.
+The smaller integral diverges by $p$-integrals, so by direct comparison, $\int_0^1 \frac{\diff{x}}{xe^x + x^2}$ diverges, too.
 
 </solution>
 
