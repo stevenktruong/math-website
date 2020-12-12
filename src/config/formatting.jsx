@@ -124,9 +124,9 @@ export const classFormatting = {
                             <td key={`${discussion.section}DiscussionDay`}>
                                 {daysOfTheWeekFormatting(discussion.days)}
                             </td>
-                            <td key={`${discussion.section}DiscussionStart`}>{discussion.start}</td>
+                            <td key={`${discussion.section}DiscussionStart`}>{discussion.time.split("-")[0].trim()}</td>
                             <td key={`${discussion.section}DiscussionTimeHyphen`}>-</td>
-                            <td key={`${discussion.section}DiscussionEnd`}>{discussion.end}</td>
+                            <td key={`${discussion.section}DiscussionEnd`}>{discussion.time.split("-")[1].trim()}</td>
                             <td key={`${discussion.section}DiscussionLocation`}>
                                 {discussion.link ? (
                                     <a href={`${discussion.link}`} key={`${discussion.section}DiscussionLocationLink`}>
@@ -152,9 +152,11 @@ export const classFormatting = {
                             <td key={`${officeHour.section}OfficeHoursDay`}>
                                 {daysOfTheWeekFormatting(officeHour.days)}
                             </td>
-                            <td key={`${officeHour.section}OfficeHoursStart`}>{officeHour.start}</td>
+                            <td key={`${officeHour.section}OfficeHoursStart`}>
+                                {officeHour.time.split("-")[0].trim()}
+                            </td>
                             <td key={`${officeHour.section}OfficeHoursTimeHyphen`}>-</td>
-                            <td key={`${officeHour.section}OfficeHoursEnd`}>{officeHour.end}</td>
+                            <td key={`${officeHour.section}OfficeHoursEnd`}>{officeHour.time.split("-")[1].trim()}</td>
                             <td key={`${officeHour.section}OfficeHoursLocation`}>
                                 {" "}
                                 {officeHour.link ? (

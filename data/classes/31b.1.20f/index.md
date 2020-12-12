@@ -7,21 +7,18 @@ instructorUrl: https://www.math.ucla.edu/~koffi/
 discussions:
     - section: 1A
       days: T
-      start: 8:00am
-      end: 8:50am
+      time: 8:00am - 8:50am
       location: Zoom
       link: https://ucla.zoom.us/j/96065072430
     - section: 1B
       days: R
-      start: 8:00am
-      end: 8:50am
+      time: 8:00am - 8:50am
       location: Zoom
       link: https://ucla.zoom.us/j/96065072430
 officeHours:
     - section: 1A, 1B
       days: R
-      start: 1:00pm
-      end: 2:00pm
+      time: 1:00pm - 2:00pm
       location: Zoom
       link: https://ucla.zoom.us/j/96065072430
 links:

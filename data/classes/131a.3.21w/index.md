@@ -7,15 +7,13 @@ instructorUrl: https://www.math.ucla.edu/~majaco/
 discussions:
     - section: 4A
       days: T
-      start: 2:00pm
-      end: 2:50pm
+      time: 2:00pm - 2:50pm
       location: Zoom
     #   link: TBD
 officeHours:
     - section: 4A
       days: TBD
-      start: TBD
-      end: TBD
+      time: TBD - TBD
       location: Zoom
     #   link: TBD
 links:
