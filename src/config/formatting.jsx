@@ -124,7 +124,9 @@ export const classFormatting = {
                             <td key={`${discussion.section}DiscussionDay`}>
                                 {daysOfTheWeekFormatting(discussion.days)}
                             </td>
-                            <td key={`${discussion.section}DiscussionTime`}>{discussion.time}</td>
+                            <td key={`${discussion.section}DiscussionStart`}>{discussion.start}</td>
+                            <td key={`${discussion.section}DiscussionTimeHyphen`}>-</td>
+                            <td key={`${discussion.section}DiscussionEnd`}>{discussion.end}</td>
                             <td key={`${discussion.section}DiscussionLocation`}>
                                 {discussion.link ? (
                                     <a href={`${discussion.link}`} key={`${discussion.section}DiscussionLocationLink`}>
@@ -150,7 +152,9 @@ export const classFormatting = {
                             <td key={`${officeHour.section}OfficeHoursDay`}>
                                 {daysOfTheWeekFormatting(officeHour.days)}
                             </td>
-                            <td key={`${officeHour.section}OfficeHoursTime`}>{officeHour.time}</td>
+                            <td key={`${officeHour.section}OfficeHoursStart`}>{officeHour.start}</td>
+                            <td key={`${officeHour.section}OfficeHoursTimeHyphen`}>-</td>
+                            <td key={`${officeHour.section}OfficeHoursEnd`}>{officeHour.end}</td>
                             <td key={`${officeHour.section}OfficeHoursLocation`}>
                                 {" "}
                                 {officeHour.link ? (
