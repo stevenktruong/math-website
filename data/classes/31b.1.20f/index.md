@@ -26,15 +26,17 @@ links:
       url: https://ccle.ucla.edu/course/view/20F-MATH31B-1
     - title: Campuswire
       url: https://campuswire.com/c/G6D8D17EE
-    - title: Textbook
-      url: https://www.math.ucla.edu/~josephbreen/calc_textbook.pdf
 ---
 
 The password to all the Zoom meetings is `integrals`. I won't be recording discussions, so to make up for this, I'll be writing detailed discussion notes.
 
 If you have any feedback, please fill out the [anonymous feedback form](https://forms.gle/o8YAcB2giVJ5jLK26). This can include anything from pacing to topics you want me to cover each week.
 
-When e-mailing me, please include `[31B]` somewhere in the subject so it doesn't get lost. I try my best to be very responsive, so if you don't get a reply by the end of the day, feel free to send me another e-mail. You can call me Steven (but _not_ Mr. Truong).
+I try my best to be very quick with e-mails, so if you don't get a reply by the end of the day, feel free to send me another e-mail. You can call me Steven (but _not_ Mr. Truong).
+
+## Announcements
+
+| 12/11/20 | It looks like the textbook I linked to previously was taken down, so you should try to ask other students to see if they have a PDF. If you still have trouble getting access to the textbook, feel free to send me an e-mail and I'll point you in the right direction.
 
 ## Resources
 
