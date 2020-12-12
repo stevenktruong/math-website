@@ -1,25 +1,27 @@
 # Table of Contents
 
--   [Development](#development)
--   [Content](#content)
-    -   [Assets](#assets)
-    -   [`./data/personal.md`](#datapersonalmd)
-        -   [Metadata](#metadata)
-    -   [`./data/classes/[classCode]/index.md`](#dataclassesclasscodeindexmd)
-        -   [Note Links](#note-links)
-        -   [Metadata](#metadata-1)
-    -   [`./data/classes/[classCode]/macros.json`](#dataclassesclasscodemacrosjson)
-    -   [`./data/classes/[classCode]/notes/[noteName].md`](#dataclassesclasscodenotesnotenamemd)
-        -   [Custom Tags](#custom-tags)
-            -   [Boxed Sections](#boxed-sections)
-            -   [Counters](#counters)
-        -   [Metadata](#metadata-2)
-    -   [`./data/quals/[topic]/index.md`](#dataqualstopicindexmd)
-        -   [Metadata](#metadata-3)
-    -   [`./data/quals/[topic]/macros.json`](#dataqualstopicmacrosjson)
-    -   [`./data/quals/[topic]/problems/[problemCode].md`](#dataqualstopicproblemsproblemcodemd)
-        -   [Custom Tags](#custom-tags-1)
-        -   [Metadata](#metadata-4)
+- [Table of Contents](#table-of-contents)
+- [Development](#development)
+- [Content](#content)
+  - [Assets](#assets)
+  - [`./data/personal.md`](#datapersonalmd)
+    - [Metadata](#metadata)
+  - [`./data/classes/[classCode]/index.md`](#dataclassesclasscodeindexmd)
+    - [Announcements Table](#announcements-table)
+    - [Note Links](#note-links)
+    - [Metadata](#metadata-1)
+  - [`./data/classes/[classCode]/macros.json`](#dataclassesclasscodemacrosjson)
+  - [`./data/classes/[classCode]/notes/[noteName].md`](#dataclassesclasscodenotesnotenamemd)
+    - [Custom Tags](#custom-tags)
+      - [Boxed Sections](#boxed-sections)
+      - [Counters](#counters)
+    - [Metadata](#metadata-2)
+  - [`./data/quals/[topic]/index.md`](#dataqualstopicindexmd)
+    - [Metadata](#metadata-3)
+  - [`./data/quals/[topic]/macros.json`](#dataqualstopicmacrosjson)
+  - [`./data/quals/[topic]/problems/[problemCode].md`](#dataqualstopicproblemsproblemcodemd)
+    - [Custom Tags](#custom-tags-1)
+    - [Metadata](#metadata-4)
 
 # Development
 
@@ -72,6 +74,10 @@ fax: my (or the math office's) fax number
 ## `./data/classes/[classCode]/index.md`
 
 Contains all the data about the class, including announcements and policies.
+
+### Announcements Table
+
+In the announcements section, each line should be in the form `| [MM/DD/YY] | [announcement]` for it to be added to the table.
 
 ### Note Links
 
@@ -136,7 +142,7 @@ Examples and exercises are counted automatically as the Markdown file is read. F
 
 ```yml
 title: title of the notes
-date: date for the notes (notes will be sorted based on this)
+date: YYYY-MM-DD (just for reference)
 tags: list of tags related to the notes (e.g., topics covered)
 publish: whether the page will be visible or not on the website
 ```
@@ -173,7 +179,7 @@ Contains the problem statement and a solution.
 -   `<problem>`
 -   `<solution>`
 
-Mainly used for styling. Currently, `<problem>` doesn't do anything, and `<solution>` puts an italiced "Solution." at the beginning of the solution.
+Mainly used for styling. Currently, `<problem>` doesn't do anything, and `<solution>` puts an italicized "Solution." at the beginning of the solution.
 
 ### Metadata
 
