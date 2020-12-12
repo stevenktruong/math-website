@@ -71,19 +71,18 @@ export const getClassData = classCode => {
     if (announcements) {
         substitutedContent = substitutedContent.replace(
             new RegExp("## Announcements"),
-            match => `${match}\n<div class="tableContainer"><table id="announcements-table">\n<tbody>`
+            match => `${match}\n<div class="tableContainer"><table id="announcements-table"><tbody>`
         );
 
         substitutedContent = substitutedContent.replace(
             new RegExp("\\| ([0-9/]+?) \\| (.+?)\n\\|", "g"),
-            (match, date, announcement, followedBy) => `<tr>\n<td>${date}</td>\n<td>${announcement}</td>\n</tr>\n|`
+            (match, date, announcement, followedBy) => `<tr><td>${date}</td>\n<td>${announcement}</td></tr>\n|`
         );
 
         // We need to end the table at the last announcement
         substitutedContent = substitutedContent.replace(
             new RegExp("\\| ([0-9/]+?) \\| (.+?)\n"),
-            (match, date, announcement) =>
-                `<tr>\n<td>${date}</td>\n<td>${announcement}</td>\n</tr>\n</tbody>\n</table>\n</div>\n`
+            (match, date, announcement) => `<tr><td>${date}</td><td>${announcement}</td></tr></tbody></table></div>\n`
         );
     }
 
