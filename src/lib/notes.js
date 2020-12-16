@@ -17,7 +17,11 @@ const counters = [
     { tag: "example", display: count => `<h6 id="example-${count}">Example ${count}.</h6>` },
     { tag: "exercise", display: count => `<h6 id="exercise-${count}">Exercise ${count}.</h6>` },
     { tag: "solution", display: () => `<h6>Solution.</h6>` },
-    { tag: "proof", display: () => `<h6>Proof.</h6>`, after: () => "$$\n\\,\\tag*{$\\square$}\n$$" },
+    {
+        tag: "proof",
+        display: () => `<h6>Proof.</h6>`,
+        after: () => '<span class="qed-square">$\\square$</span>',
+    },
 ];
 
 const boxedEnvironments = ["theorem", "definition", "proposition"];
@@ -95,8 +99,8 @@ export const getNoteDataForClass = (classCode, noteName) => {
         );
 
         substitutedContent = substitutedContent.replace(
-            new RegExp(`(</${counter.tag}>)`, "g"),
-            (match, endTag) => `${counter.after ? counter.after() : ""}\n${endTag}`
+            new RegExp(`\n(</${counter.tag}>)`, "g"),
+            (match, endTag) => `${counter.after ? counter.after() : ""}\n\n${endTag}`
         );
     });
 

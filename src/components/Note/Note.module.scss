@@ -14,6 +14,19 @@
             overflow-y: hidden;
             overflow-x: auto;
         }
+
+        .qed-square {
+            float: right;
+            padding-left: 1ex;
+        }
+    }
+
+    // Fix container collapsing with the QED square
+    proof::after {
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
     }
 
     > *:last-child {
@@ -38,6 +51,10 @@
     * + proof,
     * + solution {
         margin-top: lengths.$medium;
+    }
+
+    solution + p {
+        margin-top: lengths.$big;
     }
 
     h1 + p,
