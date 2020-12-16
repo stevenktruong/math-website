@@ -13,16 +13,16 @@
     }
 
     .LeftSide {
-        width: 25%;
+        width: lengths.$left-side-width;
     }
 
     .RightSide {
-        width: 50%;
+        width: lengths.$content-width;
         padding-bottom: lengths.$space-from-bottom;
     }
 
     @media only screen and (max-width: breakpoints.$big) {
-        width: 75%;
+        width: 60%;
         margin: auto;
 
         .LeftSide,

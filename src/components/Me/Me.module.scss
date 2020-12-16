@@ -2,7 +2,8 @@
 @use "lengths";
 
 .Me {
-    width: 100%;
+    margin-right: 100px;
+    float: right;
 
     h1 {
         margin: auto;
@@ -18,6 +19,7 @@
     }
 
     @media only screen and (max-width: breakpoints.$big) {
+        float: none;
         transform: rotate(180deg);
         margin: 0 0 lengths.$big 0;
 

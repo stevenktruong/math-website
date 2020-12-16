@@ -3,7 +3,7 @@
 @use "lengths";
 
 .Breadcrumbs {
-    width: 50%;
+    width: lengths.$content-width;
     margin: auto;
     margin-bottom: lengths.$medium;
     font-size: 12px;
