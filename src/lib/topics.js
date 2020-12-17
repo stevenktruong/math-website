@@ -51,16 +51,18 @@ export const getTopicData = topic => {
     const problemsData = getSortedProblemsDataForTopic(topic);
     const problemsDataByQuarter = createMapFromQuarterToProblemsData(problemsData);
 
-    Object.keys(problemsDataByQuarter).forEach(year => {
-        Object.keys(problemsDataByQuarter[year]).forEach(quarter => {
-            contents +=
-                `\n## ${quarter} 20${year}\n` +
-                problemsDataByQuarter[year][quarter]
-                    .sort((a, b) => a.problemNumber - b.problemNumber)
-                    .map(problemData => `- problems::${problemData.problemCode}.md`)
-                    .join("\n");
+    Object.keys(problemsDataByQuarter)
+        .sort()
+        .forEach(year => {
+            Object.keys(problemsDataByQuarter[year]).forEach(quarter => {
+                contents +=
+                    `\n## ${quarter} 20${year}\n` +
+                    problemsDataByQuarter[year][quarter]
+                        .sort((a, b) => a.problemNumber - b.problemNumber)
+                        .map(problemData => `- problems::${problemData.problemCode}.md`)
+                        .join("\n");
+            });
         });
-    });
 
     let contentHtml = processorWithMathForTopic(topic).processSync(contents).toString();
     const problemsDataMap = getProblemsDataForTopic(topic);
