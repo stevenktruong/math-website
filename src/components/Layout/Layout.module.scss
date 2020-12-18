@@ -2,7 +2,6 @@
 @use "lengths";
 
 .Layout {
-    width: 100vw;
     margin: auto;
 
     .LeftSide,
@@ -22,13 +21,13 @@
     }
 
     @media only screen and (max-width: breakpoints.$big) {
-        width: 60%;
+        width: lengths.$content-width;
         margin: auto;
 
         .LeftSide,
         .RightSide {
-            display: block;
             width: 100%;
+            display: block;
             height: auto;
             margin: 0;
         }
@@ -40,10 +39,10 @@
 
     @media only screen and (max-width: breakpoints.$medium) {
         width: 100%;
-        margin: 0;
 
         .LeftSide,
         .RightSide {
+            width: 100%;
             padding-left: lengths.$big;
             padding-right: lengths.$big;
         }
