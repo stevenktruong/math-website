@@ -2,7 +2,8 @@
 @use "lengths";
 
 .Me {
-    width: 100%;
+    float: right;
+    margin-right: 40px;
 
     h1 {
         margin: auto;
