@@ -241,7 +241,7 @@ Determine whether each integral is convergent or divergent. Evaluate those that 
     $$
     \int_1^\infty \frac{x}{x^3 + 1} \,\diff{x}
         = \frac{\pi\sqrt{3}}{6} - \frac{\pi\sqrt{3} - 6\ln{2}}{18}
-        = \boxed{\frac{2\pi\sqrt{3} + 6\ln{2}}{18}}.
+        = \boxed{\frac{\pi\sqrt{3} + 3\ln{2}}{9}}.
     $$
 
 2. We can integrate directly:
