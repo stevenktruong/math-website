@@ -1,27 +1,27 @@
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Development](#development)
-- [Content](#content)
-  - [Assets](#assets)
-  - [`./data/personal.md`](#datapersonalmd)
-    - [Metadata](#metadata)
-  - [`./data/classes/[classCode]/index.md`](#dataclassesclasscodeindexmd)
-    - [Announcements Table](#announcements-table)
-    - [Note Links](#note-links)
-    - [Metadata](#metadata-1)
-  - [`./data/classes/[classCode]/macros.json`](#dataclassesclasscodemacrosjson)
-  - [`./data/classes/[classCode]/notes/[noteName].md`](#dataclassesclasscodenotesnotenamemd)
-    - [Custom Tags](#custom-tags)
-      - [Boxed Sections](#boxed-sections)
-      - [Counters](#counters)
-    - [Metadata](#metadata-2)
-  - [`./data/quals/[topic]/index.md`](#dataqualstopicindexmd)
-    - [Metadata](#metadata-3)
-  - [`./data/quals/[topic]/macros.json`](#dataqualstopicmacrosjson)
-  - [`./data/quals/[topic]/problems/[problemCode].md`](#dataqualstopicproblemsproblemcodemd)
-    - [Custom Tags](#custom-tags-1)
-    - [Metadata](#metadata-4)
+-   [Table of Contents](#table-of-contents)
+-   [Development](#development)
+-   [Content](#content)
+    -   [Assets](#assets)
+    -   [`./data/personal.md`](#datapersonalmd)
+        -   [Metadata](#metadata)
+    -   [`./data/classes/[classCode]/index.md`](#dataclassesclasscodeindexmd)
+        -   [Announcements Table](#announcements-table)
+        -   [Note Links](#note-links)
+        -   [Metadata](#metadata-1)
+    -   [`./data/classes/[classCode]/macros.json`](#dataclassesclasscodemacrosjson)
+    -   [`./data/classes/[classCode]/notes/[noteName].md`](#dataclassesclasscodenotesnotenamemd)
+        -   [Custom Tags](#custom-tags)
+            -   [Boxed Sections](#boxed-sections)
+            -   [Counters](#counters)
+        -   [Metadata](#metadata-2)
+    -   [`./data/quals/[topic]/index.md`](#dataqualstopicindexmd)
+        -   [Metadata](#metadata-3)
+    -   [`./data/quals/[topic]/macros.json`](#dataqualstopicmacrosjson)
+    -   [`./data/quals/[topic]/problems/[problemCode].md`](#dataqualstopicproblemsproblemcodemd)
+        -   [Custom Tags](#custom-tags-1)
+        -   [Metadata](#metadata-4)
 
 # Development
 
@@ -128,13 +128,13 @@ Notes for students to read and review from.
 -   `<definition>`
 -   `<proposition>`
 
-These content in each of these tags is boxed. In these tags, content in `<h6>` tags (or after `######`) will be used as inline headers.
+These content in each of these tags is boxed. Text in the same line but after the opening tag are put in parentheses. For example, `<theorem> Cauchy` will automatically insert `Theorem (Cauchy)` at the beginning of the content.
 
 #### Counters
 
+-   `<exercise>`
 -   `<example>`
 -   `<solution>`
--   `<exercise>`
 
 Examples and exercises are counted automatically as the Markdown file is read. For example, the second `<example>` tag in the document will be formatted as `Example 2.` without needing to count manually.
 
