@@ -6,13 +6,15 @@
     :global {
         .problem-topics-container {
             font-size: fonts.$tag-font-size;
-            padding-top: lengths.$small;
+            padding-top: lengths.$tiny;
+            white-space: break-spaces;
         }
 
         span {
             background-color: colors.$note-tag-background;
             border-radius: 2pt;
             padding: 1pt 2pt;
+            line-height: 1.75;
         }
     }
 
