@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-import { customSortOrder, publicRuntimeConfig } from "helpers";
+import { customSortOrder, publicRuntimeConfig, formatQuarterYear } from "helpers";
 import {
     processorWithMathForClassCode,
     substituteVariables,
@@ -111,7 +111,16 @@ export const getProblemDataForTopic = (topic, problemCode) => {
         );
     });
 
-    const contentHtml = processorWithMathForTopic(topic).processSync(content).toString();
+    let contentHtml = processorWithMathForTopic(topic).processSync(content).toString();
+
+    // Replace quals macro
+    contentHtml = contentHtml.replace(new RegExp("quals::(.+?).md", "g"), (match, problemCode) => {
+        const problemData = parseProblemCode(problemCode);
+        return `<a href="${publicRuntimeConfig.staticFolder}/quals/${topic}/${problemCode}">${formatQuarterYear(
+            problemData.quarter,
+            problemData.year
+        )} - Problem ${problemData.problemNumber}</a>`;
+    });
 
     return {
         problemCode,
