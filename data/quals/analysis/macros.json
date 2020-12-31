@@ -18,6 +18,7 @@
     "\\conj": "\\overline{#1}",
     "\\cl": "\\overline{#1}",
     "\\itr": "\\mathrm{o}",
+    "\\trans": "\\top",
     "\\st": "\\:\\middle\\vert\\:",
     "\\Res": "\\operatorname{Res}\\p{#1; #2}",
     "\\epsilon": "\\varepsilon",
