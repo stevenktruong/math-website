@@ -22,7 +22,7 @@ export default class Class extends React.Component {
                     </h1>
                     <h3>{formatQuarterYear(classData.quarter, classData.year)}</h3>
                     <div className="tableContainer tableContainer--last-is-link">
-                        <table>
+                        <table id={styles.InfoTable}>
                             <tbody>
                                 {Object.keys(classFormatting).map(key => (
                                     <tr key={key}>
