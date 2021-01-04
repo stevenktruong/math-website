@@ -21,6 +21,8 @@ links:
       url: https://ccle.ucla.edu/course/view/21W-MATH131A-4
     - title: Textbook
       url: https://link.springer.com/book/10.1007%2F978-1-4614-6271-2
+    - title: Feedback (anonymous)
+      url: https://forms.gle/nn9K4M2KQmAjy8rQ8
 ---
 
 ## Policies
@@ -43,6 +45,10 @@ If you haven't already, this is a good time to learn how to use LaTeX and start 
 ### Emails
 
 I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Also, please address me as Steven when e-mailing me.
+
+## Announcements
+
+| 1/3/20 | Please fill out this [form](https://forms.gle/TncQfN5oDWPQbM8E9) to help me schedule office hours.
 
 ## Resources
 
