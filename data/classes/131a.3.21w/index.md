@@ -9,13 +9,13 @@ discussions:
       days: T
       time: 2:00pm - 2:50pm
       location: Zoom
-      link: https://ucla.zoom.us/j/99572905147
+      link: https://ucla.zoom.us/j/99572905147?pwd=WjRzYUMrNC9kOEJFUSt6aWdiQSs3UT09
 officeHours:
     - section: 4A
-      days: TBD
-      time: TBD - TBD
+      days: T
+      time: 3:00pm - 4:00pm
       location: Zoom
-      link: https://ucla.zoom.us/j/99572905147
+      link: https://ucla.zoom.us/j/99572905147?pwd=WjRzYUMrNC9kOEJFUSt6aWdiQSs3UT09
 links:
     - title: CCLE
       url: https://ccle.ucla.edu/course/view/21W-MATH131A-4
@@ -53,3 +53,5 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Resources
 
 -   [MIT OCW 18.100A (Introduction to Analysis)](https://ocw.mit.edu/courses/mathematics/18-100a-introduction-to-analysis-fall-2012/)
+-   [Student Math Center](https://ww3.math.ucla.edu/my-calendar/)
+    -   Mine are 12:00pm - 1:00pm every other Wednesday (Week 1, 3, etc.)
