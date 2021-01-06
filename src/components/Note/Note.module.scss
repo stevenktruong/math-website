@@ -4,6 +4,7 @@
 
 .Note {
     @include math-styles.boxed-theorem;
+    @include math-styles.math-counter(remark);
     @include math-styles.math-counter(exercise);
     @include math-styles.math-counter(example);
     @include math-styles.answer(proof);
@@ -74,7 +75,8 @@
         margin-bottom: lengths.$small;
     }
 
-    h1 + h2 {
+    h1 + h2,
+    h2 + h3 {
         margin-top: 0;
     }
 
@@ -82,6 +84,14 @@
         max-width: 100%;
         display: block;
         margin: lengths.$medium auto;
+    }
+
+    blockquote {
+        font-style: italic;
+        padding: lengths.$small 0;
+        padding-left: lengths.$big;
+        background-color: colors.$blockquote-background;
+        border-left: 4pt solid colors.$highlight;
     }
 
     // Table of contents
