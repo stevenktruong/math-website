@@ -15,6 +15,7 @@
     "\\diam": "\\operatorname{diam}",
     "\\area": "\\operatorname{area}",
     "\\comp": "\\mathrm{c}",
+    "\\pow": "\\mathcal{P}",
     "\\conj": "\\overline{#1}",
     "\\cl": "\\overline{#1}",
     "\\itr": "\\mathrm{o}",
