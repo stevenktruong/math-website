@@ -30,5 +30,6 @@
     "\\SO": "\\operatorname{SO}",
     "\\C": "\\mathbb{C}",
     "\\D": "\\mathbb{D}",
-    "\\Q": "\\mathbb{Q}"
+    "\\Q": "\\mathbb{Q}",
+    "\\T": "\\mathbb{T}"
 }
