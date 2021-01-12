@@ -44,13 +44,18 @@ If you haven't already, this is a good time to learn how to use LaTeX and start 
 
 This is not a requirement though, so you can still write up your homework however you like (e.g., with a tablet, scanning a separate sheet of paper, etc.) as long as I can read it.
 
-### Emails
+### Office Hours
+
+If you're unable to attend my office hours, then feel free to send me an e-mail and we can set up an appointment to meet at a different time.
+
+### E-mails
 
 I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Also, please address me as Steven when e-mailing me.
 
 ## Announcements
 
 | 1/3/20 | Please fill out this [form](https://forms.gle/TncQfN5oDWPQbM8E9) to help me schedule office hours.
+| 1/12/20 | Please fill out this [anonymous form](https://forms.gle/wASatPGMcNt47JH37) for general feedback on how I'm running discussions.
 
 ## Resources
 
@@ -62,3 +67,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Notes
 
 -   notes::week-1.md
+-   notes::week-2.md
