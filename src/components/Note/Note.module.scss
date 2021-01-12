@@ -54,7 +54,9 @@
         margin-top: lengths.$medium;
     }
 
-    solution + p {
+    example + p,
+    solution + p,
+    remark + p {
         margin-top: lengths.$big;
     }
 
@@ -90,6 +92,7 @@
         font-style: italic;
         padding: lengths.$small 0;
         padding-left: lengths.$big;
+        margin-top: lengths.$small;
         background-color: colors.$blockquote-background;
         border-left: 4pt solid colors.$highlight;
     }
