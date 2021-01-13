@@ -10,6 +10,7 @@
     "\\norm": "\\mathopen{}\\left\\lVert #1 \\right\\rVert\\mathclose{}",
     "\\inner": "\\mathopen{}\\left\\langle #1 \\right\\rangle\\mathclose{}",
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
+    "\\floor": "\\mathopen{}\\left\\lfloor #1 \\right\\rfloor\\mathclose{}",
     "\\func": "#1\\colon #2 \\to #3",
     "\\span": "\\operatorname{span}",
     "\\diam": "\\operatorname{diam}",
