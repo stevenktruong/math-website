@@ -60,7 +60,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Resources
 
 -   [Student Math Center](https://ww3.math.ucla.edu/my-calendar/)
-    -   Mine are 12:00pm - 1:00pm every other Wednesday (Week 1, 3, etc.)
+    -   Mine are 12:00pm - 1:00pm every other Wednesday (Week 2, 4, etc.)
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
 -   [MIT OCW 18.100A (Introduction to Analysis)](https://ocw.mit.edu/courses/mathematics/18-100a-introduction-to-analysis-fall-2012/)
 
