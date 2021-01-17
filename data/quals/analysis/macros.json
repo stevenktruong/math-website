@@ -12,6 +12,7 @@
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
     "\\floor": "\\mathopen{}\\left\\lfloor #1 \\right\\rfloor\\mathclose{}",
     "\\func": "#1\\colon #2 \\to #3",
+    "\\res": "\\left. #1 \\right\\rvert_{#2}",
     "\\span": "\\operatorname{span}",
     "\\diam": "\\operatorname{diam}",
     "\\area": "\\operatorname{area}",
