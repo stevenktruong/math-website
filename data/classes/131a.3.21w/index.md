@@ -36,13 +36,17 @@ The password to all of my Zoom meetings is `epsilon`. To access the meetings, ma
 3. Type `ucla` for the company domain.
 4. Finish signing in through UCLA.
 
-I won't be recording discussions, so to make up for this, I'll be writing detailed discussion notes and posting them on this page.
+I started recording discussions Week 3, and all recordings will be available on CCLE. I will be posting my usual notes in addition to this on my website as well.
 
 ### Homework
 
-If you haven't already, this is a good time to learn how to use LaTeX and start typing up your homework assignments. I recommend using [Overleaf](https://www.overleaf.com/) if you've never typed up math before.
+If you haven't already, this is a good time to learn how to use LaTeX and start typing up your homework assignments. I recommend using [Overleaf](https://www.overleaf.com/) if you've never typed up math before. This is not a requirement, so you can still write up your homework however you like (e.g., with a tablet, scanning a separate sheet of paper, etc.) as long as I can read it.
 
-This is not a requirement though, so you can still write up your homework however you like (e.g., with a tablet, scanning a separate sheet of paper, etc.) as long as I can read it.
+The homework will be graded as follows:
+
+-   50% will be awarded for attempting to solve every problem completely.
+    -   What I consider "complete" is at my own discretion, but as a rule of thumb, if you wrote down what you think is a correct solution, then you will get full points for that problem.
+-   The remaining 50% will be based on correctness of a few (usually 2-3) problems chosen at random.
 
 ### Office Hours
 
@@ -68,3 +72,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 
 -   notes::week-1.md
 -   notes::week-2.md
+-   notes::week-3.md
