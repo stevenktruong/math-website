@@ -25,7 +25,7 @@ const counters = [
     },
 ];
 
-const boxedEnvironments = ["theorem", "definition", "proposition"];
+const boxedEnvironments = ["theorem", "definition", "proposition", "corollary"];
 
 export const getAllNotePaths = () => {
     const notesPaths = [];

@@ -4,7 +4,8 @@
 @mixin boxed-theorem {
     theorem,
     definition,
-    proposition {
+    proposition,
+    corollary {
         display: block;
         box-sizing: border-box;
         width: 100%;
