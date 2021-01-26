@@ -9,5 +9,7 @@
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
     "\\comp": "\\mathrm{c}",
     "\\pow": "\\mathcal{P}",
-    "\\Q": "\\mathbb{Q}"
+    "\\Q": "\\mathbb{Q}",
+    "\\epsilon": "\\varepsilon",
+    "\\func": "#1\\colon #2 \\to #3"
 }
