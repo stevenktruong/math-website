@@ -235,16 +235,16 @@ This corollary helps speeds up proofs quite a bit:
 
 <example>
 
-Prove that $\displaystyle \lim_{n\to\infty} \abs{\frac{n + 2}{n^2 - 1}}$.
+Prove that $\displaystyle \lim_{n\to\infty} \abs{\frac{n + 2}{n^2 + 1}} = 0$.
 
 </example>
 
 <solution>
 
-In light of the squeeze theorem, we just need to find something bigger than $\abs{\frac{n + 2}{n^2 - 1}}$ which goes to $0$:
+In light of the squeeze theorem, we just need to find something bigger than $\abs{\frac{n + 2}{n^2 + 1}}$ which goes to $0$:
 
 $$
-\abs{\frac{n + 2}{n^2 - 1}}
+\abs{\frac{n + 2}{n^2 + 1}}
     \leq \frac{n + n}{n^2}
     \leq \frac{2}{n} \xrightarrow{n\to\infty} 0.
 $$
