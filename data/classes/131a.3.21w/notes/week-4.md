@@ -59,7 +59,7 @@ For any $a, b \in R$ with $a < b$, there exists a rational $q \in \Q$ such that 
 
 </theorem>
 
-We know that $\Q$ has gaps in it, which is why we work with $\R$. However, the fact that $\Q$ is dense means that the gaps are very "tiny." In other words, no matter how far you zoom in, you'll always see infinitely many rational numbers.
+We know that $\Q$ has gaps in it, which is why we work with $\R$. However, the fact that $\Q$ is dense means that the gaps are very "tiny". In other words, no matter how far you zoom in, you'll always see infinitely many rational numbers.
 
 <example>
 
@@ -87,7 +87,7 @@ we say that $s_n$ **converges to $L$** and we write $\displaystyle \lim_{n\to\in
 
 </definition>
 
-Intuitively, the limit of a sequence is what it gets "really close to" as $n$ "gets really big." To make this more precise, we need to quantify two things:
+Intuitively, the limit of a sequence is what it gets "really close to" as $n$ "gets really big". To make this more precise, we need to quantify two things:
 
 -   "really close to" (this is $\epsilon$)
 -   "gets really big" (this is $N$)
