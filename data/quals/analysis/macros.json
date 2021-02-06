@@ -23,6 +23,7 @@
     "\\itr": "\\mathrm{o}",
     "\\id": "\\operatorname{id}",
     "\\trans": "\\top",
+    "\\range": "\\operatorname{range}",
     "\\st": "\\:\\middle\\vert\\:",
     "\\Res": "\\operatorname{Res}\\p{#1; #2}",
     "\\epsilon": "\\varepsilon",
