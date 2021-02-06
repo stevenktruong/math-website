@@ -2,7 +2,6 @@
     "name": "math-website",
     "version": "1.0.0",
     "description": "",
-    "type": "module",
     "main": "index.js",
     "scripts": {
         "clean": "rm -rf node_modules .next build && yarn",
@@ -10,7 +9,7 @@
         "build": "rm -rf build && next build && next export -o build",
         "build:dev": "URL_ENV=development yarn build",
         "build:production": "URL_ENV=production yarn build",
-        "roll": "node -e 'import(\"./src/lib/scripts.js\").then(module => module.randomProblem());'"
+        "roll": "node src/scripts/randomAnalysis.js;"
     },
     "repository": {
         "type": "git",
