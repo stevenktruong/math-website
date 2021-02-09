@@ -75,7 +75,7 @@ We know that $\Q$ has gaps in it, which is why we work with $\R$. However, the f
 
 ## Sequences
 
-<definition>
+<definition id="sequence">
 
 A **sequence** is a function $\func{s}{\N}{\R}$, where we write $s_n = s\p{n}$ and $\set{s_n}_n = \set{s_n \mid n \in \N}$.
 

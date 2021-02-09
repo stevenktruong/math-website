@@ -168,7 +168,7 @@ Basically, every "=" needs to be justified (with a few words).
 
 Another (very) useful theorem for calculating limits is the squeeze theorem:
 
-<theorem> squeeze theorem
+<theorem id="squeeze-theorem"> squeeze theorem
 
 Let $\set{a_n}_n$, $\set{b_n}_n$, and $\set{s_n}_n$ be sequences such that $a_n \leq s_n \leq b_n$. If $\displaystyle\lim_{n\to\infty} a_n = \lim_{n\to\infty} b_n = L$, then $\displaystyle \lim_{n\to\infty} s_n = L$ also.
 
