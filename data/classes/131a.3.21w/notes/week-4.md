@@ -202,9 +202,9 @@ To summarize, this is the basic strategy for proving limits through the definiti
 
 The definition can also be used to prove some useful facts about limits.
 
-<proposition>
+<proposition id="non-zero-sequences">
 
-Let $\set{s_n}_n$ be a sequence. Suppose $s_n > 0$ for all $n \geq 1$ and that $L = \lim_{n\to\infty} s_n$ exists. Then $L \geq 0$.
+Let $\set{s_n}_n$ be a sequence. Suppose $s_n > 0$ for all $n \geq 1$ and that $L = \displaystyle\lim_{n\to\infty} s_n$ exists. Then $L \geq 0$.
 
 </proposition>
 
