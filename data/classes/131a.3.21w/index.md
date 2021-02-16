@@ -76,3 +76,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   notes::week-4.md
 -   notes::week-5.md
 -   notes::week-6.md
+-   notes::week-7.md
