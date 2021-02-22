@@ -17,6 +17,7 @@
     "\\im": "\\operatorname{im}",
     "\\diam": "\\operatorname{diam}",
     "\\area": "\\operatorname{area}",
+    "\\sgn": "\\operatorname{sgn}",
     "\\comp": "\\mathrm{c}",
     "\\pow": "\\mathcal{P}",
     "\\conj": "\\overline{#1}",
