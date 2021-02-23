@@ -292,7 +292,9 @@ True or false: _If $f + g$ is continuous and $f$ is continuous, then $g$ is cont
 True. You can write
 
 $$
-g = \underbrace{\p{f + g}}_{\text{continuous}} + \p{-f}
+g = \underbrace{\p{f + g}}_{\text{continuous}} + \underbrace{\p{-f}}_{\text{continuous}},
 $$
+
+so $g$ is a sum of continuous functions, hence continuous.
 
 </solution>
