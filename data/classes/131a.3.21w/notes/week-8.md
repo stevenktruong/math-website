@@ -203,7 +203,7 @@ $$
 
 To end this section, here's an important connection between density and continuity:
 
-<proposition>
+<proposition id="continuity-density">
 
 Let $\func{f}{\R}{\R}$ and $\func{g}{\R}{\R}$ be continuous functions such that $f\p{q} = g\p{q}$ for all $q \in \Q$. Then $f = g$ everywhere.
 

@@ -123,7 +123,7 @@ The following is **wrong**:
 
 > $\displaystyle\lim_{n\to\infty} \p{a_n + b_n} = \displaystyle\lim_{n\to\infty} a_n + \displaystyle\lim_{n\to\infty} b_n$, and these limits don't exist. Therefore, $\displaystyle\lim_{n\to\infty} \p{a_n + b_n}$ doesn't exist either.
 
-The problem is with the first "=" sign: the limits don't exist, so that "=" is invalid. As a counter-example, consider $a_n = \p{-1}^n$ and $b_n = -\p{-1}^n$. Then both limits don't exist, but
+The problem is with the first "=" sign: the limits don't exist, so that "=" is invalid. As a counterexample, consider $a_n = \p{-1}^n$ and $b_n = -\p{-1}^n$. Then both limits don't exist, but
 
 $$
 \lim_{n\to\infty} \p{a_n + b_n}
