@@ -60,6 +60,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 
 | 1/3/20 | Please fill out this [form](https://forms.gle/TncQfN5oDWPQbM8E9) to help me schedule office hours.
 | 1/12/20 | Please fill out this [anonymous form](https://forms.gle/wASatPGMcNt47JH37) for general feedback on how I'm running discussions.
+| 3/9/20 | Please fill out this [form](https://forms.gle/WcLC8RUKTDx9AUtA7) if you're interested in a review session for the final.
 
 ## Resources
 
