@@ -70,20 +70,19 @@ export const getClassData = classCode => {
     const announcements = new RegExp('<h2 id="announcements">Announcements</h2>').test(contentHtml);
     if (announcements) {
         contentHtml = contentHtml.replace(
-            new RegExp('<h2 id="announcements">Announcements</h2>'),
-            match => `${match}\n<div class="tableContainer"><table id="announcements-table"><tbody>`
+            new RegExp('(<h2 id="announcements">Announcements</h2>)\n<ul>'),
+            (match, noUl) => `${noUl}\n<div class="tableContainer"><table id="announcements-table"><tbody>`
         );
 
         // We need to end the table at the last announcement
         contentHtml = contentHtml.replace(
-            new RegExp("\\| ([0-9/]+?) \\| (.+?)\n([^\\|])"),
-            (match, date, announcement, followedBy) =>
-                `<tr><td>${date}</td><td>${announcement}</td></tr></tbody></table></div>\n${followedBy}`
+            new RegExp("<li>\\| ([0-9/]+?) \\| (.+?)</li>\n</ul>"),
+            (match, date, announcement) => `<tr><td>${date}</td><td>${announcement}</td></tr>\n</tbody></table></div>`
         );
 
         contentHtml = contentHtml.replace(
-            new RegExp("\\| ([0-9/]+?) \\| (.+?)\n", "g"),
-            (match, date, announcement) => `<tr><td>${date}</td>\n<td>${announcement}</td></tr>\n`
+            new RegExp("<li>\\| ([0-9/]+?) \\| (.+?)</li>", "g"),
+            (match, date, announcement) => `<tr><td>${date}</td>\n<td>${announcement}</td></tr>`
         );
     }
 

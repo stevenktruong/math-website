@@ -36,7 +36,7 @@ I try my best to be very quick with e-mails, so if you don't get a reply by the 
 
 ## Announcements
 
-| 12/11/20 | It looks like the textbook I linked to previously was taken down, so you should try to ask other students to see if they have a PDF. If you still have trouble getting access to the textbook, feel free to send me an e-mail and I'll point you in the right direction.
+-   | 12/11/20 | It looks like the textbook I linked to previously was taken down, so you should try to ask other students to see if they have a PDF. If you still have trouble getting access to the textbook, feel free to send me an e-mail and I'll point you in the right direction.
 
 ## Resources
 

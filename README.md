@@ -78,7 +78,7 @@ Contains all the data about the class, including announcements and policies.
 
 ### Announcements Table
 
-In the announcements section, each line should be in the form `| [MM/DD/YY] | [announcement]` for it to be added to the table.
+In the announcements section, each line should be in the form `- | [MM/DD/YY] | [announcement]` for it to be added to the table properly.
 
 ### Note Links
 
@@ -112,8 +112,8 @@ Defines LaTeX macros for the class. They will mainly be used in the notes.
 
 ```json
 {
-    "\\commandName": "macro",
-    ...
+    "\\commandName": "macro"
+    // ...
 }
 ```
 
@@ -166,8 +166,8 @@ Defines LaTeX macros for the qual topic.
 
 ```json
 {
-    "\\commandName": "macro",
-    ...
+    "\\commandName": "macro"
+    // ...
 }
 ```
 
