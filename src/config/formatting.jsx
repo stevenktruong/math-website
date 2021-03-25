@@ -21,10 +21,10 @@ export const navLinks = {
         title: "Teaching",
         href: "/teaching",
     },
-    // quals: {
-    //     title: "Qualifying Exams",
-    //     href: "/quals",
-    // },
+    quals: {
+        title: "Qualifying Exams",
+        href: "/quals",
+    },
     cv: {
         title: "CV",
         href: "/files/cv.pdf",
