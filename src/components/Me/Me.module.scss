@@ -17,6 +17,7 @@
         object-fit: cover;
         border-radius: 100%;
         margin: lengths.$big auto;
+        pointer-events: none;
     }
 
     @media only screen and (max-width: breakpoints.$big) {
