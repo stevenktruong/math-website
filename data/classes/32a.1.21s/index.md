@@ -24,6 +24,8 @@ officeHours:
 links:
     - title: CCLE
       url: https://ccle.ucla.edu/course/view/21S-MATH32A-1
+    - title: Campuswire
+      url: https://campuswire.com/c/GD0613F78/
 ---
 
 ## Policies
@@ -31,6 +33,10 @@ links:
 ### E-mails
 
 I try my best to be very quick with e-mails, so if you don't get a reply by the end of the day, feel free to send me another one. You can address me as Steven.
+
+## Announcements
+
+-   | 3/29/21 | Please fill out this [form](https://forms.gle/u4iXpvxNZSbaidZ8A) to help me schedule office hours for the quarter.
 
 ## Resources
 
