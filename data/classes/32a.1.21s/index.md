@@ -40,7 +40,9 @@ I try my best to be very quick with e-mails, so if you don't get a reply by the 
 
 ## Resources
 
--   [Open Office Hours](https://ww3.math.ucla.edu/my-calendar/)
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
+-   [GeoGebra 3D Calculator](http://geogebra.org/3d)
 -   [Symbolab Calculator](https://www.symbolab.com/solver/calculus-calculator)
+-   [Open Office Hours](https://ww3.math.ucla.edu/my-calendar/)
+    -   Mine are 2:00pm - 3:00pm every other Friday (Week 2, 4, etc.)
 -   [Paul's Online Notes](https://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx)
