@@ -17,8 +17,8 @@ discussions:
       link: https://ucla.zoom.us/j/96658941081?pwd=SUJkMU9reCtZbmxpQ0hmM3J4S3dtQT09
 officeHours:
     - section: 1A, 1B
-      days: TBD
-      time: TBD - TBD
+      days: W
+      time: 12:00pm - 1:00pm
       location: Zoom
       link: https://ucla.zoom.us/j/96658941081?pwd=SUJkMU9reCtZbmxpQ0hmM3J4S3dtQT09
 links:
