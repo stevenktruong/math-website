@@ -46,3 +46,7 @@ I try my best to be very quick with e-mails, so if you don't get a reply by the 
 -   [Open Office Hours](https://ww3.math.ucla.edu/my-calendar/)
     -   Mine are 2:00pm - 3:00pm every other Friday (Week 2, 4, etc.)
 -   [Paul's Online Notes](https://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx)
+
+## Notes
+
+-   notes::week-1.md
