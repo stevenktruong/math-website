@@ -30,6 +30,16 @@ links:
 
 ## Policies
 
+### Learning Assistants
+
+Our class incorporates [learning assistants](https://ceils.ucla.edu/learningassistants/), who are undergrads who have taken this class and are here to support you.
+
+### Office Hours
+
+If my office hours don't work for you, feel free to attend the other TA's office hours (the link to their office hours is under `Office Hours for TAs` in the sidebar on CCLE).
+
+If you want to meet with me specifically, then you can also send me an e-mail to schedule an appointment for us to meet individually. I'm also happy to meet with you on weekends if I have time.
+
 ### E-mails
 
 I try my best to be very quick with e-mails, so if you don't get a reply by the end of the day, feel free to send me another one. You can address me as Steven.
@@ -37,6 +47,7 @@ I try my best to be very quick with e-mails, so if you don't get a reply by the 
 ## Announcements
 
 -   | 3/29/21 | Please fill out this [form](https://forms.gle/u4iXpvxNZSbaidZ8A) to help me schedule office hours for the quarter.
+-   | 4/8/21 | Please fill out this [form](https://forms.gle/MsSM7hXenfGbUbRV9) for general feedback about how discussions are being run.
 
 ## Resources
 
@@ -50,3 +61,4 @@ I try my best to be very quick with e-mails, so if you don't get a reply by the 
 ## Notes
 
 -   notes::week-1.md
+-   notes::week-2.md
