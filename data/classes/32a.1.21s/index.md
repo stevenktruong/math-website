@@ -62,3 +62,4 @@ I try my best to be very quick with e-mails, so if you don't get a reply by the 
 
 -   notes::week-1.md
 -   notes::week-2.md
+-   notes::week-3.md
