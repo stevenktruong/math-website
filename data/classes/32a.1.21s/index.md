@@ -48,6 +48,7 @@ I try my best to be very quick with e-mails, so if you don't get a reply by the 
 
 -   | 3/29/21 | Please fill out this [form](https://forms.gle/u4iXpvxNZSbaidZ8A) to help me schedule office hours for the quarter.
 -   | 4/8/21 | Please fill out this [form](https://forms.gle/MsSM7hXenfGbUbRV9) for general feedback about how discussions are being run.
+-   | 4/28/21| Since there is a midterm this Friday, I'll be holding extra office hours on Thursday, 4/29 from 4pm to 6pm PT.
 
 ## Resources
 
