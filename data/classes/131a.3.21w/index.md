@@ -25,6 +25,8 @@ links:
       url: https://forms.gle/nn9K4M2KQmAjy8rQ8
 ---
 
+## Table of Contents
+
 ## Policies
 
 ### Zoom

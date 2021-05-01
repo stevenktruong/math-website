@@ -28,6 +28,8 @@ links:
       url: https://campuswire.com/c/GD0613F78/
 ---
 
+## Table of Contents
+
 ## Policies
 
 ### Learning Assistants

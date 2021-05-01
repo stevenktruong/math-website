@@ -28,6 +28,8 @@ links:
       url: https://campuswire.com/c/G6D8D17EE
 ---
 
+## Table of Contents
+
 The password to all the Zoom meetings is `integrals`. I won't be recording discussions, so to make up for this, I'll be writing detailed discussion notes.
 
 If you have any feedback, please fill out the [anonymous feedback form](https://forms.gle/o8YAcB2giVJ5jLK26). This can include anything from pacing to topics you want me to cover each week.
