@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { formatQuarterYear, formatCourseWithDescription, customSortOrder } from "helpers";
 import styles from "./Teaching.module.scss";

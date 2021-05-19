@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { formatQuarterYear, formatCourseWithDescription } from "helpers";
 import styles from "./Topic.module.scss";

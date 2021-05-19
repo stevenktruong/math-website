@@ -1,3 +1,4 @@
+import React from "react";
 import { contactFormatting } from "config/formatting";
 import styles from "./Contact.module.scss";
 

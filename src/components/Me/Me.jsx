@@ -1,3 +1,4 @@
+import React from "react";
 import { publicRuntimeConfig } from "helpers";
 import styles from "./Me.module.scss";
 

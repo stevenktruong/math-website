@@ -1,3 +1,5 @@
+import React from "react";
+
 import Link from "next/link";
 import HamburgerButton from "components/HamburgerButton";
 import styles from "./Navbar.module.scss";

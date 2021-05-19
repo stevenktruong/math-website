@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Note.module.scss";
 
 export default class Note extends React.Component {

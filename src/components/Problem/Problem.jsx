@@ -1,6 +1,6 @@
-import styles from "./Problem.module.scss";
-
+import React from "react";
 import { formatQuarterYear } from "helpers";
+import styles from "./Problem.module.scss";
 
 export default class Problem extends React.Component {
     render() {
