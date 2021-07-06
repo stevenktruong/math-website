@@ -1,5 +1,6 @@
 ---
 fullName: Steven Truong
+pronouns: he / him / his
 office: Virtual
 email: steven [at] math [dot] ucla [dot] edu
 address:

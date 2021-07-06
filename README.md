@@ -1,28 +1,28 @@
 # Table of Contents
 
--   [Table of Contents](#table-of-contents)
--   [Development](#development)
--   [Content](#content)
-    -   [Assets](#assets)
-    -   [`./data/personal.md`](#datapersonalmd)
-        -   [Metadata](#metadata)
-    -   [`./data/classes/[classCode]/index.md`](#dataclassesclasscodeindexmd)
-        -   [Announcements Table](#announcements-table)
-        -   [Note Links](#note-links)
-        -   [Metadata](#metadata-1)
-    -   [`./data/classes/[classCode]/macros.json`](#dataclassesclasscodemacrosjson)
-    -   [`./data/classes/[classCode]/notes/[noteName].md`](#dataclassesclasscodenotesnotenamemd)
-        -   [Custom Tags](#custom-tags)
-            -   [Boxed Sections](#boxed-sections)
-            -   [Counters](#counters)
-        -   [Metadata](#metadata-2)
-    -   [`./data/quals/[topic]/index.md`](#dataqualstopicindexmd)
-        -   [Metadata](#metadata-3)
-    -   [`./data/quals/[topic]/macros.json`](#dataqualstopicmacrosjson)
-    -   [`./data/quals/[topic]/problems/[problemCode].md`](#dataqualstopicproblemsproblemcodemd)
-        -   [Custom Tags](#custom-tags-1)
-        -   [Links to Other Problems](#links-to-other-problems)
-        -   [Metadata](#metadata-4)
+- [Table of Contents](#table-of-contents)
+- [Development](#development)
+- [Content](#content)
+  - [Assets](#assets)
+  - [`./data/personal.md`](#datapersonalmd)
+    - [Metadata](#metadata)
+  - [`./data/classes/[classCode]/index.md`](#dataclassesclasscodeindexmd)
+    - [Announcements Table](#announcements-table)
+    - [Note Links](#note-links)
+    - [Metadata](#metadata-1)
+  - [`./data/classes/[classCode]/macros.json`](#dataclassesclasscodemacrosjson)
+  - [`./data/classes/[classCode]/notes/[noteName].md`](#dataclassesclasscodenotesnotenamemd)
+    - [Custom Tags](#custom-tags)
+      - [Boxed Sections](#boxed-sections)
+      - [Counters](#counters)
+    - [Metadata](#metadata-2)
+  - [`./data/quals/[topic]/index.md`](#dataqualstopicindexmd)
+    - [Metadata](#metadata-3)
+  - [`./data/quals/[topic]/macros.json`](#dataqualstopicmacrosjson)
+  - [`./data/quals/[topic]/problems/[problemCode].md`](#dataqualstopicproblemsproblemcodemd)
+    - [Custom Tags](#custom-tags-1)
+    - [Links to Other Problems](#links-to-other-problems)
+    - [Metadata](#metadata-4)
 
 # Development
 
@@ -66,6 +66,7 @@ Contains the blurb on the "About Me" section at the index.
 
 ```yml
 fullName: my full name
+pronouns: my preferred pronouns
 office: my office
 email: my (obfuscated) email address
 address: an array; each line is a line in the address

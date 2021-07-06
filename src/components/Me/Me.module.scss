@@ -5,9 +5,15 @@
     float: right;
     margin-right: 40px;
 
-    h1 {
+    .Name {
         margin: auto;
-        text-align: center;
+
+        h2 {
+            text-align: right;
+            font-size: 12pt;
+            font-style: italic;
+            color: gray;
+        }
     }
 
     img {
@@ -25,7 +31,7 @@
         transform: rotate(180deg);
         margin: 0 0 lengths.$big 0;
 
-        h1,
+        .Name,
         img {
             display: inline-block;
             vertical-align: middle;
@@ -33,10 +39,14 @@
             transform: rotate(180deg);
         }
 
-        h1 {
+        .Name {
             width: 80%;
-            text-align: left;
             padding-left: lengths.$big;
+
+            h2 {
+                text-align: left;
+                font-size: 12pt;
+            }
         }
 
         img {

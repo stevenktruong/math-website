@@ -8,7 +8,10 @@ export default class Me extends React.Component {
         const personalData = fileData.personalData;
         return (
             <div className={styles.Me}>
-                <h1>{personalData.fullName}</h1>
+                <div className={styles.Name}>
+                    <h1>{personalData.fullName}</h1>
+                    <h2>{personalData.pronouns}</h2>
+                </div>
                 <img alt="me" src={`${publicRuntimeConfig.staticFolder}/images/me.jpg`} />
             </div>
         );
