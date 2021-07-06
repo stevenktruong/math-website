@@ -104,13 +104,13 @@ export const getClassData = classCode => {
 };
 
 export const parseClassCode = classCode => {
-    const match = classCode.match(/^([0-9]{1,3}[a-z]{0,2})\.([0-9]{1,2})\.([0-9]{2})([fws])$/);
+    const match = classCode.match(/^([0-9]{2})([fws])\.([0-9]{1,3}[a-z]{0,2})\.([0-9]{1,2})$/);
 
     return {
-        courseNumber: match[1],
-        lecture: match[2],
-        year: match[3],
-        quarter: quarterList[match[4]],
+        year: match[1],
+        quarter: quarterList[match[2]],
+        courseNumber: match[3],
+        lecture: match[4],
     };
 };
 
