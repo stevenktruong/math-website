@@ -2,7 +2,9 @@
 title: Analysis
 ---
 
-While studying for the analysis qualifying exam, I will be typing solutions for the [problems](https://secure.math.ucla.edu/gradquals/hbquals.php) I worked on. Most solutions are taken from the solutions maintained by Adam Lott (see below), but rewritten into my own words. Towards the end, I began writing more original solutions.
+While studying for the analysis qualifying exam, I typed up solutions for the [problems](https://secure.math.ucla.edu/gradquals/hbquals.php) I worked on. Most solutions are taken from the solutions maintained by Adam Lott (see below), but rewritten into my own words. Towards the end, I began writing more original solutions.
+
+I passed with the [Spring 2021](#spring-2021) exam.
 
 ### Collaborators
 
