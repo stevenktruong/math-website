@@ -9,7 +9,8 @@
         "build": "rm -rf build && next build && next export -o build",
         "build:dev": "URL_ENV=development yarn build",
         "build:production": "URL_ENV=production yarn build",
-        "roll": "node src/scripts/randomAnalysis.js;"
+        "script:randomAnalysis": "node -r esm src/scripts/randomAnalysis.js;",
+        "script:problemsByTopic": "node -r esm src/scripts/problemsByTopic.js;"
     },
     "repository": {
         "type": "git",
@@ -22,6 +23,7 @@
     },
     "homepage": "https://github.com/stevenktruong/math-website#readme",
     "dependencies": {
+        "esm": "^3.2.25",
         "gray-matter": "^4.0.2",
         "moment": "^2.27.0",
         "next": "^10.2.1",
