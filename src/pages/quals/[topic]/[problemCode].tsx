@@ -22,7 +22,7 @@ interface ProblemPageProps {
 }
 
 export default class ProblemPage extends React.Component<ProblemPageProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const problemData = fileData.problemData!;
 
@@ -37,7 +37,7 @@ export default class ProblemPage extends React.Component<ProblemPageProps> {
                 <Layout rightSide={<Problem fileData={fileData} />} fileData={fileData} />
             </>
         );
-    }
+    };
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

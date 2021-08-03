@@ -7,6 +7,7 @@ interface HamburgerButtonState {
 }
 
 export default class HamburgerButton extends React.Component<any, HamburgerButtonState> {
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     constructor(props: any) {
         super(props);
 
@@ -16,11 +17,11 @@ export default class HamburgerButton extends React.Component<any, HamburgerButto
         };
     }
 
-    updateState() {
+    updateState = (): void => {
         this.setState({ active: this.props.value });
-    }
+    };
 
-    render() {
+    render = (): JSX.Element => {
         return (
             <div
                 className={styles.HamburgerButton}
@@ -44,9 +45,9 @@ export default class HamburgerButton extends React.Component<any, HamburgerButto
                 ></div>
             </div>
         );
-    }
+    };
 
-    componentDidUpdate() {
+    componentDidUpdate = (): void => {
         if (this.props.value !== this.state.active) this.updateState();
-    }
+    };
 }

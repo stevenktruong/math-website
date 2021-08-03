@@ -17,7 +17,7 @@ interface HomeProps {
 }
 
 export default class Home extends React.Component<HomeProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const personalData = fileData.personalData!;
 
@@ -38,7 +38,7 @@ export default class Home extends React.Component<HomeProps> {
                 />
             </>
         );
-    }
+    };
 }
 
 export const getStaticProps: GetStaticProps = async () => {

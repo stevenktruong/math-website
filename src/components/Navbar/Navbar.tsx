@@ -13,6 +13,7 @@ interface NavbarState {
 }
 
 export default class Navbar extends React.Component<any, NavbarState> {
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     constructor(props: any) {
         super(props);
 
@@ -21,12 +22,12 @@ export default class Navbar extends React.Component<any, NavbarState> {
         };
     }
 
-    async toggleMobileMenu() {
+    toggleMobileMenu = async (): Promise<void> => {
         const newState = !this.state.mobileMenuActive;
         await this.setState({ mobileMenuActive: newState });
-    }
+    };
 
-    renderListOfButtons(isMobile = false) {
+    renderListOfButtons = (isMobile = false): JSX.Element => {
         return (
             <ul className={isMobile ? styles.ShowButtons : null}>
                 {Object.keys(navLinks).map((key, i) => (
@@ -38,9 +39,9 @@ export default class Navbar extends React.Component<any, NavbarState> {
                 ))}
             </ul>
         );
-    }
+    };
 
-    render() {
+    render = (): JSX.Element => {
         const mobileMenuActive = this.state.mobileMenuActive;
 
         return (
@@ -53,5 +54,5 @@ export default class Navbar extends React.Component<any, NavbarState> {
                 </div>
             </nav>
         );
-    }
+    };
 }

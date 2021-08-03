@@ -13,7 +13,7 @@ interface ClassProps {
 }
 
 export default class Class extends React.Component<ClassProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const personalData = fileData.personalData!;
         const classData = {
@@ -62,5 +62,5 @@ export default class Class extends React.Component<ClassProps> {
                 ) : null} */}
             </div>
         );
-    }
+    };
 }

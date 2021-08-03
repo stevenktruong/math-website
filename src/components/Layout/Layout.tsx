@@ -18,7 +18,7 @@ interface LayoutProps {
 }
 
 export default class Layout extends React.Component<LayoutProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
 
         return (
@@ -37,5 +37,5 @@ export default class Layout extends React.Component<LayoutProps> {
                 </div>
             </>
         );
-    }
+    };
 }

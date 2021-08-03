@@ -11,7 +11,7 @@ interface ContactProps {
 }
 
 export default class Contact extends React.Component<ContactProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const personalData = fileData.personalData!;
 
@@ -32,5 +32,5 @@ export default class Contact extends React.Component<ContactProps> {
                 </div>
             </section>
         );
-    }
+    };
 }

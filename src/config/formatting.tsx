@@ -57,7 +57,7 @@ export const navLinks: Record<string, Record<string, string>> = {
  * Converts a string of days to use their display day, e.g., MTR -> MoTuTh
  * @param {string} days
  */
-export const daysOfTheWeekFormatting: (days: string) => string = (days) => {
+export const daysOfTheWeekFormatting = (days: string): string => {
     return Object.keys(daysOfTheWeekTable).reduce((acc, cur) => {
         return acc.replace(new RegExp(`${cur}`), daysOfTheWeekTable[cur]);
     }, days);

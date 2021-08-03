@@ -20,7 +20,7 @@ interface NotePageProps {
 }
 
 export default class NotePage extends React.Component<NotePageProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const noteData = fileData.noteData!;
 
@@ -34,7 +34,7 @@ export default class NotePage extends React.Component<NotePageProps> {
                 <Layout rightSide={<Note fileData={fileData} />} fileData={fileData} />
             </>
         );
-    }
+    };
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

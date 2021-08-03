@@ -56,7 +56,7 @@ export default class Teaching extends React.Component<TeachingProps> {
         return classesDataByQuarter;
     };
 
-    render() {
+    render = (): JSX.Element => {
         const classesDataByQuarter = this.createMapFromQuarterToClasses();
 
         return (
@@ -111,5 +111,5 @@ export default class Teaching extends React.Component<TeachingProps> {
                 </div>
             </section>
         );
-    }
+    };
 }

@@ -15,7 +15,7 @@ interface TeachingPageProps {
 }
 
 export default class TeachingPage extends React.Component<TeachingPageProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
 
         return (
@@ -26,7 +26,7 @@ export default class TeachingPage extends React.Component<TeachingPageProps> {
                 <Layout fileData={fileData} rightSide={<Teaching fileData={fileData} />} />
             </>
         );
-    }
+    };
 }
 
 export const getStaticProps: GetStaticProps = async () => {

@@ -20,7 +20,7 @@ interface ClassPageProps {
 }
 
 export default class ClassPage extends React.Component<ClassPageProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const classData = fileData.classData!;
 
@@ -34,7 +34,7 @@ export default class ClassPage extends React.Component<ClassPageProps> {
                 <Layout rightSide={<Class fileData={fileData} />} fileData={fileData} />
             </>
         );
-    }
+    };
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

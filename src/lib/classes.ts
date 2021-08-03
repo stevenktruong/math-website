@@ -7,6 +7,8 @@ import { customSortOrder, publicRuntimeConfig } from "helpers";
 import { ClassCode, ClassData, ParsedClassCode } from "models/ClassData.model";
 import { NoteData } from "models/NoteData.model";
 
+import { IParams } from "types";
+
 import { getNotesDataForClass } from "./notes";
 import { dataDirectory, processorWithMathForClassCode, readDirectoryContents, readMarkdown } from "./utils";
 
@@ -20,7 +22,7 @@ const quarterList: Record<string, string> = {
 
 // A course refers to the content, a class refers to a particular instance of a course
 
-export const getAllClassPaths = () => {
+export const getAllClassPaths = (): { params: IParams }[] => {
     return readDirectoryContents(classesDirectory).map((classCode) => {
         return {
             params: {
@@ -44,7 +46,7 @@ export const getAllClassPaths = () => {
  *
  * The classes are sorted from most recent to least.
  */
-export const getSortedClassesData = () => {
+export const getSortedClassesData = (): ClassData[] => {
     return readDirectoryContents(classesDirectory)
         .map((classCode) => {
             const filePath = path.join(classesDirectory, `${classCode}/index.md`);

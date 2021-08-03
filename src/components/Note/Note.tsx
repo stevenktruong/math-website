@@ -9,7 +9,7 @@ interface NoteProps {
 }
 
 export default class Note extends React.Component<NoteProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const noteData = fileData.noteData!;
 
@@ -18,5 +18,5 @@ export default class Note extends React.Component<NoteProps> {
                 <div dangerouslySetInnerHTML={{ __html: noteData.contentHtml }} />
             </section>
         );
-    }
+    };
 }

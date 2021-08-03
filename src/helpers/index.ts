@@ -15,13 +15,13 @@ export const formatQuarterYear = (quarter: string, year: string): string => `${q
  * @param course
  * @param description
  */
-export const formatCourseWithDescription = (course: string, description: string) => `${course}: ${description}`;
+export const formatCourseWithDescription = (course: string, description: string): string => `${course}: ${description}`;
 
 /**
  * Given an array, create an sorting function to match the order in the array
  * @param order is an array that specifies an order (e.g., [Spring, Fall, Winter])
  */
-export const customSortOrder = (order: string[]) => {
+export const customSortOrder = (order: string[]): ((a: string, b: string) => number) => {
     const indexMap: Record<string, number> = {};
     order.forEach((item, i) => (indexMap[item] = i));
     return (a: string, b: string) => indexMap[a] - indexMap[b];

@@ -15,7 +15,7 @@ interface QualsPageProps {
 }
 
 export default class QualsPage extends React.Component<QualsPageProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
 
         return (
@@ -26,7 +26,7 @@ export default class QualsPage extends React.Component<QualsPageProps> {
                 <Layout rightSide={<Quals fileData={fileData} />} fileData={fileData} />
             </>
         );
-    }
+    };
 }
 
 export const getStaticProps: GetStaticProps = async () => {

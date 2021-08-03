@@ -11,7 +11,7 @@ interface QualsProp {
 }
 
 export default class Quals extends React.Component<QualsProp> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const topicsData = fileData.topicsData!;
 
@@ -33,5 +33,5 @@ export default class Quals extends React.Component<QualsProp> {
                 </ul>
             </section>
         );
-    }
+    };
 }

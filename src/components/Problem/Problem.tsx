@@ -11,7 +11,7 @@ interface ProblemProps {
 }
 
 export default class Problem extends React.Component<ProblemProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const problemData = fileData.problemData!;
 
@@ -23,5 +23,5 @@ export default class Problem extends React.Component<ProblemProps> {
                 <div dangerouslySetInnerHTML={{ __html: problemData.contentHtml }} />
             </section>
         );
-    }
+    };
 }

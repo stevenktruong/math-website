@@ -15,7 +15,7 @@ interface TopicPageProps {
 }
 
 export default class TopicPage extends React.Component<TopicPageProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const topicData = fileData.topicData!;
 
@@ -27,7 +27,7 @@ export default class TopicPage extends React.Component<TopicPageProps> {
                 <Layout rightSide={<Topic fileData={fileData} />} fileData={fileData} />
             </>
         );
-    }
+    };
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

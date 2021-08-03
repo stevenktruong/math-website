@@ -11,7 +11,7 @@ interface MeProps {
 }
 
 export default class Me extends React.Component<MeProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const personalData = fileData.personalData!;
 
@@ -24,5 +24,5 @@ export default class Me extends React.Component<MeProps> {
                 <img alt="me" src={`${publicRuntimeConfig.staticFolder}/images/me.jpg`} />
             </div>
         );
-    }
+    };
 }

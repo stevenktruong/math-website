@@ -9,7 +9,7 @@ interface TopicProps {
 }
 
 export default class Topic extends React.Component<TopicProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const topicData = fileData.topicData!;
 
@@ -21,5 +21,5 @@ export default class Topic extends React.Component<TopicProps> {
                 </section>
             </div>
         );
-    }
+    };
 }

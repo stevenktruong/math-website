@@ -19,7 +19,7 @@ interface BreadcrumbsProps {
 }
 
 class Breadcrumbs extends React.Component<BreadcrumbsProps> {
-    render() {
+    render = (): JSX.Element => {
         const router = this.props.router;
 
         // This should not be rendered on the homepage
@@ -96,7 +96,7 @@ class Breadcrumbs extends React.Component<BreadcrumbsProps> {
                 })}
             </div>
         );
-    }
+    };
 }
 
 export default withRouter(Breadcrumbs);

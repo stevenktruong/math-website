@@ -9,7 +9,7 @@ interface AboutProps {
 }
 
 export default class About extends React.Component<AboutProps> {
-    render() {
+    render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const personalData = fileData.personalData!;
 
@@ -19,5 +19,5 @@ export default class About extends React.Component<AboutProps> {
                 <div dangerouslySetInnerHTML={{ __html: personalData.contentHtml }} />
             </section>
         );
-    }
+    };
 }

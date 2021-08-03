@@ -7,6 +7,7 @@ import { Plugin } from "unified";
 import unified from "unified";
 
 import remark from "remark";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import highlight from "remark-highlight.js";
 import math from "remark-math";
@@ -31,7 +32,7 @@ export const dataDirectory = path.join(process.cwd(), "data");
  */
 export const substituteVariables: (input: string, variables: Record<string, string>) => string = (input, variables) => {
     return Object.keys(variables).reduce(
-        (acc, key) => acc.replace(new RegExp(`\{{2} ${key} \}{2}`, "g"), variables[key]),
+        (acc, key) => acc.replace(new RegExp(`{{2} ${key} }{2}`, "g"), variables[key]),
         input
     );
 };

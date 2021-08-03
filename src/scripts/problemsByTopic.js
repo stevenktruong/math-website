@@ -1,11 +1,11 @@
+import { readMarkdown } from "../lib/utils.js";
+
 import fs from "fs";
 import path from "path";
-import { stringify } from "remark";
-import { readMarkdown } from "../lib/utils.js";
 
 const dataDirectory = path.join(process.cwd(), "data");
 
-const readDirectoryContents = folderPath => {
+const readDirectoryContents = (folderPath) => {
     return fs.existsSync(folderPath) ? fs.readdirSync(folderPath) : [];
 };
 
@@ -36,5 +36,5 @@ const sortedTopics = Object.keys(topicToProblemsMap).sort((a, b) =>
     a.localeCompare(b, undefined, { sensitivity: "base" })
 );
 for (const topic of sortedTopics) {
-    console.log(topic.padEnd(40) + topicToProblemsMap[topic].map(s => `${s}`.padEnd(6)).join(" "));
+    console.log(topic.padEnd(40) + topicToProblemsMap[topic].map((s) => `${s}`.padEnd(6)).join(" "));
 }

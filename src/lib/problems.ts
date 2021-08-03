@@ -4,7 +4,7 @@ import { problemTopicsFormatting } from "config/formatting";
 
 import { customSortOrder, publicRuntimeConfig, formatQuarterYear } from "helpers";
 
-import { ProblemCode, ProblemData } from "models/ProblemData.model";
+import { ParsedProblemCode, ProblemCode, ProblemData } from "models/ProblemData.model";
 
 import { IParams } from "types";
 
@@ -91,7 +91,7 @@ export const getSortedProblemsDataForTopic: (topic: string) => ProblemData[] = (
  * @param {string} topic - Topic the problem belongs to
  * @param {string} problemCode - E.g., 09f.1
  */
-export const getProblemDataForTopic = (topic: string, problemCode: ProblemCode) => {
+export const getProblemDataForTopic = (topic: string, problemCode: ProblemCode): ProblemData => {
     const { year, quarterUnformatted, problemNumber } = parseProblemCode(problemCode);
 
     const filePath = path.join(
@@ -123,15 +123,15 @@ export const getProblemDataForTopic = (topic: string, problemCode: ProblemCode) 
         )} - Problem ${problemData.problemNumber}</a>`;
     });
 
-    return {
+    return ({
         problemCode,
         contentHtml,
         ...parseProblemCode(problemCode),
         ...file.meta,
-    };
+    } as unknown) as ProblemData;
 };
 
-export const parseProblemCode = (problemCode: ProblemCode) => {
+export const parseProblemCode = (problemCode: ProblemCode): ParsedProblemCode => {
     const match = problemCode.match(/^([0-9]{2})([fs])\.([0-9]+)$/)!;
 
     return {
@@ -139,7 +139,7 @@ export const parseProblemCode = (problemCode: ProblemCode) => {
         quarterUnformatted: match[2],
         quarter: quarterList[match[2]],
         problemNumber: Number(match[3]),
-    };
+    } as ParsedProblemCode;
 };
 
 /**
