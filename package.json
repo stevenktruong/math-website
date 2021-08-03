@@ -30,18 +30,49 @@
         "path": "^0.12.7",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "rehype-highlight": "^4.0.0",
         "rehype-katex": "^5.0.0",
         "rehype-raw": "^5.1.0",
         "rehype-react": "^6.1.0",
         "rehype-stringify": "^8.0.0",
         "remark": "^13.0.0",
+        "remark-highlight.js": "^6.0.0",
         "remark-html": "^13.0.1",
         "remark-math": "^4.0.0",
         "remark-rehype": "^8.1.0",
-        "remark-slug": "^6.0.0",
+        "remark-slug": "^6.1.0",
         "remark-toc": "^7.0.0",
         "sass": "^1.26.10",
         "source-map": "^0.7.3"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^2.0.2",
+        "@types/node-sass": "^4.11.2",
+        "@types/react": "^17.0.15",
+        "typescript": "^4.3.5"
+    },
+    "prettier": {
+        "semi": true,
+        "singleQuote": false,
+        "tabWidth": 4,
+        "trailingComma": "es5",
+        "printWidth": 120,
+        "bracketSpacing": true,
+        "importOrder": [
+            "^react(/.*)?$",
+            "^next(/.*)?$",
+            "^(fs|gray-matter|path|querystring)$",
+            "^(hast-util-raw|unified)$",
+            "^remark(-.*)?$",
+            "^rehype(-.*)?$",
+            "^components(/.*)?$",
+            "^config(/.*)?$",
+            "^helpers(/.*)?$",
+            "^lib(/.*)?$",
+            "^models(/.*)?$",
+            "^types(/.*)?$",
+            "^\\./(.*)?",
+            "^(.*).scss?$"
+        ],
+        "importOrderSeparation": true
     }
 }

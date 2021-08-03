@@ -6,7 +6,7 @@ tags:
 publish: yes
 ---
 
-# Week 3 Discussion Notes
+# Week 5 Discussion Notes
 
 ## Table of Contents
 
