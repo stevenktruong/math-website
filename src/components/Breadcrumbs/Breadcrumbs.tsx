@@ -23,7 +23,7 @@ class Breadcrumbs extends React.Component<BreadcrumbsProps> {
         const router = this.props.router;
 
         // This should not be rendered on the homepage
-        if (router.pathname === "/") return null;
+        if (router.pathname === "/") return <></>;
 
         // E.g., if we visit "/teaching/123a.2.20f/file-1#theorem-1/", we want currentPath to become [ "teaching", "123a.2.20f", "file-1" ]
 
