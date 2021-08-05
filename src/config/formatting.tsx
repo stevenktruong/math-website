@@ -8,22 +8,31 @@ import { PersonalData } from "models/PersonalData.model";
 import { ProblemData } from "models/ProblemData.model";
 import { TopicData } from "models/TopicData.model";
 
-// Transform data into formatted text/HTML
+// Specify how to transform data into text/HTML
 
-export interface BreadcrumbFormat {
+/**
+ * Specifies how data should be formatted into a breadcrumb
+ */
+export interface BreadcrumbFormatting {
     [key: string]: {
         sourceProp: string | null;
         format: (data?: any) => string;
     };
 }
 
-export interface Formatting {
+/**
+ * Specifies how data should be formatted into a table
+ */
+export interface TableFormatting {
     [key: string]: {
         title: string | null;
         format: (data?: any) => string | JSX.Element | JSX.Element[];
     };
 }
 
+/**
+ * Specifies how MTWRF should be formatted in office hours and discussions lists, e.g., MT -> MoTu, but for now, we just fix the letters
+ */
 export const daysOfTheWeekTable: Record<string, string> = {
     U: "U",
     M: "M",
@@ -34,6 +43,9 @@ export const daysOfTheWeekTable: Record<string, string> = {
     S: "S",
 };
 
+/**
+ * Specifies the links in the navigation bar/hamburger menu
+ */
 export const navLinks: Record<string, Record<string, string>> = {
     home: {
         title: "Home",
@@ -58,9 +70,10 @@ export const navLinks: Record<string, Record<string, string>> = {
  * @param {string} days
  */
 export const daysOfTheWeekFormatting = (days: string): string => {
-    return Object.keys(daysOfTheWeekTable).reduce((acc, cur) => {
-        return acc.replace(new RegExp(`${cur}`), daysOfTheWeekTable[cur]);
-    }, days);
+    return days
+        .split("")
+        .map((day) => daysOfTheWeekTable[day])
+        .join("");
 };
 
 /**
@@ -87,7 +100,7 @@ export const problemTopicsFormatting: (topics: string[]) => string = (topics) =>
               .join(", ")}</div>`
         : "";
 
-export const breadcrumbFormatting: BreadcrumbFormat = {
+export const breadcrumbFormatting: BreadcrumbFormatting = {
     teaching: {
         sourceProp: null,
         format: () => "Teaching",
@@ -116,7 +129,10 @@ export const breadcrumbFormatting: BreadcrumbFormat = {
     },
 };
 
-export const contactFormatting: Formatting = {
+/**
+ * Specifies how the contact table should be formatted
+ */
+export const contactFormatting: TableFormatting = {
     office: {
         title: "Office",
         format: (personalData: PersonalData) => personalData.office,
@@ -136,7 +152,10 @@ export const contactFormatting: Formatting = {
     },
 };
 
-export const classFormatting: Formatting = {
+/**
+ * Specifies how the class information table should be displayed
+ */
+export const classFormatting: TableFormatting = {
     instructor: {
         title: "Instructor",
         format: (classData: ClassData) => (
