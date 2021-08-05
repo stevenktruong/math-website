@@ -13,12 +13,12 @@ import styles from "./Breadcrumbs.module.scss";
 const separator = ">";
 const backSeparator = "<";
 
-interface BreadcrumbsProps {
+interface Props {
     fileData: FileData;
     router: NextRouter;
 }
 
-class Breadcrumbs extends React.Component<BreadcrumbsProps> {
+class Breadcrumbs extends React.Component<Props> {
     render = (): JSX.Element => {
         const router = this.props.router;
 

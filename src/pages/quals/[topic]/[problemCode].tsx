@@ -13,15 +13,13 @@ import { formatQuarterYear } from "helpers";
 import { getAllProblemsPaths, getProblemDataForTopic } from "lib/problems";
 import { getTopicData } from "lib/topics";
 
-import { ProblemCode } from "models/ProblemData.model";
-
 import { FileData, IParams } from "types";
 
-interface ProblemPageProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class ProblemPage extends React.Component<ProblemPageProps> {
+export default class ProblemPage extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const problemData = fileData.problemData!;
@@ -49,9 +47,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const params = context.params as IParams;
-    const topicData = getTopicData(params.topic!);
-    const problemData = getProblemDataForTopic(params.topic!, params.problemCode as ProblemCode);
+    const { topic, problemCode } = context.params as IParams;
+    const topicData = getTopicData(topic!);
+    const problemData = getProblemDataForTopic(topic!, problemCode!);
     return {
         props: {
             fileData: {

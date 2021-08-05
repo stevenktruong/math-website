@@ -10,11 +10,11 @@ import { getAllTopicPaths, getTopicData } from "lib/topics";
 
 import { FileData, IParams } from "types";
 
-interface TopicPageProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class TopicPage extends React.Component<TopicPageProps> {
+export default class TopicPage extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const topicData = fileData.topicData!;
@@ -39,8 +39,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const params = context.params as IParams;
-    const topicData = getTopicData(params.topic!);
+    const { topic } = context.params as IParams;
+    const topicData = getTopicData(topic!);
     return {
         props: {
             fileData: {

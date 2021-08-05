@@ -11,15 +11,13 @@ import { formatQuarterYear } from "helpers";
 import { getAllClassPaths, getClassData } from "lib/classes";
 import { getPersonalData } from "lib/personal";
 
-import { ClassCode } from "models/ClassData.model";
-
 import { FileData, IParams } from "types";
 
-interface ClassPageProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class ClassPage extends React.Component<ClassPageProps> {
+export default class ClassPage extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const classData = fileData.classData!;
@@ -46,9 +44,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const params = context.params as IParams;
+    const { classCode } = context.params as IParams;
     const personalData = getPersonalData();
-    const classData = getClassData(params.classCode as ClassCode);
+    const classData = getClassData(classCode!);
     return {
         props: {
             fileData: {

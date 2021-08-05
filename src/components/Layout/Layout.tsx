@@ -11,13 +11,13 @@ import { FileData } from "types";
 
 import styles from "./Layout.module.scss";
 
-interface LayoutProps {
+interface Props {
     fileData: FileData;
     leftSide?: ReactNode;
     rightSide: ReactNode;
 }
 
-export default class Layout extends React.Component<LayoutProps> {
+export default class Layout extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
 

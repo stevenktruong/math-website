@@ -10,11 +10,11 @@ import { getSortedTopicsData } from "lib/topics";
 
 import { FileData } from "types";
 
-interface QualsPageProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class QualsPage extends React.Component<QualsPageProps> {
+export default class QualsPage extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
 

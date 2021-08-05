@@ -11,15 +11,13 @@ import { importKatex, importHighlightStylesheet } from "config/externalImports";
 import { getClassData } from "lib/classes";
 import { getNoteDataForClass, getAllNotePaths } from "lib/notes";
 
-import { ClassCode } from "models/ClassData.model";
-
 import { FileData, IParams } from "types";
 
-interface NotePageProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class NotePage extends React.Component<NotePageProps> {
+export default class NotePage extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const noteData = fileData.noteData!;
@@ -46,9 +44,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const params = context.params as IParams;
-    const classData = getClassData(params.classCode as ClassCode);
-    const noteData = getNoteDataForClass(params.classCode as ClassCode, params.noteName!);
+    const { classCode, noteName } = context.params as IParams;
+    const classData = getClassData(classCode!);
+    const noteData = getNoteDataForClass(classCode!, noteName!);
     return {
         props: {
             fileData: {

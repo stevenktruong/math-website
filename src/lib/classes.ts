@@ -26,7 +26,7 @@ export const getAllClassPaths = (): { params: IParams }[] => {
     return readDirectoryContents(classesDirectory).map((classCode) => {
         return {
             params: {
-                classCode,
+                classCode: classCode as ClassCode,
             },
         };
     });

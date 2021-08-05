@@ -36,7 +36,7 @@ export const getAllProblemsPaths: () => { params: IParams }[] = () => {
                 problemPaths.push({
                     params: {
                         topic: topicPath.params.topic,
-                        problemCode: `${examDate}.${problemFileName.replace(/\.md$/, "")}`,
+                        problemCode: `${examDate}.${problemFileName.replace(/\.md$/, "")}` as ProblemCode,
                     },
                 });
             });
@@ -87,7 +87,7 @@ export const getSortedProblemsDataForTopic: (topic: string) => ProblemData[] = (
 };
 
 /**
- * Gets metadata and HTML (with math rendered) for a specific problem
+ ** Gets metadata and HTML (with math macros applied, math rendered, custom syntax parsed) for a specified problem
  * @param {string} topic - Topic the problem belongs to
  * @param {string} problemCode - E.g., 09f.1
  */

@@ -4,11 +4,11 @@ import { FileData } from "types";
 
 import styles from "./Note.module.scss";
 
-interface NoteProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class Note extends React.Component<NoteProps> {
+export default class Note extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const noteData = fileData.noteData!;

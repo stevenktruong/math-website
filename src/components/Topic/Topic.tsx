@@ -4,11 +4,11 @@ import { FileData } from "types";
 
 import styles from "./Topic.module.scss";
 
-interface TopicProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class Topic extends React.Component<TopicProps> {
+export default class Topic extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const topicData = fileData.topicData!;

@@ -10,11 +10,11 @@ import { getSortedClassesData } from "lib/classes";
 
 import { FileData } from "types";
 
-interface TeachingPageProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class TeachingPage extends React.Component<TeachingPageProps> {
+export default class TeachingPage extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
 

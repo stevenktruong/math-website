@@ -8,11 +8,11 @@ import { FileData } from "types";
 
 import styles from "./Class.module.scss";
 
-interface ClassProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class Class extends React.Component<ClassProps> {
+export default class Class extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const personalData = fileData.personalData!;

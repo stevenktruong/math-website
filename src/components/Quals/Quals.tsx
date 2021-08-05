@@ -6,11 +6,11 @@ import { FileData } from "types";
 
 import styles from "./Quals.module.scss";
 
-interface QualsProp {
+interface Props {
     fileData: FileData;
 }
 
-export default class Quals extends React.Component<QualsProp> {
+export default class Quals extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const topicsData = fileData.topicsData!;

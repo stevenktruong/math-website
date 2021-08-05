@@ -8,11 +8,11 @@ import { navLinks } from "config/formatting";
 
 import styles from "./Navbar.module.scss";
 
-interface NavbarState {
+interface State {
     mobileMenuActive: boolean;
 }
 
-export default class Navbar extends React.Component<any, NavbarState> {
+export default class Navbar extends React.Component<any, State> {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     constructor(props: any) {
         super(props);

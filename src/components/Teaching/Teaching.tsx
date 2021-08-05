@@ -10,11 +10,11 @@ import { FileData } from "types";
 
 import styles from "./Teaching.module.scss";
 
-interface TeachingProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class Teaching extends React.Component<TeachingProps> {
+export default class Teaching extends React.Component<Props> {
     /**
      * Create an object of the following form:
      *

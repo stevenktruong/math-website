@@ -82,7 +82,7 @@ export const getNotesDataForClass: (classCode: string) => Record<string, NoteDat
 };
 
 /**
- * Gets metadata and HTML (with math rendered) for a specified note.
+ * Gets metadata and HTML (with math macros applied, math rendered, custom syntax parsed) for a specified note
  * @param {string} classCode - Class to get data for.
  * @param {string} noteName - Note name WITHOUT the extension .md.
  */

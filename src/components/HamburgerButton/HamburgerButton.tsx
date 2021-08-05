@@ -2,11 +2,11 @@ import React from "react";
 
 import styles from "./HamburgerButton.module.scss";
 
-interface HamburgerButtonState {
+interface State {
     active: boolean;
 }
 
-export default class HamburgerButton extends React.Component<any, HamburgerButtonState> {
+export default class HamburgerButton extends React.Component<any, State> {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     constructor(props: any) {
         super(props);

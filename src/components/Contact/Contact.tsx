@@ -6,11 +6,11 @@ import { FileData } from "types";
 
 import styles from "./Contact.module.scss";
 
-interface ContactProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class Contact extends React.Component<ContactProps> {
+export default class Contact extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const personalData = fileData.personalData!;

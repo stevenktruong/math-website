@@ -12,11 +12,11 @@ import { getPersonalData } from "lib/personal";
 
 import { FileData } from "types";
 
-interface HomeProps {
+interface Props {
     fileData: FileData;
 }
 
-export default class Home extends React.Component<HomeProps> {
+export default class Home extends React.Component<Props> {
     render = (): JSX.Element => {
         const fileData = this.props.fileData;
         const personalData = fileData.personalData!;
