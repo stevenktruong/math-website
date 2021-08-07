@@ -9,6 +9,7 @@
         "build": "rm -rf build && next build && next export -o build",
         "build:dev": "URL_ENV=development yarn build",
         "build:production": "URL_ENV=production yarn build",
+        "analyze": "cross-env ANALYZE=true next build",
         "script:randomAnalysis": "node -r esm src/scripts/randomAnalysis.js;",
         "script:problemsByTopic": "node -r esm src/scripts/problemsByTopic.js;"
     },
@@ -23,6 +24,8 @@
     },
     "homepage": "https://github.com/stevenktruong/math-website#readme",
     "dependencies": {
+        "@next/bundle-analyzer": "^11.0.1",
+        "cross-env": "^7.0.3",
         "esm": "^3.2.25",
         "gray-matter": "^4.0.2",
         "moment": "^2.27.0",
