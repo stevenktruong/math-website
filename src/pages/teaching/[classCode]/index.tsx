@@ -14,7 +14,7 @@ import { processorWithMathWithMacros } from "lib/processors";
 
 import { Meeting } from "models/Class.model";
 
-import { IParams, Link, Quarter } from "types";
+import { ClassCode, IParams, Link, Quarter } from "types";
 
 interface Props {
     instructor: string;
@@ -48,10 +48,10 @@ export default class ClassPage extends React.Component<Props> {
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const { classes } = data;
-    const paths = Object.keys(classes).map((clazz) => {
+    const paths: { params: IParams }[] = Object.keys(classes).map((clazz) => {
         return {
             params: {
-                classCode: clazz,
+                classCode: clazz as ClassCode,
             },
         };
     });

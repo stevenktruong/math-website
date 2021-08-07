@@ -20,6 +20,7 @@ import stringify from "rehype-stringify";
  */
 export const baseProcessor = remark()
     .use(toc, { maxDepth: 3 })
+    .use(slug)
     .use(remark2rehype, { allowDangerousHtml: true })
     .use(raw)
     .use(stringify);

@@ -20,7 +20,7 @@ export default class Quals extends React.Component<Props> {
                     {this.props.qualTopics.map((topic) => (
                         <li key={topic.unformattedName}>
                             <Link
-                                href="/quals/[...topic]"
+                                href="/quals/[topic]"
                                 as={`/quals/${topic.unformattedName}`}
                                 key={`${topic.unformattedName}Link`}
                             >
