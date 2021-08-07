@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async () => {
             fullName: personal.meta.fullName,
             pronouns: personal.meta.pronouns,
 
-            aboutHtml: baseProcessor().processSync(personal.content).toString(),
+            aboutHtml: baseProcessor.processSync(personal.content).toString(),
 
             office: personal.meta.office,
             email: personal.meta.email,

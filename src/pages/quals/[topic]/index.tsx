@@ -56,9 +56,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     let content = qual.index.content;
     Object.values(qual.exams)
         .sort((a, b): number => {
-            if (a.year !== b.year) {
-                return a.year < b.year ? -1 : 1;
-            }
+            if (a.year !== b.year) return a.year < b.year ? -1 : 1;
             return sortQuarters(a.quarter, b.quarter);
         })
         .forEach((exam) => {
@@ -73,7 +71,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
                     .join("\n");
         });
 
-    let contentHtml = baseProcessor().processSync(content).toString();
+    let contentHtml = baseProcessor.processSync(content).toString();
     contentHtml = contentHtml.replace(
         /problems::([0-9]{2}[fs])\.([0-9]{1,2}).md/g,
         (match, examDate, problemNumber) =>

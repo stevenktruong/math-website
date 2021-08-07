@@ -41,18 +41,9 @@ export const getStaticProps: GetStaticProps = async () => {
     // Sort classes by year, then quarter, then course, then lecture
     const sortedClassData = Object.values(classes)
         .sort((a, b) => {
-            if (a.year !== b.year) {
-                return a.year < b.year ? -1 : 1;
-            }
-
-            if (a.quarter !== b.quarter) {
-                return sortQuarters(a.quarter, b.quarter);
-            }
-
-            if (a.course !== b.course) {
-                return a.course < b.course ? -1 : 1;
-            }
-
+            if (a.year !== b.year) return a.year < b.year ? -1 : 1;
+            if (a.quarter !== b.quarter) return sortQuarters(a.quarter, b.quarter);
+            if (a.course !== b.course) return a.course < b.course ? -1 : 1;
             return a.lecture < b.lecture ? -1 : 1;
         })
         .map((clazz) => {
