@@ -2,27 +2,23 @@ import React from "react";
 
 import { publicRuntimeConfig } from "helpers";
 
-import { FileData } from "types";
-
 import styles from "./Me.module.scss";
 
 interface Props {
-    fileData: FileData;
+    fullName: string;
+    pronouns: string;
 }
 
 export default class Me extends React.Component<Props> {
-    render = (): JSX.Element => {
-        const fileData = this.props.fileData;
-        const personalData = fileData.personalData!;
-
+    render(): JSX.Element {
         return (
             <div className={styles.Me}>
                 <div className={styles.Name}>
-                    <h1>{personalData.fullName}</h1>
-                    <h2>{personalData.pronouns}</h2>
+                    <h1>{this.props.fullName}</h1>
+                    <h2>{this.props.pronouns}</h2>
                 </div>
                 <img alt="me" src={`${publicRuntimeConfig.staticFolder}/images/me.jpg`} />
             </div>
         );
-    };
+    }
 }

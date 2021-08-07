@@ -17,11 +17,11 @@ export default class HamburgerButton extends React.Component<any, State> {
         };
     }
 
-    updateState = (): void => {
+    updateState(): void {
         this.setState({ active: this.props.value });
-    };
+    }
 
-    render = (): JSX.Element => {
+    render(): JSX.Element {
         return (
             <div
                 className={styles.HamburgerButton}
@@ -45,9 +45,9 @@ export default class HamburgerButton extends React.Component<any, State> {
                 ></div>
             </div>
         );
-    };
+    }
 
-    componentDidUpdate = (): void => {
+    componentDidUpdate(): void {
         if (this.props.value !== this.state.active) this.updateState();
-    };
+    }
 }

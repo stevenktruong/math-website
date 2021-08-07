@@ -1,11 +1,5 @@
 import { ParsedUrlQuery } from "querystring";
 
-import { ClassCode, ClassData } from "models/ClassData.model";
-import { NoteData } from "models/NoteData.model";
-import { PersonalData } from "models/PersonalData.model";
-import { ProblemCode, ProblemData } from "models/ProblemData.model";
-import { TopicData } from "models/TopicData.model";
-
 /**
  * Represents the parameters from dynamic routing
  */
@@ -16,30 +10,38 @@ export interface IParams extends ParsedUrlQuery {
 
     // /quals/[topic]/[problemCode]
     topic?: string;
-    problemCode?: ProblemCode;
+    problemCode?: string;
 }
 
 /**
  * Represents a read Markdown file
  */
 export interface MarkdownFile {
-    contents: string;
+    content: string;
     meta: Record<string, any>;
 }
 
 /**
- * Represents data from the data/ directory
+ * Represents a link via its presentation and the underlying URL
  */
-export interface FileData {
-    personalData?: PersonalData;
+export interface Link {
+    title: string;
+    url: URL;
+}
 
-    classData?: ClassData;
-    classesData?: ClassData[];
+/**
+ * Uniquely identifies a class
+ */
+export type ClassCode = `${number}${string}.${number}${string}.${number}`;
 
-    noteData?: NoteData;
+export type Quarter = "f" | "w" | "s";
 
-    topicData?: TopicData;
-    topicsData?: TopicData[];
-
-    problemData?: ProblemData;
+/**
+ * Specifies how data should be formatted into a table
+ */
+export interface TableFormatting {
+    [key: string]: {
+        title: string | null;
+        format: (data?: any) => string | JSX.Element | JSX.Element[];
+    };
 }

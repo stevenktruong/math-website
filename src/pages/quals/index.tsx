@@ -6,36 +6,40 @@ import Head from "next/head";
 import Layout from "components/Layout";
 import Quals from "components/Quals";
 
-import { getSortedTopicsData } from "lib/topics";
-
-import { FileData } from "types";
+import data from "lib/data";
 
 interface Props {
-    fileData: FileData;
+    qualTopics: {
+        unformattedName: string;
+        formattedName: string;
+    }[];
 }
 
 export default class QualsPage extends React.Component<Props> {
-    render = (): JSX.Element => {
-        const fileData = this.props.fileData;
-
+    render(): JSX.Element {
         return (
             <>
                 <Head>
                     <title>Qualifying Exams</title>
                 </Head>
-                <Layout rightSide={<Quals fileData={fileData} />} fileData={fileData} />
+                <Layout rightSide={<Quals qualTopics={this.props.qualTopics} />} />
             </>
         );
-    };
+    }
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const topicsData = getSortedTopicsData();
+    const { quals } = data;
+    const qualTopics = Object.entries(quals).map(([unformattedName, qual]) => {
+        return {
+            unformattedName,
+            formattedName: qual.index.meta.title,
+        };
+    });
+
     return {
         props: {
-            fileData: {
-                topicsData,
-            },
+            qualTopics,
         },
     };
 };

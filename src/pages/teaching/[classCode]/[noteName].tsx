@@ -8,35 +8,63 @@ import Note from "components/Note";
 
 import { importKatex, importHighlightStylesheet } from "config/externalImports";
 
-import { getClassData } from "lib/classes";
-import { getNoteDataForClass, getAllNotePaths } from "lib/notes";
+import { publicRuntimeConfig } from "helpers";
 
-import { FileData, IParams } from "types";
+import data from "lib/data";
+import { processorWithMathWithMacros, substituteVariables } from "lib/processors";
+
+import { IParams } from "types";
 
 interface Props {
-    fileData: FileData;
+    noteTitle: string;
+    contentHtml: string;
 }
 
-export default class NotePage extends React.Component<Props> {
-    render = (): JSX.Element => {
-        const fileData = this.props.fileData;
-        const noteData = fileData.noteData!;
+const counters = [
+    { tag: "remark", display: () => `<h6>Remark.</h6>` },
+    { tag: "example", display: (count: number) => `<h6 id="example-${count}">Example ${count}.</h6>` },
+    { tag: "exercise", display: (count: number) => `<h6 id="exercise-${count}">Exercise ${count}.</h6>` },
+    { tag: "solution", display: () => `<h6>Solution.</h6>` },
+    {
+        tag: "proof",
+        display: () => `<h6>Proof.</h6>`,
+        after: () => '<span class="qed-square">$\\square$</span>',
+    },
+];
 
+const boxedEnvironments = ["theorem", "definition", "proposition", "corollary"];
+
+export default class NotePage extends React.Component<Props> {
+    render(): JSX.Element {
         return (
             <>
                 <Head>
                     {importKatex}
                     {importHighlightStylesheet}
-                    <title>{noteData.title}</title>
+                    <title>{this.props.noteTitle}</title>
                 </Head>
-                <Layout rightSide={<Note fileData={fileData} />} fileData={fileData} />
+                <Layout {...this.props} rightSide={<Note {...this.props} />} />
             </>
         );
-    };
+    }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const paths = getAllNotePaths();
+    const { classes } = data;
+    const paths: { params: IParams }[] = [];
+    Object.values(classes).forEach((clazz) => {
+        Object.entries(clazz.notes)
+            .filter(([, note]) => note.meta.publish || process.env.URL_ENV === "development")
+            .map(([noteName]) => {
+                paths.push({
+                    params: {
+                        classCode: clazz.classCode,
+                        noteName,
+                    },
+                });
+            });
+    });
+
     return {
         paths,
         fallback: false,
@@ -44,15 +72,51 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
+    const { classes } = data;
     const { classCode, noteName } = context.params as IParams;
-    const classData = getClassData(classCode!);
-    const noteData = getNoteDataForClass(classCode!, noteName!);
+    const clazz = classes[classCode!];
+    const note = clazz.notes[noteName!];
+
+    let substitutedContent = substituteVariables(note.content, {
+        assetsFolder: `${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}`,
+    });
+
+    // Add counters
+    counters.forEach((counter) => {
+        let count = 0;
+        substitutedContent = substitutedContent.replace(
+            new RegExp(`(<${counter.tag} ?.*>)`, "g"),
+            (match, fullTag) => `${fullTag}\n${counter.display(++count)}\n`
+        );
+
+        substitutedContent = substitutedContent.replace(
+            new RegExp(`\n(</${counter.tag}>)`, "g"),
+            (match, endTag) => `${counter.after ? counter.after() : ""}\n\n${endTag}`
+        );
+    });
+
+    // Format boxed environment headers, e.g., <theorem>, <definition>
+    boxedEnvironments.forEach((tag) => {
+        substitutedContent = substitutedContent.replace(
+            new RegExp(`(<${tag} ?.*>) ?(.+)?`, "g"),
+            (match, fullTag, description) =>
+                `${fullTag}\n<h6>${tag.replace(tag[0], tag[0].toUpperCase())}${
+                    description ? ` (${description})` : ""
+                }</h6>`
+        );
+    });
+
+    const contentHtml = processorWithMathWithMacros(clazz.macros).processSync(substitutedContent).toString();
+
     return {
         props: {
-            fileData: {
-                classData,
-                noteData,
+            classData: {
+                year: clazz.year,
+                quarter: clazz.quarter,
+                course: clazz.index.meta.course,
             },
+            noteName: note.meta.title,
+            contentHtml,
         },
     };
 };

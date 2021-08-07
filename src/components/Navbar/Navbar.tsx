@@ -4,13 +4,33 @@ import Link from "next/link";
 
 import HamburgerButton from "components/HamburgerButton";
 
-import { navLinks } from "config/formatting";
-
 import styles from "./Navbar.module.scss";
 
 interface State {
     mobileMenuActive: boolean;
 }
+
+/**
+ * Specifies the links in the navigation bar/hamburger menu
+ */
+const navLinks: Record<string, Record<string, string>> = {
+    home: {
+        title: "Home",
+        href: "/",
+    },
+    teaching: {
+        title: "Teaching",
+        href: "/teaching",
+    },
+    quals: {
+        title: "Qualifying Exams",
+        href: "/quals",
+    },
+    cv: {
+        title: "CV",
+        href: "/files/cv.pdf",
+    },
+};
 
 export default class Navbar extends React.Component<any, State> {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -22,12 +42,12 @@ export default class Navbar extends React.Component<any, State> {
         };
     }
 
-    toggleMobileMenu = async (): Promise<void> => {
+    async toggleMobileMenu(): Promise<void> {
         const newState = !this.state.mobileMenuActive;
         await this.setState({ mobileMenuActive: newState });
-    };
+    }
 
-    renderListOfButtons = (isMobile = false): JSX.Element => {
+    renderListOfButtons(isMobile = false): JSX.Element {
         return (
             <ul className={isMobile ? styles.ShowButtons : null}>
                 {Object.keys(navLinks).map((key, i) => (
@@ -39,9 +59,9 @@ export default class Navbar extends React.Component<any, State> {
                 ))}
             </ul>
         );
-    };
+    }
 
-    render = (): JSX.Element => {
+    render(): JSX.Element {
         const mobileMenuActive = this.state.mobileMenuActive;
 
         return (
@@ -54,5 +74,5 @@ export default class Navbar extends React.Component<any, State> {
                 </div>
             </nav>
         );
-    };
+    }
 }

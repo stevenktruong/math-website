@@ -2,26 +2,26 @@ import React from "react";
 
 import { formatQuarterYear } from "helpers";
 
-import { FileData } from "types";
+import { Quarter } from "types";
 
 import styles from "./Problem.module.scss";
 
-interface ProblemProps {
-    fileData: FileData;
+interface Props {
+    year: number;
+    quarter: Quarter;
+    problemNumber: number;
+    contentHtml: string;
 }
 
-export default class Problem extends React.Component<ProblemProps> {
-    render = (): JSX.Element => {
-        const fileData = this.props.fileData;
-        const problemData = fileData.problemData!;
-
+export default class Problem extends React.Component<Props> {
+    render(): JSX.Element {
         return (
             <section className={styles.Problem}>
                 <h1>
-                    {formatQuarterYear(problemData.quarter, problemData.year)} - Problem {problemData.problemNumber}
+                    {formatQuarterYear(this.props.quarter, this.props.year)} - Problem {this.props.problemNumber}
                 </h1>
-                <div dangerouslySetInnerHTML={{ __html: problemData.contentHtml }} />
+                <div dangerouslySetInnerHTML={{ __html: this.props.contentHtml }} />
             </section>
         );
-    };
+    }
 }

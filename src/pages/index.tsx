@@ -8,46 +8,56 @@ import Contact from "components/Contact";
 import Layout from "components/Layout";
 import Me from "components/Me";
 
-import { getPersonalData } from "lib/personal";
-
-import { FileData } from "types";
+import data from "lib/data";
+import { baseProcessor } from "lib/processors";
 
 interface Props {
-    fileData: FileData;
+    fullName: string;
+    pronouns: string;
+
+    aboutHtml: string;
+
+    office: string;
+    email: string;
+    address: string[];
+    fax: string;
 }
 
 export default class Home extends React.Component<Props> {
-    render = (): JSX.Element => {
-        const fileData = this.props.fileData;
-        const personalData = fileData.personalData!;
-
+    render(): JSX.Element {
         return (
             <>
                 <Head>
-                    <title>{personalData.fullName}</title>
+                    <title>{this.props.fullName}</title>
                 </Head>
                 <Layout
-                    fileData={fileData}
-                    leftSide={<Me fileData={fileData} />}
+                    leftSide={<Me {...this.props} />}
                     rightSide={
                         <>
-                            <About fileData={fileData} />
-                            <Contact fileData={fileData} />
+                            <About contentHtml={this.props.aboutHtml} />
+                            <Contact {...this.props} />
                         </>
                     }
                 />
             </>
         );
-    };
+    }
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const personalData = getPersonalData();
+    const { personal } = data;
+
     return {
         props: {
-            fileData: {
-                personalData,
-            },
+            fullName: personal.meta.fullName,
+            pronouns: personal.meta.pronouns,
+
+            aboutHtml: baseProcessor().processSync(personal.content).toString(),
+
+            office: personal.meta.office,
+            email: personal.meta.email,
+            address: personal.meta.address,
+            fax: personal.meta.fax,
         },
     };
 };

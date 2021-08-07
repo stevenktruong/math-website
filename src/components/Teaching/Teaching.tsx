@@ -2,16 +2,22 @@ import React from "react";
 
 import Link from "next/link";
 
-import { formatCourseWithDescription, customSortOrder } from "helpers";
+import { formatCourseWithDescription, formatQuarter, sortQuarters } from "helpers";
 
-import { ClassData } from "models/ClassData.model";
-
-import { FileData } from "types";
+import { ClassCode, Quarter } from "types";
 
 import styles from "./Teaching.module.scss";
 
 interface Props {
-    fileData: FileData;
+    sortedClassData: ClassData[]; // Sorted by year, then quarter, then course, then lecture number
+}
+
+interface ClassData {
+    classCode: ClassCode;
+    year: number;
+    quarter: Quarter;
+    course: string;
+    courseDescription: string;
 }
 
 export default class Teaching extends React.Component<Props> {
@@ -24,20 +30,19 @@ export default class Teaching extends React.Component<Props> {
      *       }
      *   }
      */
-    createMapFromQuarterToClasses: () => Record<string, Record<string, ClassData[]>> = () => {
-        const fileData = this.props.fileData;
-        const classesData = fileData.classesData!;
-        const classesDataByQuarter: Record<string, Record<string, ClassData[]>> = {};
+    createMapFromQuarterToClasses(): Record<number, Record<Quarter, ClassData[]>> {
+        const classesDataByQuarter: Record<number, Record<Quarter, ClassData[]>> = {};
 
-        if (classesData.length) {
+        const { sortedClassData } = this.props;
+        if (sortedClassData.length) {
             const firstQuarterYear = {
-                year: classesData[0].year,
-                quarter: classesData[0].quarter,
+                year: sortedClassData[0].year,
+                quarter: sortedClassData[0].quarter,
             };
 
-            classesData.reduce((acc, cur) => {
+            sortedClassData.reduce((acc, cur) => {
                 if (!classesDataByQuarter[cur.year]) {
-                    classesDataByQuarter[cur.year] = {};
+                    classesDataByQuarter[cur.year] = {} as Record<Quarter, ClassData[]>;
                 }
 
                 if (!classesDataByQuarter[cur.year][cur.quarter]) {
@@ -54,11 +59,10 @@ export default class Teaching extends React.Component<Props> {
         }
 
         return classesDataByQuarter;
-    };
+    }
 
-    render = (): JSX.Element => {
+    render(): JSX.Element {
         const classesDataByQuarter = this.createMapFromQuarterToClasses();
-
         return (
             <section className={styles.Teaching}>
                 <h1>Teaching</h1>
@@ -71,35 +75,38 @@ export default class Teaching extends React.Component<Props> {
                                 .reverse() // Most recent classes first
                                 .map((year) => (
                                     <React.Fragment key={`${year}`}>
-                                        {Object.keys(classesDataByQuarter[year])
-                                            .sort(customSortOrder(["Fall", "Spring", "Winter"])) // Most recent classes first
-                                            .map((quarter, i) => (
+                                        {(Object.keys(classesDataByQuarter[Number(year)]) as Quarter[])
+                                            .sort(sortQuarters)
+                                            .reverse() // Most recent classes first
+                                            .map((quarter: Quarter, i) => (
                                                 <React.Fragment key={`${year}${quarter}Fragment`}>
                                                     {/* Each row corresponds to a quarter */}
                                                     <tr key={`${year}${quarter}`}>
                                                         <td key={`${year}${quarter}KeyYear`}>
                                                             {i === 0 ? `20${year}` : null}
                                                         </td>
-                                                        <td key={`${year}${quarter}Key`}>{quarter}</td>
+                                                        <td key={`${year}${quarter}Key`}>{formatQuarter(quarter)}</td>
 
                                                         {/* Link of links to classes for a particular quarter */}
                                                         <td key={`${year}${quarter}KeyClasses`}>
-                                                            {classesDataByQuarter[year][quarter].map((classData, i) => (
-                                                                <div key={`${year}${quarter}Class${i}`}>
-                                                                    <Link
-                                                                        href={"/teaching/[classCode]"}
-                                                                        as={`/teaching/${classData.classCode}`}
-                                                                        key={`${year}${quarter}Class${i}Link`}
-                                                                    >
-                                                                        <a key={`${year}${quarter}Class${i}Anchor`}>
-                                                                            {formatCourseWithDescription(
-                                                                                classData.course,
-                                                                                classData.courseDescription
-                                                                            )}
-                                                                        </a>
-                                                                    </Link>
-                                                                </div>
-                                                            ))}
+                                                            {classesDataByQuarter[Number(year)][quarter].map(
+                                                                (classData, i) => (
+                                                                    <div key={`${year}${quarter}Class${i}`}>
+                                                                        <Link
+                                                                            href={"/teaching/[classCode]"}
+                                                                            as={`/teaching/${classData.classCode}`}
+                                                                            key={`${year}${quarter}Class${i}Link`}
+                                                                        >
+                                                                            <a key={`${year}${quarter}Class${i}Anchor`}>
+                                                                                {formatCourseWithDescription(
+                                                                                    classData.course,
+                                                                                    classData.courseDescription
+                                                                                )}
+                                                                            </a>
+                                                                        </Link>
+                                                                    </div>
+                                                                )
+                                                            )}
                                                         </td>
                                                     </tr>
                                                 </React.Fragment>
@@ -111,5 +118,5 @@ export default class Teaching extends React.Component<Props> {
                 </div>
             </section>
         );
-    };
+    }
 }
