@@ -6,8 +6,7 @@ import Head from "next/head";
 import Layout from "components/Layout";
 import Qual from "components/Qual";
 
-import { problemTopicsFormatting } from "config/formatting";
-
+import { problemTopicsFormatting } from "helpers";
 import { formatQuarter, publicRuntimeConfig, sortQuarters } from "helpers";
 
 import data from "lib/data";

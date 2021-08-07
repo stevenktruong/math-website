@@ -1,3 +1,5 @@
+import { importKatex, importHighlightStylesheet } from "vendors";
+
 import * as React from "react";
 
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -6,12 +8,10 @@ import Head from "next/head";
 import Layout from "components/Layout";
 import Note from "components/Note";
 
-import { importKatex, importHighlightStylesheet } from "config/externalImports";
-
-import { publicRuntimeConfig } from "helpers";
+import { publicRuntimeConfig, substituteVariables } from "helpers";
 
 import data from "lib/data";
-import { processorWithMathWithMacros, substituteVariables } from "lib/processors";
+import { processorWithMathWithMacros } from "lib/processors";
 
 import { IParams } from "types";
 

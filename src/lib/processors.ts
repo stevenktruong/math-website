@@ -16,18 +16,6 @@ import raw from "rehype-raw";
 import stringify from "rehype-stringify";
 
 /**
- * Replace {{ variable }} with value
- * @param input is the input to be modified
- * @param variables is a map containing the desired substitutions
- */
-export const substituteVariables = (input: string, variables: Record<string, string>): string => {
-    return Object.keys(variables).reduce(
-        (acc, key) => acc.replace(new RegExp(`{{2} ${key} }{2}`, "g"), variables[key]),
-        input
-    );
-};
-
-/**
  * Returns a processor that does the bare-bones Markdown -> HTML conversion
  */
 export const baseProcessor = (): unified.Processor<remark.RemarkOptions> =>

@@ -1,3 +1,5 @@
+import { importKatex } from "vendors";
+
 import * as React from "react";
 
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -6,9 +8,7 @@ import Head from "next/head";
 import Layout from "components/Layout";
 import Problem from "components/Problem";
 
-import { importKatex } from "config/externalImports";
-import { problemTopicsFormatting } from "config/formatting";
-
+import { problemTopicsFormatting } from "helpers";
 import { formatQuarterYear, publicRuntimeConfig } from "helpers";
 
 import data from "lib/data";

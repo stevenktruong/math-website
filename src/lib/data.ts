@@ -28,4 +28,7 @@ export const readMarkdown = (filePath: string): MarkdownFile => {
     };
 };
 
+/**
+ * Instance of the data folder
+ */
 export default new Data(path.join(process.cwd(), "data"));

@@ -1,7 +1,6 @@
 import React from "react";
 
-import { daysOfTheWeekFormatting } from "config/formatting";
-
+import { daysOfTheWeekFormatting } from "helpers";
 import { formatCourseWithDescription, formatQuarterYear } from "helpers";
 
 import { Meeting } from "models/Class.model";

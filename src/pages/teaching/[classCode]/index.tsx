@@ -6,8 +6,7 @@ import Head from "next/head";
 import Class from "components/Class";
 import Layout from "components/Layout";
 
-import { noteTagsFormatting } from "config/formatting";
-
+import { noteTagsFormatting } from "helpers";
 import { formatQuarterYear, publicRuntimeConfig } from "helpers";
 
 import data from "lib/data";
