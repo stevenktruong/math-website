@@ -13,10 +13,15 @@ import { publicRuntimeConfig, substituteVariables } from "helpers";
 import data from "lib/data";
 import { processorWithMathWithMacros } from "lib/processors";
 
-import { IParams } from "types";
+import { IParams, Quarter } from "types";
 
 interface Props {
-    noteTitle: string;
+    classData: {
+        year: number;
+        quarter: Quarter;
+        course: string;
+    };
+    noteName: string;
     contentHtml: string;
 }
 
@@ -41,7 +46,7 @@ export default class NotePage extends React.Component<Props> {
                 <Head>
                     {importKatex}
                     {importHighlightStylesheet}
-                    <title>{this.props.noteTitle}</title>
+                    <title>{this.props.noteName}</title>
                 </Head>
                 <Layout {...this.props} rightSide={<Note {...this.props} />} />
             </>
@@ -81,7 +86,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         assetsFolder: `${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}`,
     });
 
-    // Add counters
+    // Add counters, e.g., Example 1, Exercise 2, etc.
     counters.forEach((counter) => {
         let count = 0;
         substitutedContent = substitutedContent.replace(
@@ -106,8 +111,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
         );
     });
 
-    const contentHtml = processorWithMathWithMacros(clazz.macros).processSync(substitutedContent).toString();
-
     return {
         props: {
             classData: {
@@ -116,7 +119,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
                 course: clazz.index.meta.course,
             },
             noteName: note.meta.title,
-            contentHtml,
+            contentHtml: processorWithMathWithMacros(clazz.macros).processSync(substitutedContent).toString(),
         },
     };
 };

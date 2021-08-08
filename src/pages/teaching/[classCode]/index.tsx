@@ -67,29 +67,31 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const { classCode } = context.params as IParams;
     const clazz = classes[classCode!];
 
-    // Parse custom syntax
     let contentHtml = processorWithMathWithMacros(clazz.macros).processSync(clazz.index.content).toString();
 
-    // Create announcements table
+    // Parse announcements syntax into a table
     const announcements = new RegExp('<h2 id="announcements">Announcements</h2>').test(contentHtml);
     if (announcements) {
+        // Start the table
         contentHtml = contentHtml.replace(
             new RegExp('(<h2 id="announcements">Announcements</h2>)\n<ul>'),
             (match, noUl) => `${noUl}\n<div class="tableContainer"><table id="announcements-table"><tbody>`
         );
 
-        // We need to end the table at the last announcement
+        // Close the table after the last announcement
         contentHtml = contentHtml.replace(
             new RegExp("<li>\\| ([0-9/]+?) \\| (.+?)</li>\n</ul>"),
             (match, date, announcement) => `<tr><td>${date}</td><td>${announcement}</td></tr>\n</tbody></table></div>`
         );
 
+        // Parse the remaining lines in the table
         contentHtml = contentHtml.replace(
             new RegExp("<li>\\| ([0-9/]+?) \\| (.+?)</li>", "g"),
             (match, date, announcement) => `<tr><td>${date}</td>\n<td>${announcement}</td></tr>`
         );
     }
 
+    // Parse notes syntax into a link to the note
     contentHtml = contentHtml.replace(
         new RegExp("notes::(.+?).md", "g"),
         (match, noteName) =>

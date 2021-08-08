@@ -92,7 +92,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
     let contentHtml = processorWithMathWithMacros(qual.macros).processSync(content).toString();
 
-    // Replace quals macro
+    // Parse qual problem macro
     contentHtml = contentHtml.replace(/quals::(.+?).md/g, (match, problemCode) => {
         return `<a href="${publicRuntimeConfig.staticFolder}/quals/${topic}/${problemCode}">${formatQuarterYear(
             exam.quarter,

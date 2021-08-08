@@ -54,6 +54,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const qual = quals[topic!];
 
     let content = qual.index.content;
+
+    // For each exam, add a header with the date followed by a list of (custom syntax representing) the problems
     Object.values(qual.exams)
         .sort((a, b): number => {
             if (a.year !== b.year) return a.year < b.year ? -1 : 1;
@@ -72,6 +74,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
         });
 
     let contentHtml = baseProcessor.processSync(content).toString();
+
+    // Parse the custom syntax above into HTML
     contentHtml = contentHtml.replace(
         /problems::([0-9]{2}[fs])\.([0-9]{1,2}).md/g,
         (match, examDate, problemNumber) =>
