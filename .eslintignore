@@ -1,9 +1,0 @@
-# Directories
-node_modules
-.next
-build
-src/scripts
-
-# Files
-.eslintrc.js
-next.config.js

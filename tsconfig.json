@@ -3,7 +3,7 @@
         "jsx": "preserve",
         "outDir": "./built",
         "allowJs": true,
-        "target": "es5",
+        "target": "ES6",
         "esModuleInterop": true,
         "baseUrl": "./src",
         "forceConsistentCasingInFileNames": true,
