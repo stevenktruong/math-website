@@ -1,0 +1,39 @@
+{
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "es5",
+    "printWidth": 120,
+    "bracketSpacing": true,
+    "importOrderSeparation": true,
+    "importOrder": [
+        "^react(/.*)?$",
+        "^next(/.*)?$",
+        "^(fs|gray-matter|path|querystring)$",
+        "^(hast-util-raw|unified)$",
+        "^remark(-.*)?$",
+        "^rehype(-.*)?$",
+        "^components(/.*)?$",
+        "^config(/.*)?$",
+        "^helpers(/.*)?$",
+        "^lib(/.*)?$",
+        "^models(/.*)?$",
+        "^types(/.*)?$",
+        "^\\./(.*)?",
+        "^(.*).scss?$"
+    ],
+    "overrides": [
+        {
+            "files": "*.yml",
+            "options": {
+                "tabWidth": 2
+            }
+        },
+        {
+            "files": "*.md",
+            "options": {
+                "tabWidth": 4
+            }
+        }
+    ]
+}

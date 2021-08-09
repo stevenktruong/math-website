@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "lengths";
 
 .HamburgerButton {
@@ -5,10 +6,12 @@
     position: absolute;
     z-index: 9999;
     width: lengths.$mobile-navbar-menubar-width;
-    margin: (
+    margin: math.div(
             lengths.$mobile-navbar-height - 3 * (lengths.$mobile-navbar-menubar-height) - 2 *
-                (lengths.$mobile-navbar-menubar-margin)
-        ) / 2 0;
+                (lengths.$mobile-navbar-menubar-margin),
+            2
+        )
+        0;
     margin-left: lengths.$big + lengths.$medium;
 
     .TopBar,

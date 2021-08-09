@@ -8,7 +8,7 @@
         "dev": "URL_ENV=development next",
         "build": "rm -rf build && next build && next export -o build",
         "build:dev": "URL_ENV=development yarn build",
-        "build:production": "URL_ENV=production yarn build",
+        "build:prod": "URL_ENV=production yarn build",
         "analyze": "cross-env ANALYZE=true next build",
         "script:randomAnalysis": "node -r esm src/scripts/randomAnalysis.js;",
         "script:problemsByTopic": "node -r esm src/scripts/problemsByTopic.js;"
@@ -54,31 +54,7 @@
         "@typescript-eslint/eslint-plugin": "^4.29.0",
         "@typescript-eslint/parser": "^4.29.0",
         "eslint": "^7.32.0",
+        "prettier": "^2.3.2",
         "typescript": "^4.3.5"
-    },
-    "prettier": {
-        "semi": true,
-        "singleQuote": false,
-        "tabWidth": 4,
-        "trailingComma": "es5",
-        "printWidth": 120,
-        "bracketSpacing": true,
-        "importOrder": [
-            "^react(/.*)?$",
-            "^next(/.*)?$",
-            "^(fs|gray-matter|path|querystring)$",
-            "^(hast-util-raw|unified)$",
-            "^remark(-.*)?$",
-            "^rehype(-.*)?$",
-            "^components(/.*)?$",
-            "^config(/.*)?$",
-            "^helpers(/.*)?$",
-            "^lib(/.*)?$",
-            "^models(/.*)?$",
-            "^types(/.*)?$",
-            "^\\./(.*)?",
-            "^(.*).scss?$"
-        ],
-        "importOrderSeparation": true
     }
 }

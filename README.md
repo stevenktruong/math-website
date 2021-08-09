@@ -1,32 +1,36 @@
-# Table of Contents
+## Table of Contents
 
-- [Table of Contents](#table-of-contents)
+- [Overview](#overview)
 - [Development](#development)
 - [Content](#content)
-  - [Assets](#assets)
-  - [`./data/personal.md`](#datapersonalmd)
-    - [Metadata](#metadata)
-  - [`./data/classes/[classCode]/index.md`](#dataclassesclasscodeindexmd)
-    - [Announcements Table](#announcements-table)
-    - [Note Links](#note-links)
-    - [Metadata](#metadata-1)
-  - [`./data/classes/[classCode]/macros.json`](#dataclassesclasscodemacrosjson)
-  - [`./data/classes/[classCode]/notes/[noteName].md`](#dataclassesclasscodenotesnotenamemd)
-    - [Custom Tags](#custom-tags)
-      - [Boxed Sections](#boxed-sections)
-      - [Counters](#counters)
-    - [Metadata](#metadata-2)
-  - [`./data/quals/[topic]/index.md`](#dataqualstopicindexmd)
-    - [Metadata](#metadata-3)
-  - [`./data/quals/[topic]/macros.json`](#dataqualstopicmacrosjson)
-  - [`./data/quals/[topic]/problems/[problemCode].md`](#dataqualstopicproblemsproblemcodemd)
-    - [Custom Tags](#custom-tags-1)
-    - [Links to Other Problems](#links-to-other-problems)
-    - [Metadata](#metadata-4)
+    - [Assets](#assets)
+    - [`./data/personal.md`](#datapersonalmd)
+        - [Metadata](#metadata)
+    - [`./data/classes/[classCode]/index.md`](#dataclassesclasscodeindexmd)
+        - [Announcements Table](#announcements-table)
+        - [Note Links](#note-links)
+        - [Metadata](#metadata-1)
+    - [`./data/classes/[classCode]/macros.json`](#dataclassesclasscodemacrosjson)
+    - [`./data/classes/[classCode]/notes/[noteName].md`](#dataclassesclasscodenotesnotenamemd)
+        - [Custom Tags](#custom-tags)
+            - [Boxed Sections](#boxed-sections)
+            - [Counters](#counters)
+        - [Metadata](#metadata-2)
+    - [`./data/quals/[topic]/index.md`](#dataqualstopicindexmd)
+        - [Metadata](#metadata-3)
+    - [`./data/quals/[topic]/macros.json`](#dataqualstopicmacrosjson)
+    - [`./data/quals/[topic]/exams/[problemCode].md`](#dataqualstopicexamsproblemcodemd)
+        - [Custom Tags](#custom-tags-1)
+        - [Links to Other Problems](#links-to-other-problems)
+        - [Metadata](#metadata-4)
+
+# Overview
+
+This is the app I use to build and deploy my personal website on math.ucla.edu. I use Next.js as my static site generator and GitHub Actions for deployment.
 
 # Development
 
-The static site can be built with `yarn build:dev` or `yarn build:production`. The only difference between the two is the base path (the live website has index `/~steven` instead of just `/`).
+The static site can be built with `yarn build:dev` or `yarn build:prod`. The only difference between the two is the base path (the live website has index `/~steven` instead of just `/`).
 
 A local webserver can be started with `yarn dev`.
 
@@ -46,7 +50,7 @@ All content is contained in `./data` or `./public`. The folder structure is as f
     +-- quals/[topic]
         +-- index.md
         +-- macros.json
-        +-- problems
+        +-- exams
             +-- [problemCode]
 +-- public
     +-- classes
@@ -172,7 +176,7 @@ Defines LaTeX macros for the qual topic.
 }
 ```
 
-## `./data/quals/[topic]/problems/[problemCode].md`
+## `./data/quals/[topic]/exams/[problemCode].md`
 
 Contains the problem statement and a solution.
 

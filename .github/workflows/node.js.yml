@@ -14,18 +14,18 @@ jobs:
         node-version: [11.6.0]
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-    - name: Build website
-      run: yarn && yarn build:production
-    - name: Start SSH agent and deploy website
-      env:
-        HOST: ${{ secrets.HOST }}
-        USER: ${{ secrets.USER }}
-      run: |
-        eval "$(ssh-agent -s)"
-        ssh-add - <<< "${{ secrets.MATH_SSH_KEY }}"
-        mkdir -p ~/.ssh
-        echo "${{ secrets.MATH_HOSTS }}" > ~/.ssh/known_hosts
-        chmod 600 ~/.ssh/known_hosts
-        ./deploy.sh
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: Build website
+        run: yarn && yarn build:prod
+      - name: Start SSH agent and deploy website
+        env:
+          HOST: ${{ secrets.HOST }}
+          USER: ${{ secrets.USER }}
+        run: |
+          eval "$(ssh-agent -s)"
+          ssh-add - <<< "${{ secrets.MATH_SSH_KEY }}"
+          mkdir -p ~/.ssh
+          echo "${{ secrets.MATH_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+          ./deploy.sh
