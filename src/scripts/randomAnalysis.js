@@ -1,18 +1,16 @@
 import fs from "fs";
 import path from "path";
 
-const dataDirectory = path.join(process.cwd(), "data");
-
-const readDirectoryContents = folderPath => {
+const readDirectoryContents = (folderPath) => {
     return fs.existsSync(folderPath) ? fs.readdirSync(folderPath) : [];
 };
 
-const randomInt = max => {
+const randomInt = (max) => {
     return Math.floor(Math.random() * max);
 };
 
 const getRandomProblem = () => {
-    const qualsDirectory = path.join(dataDirectory, "quals/analysis/problems");
+    const qualsDirectory = path.join(process.cwd(), "data/quals/analysis/exams");
 
     const quals = readDirectoryContents(qualsDirectory);
     const randomQual = quals[randomInt(quals.length)];
