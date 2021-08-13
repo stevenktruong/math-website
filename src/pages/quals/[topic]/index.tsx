@@ -1,7 +1,9 @@
 import * as React from "react";
 
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import Head from "next/head";
+
+import { ParsedUrlQuery } from "querystring";
 
 import Layout from "components/Layout";
 import Qual from "components/Qual";
@@ -12,11 +14,13 @@ import { formatQuarter, publicRuntimeConfig, sortQuarters } from "helpers";
 import data from "lib/data";
 import { baseProcessor } from "lib/processors";
 
-import { IParams } from "types";
-
 interface Props {
     formattedTopicName: string;
     contentHtml: string;
+}
+
+interface Params extends ParsedUrlQuery {
+    topic: string;
 }
 
 export default class TopicPage extends React.Component<Props> {
@@ -34,7 +38,7 @@ export default class TopicPage extends React.Component<Props> {
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const { quals } = data;
-    const paths: { params: IParams }[] = Object.keys(quals).map((unformattedTopicName) => {
+    const paths: { params: Params }[] = Object.keys(quals).map((unformattedTopicName) => {
         return {
             params: {
                 topic: unformattedTopicName,
@@ -48,10 +52,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<Props, Params> = async (context: GetStaticPropsContext<Params>) => {
     const { quals } = data;
-    const { topic } = context.params as IParams;
-    const qual = quals[topic!];
+    const { topic } = context.params!;
+    const qual = quals[topic];
 
     let content = qual.index.content;
 

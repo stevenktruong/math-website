@@ -2,7 +2,7 @@ import { Options } from "hast-util-raw";
 import { Plugin } from "unified";
 import unified from "unified";
 
-import remark from "remark";
+import { remark } from "remark";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import highlight from "remark-highlight.js";
@@ -29,7 +29,7 @@ export const baseProcessor = remark()
  * Returns a processor with class-specific math macros included in the Markdown -> HTML conversion
  * @param mathMacros is the JSON containing all the macros
  */
-export const processorWithMathWithMacros = (mathMacros: JSON): unified.Processor<remark.RemarkOptions> =>
+export const processorWithMathWithMacros = (mathMacros: JSON): unified.Processor =>
     remark()
         .use(toc, { maxDepth: 3 })
         .use(slug)

@@ -1,7 +1,9 @@
 import * as React from "react";
 
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import Head from "next/head";
+
+import { ParsedUrlQuery } from "querystring";
 
 import Class from "components/Class";
 import Layout from "components/Layout";
@@ -14,7 +16,7 @@ import { processorWithMathWithMacros } from "lib/processors";
 
 import { Meeting } from "models/Class.model";
 
-import { ClassCode, IParams, Link, Quarter } from "types";
+import { ClassCode, Link, Quarter } from "types";
 
 interface Props {
     instructor: string;
@@ -29,6 +31,10 @@ interface Props {
     year: number;
     courseDescription: string;
     contentHtml: string;
+}
+
+interface Params extends ParsedUrlQuery {
+    classCode: string;
 }
 
 export default class ClassPage extends React.Component<Props> {
@@ -46,9 +52,9 @@ export default class ClassPage extends React.Component<Props> {
     }
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths<Params> = async () => {
     const { classes } = data;
-    const paths: { params: IParams }[] = Object.keys(classes).map((clazz) => {
+    const paths: { params: Params }[] = Object.keys(classes).map((clazz) => {
         return {
             params: {
                 classCode: clazz as ClassCode,
@@ -62,10 +68,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<Props, Params> = async (context: GetStaticPropsContext<Params>) => {
     const { personal, classes } = data;
-    const { classCode } = context.params as IParams;
-    const clazz = classes[classCode!];
+    const { classCode } = context.params!;
+    const clazz = classes[classCode];
 
     let contentHtml = processorWithMathWithMacros(clazz.macros).processSync(clazz.index.content).toString();
 

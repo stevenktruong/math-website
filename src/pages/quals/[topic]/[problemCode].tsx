@@ -2,8 +2,10 @@ import { importKatex } from "vendors";
 
 import * as React from "react";
 
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import Head from "next/head";
+
+import { ParsedUrlQuery } from "querystring";
 
 import Layout from "components/Layout";
 import Problem from "components/Problem";
@@ -14,7 +16,7 @@ import { formatQuarterYear, publicRuntimeConfig } from "helpers";
 import data from "lib/data";
 import { processorWithMathWithMacros } from "lib/processors";
 
-import { IParams, Quarter } from "types";
+import { Quarter } from "types";
 
 interface Props {
     year: number;
@@ -23,6 +25,11 @@ interface Props {
 
     formattedTopicName: string;
     contentHtml: string;
+}
+
+interface Params extends ParsedUrlQuery {
+    topic: string;
+    problemCode: string;
 }
 
 const customTags = [
@@ -50,9 +57,9 @@ export default class ProblemPage extends React.Component<Props> {
     }
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths<Params> = async () => {
     const { quals } = data;
-    const paths: { params: IParams }[] = [];
+    const paths: { params: Params }[] = [];
     Object.entries(quals).forEach(([unformattedTopicName, qual]) => {
         Object.entries(qual.exams).forEach(([, exam]) => {
             Object.keys(exam.problems).forEach((problemNumber) => {
@@ -72,12 +79,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<Props, Params> = async (context: GetStaticPropsContext<Params>) => {
     const { quals } = data;
-    const { topic, problemCode } = context.params as IParams;
-    const qual = quals[topic!];
-    const exam = qual.exams[problemCode!.split(".")[0]];
-    const problemNumber = Number(problemCode!.split(".")[1]);
+    const { topic, problemCode } = context.params!;
+    const qual = quals[topic];
+    const exam = qual.exams[problemCode.split(".")[0]];
+    const problemNumber = Number(problemCode.split(".")[1]);
     const problem = exam.problems[problemNumber];
 
     let content = problemTopicsFormatting(problem.meta.topics) + problem.content;

@@ -1,18 +1,3 @@
-import { ParsedUrlQuery } from "querystring";
-
-/**
- * Represents the parameters from dynamic routing
- */
-export interface IParams extends ParsedUrlQuery {
-    // /teaching/[classCode]/[noteName]
-    classCode?: ClassCode;
-    noteName?: string;
-
-    // /quals/[topic]/[problemCode]
-    topic?: string;
-    problemCode?: string;
-}
-
 /**
  * Represents a read Markdown file
  */

@@ -2,8 +2,10 @@ import { importKatex, importHighlightStylesheet } from "vendors";
 
 import * as React from "react";
 
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import Head from "next/head";
+
+import { ParsedUrlQuery } from "querystring";
 
 import Layout from "components/Layout";
 import Note from "components/Note";
@@ -13,7 +15,7 @@ import { publicRuntimeConfig, substituteVariables } from "helpers";
 import data from "lib/data";
 import { processorWithMathWithMacros } from "lib/processors";
 
-import { IParams, Quarter } from "types";
+import { Quarter } from "types";
 
 interface Props {
     classData: {
@@ -23,6 +25,11 @@ interface Props {
     };
     noteName: string;
     contentHtml: string;
+}
+
+interface Params extends ParsedUrlQuery {
+    classCode: string;
+    noteName: string;
 }
 
 const counters = [
@@ -54,9 +61,9 @@ export default class NotePage extends React.Component<Props> {
     }
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths<Params> = async () => {
     const { classes } = data;
-    const paths: { params: IParams }[] = [];
+    const paths: { params: Params }[] = [];
     Object.values(classes).forEach((clazz) => {
         Object.entries(clazz.notes)
             .filter(([, note]) => note.meta.publish || process.env.URL_ENV === "development")
@@ -76,11 +83,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<Props, Params> = async (context: GetStaticPropsContext<Params>) => {
     const { classes } = data;
-    const { classCode, noteName } = context.params as IParams;
-    const clazz = classes[classCode!];
-    const note = clazz.notes[noteName!];
+    const { classCode, noteName } = context.params!;
+    const clazz = classes[classCode];
+    const note = clazz.notes[noteName];
 
     let substitutedContent = substituteVariables(note.content, {
         assetsFolder: `${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}`,
