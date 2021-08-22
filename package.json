@@ -23,6 +23,9 @@
         "url": "https://github.com/stevenktruong/math-website/issues"
     },
     "homepage": "https://github.com/stevenktruong/math-website#readme",
+    "engines": {
+        "node": "^16"
+    },
     "dependencies": {
         "@next/eslint-plugin-next": "^11.1.0",
         "gray-matter": "^4.0.3",
@@ -44,6 +47,7 @@
         "remark-toc": "^8.0.0"
     },
     "devDependencies": {
+        "@babel/core": "^7.15.0",
         "@next/bundle-analyzer": "^11.1.0",
         "@trivago/prettier-plugin-sort-imports": "^2.0.2",
         "@types/node-sass": "^4.11.2",
