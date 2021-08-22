@@ -1,7 +1,8 @@
 import { readMarkdown } from "lib/data";
 
 /**
- * Represents a read Markdown file
+ * M represents the meta in the front matter of the Markdown file. The behavior of
+ * this class determines whether data is lazy, singleton, etc.
  */
 export class MarkdownFile<M extends Record<string, any>> {
     filePath: string;
