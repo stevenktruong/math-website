@@ -72,6 +72,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
     const { personal, classes } = data;
     const { classCode } = context.params!;
     const clazz = classes[classCode];
+    const classMeta = clazz.getMeta();
 
     let contentHtml = processorWithMathWithMacros(clazz.macros).processSync(clazz.index.getContent()).toString();
 
@@ -101,23 +102,24 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
     contentHtml = contentHtml.replace(
         new RegExp("notes::(.+?).md", "g"),
         (match, noteName) =>
-            `<a href="${publicRuntimeConfig.staticFolder}/teaching/${classCode}/${noteName}">${clazz.notes[noteName].getMeta().title}</a>` +
-            noteTagsFormatting(clazz.notes[noteName].getMeta().tags)
+            `<a href="${publicRuntimeConfig.staticFolder}/teaching/${classCode}/${noteName}">${
+                clazz.notes[noteName].getMeta().title
+            }</a>` + noteTagsFormatting(clazz.notes[noteName].getMeta().tags)
     );
 
     return {
         props: {
-            instructor: clazz.index.getMeta().instructor,
-            instructorUrl: clazz.index.getMeta().instructorUrl,
-            sections: clazz.index.getMeta().discussions,
-            officeHours: clazz.index.getMeta().officeHours,
+            instructor: classMeta.instructor,
+            instructorUrl: classMeta.instructorUrl,
+            sections: classMeta.discussions,
+            officeHours: classMeta.officeHours,
             email: personal.getMeta().email,
-            links: clazz.index.getMeta().links,
+            links: classMeta.links,
 
-            course: clazz.index.getMeta().course,
+            course: classMeta.course,
             quarter: clazz.quarter,
             year: clazz.year,
-            courseDescription: clazz.index.getMeta().courseDescription,
+            courseDescription: classMeta.courseDescription,
             contentHtml,
         },
     };

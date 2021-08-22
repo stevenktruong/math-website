@@ -47,12 +47,13 @@ export const getStaticProps: GetStaticProps = async () => {
             return a.lecture < b.lecture ? -1 : 1;
         })
         .map((clazz) => {
+            const classMeta = clazz.index.getMeta();
             return {
                 classCode: clazz.classCode,
                 year: clazz.year,
                 quarter: clazz.quarter,
-                course: clazz.index.getMeta().course,
-                courseDescription: clazz.index.getMeta().courseDescription,
+                course: classMeta.course,
+                courseDescription: classMeta.courseDescription,
             };
         });
 

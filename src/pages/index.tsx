@@ -46,18 +46,19 @@ export default class Home extends React.Component<Props> {
 
 export const getStaticProps: GetStaticProps = async () => {
     const { personal } = data;
+    const personalMeta = personal.getMeta();
 
     return {
         props: {
-            fullName: personal.getMeta().fullName,
-            pronouns: personal.getMeta().pronouns,
+            fullName: personalMeta.fullName,
+            pronouns: personalMeta.pronouns,
 
             aboutHtml: baseProcessor.processSync(personal.getContent()).toString(),
 
-            office: personal.getMeta().office,
-            email: personal.getMeta().email,
-            address: personal.getMeta().address,
-            fax: personal.getMeta().fax,
+            office: personalMeta.office,
+            email: personalMeta.email,
+            address: personalMeta.address,
+            fax: personalMeta.fax,
         },
     };
 };
