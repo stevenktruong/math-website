@@ -72,7 +72,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
     const { personal, classes } = data;
     const { classCode } = context.params!;
     const clazz = classes[classCode];
-    const classMeta = clazz.getMeta();
+    const classMeta = clazz.index.getMeta();
 
     let contentHtml = processorWithMathWithMacros(clazz.macros).processSync(clazz.index.getContent()).toString();
 
