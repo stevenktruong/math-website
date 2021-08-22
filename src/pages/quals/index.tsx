@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const qualTopics = Object.entries(quals).map(([unformattedName, qual]) => {
         return {
             unformattedName,
-            formattedName: qual.index.meta.title,
+            formattedName: qual.index.getMeta().title,
         };
     });
 

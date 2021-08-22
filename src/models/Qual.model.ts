@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-import { readDirectoryContents, readMarkdown } from "lib/data";
+import { readDirectoryContents } from "lib/data";
 
 import { MarkdownFile, Quarter } from "types";
 
@@ -28,18 +28,9 @@ export class Qual {
     exams: Record<string, Exam>;
 }
 
-export class QualIndex implements MarkdownFile {
-    constructor(qualIndexPath: string) {
-        const { content, meta } = readMarkdown(qualIndexPath);
-        this.content = content;
-        this.meta = meta as QualIndex["meta"];
-    }
-
-    content: string;
-    meta: {
-        title: string; // Display name
-    };
-}
+export class QualIndex extends MarkdownFile<{
+    title: string; // Display name
+}> {}
 
 export class Exam {
     constructor(examPath: string) {
@@ -64,15 +55,6 @@ export class Exam {
     problems: Record<number, Problem>;
 }
 
-export class Problem implements MarkdownFile {
-    constructor(problemPath: string) {
-        const { content, meta } = readMarkdown(problemPath);
-        this.content = content;
-        this.meta = meta as Problem["meta"];
-    }
-
-    content: string;
-    meta: {
-        topics: string[];
-    };
-}
+export class Problem extends MarkdownFile<{
+    topics: string[];
+}> {}

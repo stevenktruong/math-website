@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-import { readDirectoryContents, readMarkdown } from "lib/data";
+import { readDirectoryContents } from "lib/data";
 
 import { ClassCode, Link, MarkdownFile, Quarter } from "types";
 
@@ -52,38 +52,20 @@ export interface Meeting {
     link?: URL;
 }
 
-export class ClassIndex implements MarkdownFile {
-    constructor(classIndexPath: string) {
-        const { content, meta } = readMarkdown(classIndexPath);
-        this.content = content;
-        this.meta = meta as ClassIndex["meta"];
-    }
+export class ClassIndex extends MarkdownFile<{
+    course: `${string} ${string}`;
+    courseDescription: string;
+    section: string;
+    instructor: string;
+    instructorUrl: URL;
+    discussions: Meeting[];
+    officeHours: Meeting[];
+    links: Link[];
+}> {}
 
-    content: string;
-    meta: {
-        course: `${string} ${string}`;
-        courseDescription: string;
-        section: string;
-        instructor: string;
-        instructorUrl: URL;
-        discussions: Meeting[];
-        officeHours: Meeting[];
-        links: Link[];
-    };
-}
-
-export class Note implements MarkdownFile {
-    constructor(notePath: string) {
-        const { content, meta } = readMarkdown(notePath);
-        this.content = content;
-        this.meta = meta as Note["meta"];
-    }
-
-    content: string;
-    meta: {
-        title: string;
-        date: Date;
-        tags: string[];
-        publish: boolean;
-    };
-}
+export class Note extends MarkdownFile<{
+    title: string;
+    date: Date;
+    tags: string[];
+    publish: boolean;
+}> {}

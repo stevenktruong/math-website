@@ -57,7 +57,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
     const { topic } = context.params!;
     const qual = quals[topic];
 
-    let content = qual.index.content;
+    let content = qual.index.getContent();
 
     // For each exam, add a header with the date followed by a list of (custom syntax representing) the problems
     Object.values(qual.exams)
@@ -84,12 +84,12 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
         /problems::([0-9]{2}[fs])\.([0-9]{1,2}).md/g,
         (match, examDate, problemNumber) =>
             `<a href="${publicRuntimeConfig.staticFolder}/quals/${topic}/${examDate}.${problemNumber}">Problem ${problemNumber}</a>` +
-            problemTopicsFormatting(qual.exams[examDate].problems[problemNumber].meta.topics)
+            problemTopicsFormatting(qual.exams[examDate].problems[problemNumber].getMeta().topics)
     );
 
     return {
         props: {
-            formattedTopicName: qual.index.meta.title,
+            formattedTopicName: qual.index.getMeta().title,
             contentHtml,
         },
     };

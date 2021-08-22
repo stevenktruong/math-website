@@ -73,7 +73,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
     const { classCode } = context.params!;
     const clazz = classes[classCode];
 
-    let contentHtml = processorWithMathWithMacros(clazz.macros).processSync(clazz.index.content).toString();
+    let contentHtml = processorWithMathWithMacros(clazz.macros).processSync(clazz.index.getContent()).toString();
 
     // Parse announcements syntax into a table
     const announcements = new RegExp('<h2 id="announcements">Announcements</h2>').test(contentHtml);
@@ -101,23 +101,23 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
     contentHtml = contentHtml.replace(
         new RegExp("notes::(.+?).md", "g"),
         (match, noteName) =>
-            `<a href="${publicRuntimeConfig.staticFolder}/teaching/${classCode}/${noteName}">${clazz.notes[noteName].meta.title}</a>` +
-            noteTagsFormatting(clazz.notes[noteName].meta.tags)
+            `<a href="${publicRuntimeConfig.staticFolder}/teaching/${classCode}/${noteName}">${clazz.notes[noteName].getMeta().title}</a>` +
+            noteTagsFormatting(clazz.notes[noteName].getMeta().tags)
     );
 
     return {
         props: {
-            instructor: clazz.index.meta.instructor,
-            instructorUrl: clazz.index.meta.instructorUrl,
-            sections: clazz.index.meta.discussions,
-            officeHours: clazz.index.meta.officeHours,
-            email: personal.meta.email,
-            links: clazz.index.meta.links,
+            instructor: clazz.index.getMeta().instructor,
+            instructorUrl: clazz.index.getMeta().instructorUrl,
+            sections: clazz.index.getMeta().discussions,
+            officeHours: clazz.index.getMeta().officeHours,
+            email: personal.getMeta().email,
+            links: clazz.index.getMeta().links,
 
-            course: clazz.index.meta.course,
+            course: clazz.index.getMeta().course,
             quarter: clazz.quarter,
             year: clazz.year,
-            courseDescription: clazz.index.meta.courseDescription,
+            courseDescription: clazz.index.getMeta().courseDescription,
             contentHtml,
         },
     };

@@ -18,7 +18,7 @@ const topicToProblemsMap = quals.reduce((acc, cur) => {
 
     for (const problem of problems) {
         const problemCode = `${cur}.${problem.split(".")[0]}`;
-        const topics = readMarkdown(path.join(problemsDirectory, problem)).meta.topics;
+        const topics = readMarkdown(path.join(problemsDirectory, problem)).getMeta().topics;
 
         for (const topic of topics) {
             if (Object.keys(acc).includes(topic)) {

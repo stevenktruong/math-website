@@ -66,7 +66,7 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
     const paths: { params: Params }[] = [];
     Object.values(classes).forEach((clazz) => {
         Object.entries(clazz.notes)
-            .filter(([, note]) => note.meta.publish || process.env.URL_ENV === "development")
+            .filter(([, note]) => note.getMeta().publish || process.env.URL_ENV === "development")
             .map(([noteName]) => {
                 paths.push({
                     params: {
@@ -89,7 +89,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
     const clazz = classes[classCode];
     const note = clazz.notes[noteName];
 
-    let substitutedContent = substituteVariables(note.content, {
+    let substitutedContent = substituteVariables(note.getContent(), {
         assetsFolder: `${publicRuntimeConfig.staticFolder}/classes/${classCode}/${noteName}`,
     });
 
@@ -123,9 +123,9 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
             classData: {
                 year: clazz.year,
                 quarter: clazz.quarter,
-                course: clazz.index.meta.course,
+                course: clazz.index.getMeta().course,
             },
-            noteName: note.meta.title,
+            noteName: note.getMeta().title,
             contentHtml: processorWithMathWithMacros(clazz.macros).processSync(substitutedContent).toString(),
         },
     };

@@ -31,7 +31,7 @@ const classFormatting: TableFormatting = {
     instructor: {
         title: "Instructor",
         format: (props: Props) => (
-            <a href={props.instructorUrl.href} key="instructorLink">
+            <a href={`${props.instructorUrl}`} key="instructorLink">
                 {props.instructor}
             </a>
         ),
@@ -104,7 +104,7 @@ const classFormatting: TableFormatting = {
         format: (props: Props) =>
             props.links.map((link, index) => (
                 <div key={`linksDiv${index}`}>
-                    <a href={link.url.href} key={`linksAnchor${index}`}>
+                    <a href={`${link.url}`} key={`linksAnchor${index}`}>
                         {link.title}
                     </a>
                 </div>

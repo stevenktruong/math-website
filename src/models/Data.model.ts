@@ -1,6 +1,6 @@
 import path from "path";
 
-import { readDirectoryContents, readMarkdown } from "lib/data";
+import { readDirectoryContents } from "lib/data";
 
 import { MarkdownFile } from "types";
 
@@ -35,20 +35,11 @@ export class Data {
     quals: Record<string, Qual>;
 }
 
-export class Personal implements MarkdownFile {
-    constructor(personalPath: string) {
-        const { content, meta } = readMarkdown(personalPath);
-        this.content = content;
-        this.meta = meta as Personal["meta"];
-    }
-
-    content: string;
-    meta: {
-        fullName: string;
-        pronouns: string;
-        office: string;
-        email: string;
-        address: string[];
-        fax: string;
-    };
-}
+export class Personal extends MarkdownFile<{
+    fullName: string;
+    pronouns: string;
+    office: string;
+    email: string;
+    address: string[];
+    fax: string;
+}> {}

@@ -53,7 +53,7 @@ export const formatCourseWithDescription = (course: string, description: string)
 export const daysOfTheWeekFormatting = (days: string): string => {
     return days
         .split("")
-        .map((day) => daysOfTheWeekTable[day])
+        .map((day) => daysOfTheWeekTable[day] || day)
         .join("");
 };
 

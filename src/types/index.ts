@@ -1,9 +1,32 @@
+import { readMarkdown } from "lib/data";
+
 /**
  * Represents a read Markdown file
  */
-export interface MarkdownFile {
-    content: string;
-    meta: Record<string, any>;
+export class MarkdownFile<M extends Record<string, any>> {
+    filePath: string;
+    // content?: string;
+    // meta?: M;
+
+    constructor(filePath: string) {
+        this.filePath = filePath;
+    }
+
+    // readFile(): void {
+    //     const { content, meta } = readMarkdown(this.filePath);
+    //     this.content = content;
+    //     this.meta = meta as M;
+    // }
+
+    getContent(): string {
+        const { content } = readMarkdown(this.filePath);
+        return content;
+    }
+
+    getMeta(): M {
+        const { meta } = readMarkdown(this.filePath);
+        return meta as M;
+    }
 }
 
 /**

@@ -51,8 +51,8 @@ export const getStaticProps: GetStaticProps = async () => {
                 classCode: clazz.classCode,
                 year: clazz.year,
                 quarter: clazz.quarter,
-                course: clazz.index.meta.course,
-                courseDescription: clazz.index.meta.courseDescription,
+                course: clazz.index.getMeta().course,
+                courseDescription: clazz.index.getMeta().courseDescription,
             };
         });
 

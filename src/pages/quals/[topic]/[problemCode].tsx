@@ -87,7 +87,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
     const problemNumber = Number(problemCode.split(".")[1]);
     const problem = exam.problems[problemNumber];
 
-    let content = problemTopicsFormatting(problem.meta.topics) + problem.content;
+    let content = problemTopicsFormatting(problem.getMeta().topics) + problem.getContent();
 
     // Add counters
     customTags.forEach((customTag) => {
@@ -113,7 +113,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
             year: exam.year,
             problemNumber,
 
-            formattedTopicName: qual.index.meta.title,
+            formattedTopicName: qual.index.getMeta().title,
             contentHtml,
         },
     };

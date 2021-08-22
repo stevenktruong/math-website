@@ -49,15 +49,15 @@ export const getStaticProps: GetStaticProps = async () => {
 
     return {
         props: {
-            fullName: personal.meta.fullName,
-            pronouns: personal.meta.pronouns,
+            fullName: personal.getMeta().fullName,
+            pronouns: personal.getMeta().pronouns,
 
-            aboutHtml: baseProcessor.processSync(personal.content).toString(),
+            aboutHtml: baseProcessor.processSync(personal.getContent()).toString(),
 
-            office: personal.meta.office,
-            email: personal.meta.email,
-            address: personal.meta.address,
-            fax: personal.meta.fax,
+            office: personal.getMeta().office,
+            email: personal.getMeta().email,
+            address: personal.getMeta().address,
+            fax: personal.getMeta().fax,
         },
     };
 };
