@@ -1,7 +1,7 @@
 ---
 fullName: Steven Truong
 pronouns: he / him / his
-office: Virtual
+office: Mathematical Sciences 2961
 email: steven [at] math [dot] ucla [dot] edu
 address:
     - UCLA Mathematics Department

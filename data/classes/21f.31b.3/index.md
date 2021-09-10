@@ -17,7 +17,7 @@ officeHours:
     - section: 3C, 3D
       days: TBD
       time: TBD - TBD
-      location: TBD
+      location: Mathematical Sciences 2961
 links:
     - title: CCLE
       url: https://ccle.ucla.edu/course/view/21F-MATH31B-3
