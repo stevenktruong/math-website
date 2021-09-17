@@ -6,8 +6,24 @@
     "\\abs": "\\mathopen{}\\left\\lvert #1 \\right\\rvert\\mathclose{}",
     "\\norm": "\\mathopen{}\\left\\lVert #1 \\right\\rVert\\mathclose{}",
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
+    "\\st": "\\:\\middle\\vert\\:",
+    "\\gen": "\\mathopen{}\\left\\langle #1 \\right\\rangle\\mathclose{}",
+    "\\inner": "\\gen",
     "\\func": "#1\\colon #2 \\to #3",
+    "\\cat": "\\mathcal{#1}",
+    "\\phi": "\\varphi",
+    "\\GL": "\\operatorname{GL}",
+    "\\id": "\\operatorname{id}",
+    "\\diag": "\\operatorname{diag}",
+    "\\span": "\\operatorname{span}",
+    "\\restr": "\\left. #1 \\right\\rvert_{#2}",
+    "\\Gal": "\\operatorname{Gal}",
     "\\Q": "\\mathbb{Q}",
+    "\\C": "\\mathbb{C}",
+    "\\Hom": "\\operatorname{Hom}",
 
-    "\\Top": "\\mathrm{Top}"
+    "\\Top": "\\mathrm{\\textbf{Top}}",
+    "\\Set": "\\mathrm{\\textbf{Set}}",
+    "\\CRing": "\\mathrm{\\textbf{CRing}}",
+    "\\Ab": "\\mathrm{\\textbf{Ab}}"
 }
