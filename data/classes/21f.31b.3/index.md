@@ -27,13 +27,17 @@ links:
 
 ## Policies
 
+### COVID-19
+
+Following the school's COVID-19 policies, discussions will be held in person and masks will be required unless you have an exemption.
+
 ### Office Hours
 
-If you're unable to attend my office hours, feel free to send me an e-mail and we can set up an appointment to meet at a different time.
+If you're unable to attend my office hours for any reason, feel free to send me an e-mail and we can set up an appointment to meet at a different time and place, including over Zoom.
 
 ### E-mails
 
-I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Also, please address me as Steven when e-mailing me.
+I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Try to include `31B` somewhere in the subject so it doesn't get flagged as spam. Also, please address me as Steven when e-mailing me.
 
 ## Resources
 
