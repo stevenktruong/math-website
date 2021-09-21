@@ -39,6 +39,10 @@ If you're unable to attend my office hours for any reason, feel free to send me 
 
 I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Try to include `31B` somewhere in the subject so it doesn't get flagged as spam. Also, please address me as Steven when e-mailing me.
 
+## Announcements
+
+-   | 9/20/21 | Please fill out [this form](https://forms.gle/rTCb8Ue7c5aSGmoK6) to help me schedule office hours.
+
 ## Resources
 
 -   [Student Math Center](https://ww3.math.ucla.edu/student-math-center/)
