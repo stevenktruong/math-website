@@ -52,3 +52,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   [Symbolab Calculator](https://www.symbolab.com/solver/calculus-calculator)
 -   [Open Office Hours](https://ww3.math.ucla.edu/my-calendar/)
 -   [Paul's Online Notes](https://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx)
+
+## Notes
+
+-   notes::week-0.md

@@ -49,3 +49,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
 -   [Symbolab Calculator](https://www.symbolab.com/solver/calculus-calculator)
 -   [Paul's Online Notes](https://tutorial.math.lamar.edu/classes/calcII/calcII.aspx)
+
+## Notes
+
+-   notes::week-0.md
