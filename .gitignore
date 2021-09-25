@@ -5,3 +5,6 @@ build/
 
 # Log files
 **/*.log
+
+# Workspace files
+.vscode/
