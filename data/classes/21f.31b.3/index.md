@@ -15,8 +15,8 @@ discussions:
       location: Boelter Hall 5264
 officeHours:
     - section: 3C, 3D
-      days: TBD
-      time: TBD - TBD
+      days: W
+      time: 11:00am - 12:00pm
       location: Mathematical Sciences 2961
 links:
     - title: CCLE

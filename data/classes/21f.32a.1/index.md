@@ -15,8 +15,8 @@ discussions:
       location: Haines Hall A2
 officeHours:
     - section: 1C, 1D
-      days: TBD
-      time: TBD - TBD
+      days: T
+      time: 4:00pm - 5:00pm
       location: Mathematical Sciences 2961
 links:
     - title: CCLE
