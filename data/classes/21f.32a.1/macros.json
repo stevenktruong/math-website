@@ -6,6 +6,8 @@
     "\\pco": "\\mathopen{}\\left\\lbrack #1 \\right\\rparen\\mathclose{}",
     "\\poc": "\\mathopen{}\\left\\lparen #1 \\right\\rbrack\\mathclose{}",
     "\\abs": "\\mathopen{}\\left\\lvert #1 \\right\\rvert\\mathclose{}",
+    "\\ang": "\\mathopen{}\\left\\langle #1 \\right\\rangle\\mathclose{}",
+    "\\norm": "\\mathopen{}\\left\\lVert #1 \\right\\rVert\\mathclose{}",
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
     "\\comp": "\\mathrm{c}",
     "\\pow": "\\mathcal{P}",

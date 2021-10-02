@@ -53,3 +53,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Notes
 
 -   notes::week-0.md
+-   notes::week-1.md
