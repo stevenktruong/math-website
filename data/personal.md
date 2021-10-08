@@ -21,7 +21,7 @@ You're welcome to come to any of my office hours, but if there are too many stud
 ### In-person ({{ office }})
 
 -   Tuesdays, 4pm - 5pm (MATH 32A)
--   Wednesday, 11am - 12pm (MATH 31B)
+-   Wednesdays, 11am - 12pm (MATH 31B)
 
 ### Zoom (Open Office Hours)
 
