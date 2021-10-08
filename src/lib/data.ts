@@ -2,6 +2,8 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
+import { substituteVariables } from "helpers";
+
 import { Data } from "models/Data.model";
 
 /**
@@ -21,7 +23,7 @@ export const readMarkdown = (filePath: string): { content: string; meta: Record<
     const matterResult = matter(fileContents);
 
     return {
-        content: matterResult.content,
+        content: substituteVariables(matterResult.content, matterResult.data),
         meta: matterResult.data,
     };
 };

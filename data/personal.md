@@ -13,3 +13,16 @@ fax: +1 (310) 206-6673
 I'm a second year Ph.D. student at the [UCLA Department of Mathematics](https://ww3.math.ucla.edu/) studying analysis. I was also an undergraduate at UCLA, where I obtained both my B.S. in Mathematics of Computation and my M.A. in Mathematics through the Departmental Scholars Program.
 
 In my free time, I like to play Valorant, read One Piece, and work on this website.
+
+## Office Hours
+
+You're welcome to come to any of my office hours, but if there are too many students, I'll be prioritizing the students in the specified class.
+
+### In-person ({{ office }})
+
+-   Tuesdays, 4pm - 5pm (MATH 32A)
+-   Wednesday, 11am - 12pm (MATH 31B)
+
+### Zoom (Open Office Hours)
+
+-   Thursdays, 5pm - 6pm ([Zoom Link](https://ucla.zoom.us/j/91283877691?pwd=VFdIMk10RExMcXM4cTF1azNIUnBFUT09))

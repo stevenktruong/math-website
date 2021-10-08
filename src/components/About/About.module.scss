@@ -1,0 +1,13 @@
+@use "lengths";
+
+.About {
+    p + h2 {
+        margin-top: lengths.$big;
+        margin-bottom: lengths.$small;
+    }
+
+    p + h3,
+    ul + h3 {
+        margin-top: lengths.$medium;
+    }
+}
