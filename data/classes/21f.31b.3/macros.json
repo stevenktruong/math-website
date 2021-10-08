@@ -11,5 +11,6 @@
     "\\pow": "\\mathcal{P}",
     "\\Q": "\\mathbb{Q}",
     "\\epsilon": "\\varepsilon",
-    "\\func": "#1\\colon #2 \\to #3"
+    "\\func": "#1\\colon #2 \\to #3",
+    "\\dne": "\\mathrm{DNE}"
 }

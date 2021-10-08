@@ -47,13 +47,15 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 
 ## Resources
 
+-   [Student Math Center](https://ww3.math.ucla.edu/my-calendar/)
+    -   Mine are 5:00pm - 6:00pm every Thursday
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
 -   [GeoGebra 3D Calculator](http://geogebra.org/3d)
 -   [Symbolab Calculator](https://www.symbolab.com/solver/calculus-calculator)
--   [Open Office Hours](https://ww3.math.ucla.edu/my-calendar/)
 -   [Paul's Online Notes](https://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx)
 
 ## Notes
 
 -   notes::week-0.md
 -   notes::week-1.md
+-   notes::week-2.md
