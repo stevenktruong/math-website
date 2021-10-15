@@ -42,6 +42,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Announcements
 
 -   | 9/20/21 | Please fill out [this form](https://forms.gle/rTCb8Ue7c5aSGmoK6) to help me schedule office hours.
+-   | 10/14/21 | I'll be holding extra office hours in-person in my office on tomorrow, 10/15 from 12:45pm - 2pm.
 
 ## Resources
 
@@ -56,3 +57,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   notes::week-0.md
 -   notes::week-1.md
 -   notes::week-2.md
+-   notes::week-3.md
