@@ -1,6 +1,7 @@
 {
     "\\diff": "\\mathrm{d}",
     "\\deriv": "\\frac{\\diff{#1}}{\\diff{#2}}",
+    "\\pderiv": "\\frac{\\partial{#1}}{\\partial{#2}}",
     "\\p": "\\mathopen{}\\left\\lparen #1 \\right\\rparen\\mathclose{}",
     "\\br": "\\mathopen{}\\left\\lbrack #1 \\right\\rbrack\\mathclose{}",
     "\\pco": "\\mathopen{}\\left\\lbrack #1 \\right\\rparen\\mathclose{}",
