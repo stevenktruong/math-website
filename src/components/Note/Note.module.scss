@@ -42,6 +42,16 @@
         background-color: colors.$inline-code-background;
     }
 
+    p + ol {
+        margin-top: lengths.$medium;
+        margin-bottom: lengths.$medium;
+
+        li {
+            margin: lengths.$medium 0;
+            margin-left: lengths.$big;
+        }
+    }
+
     * + p,
     * > p,
     * + theorem,
