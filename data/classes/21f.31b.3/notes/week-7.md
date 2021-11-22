@@ -2,7 +2,7 @@
 title: Week 7 Discussion Notes
 date: "2021-11-11"
 tags:
-    - taylor polynomials
+    - Taylor polynomials
     - convergence tests
 publish: yes
 ---
@@ -227,6 +227,7 @@ There are a couple of Taylor series expansions that you want to remember:
 
 $$
 \begin{array}{rcllll}
+    \hline \\[-2ex]
     f\p{x}
         & =
         & T\p{x} \\[1ex] \hline \\[-2ex]
