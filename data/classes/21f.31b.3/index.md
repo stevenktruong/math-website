@@ -44,7 +44,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   | 9/20/21 | Please fill out [this form](https://forms.gle/rTCb8Ue7c5aSGmoK6) to help me schedule office hours.
 -   | 10/14/21 | I'll be holding extra office hours in-person in my office tomorrow, 10/15 from 12:45pm - 2pm.
 -   | 10/23/21 | Please fill out this anonymous mid-quarter [feedback form](https://forms.gle/7UGFqCsET7JzPLbj7) to help me plan discussions for the rest of the quarter.
--   | 11/9/21 | For the second midterm, I'll be holding extra office hours in-person in my office tomorrow, 11/10 from 12:00pm - 1pm and Friday, 11/12 from 12:45pm - 1pm in addition to my usual one.
+-   | 11/9/21 | For the second midterm, I'll be holding extra office hours in-person in my office tomorrow, 11/10 from 12pm - 1pm and Friday, 11/12 from 12:45pm - 1pm in addition to my usual one.
 
 ## Resources
 
@@ -64,3 +64,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   notes::week-5.md
 -   notes::week-6.md
 -   notes::week-7.md
+-   notes::week-8.md
