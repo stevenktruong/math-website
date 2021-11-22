@@ -15,7 +15,7 @@ publish: yes
 
 Recall that the purpose of a Taylor polynomial is to approximate a function $f$ near some point $a$ (called the center of the polynomial). So naturally, we want to have a rough idea of how good the estimate is, which leads to the following result:
 
-<theorem> (error bound)
+<theorem> error bound
 
 Let $f\p{x}$ be differentiable (at least) $n+1$ times, and let $T_nf\p{x}$ be the $n$-th degree Taylor polynomial of $f$ centered at $a$. Then
 
