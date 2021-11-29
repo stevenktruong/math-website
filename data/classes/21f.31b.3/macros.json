@@ -12,5 +12,8 @@
     "\\Q": "\\mathbb{Q}",
     "\\epsilon": "\\varepsilon",
     "\\func": "#1\\colon #2 \\to #3",
-    "\\dne": "\\mathrm{DNE}"
+    "\\dne": "\\mathrm{DNE}",
+    "\\arcsec": "\\operatorname{arcsec}",
+    "\\arccsc": "\\operatorname{arccsc}",
+    "\\arccot": "\\operatorname{arccot}"
 }
