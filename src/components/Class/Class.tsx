@@ -39,7 +39,7 @@ const classFormatting: TableFormatting = {
     sections: {
         title: "Sections",
         format: (props: Props) =>
-            props.sections.map((discussion) => (
+        props.sections ? props.sections.map((discussion) => (
                 <table key={`${discussion.section}DiscussionTable`}>
                     <tbody key={`${discussion.section}DiscussionTableBody`}>
                         <tr key={`${discussion.section}Discussion`}>
@@ -62,12 +62,12 @@ const classFormatting: TableFormatting = {
                         </tr>
                     </tbody>
                 </table>
-            )),
+            )) : <></>,
     },
     officeHours: {
         title: "Office Hours",
         format: (props: Props) =>
-            props.officeHours.map((officeHour) => (
+            props.officeHours ? props.officeHours.map((officeHour) => (
                 <table key={`${officeHour.section}OfficeHoursTable`}>
                     <tbody key={`${officeHour.section}OfficeHoursTableBody`}>
                         <tr key={`${officeHour.section}OfficeHours`}>
@@ -93,7 +93,7 @@ const classFormatting: TableFormatting = {
                         </tr>
                     </tbody>
                 </table>
-            )),
+            )) : <></>,
     },
     email: {
         title: "E-mail",
@@ -102,13 +102,13 @@ const classFormatting: TableFormatting = {
     links: {
         title: "Links",
         format: (props: Props) =>
-            props.links.map((link, index) => (
+            props.links ? props.links.map((link, index) => (
                 <div key={`linksDiv${index}`}>
                     <a href={`${link.url}`} key={`linksAnchor${index}`}>
                         {link.title}
                     </a>
                 </div>
-            )),
+            )) : <></>,
     },
 };
 
