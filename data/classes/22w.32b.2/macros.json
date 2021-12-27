@@ -1,0 +1,19 @@
+{
+    "\\diff": "\\mathrm{d}",
+    "\\deriv": "\\frac{\\diff{#1}}{\\diff{#2}}",
+    "\\pderiv": "\\frac{\\partial{#1}}{\\partial{#2}}",
+    "\\p": "\\mathopen{}\\left\\lparen #1 \\right\\rparen\\mathclose{}",
+    "\\br": "\\mathopen{}\\left\\lbrack #1 \\right\\rbrack\\mathclose{}",
+    "\\pco": "\\mathopen{}\\left\\lbrack #1 \\right\\rparen\\mathclose{}",
+    "\\poc": "\\mathopen{}\\left\\lparen #1 \\right\\rbrack\\mathclose{}",
+    "\\abs": "\\mathopen{}\\left\\lvert #1 \\right\\rvert\\mathclose{}",
+    "\\ang": "\\mathopen{}\\left\\langle #1 \\right\\rangle\\mathclose{}",
+    "\\norm": "\\mathopen{}\\left\\lVert #1 \\right\\rVert\\mathclose{}",
+    "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
+    "\\comp": "\\mathrm{c}",
+    "\\pow": "\\mathcal{P}",
+    "\\Q": "\\mathbb{Q}",
+    "\\epsilon": "\\varepsilon",
+    "\\func": "#1\\colon #2 \\to #3",
+    "\\dne": "\\mathrm{DNE}"
+}
