@@ -48,12 +48,9 @@ If you're unable to attend my office hours for any reason, feel free to send me 
 
 I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Also, please address me as Steven.
 
-<!-- ## Announcements
+## Announcements
 
--   | 9/20/21 | Please fill out [this form](https://forms.gle/Zyqz3aNrthgXEJot8) to help me schedule office hours.
--   | 10/19/21 | I'll be holding extra office hours in-person in my office tomorrow, 10/20 from 12pm - 1pm and another from 3pm - 4pm.
--   | 10/23/21 | Please fill out this anonymous mid-quarter [feedback form](https://forms.gle/A3bAcb3JK8yqkA6RA) to help me plan discussions for the rest of the quarter.
--   | 11/16/21 | I'll be holding extra office hours in-person in my office tomorrow, 11/17 from 12pm - 1pm and another from 3pm - 4pm. -->
+-   | 1/2/22 | Please fill out this [form](https://forms.gle/PRM9ba5AgKNtyFe3A) to help me schedule office hours.
 
 ## Resources
 

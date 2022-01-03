@@ -46,12 +46,9 @@ If you're unable to attend my office hours, then feel free to send me an e-mail 
 
 I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Also, please address me as Steven.
 
-<!-- ## Announcements
+## Announcements
 
--   | 1/3/21 | Please fill out this [form](https://forms.gle/TncQfN5oDWPQbM8E9) to help me schedule office hours.
--   | 1/12/21 | Please fill out this [anonymous form](https://forms.gle/wASatPGMcNt47JH37) for general feedback on how I'm running discussions.
--   | 3/9/21 | Please fill out this [form](https://forms.gle/WcLC8RUKTDx9AUtA7) if you're interested in a review session for the final.
--   | 3/11/21 | The review session will start on Sunday, 3/14 at 4pm PT. If you have any requests, please fill out this [form](https://forms.gle/A349fDkQuMVqmqmU9). -->
+-   | 1/2/22 | Please fill out this [form](https://forms.gle/UWCaUhvhfRjr3v4c8) to help me schedule office hours.
 
 ## Resources
 
