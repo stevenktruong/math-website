@@ -40,7 +40,7 @@ Following the school's COVID-19 policies, masks will be required for in-person d
 
 The password to all of my Zoom meetings for this class is `fubini`.
 
-For the first two week of this quarter, our discussions will be on Zoom. I will be recording and uploading any parts where I lecture to Bruin Learn.
+For the month of January, our discussions will be on Zoom. I will be recording and uploading any parts where I lecture to Bruin Learn.
 
 ### Office Hours
 
