@@ -43,7 +43,16 @@ export const getStaticProps: GetStaticProps = async () => {
         .sort((a, b) => {
             if (a.year !== b.year) return a.year < b.year ? -1 : 1;
             if (a.quarter !== b.quarter) return sortQuarters(a.quarter, b.quarter);
-            if (a.course !== b.course) return a.course < b.course ? -1 : 1;
+            if (a.course !== b.course) {
+                // E.g., 131A -> [ "131", "A", "" ]
+                const splitCourseA = a.course.split(/([a-zA-Z]+)/);
+                const splitCourseB = b.course.split(/([a-zA-Z]+)/);
+
+                if (Number(splitCourseA[0]) !== Number(splitCourseB[0]))
+                    return Number(splitCourseA[0]) < Number(splitCourseB[0]) ? -1 : 1;
+
+                return splitCourseA[1] < splitCourseB[1] ? -1 : 1;
+            }
             return a.lecture < b.lecture ? -1 : 1;
         })
         .map((clazz) => {
