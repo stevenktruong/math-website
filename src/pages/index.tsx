@@ -34,8 +34,8 @@ export default class Home extends React.Component<Props> {
                     leftSide={<Me {...this.props} />}
                     rightSide={
                         <>
-                            <About contentHtml={this.props.aboutHtml} />
                             <Contact {...this.props} />
+                            <About contentHtml={this.props.aboutHtml} />
                         </>
                     }
                 />

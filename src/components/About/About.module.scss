@@ -1,7 +1,8 @@
 @use "lengths";
 
 .About {
-    p + h2 {
+    p + h2,
+    ul + h2 {
         margin-top: lengths.$big;
         margin-bottom: lengths.$small;
     }
