@@ -1,10 +1,8 @@
 ---
 title: Week 1 Discussion Notes
-date: "2021-01-05"
+date: "2022-01-06"
 tags:
-    - symbols
-    - set theory
-    - counterexamples
+    - metric spaces
 publish: yes
 ---
 
@@ -12,212 +10,192 @@ publish: yes
 
 ## Table of Contents
 
-## Symbols
+## Metric Spaces
 
-<definition>
+When working with metric spaces, there are two main examples you want to have in mind:
 
--   $\forall\: =$ "for all" or "for any" or "for every"
--   $\exists\: =$ "there exists"
--   $\in\: =$ "is in" or "is an element of"
--   $\implies\: =$ "implies"
--   $\subseteq\: =$ "subset"
--   $\subsetneq\: =$ "proper subset"
+1. $\p{\R, \abs{\,\cdot\,}}$, which is useful to have in the back of your mind when doing proofs for general metric spaces.
+2. $\p{\R^2, \text{Euclidean distance}}$, which is useful when drawing pictures (this will be an especially helpful example when we get to point-set topology).
 
-</definition>
+<definition> metric spaces
 
-These will be your best friends in this class, so get used to using them all the time.
+Let $X$ be a non-empty set. A function $\func{d}{X \times X}{\pco{0, \infty}}$ is called a **metric** on $X$ if:
 
-<remark>
+1. $d\p{x, y} = 0 \iff x = y$
+2. (symmetry) $d\p{x, y} = d\p{y, x}$
+3. (triangle inequality) $d\p{x, y} \leq d\p{x, z} + d\p{z, y}$
 
-A weird thing is that a lot of mathematicians use "$\subset$" and "$\subseteq$" to mean the same thing, even though everyone uses "$<$" and "$\leq$" mean different things.
-
-</remark>
-
-## Set Theory
-
-### Common Sets
-
-Here are some very common sets that we'll be using throughout the class:
-
--   $\emptyset\: =$ "empty set"
--   $\N = \set{1, 2, 3, \ldots} =$ "natural numbers" (in our textbook, natural numbers start at $1$, but that might not be the case in other books)
--   $\Z = \set{\ldots, -2, -1, 0, 1, 2, \ldots} =$ "integers"
--   $2\Z = \set{2n \mid n \in \Z} =$ "even integers"
--   $\Q =$ "rational numbers"
--   $\R =$ "real numbers"
-
-We will be covering the construction of these sets (especially $\Q$ and $\R$) in great detail a little later in the class, but these are the sets that you "know" already.
-
-<remark>
-
-$\emptyset$ is a subset of every set. The idea goes like this: if $\emptyset$ were **not** a subset of $A$, then there exists $x \in \emptyset$ such that $x \notin A$. But $\emptyset$ has no elements, so $\emptyset \subseteq A$. This is an example of a [vacuous truth](https://en.wikipedia.org/wiki/Vacuous_truth).
-
-</remark>
-
-### Set Operations
-
-<definition>
-
-Let $A, B$ be sets. Then
-
-1. The **union** of $A$ and $B$ is $A \cup B = \set{x \mid x \in A \text{ or } x \in B}$.
-2. The **intersection** of $A$ and $B$ is $A \cap B = \set{x \mid x \in A \text{ and } x \in B}$.
-3. The **complement** of $A$ is $A^\comp = \set{x \mid x \notin A}$.
+The tuple $\p{X, d}$ is called a **metric space**.
 
 </definition>
 
-Let's understand these one-by-one:
-
-1. Taking the union of $A$ and $B$ just means dumping everything in $A$ and everything in $B$ into one bigger set.
-2. The intersection of $A$ and $B$ means everything that's in both sets.
-3. The complement of $A$ is everything that's outside of $A$ (i.e., everything that's not an element of $A$).
-
-Now that we have some basic set operations, it's natural to ask what happens when we mix them together:
-
-<proposition> De Morgan's laws
-
-Let $A, B$ be sets. Then
-
-1. $\p{A \cup B}^\comp = A^\comp \cap B^\comp$
-2. $\p{A \cap B}^\comp = A^\comp \cup B^\comp$
-
-</proposition>
-
-<proof>
-
-(i): If $x \in A \cup B$, then $x$ is in _at least one_ of $A$ or $B$. The negation of "at least one" is "none," so $x \notin A \cup B$ if and only if $x \notin A$ and $x \notin B$, which means
-
-$$
-\p{A \cup B}^\comp
-    = \set{x \mid x \notin A \text{ and } x \notin B}
-    = A^\comp \cap B^\comp.
-$$
-
-Here's the picture:
-
-<img src="{{ assetsFolder }}/images/demorgan-acupb.png" width=100% />
-
-(ii): The idea is the same: if $x \in A \cap B$, then $x$ is in _both_ $A$ and $B$. The negation of "both" is "at most one," so $x \notin A \cap B$ if and only if $x \notin A$ or $x \notin B$. This means
-
-$$
-\p{A \cap B}^\comp
-    = \set{x \mid x \notin A \text{ or } x \notin B}
-    = A^\comp \cup B^\comp.
-$$
-
-</proof>
-
-<exercise>
-
-Draw a picture for $\p{A \cap B}^\comp$.
-
-</exercise>
+In analysis, one of the most important concepts is convergence, i.e., limits:
 
 <definition>
 
-Let $A, B$ be sets. Then
+Let $\p{X, d}$ be a metric space. We say that a sequence $\p{x_n}$ **converges** to $x$ with respect to the metric $d$ if $\lim_{n\to\infty} d\p{x_n, x} = 0$.
 
-1. The **power set** of $A$ is $\pow\p{A} = \set{B \mid B \subseteq A}$.
-2. The **cartesian product** of $A$ and $B$ is $A \times B = \set{\p{a, b} \mid a \in A \text{ and } x \in B}$.
+Equivalently, if for any $\epsilon > 0$, there exists $N$ such that if $n \geq N$, then $d\p{x_n, x} < \epsilon$.
 
 </definition>
 
-Like before, here's a less mathy way of looking at these sets:
-
-1. The power set of $A$ is the set of subsets of $A$, so it's a _set of sets_.
-2. The cartesian product of $A$ and $B$ just means you pick one element of $A$ and one element of $B$ and put them in a pair.
+### Motivation
 
 <example>
 
-If $A = \set{0, 1, 2}$, then
+Let $X = C\p{\br{0, 1}}$ be the set of continuous functions on the interval $\br{0, 1}$. We will consider two metrics on this set:
 
 $$
-\pow\p{A}
-    = \set{\emptyset, \set{0}, \set{1}, \set{2}, \set{0, 1}, \set{0, 2}, \set{1, 2}, \set{0, 1, 2}}.
+\begin{aligned}
+    d_1\p{f, g} &= \int_0^1 \abs{f\p{x} - g\p{x}} \,\diff{x} \\
+    d_2\p{f, g} &= \sup_{x \in \br{0,1}} \abs{f\p{x} - g\p{x}}
+\end{aligned}
 $$
+
+(In the live discussion, I flipped these.)
+
+Consider the sequence $f_n\p{x} = x^n$. In the first metric,
+
+$$
+d_1\p{f_n, 0}
+    = \int_0^1 x^n \,\diff{x}
+    = \frac{1}{n + 1}
+    \xrightarrow{n\to\infty} 0.
+$$
+
+In the second metric,
+
+$$
+d_2\p{f_n, 0}
+    = \sup_{x \in \br{0,1}} x^n
+    = 1.
+$$
+
+Our calculations show that $f_n$ converges to $0$ with respect to $d_1$ (which is called the $L^1$-metric), but it does _not_ converge with respect to $d_2$ (which is called the $\sup$-metric or $L^\infty$-metric).
+
+**Moral:** Different metrics capture different types of convergence.
+
+In analysis, one of the central concepts is convergence, and metrics are an important way to describe the type of convergence we have.
 
 </example>
-
-<example>
-
-If $A = \set{\emptyset, 1}$, then
-
-$$
-\pow\p{A}
-    = \set{\emptyset, \set{\emptyset}, \set{1}, \set{\emptyset, 1}}.
-$$
-
-Notice that $A \neq \set{1}$ and that $\emptyset$ is _both_ a subset of $A$ and an element of $A$.
-
-</example>
-
-<example>
-
-$\R \times \R = \set{\p{x, y} \mid x \in \R \text{ and } y \in \R}$. This is the 2D plane, and we also write it as $\R^2$.
-
-</example>
-
-## Counterexamples
-
-It's good to know a lot of counterexamples to prevent you from writing down things that are wrong. A lot of times, something is "intuitively true," but turns out to be false. For example, when I took Calc AB in high school, I wrote something like this:
-
-> Since $f$ is continuous, it is differentiable somewhere.
-
-I now know how wrong I was, but as a beginner, this made sense to me since it was true for every example I could think of. The issue was that I wasn't exposed to enough counterexamples. This statement is false because there are [functions which are continuous everywhere, but differentiable nowhere](https://en.wikipedia.org/wiki/Weierstrass_function).
 
 ### Examples
 
-<example>
+<example> (Exercise 1.1.10)
 
-True or false: _If $f$ is continuous at $x_0$, then it's continuous on an interval containing $x_0$._
+Let $X = \R^n$ and let
+
+$$
+\begin{aligned}
+    d_{\ell^2}\p{x, y} &= \p{\sum_{i=1}^n \abs{x_i - y_i}^2}^{1/2}, \\
+    d_{\ell^\infty}\p{x, y} &= \sup_{1 \leq i \leq n} \abs{x_i - y_i}.
+\end{aligned}
+$$
+
+Show that
+
+$$
+\frac{1}{\sqrt{n}} d_{\ell^2}\p{x, y} \leq d_{\ell^\infty}\p{x, y} \leq d_{\ell^2}\p{x, y}.
+$$
 
 </example>
 
 <solution>
 
-This one is false. For example,
+There are two inequalities to show:
 
 $$
-f\p{x}
-    =
-        \begin{cases}
-            x & \text{if } x \in \Q, \\
-            0 & \text{otherwise}.
+\frac{1}{\sqrt{n}} d_{\ell^2}\p{x, y} \leq d_{\ell^\infty}\p{x, y}
+\quad\text{and}\quad
+d_{\ell^\infty}\p{x, y} \leq d_{\ell^2}\p{x, y}.
+$$
+
+Let's start with the first one. Notice that by definition of a supremum,
+
+$$
+\abs{x_i - y_i} \leq d_{\ell^\infty}\p{x, y}
+$$
+
+for any $1 \leq i \leq n$. Thus,
+
+$$
+\begin{aligned}
+    d_{\ell^2}\p{x, y}
+        &= \p{\sum_{i=1}^n \abs{x_i - y_i}^2}^{1/2} \\
+        &\leq \p{\sum_{i=1}^n d_{\ell^\infty}\p{x, y}^2}^{1/2} \\
+        &= \p{n d_{\ell^\infty}\p{x, y}^2}^{1/2} \\
+        &= \sqrt{n} d_{\ell^\infty}\p{x, y} \\
+    \implies
+    \frac{1}{\sqrt{n}} d_{\ell^2}\p{x, y}
+        &\leq d_{\ell^\infty}\p{x, y},
+\end{aligned}
+$$
+
+which proves the first inequality. For the second inequality, we want to prove a statement about a supremum-we want to show that
+
+$$
+\sup_{1 \leq i \leq n} \abs{x_i - y_i}
+    \leq d_{\ell^2}\p{x, y}.
+$$
+
+When you want to prove something like this, you almost _never_ want to find an inequality with the supremum directly. Instead, you want to find an upper bound for every element you take the supremum of, i.e., you want to find an upper bound for $\abs{x_k - y_k}$ that works for each $1 \leq k \leq n$ (I switched to $k$ here since I want to use $i$ for the index in the sum):
+
+$$
+\begin{aligned}
+    \abs{x_k - y_k}
+        &= \p{\abs{x_k - y_k}^2}^{1/2} \\
+        &\leq \p{\sum_{i=1}^n \abs{x_k - y_k}^2}^{1/2} \\
+        &= d_{\ell^2}\p{x, y}.
+\end{aligned}
+$$
+
+Thus, $d_{\ell^2}\p{x, y}$ is an upper bound for the set $\set{\abs{x_i - y_i} \mid 1 \leq i \leq n}$, so because the supremum is the _least_ upper bound, you immediately get
+
+$$
+d_{\ell^\infty}\p{x, y}
+    = \sup_{1 \leq i \leq n} \abs{x_i - y_i}
+    \leq d_{\ell^2}\p{x, y}.
+$$
+
+</solution>
+
+<example> (Exercise 1.1.13)
+
+Let $X$ be any set, and let $d$ be the discrete metric on $X$:
+
+$$
+d\p{x, y}
+    =   \begin{cases}
+            0 & \text{if } x = y, \\
+            1 & \text{if } x \neq y.
         \end{cases}
 $$
 
-The graph looks something like this:
-
-<img src="{{ assetsFolder }}/images/continuous-one-point.png" width=400px />
-
-At any point $x \neq 0$ you're going to "jump" between the lines $y = 0$ and $y = x$, so you're discontinuous if $x \neq 0$. However, if you follow both lines to $x = 0$, they both converge to $0$, which is why $f$ is continuous at $x = 0$.
-
-</solution>
-
-<example>
-
-True or false: _If $f_n$ is continuous and converges to the $0$ function, then $\int_0^1 f_n\p{x} \,\diff{x}$ converges to $0$ also._
+Show that $\p{x_n}$ converges to $x$ with respect to the discrete metric if and only if there exists an $N$ such that $x_n = x$ for all $n \geq N$.
 
 </example>
 
 <solution>
 
-This is false. See this [Desmos graph](https://www.desmos.com/calculator/hzycszqche).
+There are two implications to prove:
 
-To see why $f_n$ converges to $0$, you can slide $x_0$ to be any number in $\br{0, 1}$. You'll see that if $n$ is large enough, then the spike won't include $x = x_0$. But no matter what $n$ is, my example always has $\int_0^1 f_n\p{x} \,\diff{x} = 1$, so the integrals can't converge to $0$.
+"$\impliedby$"
+
+Assume that there exists $N$ such that $x_n = x$ for all $n \geq N$. Given any $\epsilon > 0$, if $n \geq N$, then
+
+$$
+d\p{x_n, x}
+    = d\p{x, x}
+    = 0
+    < \epsilon.
+$$
+
+Thus, $\p{x_n}$ converges to $x$ with respect to the discrete metric. (We never used the fact that $d$ is the discrete metric, so in this case, $\p{x_n}$ actually converges to $x$ with respect to _any_ metric.)
+
+"$\implies$"
+
+Now assume that $\p{x_n}$ converges to $x$ with respect to the discrete metric. This means that given _any_ $\epsilon > 0$, there exists $N$ such that if $n \geq N$, then $d\p{x_n, x} < \epsilon$.
+
+Here, we will need to use the fact that $d$ is the discrete metric: if we pick $\epsilon = \frac{1}{2}$, then there exists an $N$ so that if $n \geq N$, then $d\p{x_n, x} < \frac{1}{2}$. But $d$ is the discrete metric, so the only way this can occur is if $d\p{x_n, x} = 0$, i.e., $x_n = x$. Thus, we have shown that if $n \geq N$, then $x_n = x$, which was what we wanted to show.
 
 </solution>
-
-<example>
-
-True or false: _If $f$ is continuous, then the image of $\p{a, b}$ is still an interval._ (An interval is anything of the form $\p{c, d}, \pco{c, d}, \poc{c, d}$, or $\br{c, d}$.)
-
-</example>
-
-<solution>
-
-This is true because of the intermediate value theorem (it's a bit technical to explain in detail, though, but we'll revisit this in the future). This is also related to something called [connectedness](https://en.wikipedia.org/wiki/Connected_space), which is covered in MATH 131B.
-
-</solution>
-
-The main takeaway from these examples is that there is bad intuition and good intuition. Knowing counterexamples helps you get rid of the bad intuition, which helps you avoid making mistakes.

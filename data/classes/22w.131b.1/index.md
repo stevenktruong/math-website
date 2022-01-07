@@ -12,12 +12,13 @@ discussions:
       link: https://ucla.zoom.us/j/92204020783?pwd=ZWRZbDJMWDc0aVJobGhkbXF0KzdIZz09
 officeHours:
     - section: 1A
-      days: TBD
-      time: TBD - TBD
-      location: TBD
+      days: R
+      time: 12:00pm - 1:00pm
+      location: Zoom
+      link: https://ucla.zoom.us/j/92204020783?pwd=ZWRZbDJMWDc0aVJobGhkbXF0KzdIZz09
 links:
-    # - title: CCLE
-    #   url: https://ccle.ucla.edu/course/view/21W-MATH131A-4
+    - title: Bruin Learn
+      url: https://bruinlearn.ucla.edu/courses/77012
 ---
 
 ## Table of Contents
@@ -53,10 +54,10 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Resources
 
 -   [Student Math Center](https://ww3.math.ucla.edu/my-calendar/)
-    <!-- -   Mine are 5:00pm - 6:00pm every Thursday -->
+    -   Mine are 11:00am - 12:00pm every Friday
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
 -   [MIT OCW 18.100A (Introduction to Analysis)](https://ocw.mit.edu/courses/mathematics/18-100b-analysis-i-fall-2010/)
 
-<!-- ## Notes
+## Notes
 
--   notes::week-1.md -->
+-   notes::week-1.md

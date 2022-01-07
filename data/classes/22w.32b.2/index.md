@@ -17,10 +17,12 @@ discussions:
       link: https://ucla.zoom.us/j/92072800014?pwd=azh1dk9aQXVNOWF3aTZnR1ZSdFdzZz09
 officeHours:
     - section: 2C, 2D
-      days: TBD
-      time: TBD - TBD
+      days: T
+      time: 11:00am - 12:00pm
+      location: Zoom
+      link: https://ucla.zoom.us/j/92072800014?pwd=azh1dk9aQXVNOWF3aTZnR1ZSdFdzZz09
 links:
-    - title: Canvas
+    - title: Bruin Learn
       url: https://bruinlearn.ucla.edu/courses/76976
     - title: Campuswire
       url: https://campuswire.com/c/G2DB2EE08/
@@ -38,7 +40,7 @@ Following the school's COVID-19 policies, masks will be required for in-person d
 
 The password to all of my Zoom meetings for this class is `fubini`.
 
-For the first two week of this quarter, our discussions will be on Zoom. I will be recording and uploading any parts where I give a lecture.
+For the first two week of this quarter, our discussions will be on Zoom. I will be recording and uploading any parts where I lecture to Bruin Learn.
 
 ### Office Hours
 
@@ -48,6 +50,8 @@ If you're unable to attend my office hours for any reason, feel free to send me 
 
 I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Also, please address me as Steven.
 
+**If you want to ask about grades or anything about the assignments, please e-mail Koffi instead.**
+
 ## Announcements
 
 -   | 1/2/22 | Please fill out this [form](https://forms.gle/PRM9ba5AgKNtyFe3A) to help me schedule office hours.
@@ -55,12 +59,12 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Resources
 
 -   [Student Math Center](https://ww3.math.ucla.edu/my-calendar/)
-    <!-- -   Mine are 5:00pm - 6:00pm every Thursday -->
+    -   Mine are 11:00am - 12:00pm every Friday
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
 -   [GeoGebra 3D Calculator](http://geogebra.org/3d)
 -   [Symbolab Calculator](https://www.symbolab.com/solver/calculus-calculator)
 -   [Paul's Online Notes](https://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx)
 
-<!-- ## Notes
+## Notes
 
--   notes::week-1.md -->
+-   notes::week-1.md
