@@ -11,5 +11,10 @@
     "\\pow": "\\mathcal{P}",
     "\\Q": "\\mathbb{Q}",
     "\\epsilon": "\\varepsilon",
-    "\\func": "#1\\colon #2 \\to #3"
+    "\\func": "#1\\colon #2 \\to #3",
+    "\\Int": "\\operatorname{Int}",
+    "\\Ext": "\\operatorname{Ext}",
+    "\\bd": "\\partial",
+    "\\cl": "\\overline",
+    "\\st": "\\:\\middle\\vert\\:"
 }
