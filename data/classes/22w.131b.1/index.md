@@ -39,6 +39,12 @@ For the month of January, our discussions will be on Zoom. I'll be recording the
 
 If you haven't already, this is a good time to learn how to use LaTeX and start typing up your homework assignments. I recommend using [Overleaf](https://www.overleaf.com/) if you've never typed up math before. **This is not a requirement**, so you can still write up your homework however you like (e.g., with a tablet, scanning a separate sheet of paper, etc.) as long as I can read it.
 
+Here's how homework will be graded:
+
+-   In every homework assignment, each problem will be worth the same number of points.
+-   I will choose ~3 problems to grade for correctness, and the remaining problems will be graded for completion.
+    -   What I consider "complete" is at my own discretion, but as a rule of thumb, if you wrote down what you think is a correct solution, then you will get full points for that problem.
+
 ### Office Hours
 
 If you're unable to attend my office hours, then feel free to send me an e-mail and we can set up an appointment to meet at a different time.
