@@ -14,9 +14,11 @@
     "\\pow": "\\mathcal{P}",
     "\\Q": "\\mathbb{Q}",
     "\\epsilon": "\\varepsilon",
+    "\\phi": "\\varphi",
     "\\func": "#1\\colon #2 \\to #3",
     "\\dne": "\\mathrm{DNE}",
     "\\arcsec": "\\operatorname{arcsec}",
     "\\arccsc": "\\operatorname{arccsc}",
-    "\\arccot": "\\operatorname{arccot}"
+    "\\arccot": "\\operatorname{arccot}",
+    "\\st": "\\:\\middle\\vert\\:"
 }
