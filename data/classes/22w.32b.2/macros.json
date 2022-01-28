@@ -20,5 +20,6 @@
     "\\arcsec": "\\operatorname{arcsec}",
     "\\arccsc": "\\operatorname{arccsc}",
     "\\arccot": "\\operatorname{arccot}",
+    "\\Jac": "\\operatorname{Jac}",
     "\\st": "\\:\\middle\\vert\\:"
 }
