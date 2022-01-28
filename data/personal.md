@@ -16,7 +16,9 @@ I'm a second year Ph.D. student at the [UCLA Department of Mathematics](https://
 
 You're welcome to come to any of my office hours, but if there are too many students, I'll be prioritizing the students in the specified class.
 
-All my office hours will be online until the administration allows us to return in-person (currently, we are planning to return in-person on January 31st). Once this happens, all of my office hours will be held in-person in my office with the exception of my open office hours, which will be online all quarter.
+All my office hours will be online until lectures and discussions are all in-person. Currently, the math department has requires all instruction to be online until Week 7, i.e., until Monday, February 14th.
+
+Once this happens, all of my office hours will be held in-person in my office with the exception of my open office hours, which will be online all quarter.
 
 ### Zoom
 
