@@ -33,7 +33,7 @@ Following the school's COVID-19 policies, masks will be required for in-person d
 
 The password to all of my Zoom meetings for this class is `epsilon`.
 
-For the month of January, our discussions will be on Zoom. I'll be recording these discussions and uploading them to Canvas.
+I'll be recording discussions and linking them to Canvas for as long as we stay on Zoom.
 
 ### Homework
 
@@ -71,3 +71,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   notes::week-3.md
 -   notes::week-4.md
 -   notes::week-5.md
+-   notes::week-6.md

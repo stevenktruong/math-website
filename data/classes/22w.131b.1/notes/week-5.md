@@ -179,13 +179,13 @@ Thus, setting $\delta = \epsilon$ works.
 
 </solution>
 
-## Compactness and Continuity
+### Compactness and Continuity
 
-<prop>
+<proposition>
 
 Let $\func{f}{\p{X, d_X}}{\p{Y, d_Y}}$ be continuous. Then for any compact set $K \subseteq X$, its image $f\p{K} \subseteq Y$ is compact.
 
-</prop>
+</proposition>
 
 Usually, we say "the continuous image of a compact set is compact."
 
