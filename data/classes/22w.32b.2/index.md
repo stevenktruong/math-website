@@ -75,3 +75,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   notes::week-6.md
 -   notes::week-7.md
 -   notes::week-8.md
+-   notes::week-9.md
