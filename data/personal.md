@@ -1,5 +1,5 @@
 ---
-fullName: Steven Truong
+fullName: Steven Trương
 pronouns: he / him / his
 office: Mathematical Sciences 2961
 email: steven [at] math [dot] ucla [dot] edu
@@ -16,13 +16,15 @@ I'm a second year Ph.D. student at the [UCLA Department of Mathematics](https://
 
 You're welcome to come to any of my office hours, but if there are too many students, I'll be prioritizing the students in the specified class.
 
-This quarter, all my office hours will be online.
+My office hours for Spring 2022 haven't been decided yet.
+
+<!-- This quarter, all my office hours will be online.
 
 ### Zoom
 
 -   Tuesdays, 11:00am - 12:00pm (MATH 32B, [Zoom](https://ucla.zoom.us/j/92072800014?pwd=azh1dk9aQXVNOWF3aTZnR1ZSdFdzZz09))
 -   Thursdays, 12:00pm - 1:00pm (MATH 131B, [Zoom](https://ucla.zoom.us/j/92204020783?pwd=ZWRZbDJMWDc0aVJobGhkbXF0KzdIZz09))
--   Fridays, 11:00am - 12:00pm (Open Office Hours, [Zoom](https://ucla.zoom.us/j/91283877691?pwd=VFdIMk10RExMcXM4cTF1azNIUnBFUT09))
+-   Fridays, 11:00am - 12:00pm (Open Office Hours, [Zoom](https://ucla.zoom.us/j/91283877691?pwd=VFdIMk10RExMcXM4cTF1azNIUnBFUT09)) -->
 
 ## Personal
 
