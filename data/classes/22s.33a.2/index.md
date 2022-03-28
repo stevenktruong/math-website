@@ -43,14 +43,14 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 
 **If you want to ask anything about grades or extensions, please e-mail Professor Rose instead.**
 
-<!-- ## Announcements
+## Announcements
 
--   | 1/2/22 | Please fill out this [form](https://forms.gle/PRM9ba5AgKNtyFe3A) to help me schedule office hours. -->
+-   | 3/28/22 | Please fill out this [form](https://forms.gle/rpyxfNkby6seBDnv9) to help me schedule office hours.
 
 ## Resources
 
 -   [Student Math Center](https://ww3.math.ucla.edu/my-calendar/)
-    <!-- -   Mine are 11:00am - 12:00pm every Friday -->
+    -   Mine are 3:00pm - 4:00pm every Wednesday
 -   [Essence of linear algebra, 3Blue1Brown](https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
     -   Great YouTube series for visualizing linear algebra, but not a replacement for lectures!
 
