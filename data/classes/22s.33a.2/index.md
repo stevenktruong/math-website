@@ -29,10 +29,6 @@ links:
 
 ## Policies
 
-### COVID-19
-
-Following the school's COVID-19 policies, masks will be required for in-person discussions and office hours until April 11th, unless you have an exemption.
-
 ### Office Hours
 
 If you're unable to attend my office hours for any reason, feel free to send me an e-mail and we can set up an appointment to meet at a different time and place, including evenings and over Zoom.

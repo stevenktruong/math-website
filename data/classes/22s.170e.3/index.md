@@ -23,9 +23,9 @@ links:
 
 ## Policies
 
-### COVID-19
+### Zoom
 
-Following the school's COVID-19 policies, masks will be required for in-person discussions and office hours until April 11th, unless you have an exemption.
+Discussions will be held in-person, but I'll also broadcast them live. ([Zoom](https://ucla.zoom.us/j/96801067704))
 
 ### Homework
 
@@ -38,6 +38,8 @@ The homework will be graded as follows:
 ### Participation
 
 Each discussion, I will check the attendance of 6-7 students chosen at random. I'll have a photo roster with me, so please don't try to check in for a different student.
+
+If you're joining the discussion over Zoom, please be prepared to turn on your camera briefly so that I can make sure you're actually there.
 
 ### Office Hours
 
