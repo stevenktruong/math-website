@@ -15,8 +15,8 @@ discussions:
       location: Mathematical Sciences 5137
 officeHours:
     - section: 2C, 2D
-      days: TBD
-      time: TBD - TBD
+      days: M
+      time: 3:00pm - 4:00pm
       location: Mathematical Sciences 2961
 links:
     - title: Bruin Learn
@@ -37,7 +37,7 @@ If you're unable to attend my office hours for any reason, feel free to send me 
 
 I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Also, please address me as Steven.
 
-**If you want to ask anything about grades or extensions, please e-mail Professor Rose instead.**
+**If you want to ask anything relating to grades or extensions, please e-mail Professor Rose instead.**
 
 ## Announcements
 
