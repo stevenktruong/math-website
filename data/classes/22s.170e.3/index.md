@@ -56,7 +56,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Resources
 
 -   [Student Math Center](https://ww3.math.ucla.edu/my-calendar/)
-    -   Mine are 3:00pm - 4:00pm every Wednesday
+    -   Mine are 1:00pm - 2:00pm every Thursday
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
 
 <!-- ## Notes -->

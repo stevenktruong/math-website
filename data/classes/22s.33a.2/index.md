@@ -46,7 +46,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Resources
 
 -   [Student Math Center](https://ww3.math.ucla.edu/my-calendar/)
-    -   Mine are 3:00pm - 4:00pm every Wednesday
+    -   Mine are 1:00pm - 2:00pm every Thursday
 -   [Essence of linear algebra, 3Blue1Brown](https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
     -   Great YouTube series for visualizing linear algebra, but not a replacement for lectures!
 

@@ -28,7 +28,7 @@ Anyone is welcome to come to any of my office hours, but if too many people show
 
 ### Virtual
 
--   Wednesdays, 3:00pm - 4:00pm (Open Office Hours, [Zoom](https://ucla.zoom.us/j/91283877691?pwd=VFdIMk10RExMcXM4cTF1azNIUnBFUT09))
+-   Thursdays, 1:00pm - 2:00pm (Open Office Hours, [Zoom](https://ucla.zoom.us/j/91283877691?pwd=VFdIMk10RExMcXM4cTF1azNIUnBFUT09))
 
 ## Random
 
