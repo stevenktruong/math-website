@@ -1,3 +1,5 @@
+@use "lengths";
+
 $big: 1280px;
-$medium: 740px;
+$medium: calc(lengths.$content-width + 2*lengths.$big);
 $small: 480px;

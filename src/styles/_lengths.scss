@@ -9,8 +9,8 @@ $table-max-width: 500px;
 $quarter-name-width: 100px;
 
 // Width of content for large screens
-$left-side-width: calc((100vw - 700px) / 2);
 $content-width: 700px;
+$left-side-width: calc((100vw - $content-width) / 2);
 
 // Mobile navbar
 $mobile-navbar-height: 80px;
