@@ -31,9 +31,9 @@ Discussions will be held in-person, but I'll also broadcast them live. ([Zoom](h
 
 The homework will be graded as follows:
 
--   50% will be awarded for attempting to solve every problem completely.
+-   You must attempt to complete every problem on the homework, or else you will receive as zero on the whole assignment.
     -   What I consider "complete" is at my own discretion, but as a rule of thumb, if you wrote down what you think is a correct solution, then you will get full points for that problem.
--   The remaining 50% will be based on correctness of 2 problems chosen at random.
+-   Your total score will be based on the correctness of 2 problems chosen at random.
 
 ### Participation
 
@@ -52,6 +52,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Announcements
 
 -   | 3/28/22 | Please fill out this [form](https://forms.gle/HkmHm2KuE5LrWzgs9) to help me schedule office hours.
+-   | 4/11/22 | Please fill out this [form](https://forms.gle/CF2ATBfy6ewi8GXL6) so that I can adjust how I run discussion sections.
 
 ## Resources
 
