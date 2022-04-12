@@ -52,7 +52,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Announcements
 
 -   | 3/28/22 | Please fill out this [form](https://forms.gle/HkmHm2KuE5LrWzgs9) to help me schedule office hours.
--   | 4/11/22 | Please fill out this [form](https://forms.gle/CF2ATBfy6ewi8GXL6) so that I can adjust how I run discussion sections.
+-   | 4/11/22 | Please fill out this [form](https://forms.gle/Sko7CkrCWZdvmmzp8) so that I can adjust how I run discussion sections.
 
 ## Resources
 
