@@ -15,5 +15,8 @@
     "\\epsilon": "\\varepsilon",
     "\\phi": "\\varphi",
     "\\func": "#1\\colon #2 \\to #3",
-    "\\st": "\\:\\middle\\vert\\:"
+    "\\st": "\\:\\middle\\vert\\:",
+    "\\E": "\\mathbb{E}",
+    "\\Var": "\\operatorname{Var}",
+    "\\P": "\\mathbb{P}"
 }

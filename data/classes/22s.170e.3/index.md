@@ -60,4 +60,6 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
     -   Mine are 1:00pm - 2:00pm every Thursday
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
 
-<!-- ## Notes -->
+## Notes
+
+-   notes::week-4.md
