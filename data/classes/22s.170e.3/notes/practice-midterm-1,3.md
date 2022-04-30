@@ -24,10 +24,10 @@ A bridge hand is found by taking $13$ cards at random and without replacement fr
     \boxed{\frac{\binom{13}{5} \binom{13}{2} \binom{13}{2} \binom{13}{4}}{\binom{52}{13}}}.
     $$
 
-2. The condition just tells us that we need three cards of each suit, and the last card can be anything it wants to be. For each suit, there are $\binom{13}{3}$ ways to pick three cards, which means we've chosen a total of $12$ cards. So, there are $52 - 12 = 40$ cards left, and there are $\binom{40}{1}$ ways to pick one card from those. Thus, the answer is
+2. The condition just tells us that our hand should have $3$ cards for $3$ of the suits, and $4$ cards for the final suit. So, we need to pick the suit that gets $4$ cards, and then pick our cards accordingly. We get
 
     $$
-    \boxed{\frac{\binom{13}{3} \binom{13}{3} \binom{13}{3} \binom{13}{3} \binom{40}{1}}{\binom{52}{13}}}.
+    \boxed{\binom{4}{1} \frac{\binom{13}{4} \binom{13}{3} \binom{13}{3} \binom{13}{3}}{\binom{52}{13}}}.
     $$
 
 </solution>
