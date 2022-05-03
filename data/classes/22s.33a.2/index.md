@@ -15,8 +15,8 @@ discussions:
       location: Mathematical Sciences 5137
 officeHours:
     - section: 2C, 2D
-      days: M
-      time: 3:00pm - 4:00pm
+      days: T
+      time: 2:00pm - 3:00pm
       location: Mathematical Sciences 2961
 links:
     - title: Bruin Learn
@@ -42,6 +42,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Announcements
 
 -   | 3/28/22 | Please fill out this [form](https://forms.gle/rpyxfNkby6seBDnv9) to help me schedule office hours.
+-   | 4/2/22 | My office hours have moved to Tuesdays, 2pm - 3pm.
 
 ## Resources
 

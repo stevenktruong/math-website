@@ -23,8 +23,8 @@ Anyone is welcome to come to any of my office hours, but if too many people show
 
 ### In-Person ({{ office }})
 
--   Mondays, 3:00pm - 4:00pm (MATH 33A)
 -   Tuesdays, 1:00pm - 2:00pm (MATH 170E)
+-   Tuesdays, 2:00pm - 3:00pm (MATH 33A)
 
 ### Virtual
 
