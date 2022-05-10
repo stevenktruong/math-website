@@ -64,3 +64,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 
 -   notes::week-4.md
 -   notes::practice-midterm-1,3.md
+-   notes::week-6.md
