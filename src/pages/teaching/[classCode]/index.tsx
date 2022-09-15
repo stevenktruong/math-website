@@ -99,12 +99,12 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context: Get
     }
 
     // Parse notes syntax into a link to the note
-    contentHtml = contentHtml.replace(
-        new RegExp("notes::(.+?).md", "g"),
-        (match, noteName) =>
-            `<a href="${publicRuntimeConfig.staticFolder}/teaching/${classCode}/${noteName}">${
-                clazz.notes[noteName].getMeta().title
-            }</a>` + noteTagsFormatting(clazz.notes[noteName].getMeta().tags)
+    contentHtml = contentHtml.replace(new RegExp("notes::(.+?).md", "g"), (match, noteName) =>
+        noteName in clazz.notes
+            ? `<a href="${publicRuntimeConfig.staticFolder}/teaching/${classCode}/${noteName}">${
+                  clazz.notes[noteName].getMeta().title
+              }</a>` + noteTagsFormatting(clazz.notes[noteName].getMeta().tags)
+            : match
     );
 
     return {
