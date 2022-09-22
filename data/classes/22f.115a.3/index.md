@@ -11,31 +11,35 @@ discussions:
       location: Mathematical Sciences 5127
 officeHours:
     - section: 3B
-      days: TBD
-      time: TBD - TBD
+      days: T
+      time: 11:00am - 12:00pm
       location: Mathematical Sciences 2961
 links:
     - title: Bruin Learn
       url: https://bruinlearn.ucla.edu/courses/141805
+    - title: Campuswire
+      url: https://campuswire.com/c/G0DB3D8D7
+    - title: Discord
+      url: https://discord.gg/69N9pC3Vte
 ---
 
 ## Table of Contents
 
 ## Policies
 
+### Discussion Sections
+
+In this class, **discussion attendance is required each Tuesday and Thursday**. If for any reason you can't attend, please let me know as soon as possible.
+
 ### Homework
 
-If you haven't already, this is a good time to learn how to use LaTeX and start typing up your homework assignments. I recommend using [Overleaf](https://www.overleaf.com/learn/latex/Tutorials) if you've never typed up math before. **This is not a requirement**, so you can still write up your homework however you like (e.g., with a tablet, scanning a separate sheet of paper, etc.) as long as I can read it.
+In this class, **typing up your homework is required**. I recommend using [Overleaf](https://www.overleaf.com/learn/latex/Tutorials) if you've never typed up math before.
 
-<!-- Here's how homework will be graded:
-
--   In every homework assignment, each problem will be worth the same number of points.
--   I will choose ~3 problems to grade for correctness, and the remaining problems will be graded for completion.
-    -   What I consider "complete" is at my own discretion, but as a rule of thumb, if you wrote down what you think is a correct solution, then you will get full points for that problem. -->
+Homework should be turned in through Gradescope, and it will be graded by a reader. This means that **none of the TA's are grading your homework**.
 
 ### Office Hours
 
-If you're unable to attend my office hours, then feel free to send me an e-mail and we can set up an appointment to meet at a different time.
+If you're unable to attend my office hours, then feel free to send me an e-mail and we can set up an appointment to meet at a different time. You're also free to go to any other instructor's office hours (a list can be found in the syllabus).
 
 ### E-mails
 
