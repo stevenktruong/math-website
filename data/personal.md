@@ -18,7 +18,11 @@ Anyone is welcome to come to any of my office hours, but if too many people show
 
 ### In-Person ({{ office }})
 
+-   Mondays, 11:00am - 12:00pm (MATH 170A)
+
 -   Tuesdays, 11:00am - 12:00pm (MATH 115A)
+
+-   Thursdays, 11:00am - 12:00pm (open)
 
 ## Random
 
