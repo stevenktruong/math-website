@@ -11,8 +11,8 @@ discussions:
       location: Mathematical Sciences 5118
 officeHours:
     - section: 1A
-      days: TBD
-      time: TBD - TBD
+      days: M
+      time: 11:00am - 12:00pm
       location: Mathematical Sciences 2961
 links:
     - title: Bruin Learn
@@ -41,9 +41,9 @@ If you're unable to attend my office hours, then feel free to send me an e-mail 
 
 I'm usually quick to respond to e-mails, so if you don't get a reply by the end of the day, feel free to send another one. Also, please address me as Steven.
 
-<!-- ## Announcements
+## Announcements
 
--   | 1/2/22 | Please fill out this [form](https://forms.gle/UWCaUhvhfRjr3v4c8) to help me schedule office hours. -->
+-   | 9/22/22 | Please fill out this [form](https://forms.gle/QVYFLRep5WxS73DU6) to help me schedule office hours.
 
 <!-- ## Resources
 
