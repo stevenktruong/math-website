@@ -10,11 +10,13 @@ address:
 fax: +1 (310) 206-6673
 ---
 
-I'm a third year Ph.D. student at the [UCLA Department of Mathematics](https://ww3.math.ucla.edu/) (soon to be) researching random matrix theory. I was also an undergraduate at UCLA, where I obtained both my B.S. in Mathematics of Computation and my M.A. in Mathematics through the Departmental Scholars Program.
+I'm a third year Ph.D. student at the [UCLA Department of Mathematics](https://ww3.math.ucla.edu/) (soon to be) researching random matrix theory under my advisor [Jun Yin](https://www.math.ucla.edu/~jyin/). I was also an undergraduate at UCLA, where I obtained both my B.S. in Mathematics of Computation and my M.A. in Mathematics through the Departmental Scholars Program.
 
 ## Office Hours
 
-Anyone is welcome to come to any of my office hours, but if too many people show up, I'll be prioritizing the students in the specified class.
+I'm not teaching any classes this quarter, but feel free to reach out if you still want to ask me anything!
+
+<!-- Anyone is welcome to come to any of my office hours, but if too many people show up, I'll be prioritizing the students in the specified class.
 
 ### In-Person ({{ office }})
 
@@ -22,7 +24,7 @@ Anyone is welcome to come to any of my office hours, but if too many people show
 
 -   Tuesdays, 11:00am - 12:00pm (MATH 115A)
 
--   Thursdays, 11:00am - 12:00pm (open)
+-   Thursdays, 11:00am - 12:00pm (open) -->
 
 ## Random
 
