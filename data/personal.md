@@ -14,13 +14,13 @@ I'm a third year Ph.D. student at the [UCLA Department of Mathematics](https://w
 
 ## Office Hours
 
-I'm not teaching any classes this quarter, but feel free to reach out if you still want to ask me anything!
-
-<!-- Anyone is welcome to come to any of my office hours, but if too many people show up, I'll be prioritizing the students in the specified class.
+Anyone is welcome to come to any of my office hours, but if too many people show up, I'll be prioritizing the students in the specified class.
 
 ### In-Person ({{ office }})
 
--   Mondays, 11:00am - 12:00pm (MATH 170A)
+-   TBD
+
+<!-- -   Mondays, 11:00am - 12:00pm (MATH 170A)
 
 -   Tuesdays, 11:00am - 12:00pm (MATH 115A)
 
