@@ -11,8 +11,8 @@ discussions:
       location: Mathematical Sciences 6229
 officeHours:
     - section: 1A
-      days: TBD
-      time: TBD - TBD
+      days: T
+      time: 10:00am - 11:00am
       location: Mathematical Sciences 2961
 links:
     - title: Bruin Learn
