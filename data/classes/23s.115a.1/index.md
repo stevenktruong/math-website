@@ -53,15 +53,6 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 
 -   [Student Math Center](https://ww3.math.ucla.edu/student-math-center/)
 
-<!-- ## Notes
+## Notes
 
--   notes::week-1.md
--   notes::week-2.md
--   notes::week-3.md
--   notes::week-4.md
--   notes::week-5.md
--   notes::week-6.md
--   notes::week-7.md
--   notes::week-8.md
--   notes::week-9.md
--   notes::week-10.md -->
+-   notes::formal-calculus.md
