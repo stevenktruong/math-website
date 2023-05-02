@@ -56,3 +56,8 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Notes
 
 -   notes::formal-calculus.md
+
+## Solutions to Starred Problems
+
+-   notes::worksheet-1.md
+-   notes::worksheet-2.md

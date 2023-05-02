@@ -10,10 +10,10 @@
     "\\comp": "\\mathrm{c}",
     "\\pow": "\\mathcal{P}",
     "\\Q": "\\mathbb{Q}",
+    "\\C": "\\mathbb{C}",
+    "\\F": "\\mathbb{F}",
+    "\\conj": "\\overline",
     "\\epsilon": "\\varepsilon",
     "\\func": "#1\\colon #2 \\to #3",
-    "\\dne": "\\mathrm{DNE}",
-    "\\arcsec": "\\operatorname{arcsec}",
-    "\\arccsc": "\\operatorname{arccsc}",
-    "\\arccot": "\\operatorname{arccot}"
+    "\\span": "\\operatorname{span}"
 }
