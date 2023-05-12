@@ -64,3 +64,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   notes::worksheet-3.md
 -   notes::worksheet-4.md
 -   notes::worksheet-5.md
+-   notes::worksheet-6.md
