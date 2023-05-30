@@ -15,5 +15,6 @@
     "\\conj": "\\overline",
     "\\epsilon": "\\varepsilon",
     "\\func": "#1\\colon #2 \\to #3",
-    "\\span": "\\operatorname{span}"
+    "\\span": "\\operatorname{span}",
+    "\\tr": "\\operatorname{tr}"
 }
