@@ -7,6 +7,8 @@
     "\\poc": "\\mathopen{}\\left\\lparen #1 \\right\\rbrack\\mathclose{}",
     "\\abs": "\\mathopen{}\\left\\lvert #1 \\right\\rvert\\mathclose{}",
     "\\set": "\\mathopen{}\\left\\{ #1 \\right\\}\\mathclose{}",
+    "\\inner": "\\mathopen{}\\left\\langle #1 \\right\\rangle\\mathclose{}",
+    "\\norm": "\\mathopen{}\\left\\lVert #1 \\right\\rVert\\mathclose{}",
     "\\comp": "\\mathrm{c}",
     "\\pow": "\\mathcal{P}",
     "\\Q": "\\mathbb{Q}",
