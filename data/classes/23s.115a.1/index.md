@@ -68,3 +68,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   notes::worksheet-7.md
 -   notes::worksheet-8.md
 -   notes::worksheet-9.md
+-   notes::worksheet-10.md
