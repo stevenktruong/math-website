@@ -10,10 +10,12 @@ discussions:
       time: 1:00pm - 1:50pm
       location: Public Affairs Building 1222
 officeHours:
-    - section: TBD
-      days: TBD
-      time: TBD - TBD
+    - section: 1A
+      days: W
+      time: 4:00pm - 5:00pm
       location: Mathematical Sciences 2961
+    - days: R
+      time: 2:00pm - 3:00pm
 links:
     - title: Bruin Learn
       url: https://bruinlearn.ucla.edu/courses/171264
