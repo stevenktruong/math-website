@@ -8,6 +8,8 @@ publish: yes
 
 # Integrability of $\frac{1}{f}$
 
+## Table of Contents
+
 ## Swapping Argument
 
 This first section isn't too important, but I figured it'd be good for you to see the precise statement of the swapping argument done in class. (I did this in office hours, but I really overcomplicated it and made a mistake proving it, but this version should be correct.)
