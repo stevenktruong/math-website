@@ -5,10 +5,10 @@
     "main": "index.js",
     "scripts": {
         "clean": "rm -rf node_modules .next build && yarn",
-        "dev": "URL_ENV=development next",
+        "dev": "cross-env URL_ENV=development next",
         "build": "rm -rf build && next build && next export -o build",
-        "build:dev": "URL_ENV=development yarn build",
-        "build:prod": "URL_ENV=production yarn build",
+        "build:dev": "cross-env URL_ENV=development yarn build",
+        "build:prod": "cross-env URL_ENV=production yarn build",
         "analyze": "cross-env ANALYZE=true next build",
         "script:randomAnalysis": "node -r esm src/scripts/randomAnalysis.js",
         "script:problemsByTopic": "node -r esm src/scripts/problemsByTopic.js"

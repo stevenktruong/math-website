@@ -44,7 +44,7 @@ const counters = [
     },
 ];
 
-const boxedEnvironments = ["theorem", "definition", "proposition", "corollary"];
+const boxedEnvironments = ["theorem", "definition", "proposition", "lemma", "corollary"];
 
 export default class NotePage extends React.Component<Props> {
     render(): JSX.Element {
