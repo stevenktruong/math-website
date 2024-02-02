@@ -24,12 +24,14 @@ export class Class {
         this.index = new ClassIndex(path.join(classPath, Class.INDEX_FILE));
         this.macros = JSON.parse(fs.readFileSync(path.join(classPath, Class.MACROS_FILE), "utf8"));
         this.notes = {};
-        readDirectoryContents(path.join(classPath, Class.NOTES_DIR)).map(
-            (noteFileName) =>
-                (this.notes[path.parse(noteFileName).name] = new Note(
-                    path.join(classPath, Class.NOTES_DIR, noteFileName)
-                ))
-        );
+        readDirectoryContents(path.join(classPath, Class.NOTES_DIR))
+            .filter((noteFileName) => noteFileName.endsWith(".md"))
+            .map(
+                (noteFileName) =>
+                    (this.notes[path.parse(noteFileName).name] = new Note(
+                        path.join(classPath, Class.NOTES_DIR, noteFileName)
+                    ))
+            );
     }
 
     // Information contained just from the folder name
