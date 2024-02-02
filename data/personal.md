@@ -18,8 +18,8 @@ Anyone is welcome to come to any of my office hours, but if too many people show
 
 ### In-Person ({{ office }})
 
--   Wednesdays, 4:00pm - 5:00pm (MATH 131A)
--   Thursdays, 2:00pm - 3:00pm (MATH 131A)
+-   Tuesdays, 11:00am - 12:00pm (MATH 170S)
+-   Thursdays, 11:00am - 12:00pm (MATH 170S)
 
 ## Random
 
