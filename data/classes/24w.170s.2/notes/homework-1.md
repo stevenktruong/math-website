@@ -267,7 +267,7 @@ $$
 \begin{aligned}
   \P\p{Y_7 < 27.3}
     &= \sum_{k=7}^8 \P\p{X_1 < 27.3}^k \p{1 - \P\p{X_1 < 27.3}}^{8-k} \\
-    &= \boxed{\sum_{k=7}^8 \p{0.7}^k \p{0.3}^{8-k}}.
+    &= \boxed{\sum_{k=7}^8 \binom{8}{k} \p{0.7}^k \p{0.3}^{8-k}}.
 \end{aligned}
 $$
 
@@ -277,7 +277,7 @@ $$
 \begin{aligned}
   \P\p{Y_5 < 27.3 < Y_8}
     &= \sum_{k=5}^{8-1} \P\p{X_1 < 27.3}^k \p{1 - \P\p{X_1 < 27.3}}^{8-k} \\
-    &= \boxed{\sum_{k=5}^7 \p{0.7}^k \p{0.3}^{8-k}}.
+    &= \boxed{\sum_{k=5}^7 \binom{8}{k} \p{0.7}^k \p{0.3}^{8-k}}.
 \end{aligned}
 $$
 
