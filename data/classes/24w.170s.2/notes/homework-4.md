@@ -45,36 +45,32 @@ Use the observations to:
 
 <solution>
 
-1.
+1.  $$
+    \boxed{\mean{x} \approx 3.72}
+    $$
 
-   $$
-   \boxed{\mean{x} \approx 3.72}
-   $$
+2.  $$
+    \boxed{s \approx 0.46}
+    $$
 
-2.
+3.  Since the sample is small and the variance is unknown, we need to use a $t$-distribution with $10 - 1 = 9$ degrees of freedom:
 
-   $$
-   \boxed{s \approx 0.46}
-   $$
+    $$
+    T = \frac{\mean{X} - \mu}{S/\sqrt{10}} \sim t\p{9}
+    $$
 
-3. Since the sample is small and the variance is unknown, we need to use a $t$-distribution with $10 - 1 = 9$ degrees of freedom:
+    For a $95\%$ one-sided confidence interval, we use
 
-   $$
-   T = \frac{\mean{X} - \mu}{S/\sqrt{10}} \sim t\p{9}
-   $$
+    $$
+    \P\p{T \leq t_{0.05}\p{9}} = 0.95.
+    $$
 
-   For a $95\%$ one-sided confidence interval, we use
+    This gives the one-sided interval
 
-   $$
-   \P\p{T \leq t_{0.05}\p{9}} = 0.95.
-   $$
-
-   This gives the one-sided interval
-
-   $$
-   \mu \leq \mean{x} + t_{0.05}\p{9} \frac{s}{\sqrt{10}}
-    = \boxed{\poc{-\infty, 3.99}}.
-   $$
+    $$
+    \mu \leq \mean{x} + t_{0.05}\p{9} \frac{s}{\sqrt{10}}
+     = \boxed{\poc{-\infty, 3.99}}.
+    $$
 
 </solution>
 
@@ -124,48 +120,48 @@ $$
 
 1. Since the sample size is small and the variance is unknown, we use a $t$-distribution for our confidence interval. Our sample for $X$ is
 
-   $$
-   \begin{array}{rrrr}
-     -0.01 & 1.87 & -1.95 & -1.90 \\
-     -1.36 & -2.70 & -1.64 & -0.85
-   \end{array}
-   $$
+    $$
+    \begin{array}{rrrr}
+      -0.01 & 1.87 & -1.95 & -1.90 \\
+      -1.36 & -2.70 & -1.64 & -0.85
+    \end{array}
+    $$
 
-   Thus, our confidence interval is
+    Thus, our confidence interval is
 
-   $$
-   \mean{y} \pm t_{0.05}\p{7} \frac{s_Y}{\sqrt{8}}
-     = \boxed{\br{-2.03, -0.11}}.
-   $$
+    $$
+    \mean{y} \pm t_{0.05}\p{7} \frac{s_Y}{\sqrt{8}}
+      = \boxed{\br{-2.03, -0.11}}.
+    $$
 
 2. Similarly, our sample for $Y$ is
 
-   $$
-   \begin{array}{rrrrr}
-      -1.13 & -3.70 & -0.98 & 0.98 & -0.89 \\
-      -0.49 & -1.40 & 2.10 & -0.91
-   \end{array}
-   $$
+    $$
+    \begin{array}{rrrrr}
+       -1.13 & -3.70 & -0.98 & 0.98 & -0.89 \\
+       -0.49 & -1.40 & 2.10 & -0.91
+    \end{array}
+    $$
 
-   We get the confidence interval
+    We get the confidence interval
 
-   $$
-   \mean{x} \pm t_{0.05}\p{8} \frac{s_X}{\sqrt{9}}
-     = \boxed{\br{-1.70, 0.28}}.
-   $$
+    $$
+    \mean{x} \pm t_{0.05}\p{8} \frac{s_X}{\sqrt{9}}
+      = \boxed{\br{-1.70, 0.28}}.
+    $$
 
 3. Since the variances are the same, we will use a $t$-distribution with degrees of freedom $9 + 8 - 2 = 15$. Recall the pooled sample variance:
 
-   $$
-   S_p^2 = \frac{\p{n_X-1} S_X^2 + \p{n_Y-1} S_Y^2}{n_X + n_Y - 2}.
-   $$
+    $$
+    S_p^2 = \frac{\p{n_X-1} S_X^2 + \p{n_Y-1} S_Y^2}{n_X + n_Y - 2}.
+    $$
 
-   The final confidence interval will be
+    The final confidence interval will be
 
-   $$
-   \mean{x} - \mean{y} \pm t_{0.05}\p{15} s_p \sqrt{\frac{1}{9} + \frac{1}{8}}
-     = \boxed{\br{-0.94, 1.65}}.
-   $$
+    $$
+    \mean{x} - \mean{y} \pm t_{0.05}\p{15} s_p \sqrt{\frac{1}{9} + \frac{1}{8}}
+      = \boxed{\br{-0.94, 1.65}}.
+    $$
 
 4. Based on the samples and confidence intervals, the program seems to be effective for females, but inconclusive for males (since it contains $0$). Similarly, based on the confidence interval for the difference of the means, there is no evidence that the program is more effective for a particular sex.
 
