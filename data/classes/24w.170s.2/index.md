@@ -42,6 +42,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Announcements
 
 -   | 1/8/24 | Please fill out this [form](https://forms.gle/1ZipALVBr2DDQq526) to help me schedule office hours.
+-   | 3/17/24 | Please fill out this [form](https://forms.gle/1W1MTrherEBtLqty9) to help me schedule office hours during finals week.
 
 ## Resources
 
@@ -57,3 +58,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   notes::homework-5.md
 -   notes::homework-6.md
 -   notes::homework-7.md
+-   notes::homework-8.md
