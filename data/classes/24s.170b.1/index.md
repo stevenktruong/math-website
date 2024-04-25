@@ -11,9 +11,11 @@ discussions:
       location: Mathematical Sciences 5137
 officeHours:
     - section: 1A
-      days: TBD
-      time: TBD - TBD
+      days: T
+      time: 10:00am - 11:00am
       location: Mathematical Sciences 2961
+    - days: R
+      time: 12:30pm - 1:30pm
 links:
     - title: Bruin Learn
       url: https://bruinlearn.ucla.edu/courses/185436
@@ -44,15 +46,6 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   [Student Math Center](https://ww3.math.ucla.edu/student-math-center/)
 -   [Desmos Graphing Calculator](https://www.desmos.com/calculator)
 
-<!-- ## Notes
+## Notes
 
--   notes::week-1.md
--   notes::week-2.md
--   notes::week-3.md
--   notes::week-4.md
--   notes::week-5.md
--   notes::week-6.md
--   notes::week-7.md
--   notes::week-8.md
--   notes::week-9.md
--   notes::week-10.md -->
+-   notes::homework-3-oh-corrections.md
