@@ -18,8 +18,10 @@ Anyone is welcome to come to any of my office hours, but if too many people show
 
 ### In-Person ({{ office }})
 
--   Tuesdays, 11:00am - 12:00pm (MATH 170S)
--   Thursdays, 11:00am - 12:00pm (MATH 170S)
+I'm not holding any office hours this summer.
+
+<!-- -   Tuesdays, 11:00am - 12:00pm (MATH 170S)
+-   Thursdays, 11:00am - 12:00pm (MATH 170S) -->
 
 ## Random
 
