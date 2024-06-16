@@ -35,6 +35,8 @@
     h5,
     h6 {
         font-family: fonts.$header-font;
+        font-weight: 400;
+        text-rendering: optimizeLegibility;
     }
 
     h1 {

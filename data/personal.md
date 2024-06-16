@@ -16,11 +16,11 @@ I'm a fourth year Ph.D. student at the [UCLA Department of Mathematics](https://
 
 Anyone is welcome to come to any of my office hours, but if too many people show up, I'll be prioritizing the students in the specified class.
 
-### In-Person ({{ office }})
-
 I'm not holding any office hours this summer.
 
-<!-- -   Tuesdays, 11:00am - 12:00pm (MATH 170S)
+<!-- ### In-Person ({{ office }})
+
+-   Tuesdays, 11:00am - 12:00pm (MATH 170S)
 -   Thursdays, 11:00am - 12:00pm (MATH 170S) -->
 
 ## Random
