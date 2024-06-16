@@ -8,3 +8,6 @@ build/
 
 # Workspace files
 .vscode/
+
+# Environment variables
+.env

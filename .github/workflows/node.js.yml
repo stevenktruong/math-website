@@ -14,6 +14,16 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
+      - name: Install OpenVPN
+        run: |
+          sudo apt update
+          sudo apt install -y openvpn openvpn-systemd-resolved
+      - name: Connect to VPN
+        uses: "kota65535/github-openvpn-connect-action@v2"
+        with:
+          config_file: .github/workflows/client.ovpn
+          username: ${{ secrets.OVPN_USERNAME }}
+          password: ${{ secrets.OVPN_PASSWORD }}
       - name: Build website
         run: yarn && yarn build:prod
       - name: Start SSH agent and deploy website

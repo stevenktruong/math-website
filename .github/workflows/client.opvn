@@ -1,0 +1,18 @@
+client
+
+# use user & password auth
+auth-user-pass
+
+dev tun
+proto udp
+remote ssl.vpn.ucla.edu
+
+# cf. https://github.com/jonathanio/update-systemd-resolved#openvpn-configuration
+script-security 2
+up /etc/openvpn/update-systemd-resolved
+up-restart
+down /etc/openvpn/update-systemd-resolved
+down-pre
+dhcp-option DOMAIN-ROUTE .
+
+verb 3
