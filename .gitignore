@@ -11,3 +11,6 @@ build/
 
 # Environment variables
 .env
+
+# Miscellaneous
+.github-bak
