@@ -50,15 +50,6 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   [My discussion notes for MATH 131A in Winter 2021](https://www.math.ucla.edu/~steven/teaching/21w.131a.3/#notes)
 -   [My discussion notes for MATH 131B in Winter 2022](https://www.math.ucla.edu/~steven/teaching/22w.131b.1/#notes)
 
-<!-- ## Notes
+## Notes
 
--   notes::week-1.md
--   notes::week-2.md
--   notes::week-3.md
--   notes::week-4.md
--   notes::week-5.md
--   notes::week-6.md
--   notes::week-7.md
--   notes::week-8.md
--   notes::week-9.md
--   notes::week-10.md -->
+-   notes::1.2.15.md
