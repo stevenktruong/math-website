@@ -14,21 +14,16 @@ I'm a fifth year Ph.D. student at the [UCLA Department of Mathematics](https://w
 
 ## Office Hours
 
-Anyone is welcome to come to any of my office hours, but if too many people show up, I'll be prioritizing the students in the specified class.
+Anyone is welcome to come to any of my office hours, but if too many people show up, I'll be prioritizing the students in the specified class. These will all be held in my office at {{ office }}.
 
-### In-Person ({{ office }})
+-   TBD
 
--   Tuesdays, 2:00pm - 5:00pm (MATH 131B and MATH 275A)
+## Hobbies
 
-## Random
-
-### Currently Playing
-
--   _Valorant_
-
-### Currently Following
+### Current Top Anime/Manga
 
 -   _One Piece_
--   _One Punch Man_
 -   _Chainsaw Man_
--   _Jujutsu Kaisen_
+-   _Kagurabachi_
+-   _Dandadan_
+-   _One Punch Man_
