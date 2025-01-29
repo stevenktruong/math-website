@@ -50,3 +50,5 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Notes
 
 -   notes::homework-1.md
+-   notes::homework-2.md
+-   notes::homework-3.md
