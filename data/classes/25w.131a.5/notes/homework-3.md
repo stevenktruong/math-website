@@ -65,6 +65,16 @@ $$
 
 which is a contradiction.
 
+### Common Mistakes
+
+One mistake I saw a few times was something like this:
+
+> There are two cases: $\abs{s_n} = s_n$ or $\abs{s_n} = -s_n$. In either case, we have $\lim_{n\to\infty} s_n = \lim_{n\to\infty} \p{-s_n} = 0$. Therefore, $\lim_{n\to\infty} \abs{s_n} = 0$.
+
+The issue with this is that this does not exist _all_ the cases. While it's true that for each $n$, we have $\abs{s_n} = s_n$ or $\abs{s_n} = -s_n$, the issue is that the sign of $s_n$ could change with $n$.
+
+In other words, for this argument to work, you would need $\p{\abs{s_n}} = \p{s_n}$ or $\p{\abs{s_n}} = \p{-s_n}$, but this doesn't have to happen, e.g., $s_n = \p{-1}^n$.
+
 </solution>
 
 ## Exercise 9.4
@@ -112,7 +122,7 @@ Show that if $n_0 \in \N$ and $\lim_{n\to\infty} s_n = s$, then $\lim_{n\to\inft
 
 </exercise>
 
-<exercise>
+<exercise id="limit-inequality-lemma">
 
 1. Show that if $s_n \geq 0$ for all $n \geq 1$ and $\lim_{n\to\infty} s_n = s$, then $s \geq 0$ as well.
 2. Give a counter-example to show that this statement is false with strict inequalities, i.e., to show that the statement
