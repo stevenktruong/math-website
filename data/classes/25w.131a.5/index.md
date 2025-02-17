@@ -47,9 +47,16 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   [MIT OCW 18.100A (Introduction to Analysis)](https://ocw.mit.edu/courses/mathematics/18-100a-introduction-to-analysis-fall-2012/)
 -   [My 131A notes from Winter 2021](21w.131a.3)
 
-## Notes
+## Solutions
+
+### Homework
 
 -   notes::homework-1.md
 -   notes::homework-2.md
 -   notes::homework-3.md
+-   notes::homework-4.md
+-   notes::homework-5.md
+
+### Exams
+
 -   notes::midterm-1-partial-solutions.md
