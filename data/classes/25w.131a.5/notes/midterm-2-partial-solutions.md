@@ -2,8 +2,8 @@
 title: Midterm 2 Partial Solutions
 date: "2025-03-02"
 tags:
-    - density
     - limits
+    - series
 publish: yes
 ---
 
