@@ -2,8 +2,8 @@
 title: Homework 9
 date: "2025-03-15"
 tags:
-    - differentiation
     - mean value theorem
+    - integration
 publish: yes
 ---
 
