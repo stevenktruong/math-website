@@ -85,7 +85,7 @@ Lastly, the most common small mistake was this:
 >
 > for sufficiently large $n$. Thus, $f$ is integrable by Theorem 32.5.
 
-The issue here is that you're not given that $U_n$ and $L_n$ correspond to the same partition, so you can't invoke Theorem 32.5 immediately. However, there is an easy fix: you do know that $U_n = U\p{f, P_n}$ and $L_n = L\p{f, Q_n}$ for some partitions $P_n, Q_n$, so by Lemma 32.2 applied to the common refinement $P_n \cup Q_n \subseteq P_n, Q_n$,
+The issue here is that you're not given that $U_n$ and $L_n$ correspond to the same partition, so you can't invoke Theorem 32.5 immediately. However, there is an easy fix: you do know that $U_n = U\p{f, P_n}$ and $L_n = L\p{f, Q_n}$ for some partitions $P_n, Q_n$, so by Lemma 32.2 applied to the common refinement $P_n, Q_n \subseteq P_n \cup Q_n$,
 
 $$
 U\p{f, P_n \cup Q_n} - L\p{f, P_n \cup Q_n}
