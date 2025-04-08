@@ -10,9 +10,9 @@ discussions:
       time: 12:00pm - 12:50pm
       location: Boelter Hall 5440
 officeHours:
-    - section: 2A
-      days: TBD
-      time: TBD - TBD
+    - section: 2A, 3A
+      days: TW
+      time: 2:00pm - 4:00pm
       location: Mathematical Sciences 3973
 links:
     - title: Bruin Learn
@@ -44,6 +44,10 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   [MIT OCW 18.100A (Introduction to Analysis)](https://ocw.mit.edu/courses/mathematics/18-100b-analysis-i-fall-2010/)
 -   [My discussion notes for MATH 131A in Winter 2021](https://www.math.ucla.edu/~steven/teaching/21w.131a.3/#notes)
 -   [My discussion notes for MATH 131B in Winter 2022](https://www.math.ucla.edu/~steven/teaching/22w.131b.1/#notes)
+
+## Notes
+
+-   notes::common-mistakes.md
 
 <!-- ## Solutions
 

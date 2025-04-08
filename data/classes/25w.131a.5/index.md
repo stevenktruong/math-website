@@ -10,7 +10,7 @@ discussions:
       time: 2:00pm - 2:50pm
       location: Renée and David Kaplan 135
 officeHours:
-    - section: 5A
+    - section: 2A, 5A
       days: TW
       time: 3:00pm - 4:00pm
       location: Mathematical Sciences 3973

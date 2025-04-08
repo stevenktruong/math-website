@@ -10,7 +10,7 @@ discussions:
       time: 10:00am - 10:50am
       location: Kaufman Hall 101
 officeHours:
-    - section: 2A
+    - section: 2A, 5A
       days: TW
       time: 3:00pm - 4:00pm
       location: Mathematical Sciences 3973
