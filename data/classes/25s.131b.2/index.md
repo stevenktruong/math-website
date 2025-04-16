@@ -49,21 +49,13 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 
 -   notes::common-mistakes.md
 
-<!-- ## Solutions
+## Solutions
 
 ### Homework
 
 -   notes::homework-1.md
--   notes::homework-2.md
--   notes::homework-3.md
--   notes::homework-4.md
--   notes::homework-5.md
--   notes::homework-6.md
--   notes::homework-7.md
--   notes::homework-8.md
--   notes::homework-9.md
 
-### Exams
+<!-- ### Exams
 
 -   notes::midterm-1-partial-solutions.md
 -   notes::midterm-2-partial-solutions.md -->
