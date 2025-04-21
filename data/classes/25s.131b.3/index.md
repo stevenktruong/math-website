@@ -48,3 +48,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Notes
 
 -   notes::common-mistakes.md
+
+### Homework
+
+-   notes::homework-1.md

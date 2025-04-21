@@ -54,6 +54,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ### Homework
 
 -   notes::homework-1.md
+-   notes::homework-2.md
 
 <!-- ### Exams
 
