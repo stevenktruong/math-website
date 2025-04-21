@@ -8,7 +8,7 @@ discussions:
     - section: 2A
       days: R
       time: 12:00pm - 12:50pm
-      location: Boelter Hall 5440
+      location: Boelter Hall 5273
 officeHours:
     - section: 2A, 3A
       days: TW
@@ -38,6 +38,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ## Announcements
 
 -   | 4/2/25 | Please fill out this [form](https://forms.gle/CjpJTQip5ARggEqv9) to help me schedule office hours.
+-   | 4/21/25 | Our discussion room has changed from Boelter Hall 5440 to Boelter Hall 5273.
 
 ## Resources
 
