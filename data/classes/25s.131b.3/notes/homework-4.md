@@ -3,7 +3,6 @@ title: Homework 4
 date: "2025-05-12"
 tags:
     - uniform convergence
-    - uniform continuity
 publish: yes
 ---
 
@@ -113,7 +112,7 @@ Prove Proposition 3.3.4. (_Hint_: again, this is similar to Theorem 3.3.1 and Pr
 
 <proposition> 3.3.4
 
-Let $\p{f^{\p{n}}}_{n=1}^\infty$ be a sequence of continuous functions from one metric space $\p{X, d_X}$ to another $\p{Y, d_Y}$, and suppose that this sequence converges uniformly to another function $\func{f}{X}{Y}$. Let $x^{\p{n}}$ be a sequence of points in$ X$ which converge to some limit $x$. Then $f^{\p{n}}\p{x^{\p{n}}}$ converges (in $Y$) to $f\p{x}$.
+Let $\p{f^{\p{n}}}_{n=1}^\infty$ be a sequence of continuous functions from one metric space $\p{X, d_X}$ to another $\p{Y, d_Y}$, and suppose that this sequence converges uniformly to another function $\func{f}{X}{Y}$. Let $x^{\p{n}}$ be a sequence of points in $X$ which converge to some limit $x$. Then $f^{\p{n}}\p{x^{\p{n}}}$ converges (in $Y$) to $f\p{x}$.
 
 </proposition>
 
