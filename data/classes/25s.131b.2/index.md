@@ -65,3 +65,4 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 ### Exams
 
 -   notes::midterm-1-partial-solutions.md
+-   notes::midterm-2-partial-solutions.md
