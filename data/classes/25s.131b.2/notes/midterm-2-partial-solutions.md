@@ -2,8 +2,7 @@
 title: Midterm 2 Partial Solutions
 date: "2025-05-26"
 tags:
-    - metric spaces
-    - compactness
+    - uniform convergence
 publish: yes
 ---
 
