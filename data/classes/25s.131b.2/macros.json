@@ -21,5 +21,6 @@
     "\\proj": "\\operatorname{proj}",
     "\\bd": "\\partial",
     "\\cl": "\\overline",
-    "\\st": "\\:\\middle\\vert\\:"
+    "\\st": "\\:\\middle\\vert\\:",
+    "\\conj": "\\overline"
 }

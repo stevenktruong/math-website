@@ -62,6 +62,7 @@ I'm usually quick to respond to e-mails, so if you don't get a reply by the end 
 -   notes::homework-6.md
 -   notes::homework-7.md
 -   notes::homework-8.md
+-   notes::homework-9.md
 
 ### Exams
 
