@@ -14,10 +14,9 @@ I'm a fifth year Ph.D. student at the [UCLA Department of Mathematics](https://w
 
 ## Office Hours
 
-Anyone is welcome to come to any of my office hours, but if too many people show up, I'll be prioritizing the students in the specified class. These will all be held in my office at {{ office }}.
+Anyone is welcome to come to any of my office hours, but if too many people show up, I'll be prioritizing the students in the specified class. This summer, all my office hours are on [Zoom](https://ucla.zoom.us/j/9645212828).
 
--   Tuesdays, 2pm - 4pm (MATH 131B)
--   Wednesdays, 2pm - 4pm (MATH 131B)
+-   Tuesdays, 11am - 1pm (MATH 170E)
 
 ## Hobbies
 
