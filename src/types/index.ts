@@ -43,7 +43,7 @@ export interface Link {
  */
 export type ClassCode = `${number}${string}.${number}${string}.${number}`;
 
-export type Quarter = "f" | "w" | "s";
+export type Quarter = "f" | "w" | "s" | "a";
 
 /**
  * Specifies how data should be formatted into a table

@@ -13,7 +13,7 @@ export class Class {
     constructor(classPath: string) {
         // Read in data from the name of the class folder
         this.classCode = path.parse(classPath).base as Class["classCode"]; // E.g., 20f.31b.1
-        const match = this.classCode.match(/^([0-9]{2})([fws])\.([0-9]{1,3}[a-z]{0,2})\.([0-9]{1,2})$/)!;
+        const match = this.classCode.match(/^([0-9]{2})([fwsa])\.([0-9]{1,3}[a-z]{0,2})\.([0-9]{1,2})$/)!;
 
         this.year = Number(match[1]);
         this.quarter = match[2] as Class["quarter"];

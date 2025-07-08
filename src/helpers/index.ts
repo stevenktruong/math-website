@@ -19,6 +19,7 @@ const fullQuarterName: Record<Quarter, string> = {
     f: "Fall",
     w: "Winter",
     s: "Spring",
+    a: "Summer Session A",
 };
 
 export const { publicRuntimeConfig = {} } = getConfig() || {};
@@ -103,4 +104,4 @@ const customSortOrder = (order: string[]): ((a: string, b: string) => number) =>
     return (a: string, b: string) => indexMap[a] - indexMap[b];
 };
 
-export const sortQuarters: (a: Quarter, b: Quarter) => number = customSortOrder(["w", "s", "f"]);
+export const sortQuarters: (a: Quarter, b: Quarter) => number = customSortOrder(["w", "s", "a", "f"]);
