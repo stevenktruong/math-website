@@ -3,20 +3,20 @@ course: MATH 275A
 courseDescription: Probability Theory
 section: 1A
 instructor: Yin, Jun
-instructorUrl: https://sites.google.com/view/jun-yin
+instructorUrl: https://www.math.ucla.edu/~jyin/jun-yin.html
 discussions:
     - section: 1A
-      days: T
-      time: 12:00pm - 12:50pm
-      location: Mathematical Sciences 6627
+      days: R
+      time: 1:00pm - 1:50pm
+      location: Mathematical Sciences 6201
 officeHours:
-    - section: TBD
-      days: TBD
-      time: TBD
-      location: Mathematical Sciences 5351-2
+    - section: 1A
+      days: T
+      time: 2pm - 5pm
+      location: Mathematical Sciences 3973
 links:
     - title: Bruin Learn
-      url: https://bruinlearn.ucla.edu/courses/216005
+      url: https://bruinlearn.ucla.edu/courses/197359
 ---
 
 ## Table of Contents
@@ -27,9 +27,9 @@ links:
 
 If you're unable to attend my office hours, then feel free to send me an e-mail and we can set up an appointment to meet at a different time.
 
-<!-- ## Announcements
+## Announcements
 
--   | 9/26/24 | Please fill out this [form](https://forms.gle/Xd8m1SR4WR1qh3dM9) to help me schedule office hours. -->
+-   | 9/26/24 | Please fill out this [form](https://forms.gle/Xd8m1SR4WR1qh3dM9) to help me schedule office hours.
 
 <!-- ## Notes
 
