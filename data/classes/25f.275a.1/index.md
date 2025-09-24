@@ -12,7 +12,7 @@ discussions:
 officeHours:
     - section: TBD
       days: TBD
-      time: TBD
+      time: TBD - TBD
       location: Mathematical Sciences 5351-2
 links:
     - title: Bruin Learn
