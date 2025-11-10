@@ -27,11 +27,11 @@ links:
 
 If you're unable to attend my office hours, then feel free to send me an e-mail and we can set up an appointment to meet at a different time.
 
-<!-- ## Announcements
+## Announcements
 
--   | 9/26/24 | Please fill out this [form](https://forms.gle/Xd8m1SR4WR1qh3dM9) to help me schedule office hours.
+-   | 9/28/25 | Please fill out this [form](https://forms.gle/JzrdGZJWbqk138N18) to help me schedule office hours.
 
-## Notes
+<!-- ## Notes
 
 -   notes::week-1.md
 -   notes::week-2.md
