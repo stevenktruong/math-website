@@ -5,33 +5,33 @@ import { TableFormatting } from "types";
 import styles from "./Contact.module.scss";
 
 interface Props {
-    office: string;
+    // office: string;
     email: string;
-    address: string[];
-    fax: string;
+    // address: string[];
+    // fax: string;
 }
 
 /**
  * Specifies how the contact table should be formatted
  */
 const contactFormatting: TableFormatting = {
-    office: {
-        title: "Office",
-        format: (personalData: Props) => personalData.office,
-    },
+    // office: {
+    //     title: "Office",
+    //     format: (personalData: Props) => personalData.office,
+    // },
     email: {
         title: "E-mail",
         format: (personalData: Props) => personalData.email,
     },
-    address: {
-        title: "Address",
-        format: (personalData: Props) =>
-            personalData.address.map((line, i) => <div key={`addressLine${i}`}>{line}</div>),
-    },
-    fax: {
-        title: "Fax",
-        format: (personalData: Props) => personalData.fax,
-    },
+    // address: {
+    //     title: "Address",
+    //     format: (personalData: Props) =>
+    //         personalData.address.map((line, i) => <div key={`addressLine${i}`}>{line}</div>),
+    // },
+    // fax: {
+    //     title: "Fax",
+    //     format: (personalData: Props) => personalData.fax,
+    // },
 };
 
 export default class Contact extends React.Component<Props> {

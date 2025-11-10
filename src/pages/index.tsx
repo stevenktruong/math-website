@@ -55,10 +55,10 @@ export const getStaticProps: GetStaticProps = async () => {
 
             aboutHtml: baseProcessor.processSync(personal.getContent()).toString(),
 
-            office: personalMeta.office,
+            // office: personalMeta.office,
             email: personalMeta.email,
-            address: personalMeta.address,
-            fax: personalMeta.fax,
+            // address: personalMeta.address,
+            // fax: personalMeta.fax,
         },
     };
 };

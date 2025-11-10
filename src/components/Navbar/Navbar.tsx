@@ -26,9 +26,9 @@ const navLinks: Record<string, Record<string, string>> = {
         title: "Qualifying Exams",
         href: "/quals",
     },
-    cv: {
-        title: "CV",
-        href: "/files/cv.pdf",
+    resume: {
+        title: "Resume",
+        href: "/files/resume.pdf",
     },
 };
 
